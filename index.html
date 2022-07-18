@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+<!-- Head -->
+<head th:replace="layout/layout :: head"> </head> 
+
+<!-- Body -->
+<body>
+  <div class="main">  
+    <!-- Loading page Gif -->
+    <div id="loading" class="loading-page-gif">
+      <img th:src="@{/img/loading.gif}" alt="">
+    </div>
+    <!-- Bóton para regresar al inicio -->
+    <button class="ScrollToTop btn b-color-4B7 transition04" title="Volver al inicio - Back to top">
+      <i class="fa-solid fa-arrow-up fa-bounce"></i>     
+    </button>  
+       
+    <!-- Header -->
+    <header id="h-introduccion">      
+      <!-- Introducción -->
+      <section class="h-introduccion radius10-padding1">       
+        <div class="h-title">
+          <h1 class="radius-padding b-color-4B7"><i class="fa-solid fa-terminal fa-fw"></i><span data-es="'Hola Mundo!!'_" data-en="'Hello World!!'_"></span></h1>
+        </div>
+        <div class="h-subtitle">
+          <h5 class="radius-padding b-color-6CC" data-es="if(Desarrollador == true){ //Inicia el if" data-en="if(Developer == true){ //Start if"></h5>
+        </div>  
+        <div class="content">
+          <div class="h-back radius-padding b-color-4B7 transition04">
+            <span class="transition04">Back end</span>
+            <p class="transition04" 
+              data-es="Desarrollo Backend con énfasis en la codificación de las funciones del sistema, creando código limpio y a la par eficiente "
+              data-en="Text in english lol"></p>
+          </div>
+          <div class="h-image">
+            <img th:src="@{/img/fondo.jpg}" alt="">
+          </div>
+          <div class="h-front radius-padding b-color-4B7 transition04">
+            <span class="transition04">Front end</span>
+            <p class="transition04" 
+              data-es="Más enfocado en la parte de la codificación de las funciones del proyecto"
+              data-en="Text in english lol"></p>
+          </div>
+        </div>
+  
+        <h5 class="radius-padding b-color-6CC" id="h5-final"><span data-es="} //Termina el if" data-en="} //End if"></span> </h5>
+        <a href="#contactme" class="btn-h-contact btn radius-padding"><span data-es="Contáctame" data-en="Contact me"></span></a>       
+      </section>
+    </header>  
+    
+    <span class="position-absolute trigger"></span> <!-- Span oculto que funciona como trigger usado para aplicar el efecto 'stuck' a la navbar -->
+    <!-- Navbar -->
+    <nav th:replace="layout/layout :: navbar"></nav>
+    <!-- Modal Spinner Lenguaje -->
+    <div th:replace="layout/layout :: modalSpinner"></div>
+  
+    <!-- Sobre mí -->
+    <section class="aboutme" id="aboutme">
+      <div class="content" data-aos="fade-up">
+        <img th:src="@{/img/fondo.jpg}" alt="">
+        <div class="abtm-text radius10-padding1">
+          <h1 class="radius-padding b-color-4B7"><i class="fa-solid fa-address-card fa-fw"></i>&nbsp;<span data-es="Sobre mí" data-en="About me"></span> </h1>                   
+          <h5 class="radius-padding b-color-6CC" data-es="Me llamo Edgar Mauricio Barrueta Aguirre" data-en="My name is Edgar Mauricio Barrueta Aguirre"></h5>
+          <pre 
+            data-es="Soy un desarrollador que por lo general usa lenguaje Java para programar, ya que la mayoría de los proyectos (aplicaciones de escritorio, páginas web y aplicaciones móviles) tienen como base dicho lenguaje, pero como cualquier otro programador, me apasiona aprender y usar nuevos lenguajes y frameworks. 
+            Egresado desde el año 2020 y desempleado desde entonces :c pero he ocupado mi tiempo en adquirir conocimientos por mi cuenta, que pienso yo sería una de mis cualidades más importantes, ya que varias de las habilidades con las que cuento las he adquirido gracias a eso, muchas de ellas solamente lo más basico y otras trato de aprenderlas más a fondo. 
+                      
+            Entre el desarrollo de software, desarrollo web y el desarrollo de aplicaciones, destacaría el desarrollo de páginas web, ya que en la actualidad una página web es una pieza fundamental para la publicidad y por ende, el crecimiento de cualquier tipo de empresa, negocio, etc,
+             además el hecho de ver desde 0 como el código HTML poco a poco empieza a tomar forma, tanto del lado funcional como del visual realmente provoca cierta emoción.
+                     
+                    "
+            data-en="I consider myself a Java Developer, since most of the projects I´ve worked on (desktop applications, webpages and mobile applications) have been in this language, but also I like to learn different languages ​​and frameworks.
+
+            ">
+          </pre>
+          <div class="abtm-footer radius-padding b-color-6CC">
+            <h6>Hobbies:</h6>
+            <i class="fa-solid fa-laptop-code fa-fw fa-xl"></i>
+            <i class="fa-solid fa-guitar fa-fw  fa-xl"></i>
+            <i class="fa-solid fa-headphones fa-fw  fa-xl"></i>
+            <i class="fa-solid fa-gamepad fa-fw  fa-xl"></i>
+            <i class="fa-solid fa-film fa-fw fa-xl"></i>
+            <i class="fa-solid fa-mug-hot fa-fw fa-xl"></i>
+          </div>
+          <a th:href="@{/files/CV.pdf}" class="btnCV btn " target="_blank"><span data-es="Currículum Vitae" data-en="Resume"></span></a>
+        </div>
+      </div>
+    </section>
+  
+    <!-- Portafolio -->    
+    <section th:replace="layout/layout :: portafolio"></section>    
+  
+    <!-- Skills -->
+    <section th:replace="layout/layout :: skills"></section>
+  
+    <!-- Contacto -->
+    <section th:replace="layout/layout :: contact"></section>  
+  </div>
+
+  <!-- Portafolio Image Modal -->
+  <div th:replace="layout/layout :: p-modal"></div>
+  
+  <!-- Footer -->
+  <footer id="footer">
+    <div class="footer-content">
+      <h3 data-es="Sígueme" data-en="Follow me"></h3>
+      <div class="social radius-padding">
+        <a href="#" title="Spotify"><i class="fab fa-spotify"></i></a>
+        <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" title="Codepen"><i class="fab fa-codepen"></i></a>
+        <a href="#" title="Reddit"><i class="fab fa-reddit"></i></a>
+      </div>
+      
+      <ul class="menu radius-padding b-color-4B7">
+        <li><a href="#h-introduccion">Inicio</a></li>
+        <li><a href="#aboutme">Sobre mí</a></li>
+        <li><a href="#portafolio">Portafolio</a></li>
+        <li><a href="#skills-cards">Habilidades</a></li>
+        <li><a href="#contactme">Contacto</a></li>
+      </ul>       
+      <p data-es="Página desarrollada por:" data-en="Web page developed by:"></p>
+    </div>
+    <div class="footer-bottom">
+      <p>Edgar Mauricio Barrueta Aguirre <span>&copy; 2022</span></p>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <th:block th:replace="layout/layout :: end-scripts"></th:block>
+</body>
+</html>
