@@ -19,8 +19,7 @@
 </head> 
 
 <!-- Body -->
-<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
-  
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">  
   <div class="main">  
     <!-- Loading page Gif -->
     <div id="loading" class="loading-page-gif">
@@ -681,29 +680,7 @@
         </button>
     
       </div>
-    </section>
-    <!-- Portafolio Image Modal -->
-    <div class="modal fade" id="imgPopUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-      data-bs-backdrop="static" data-bs-keyboard="false">
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-        <div class="modal-content">
-          <div class="modal-header b-color-4B7">
-            <h6> </h6>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Cerrar"></button>
-            <!--btn-close-white-->
-          </div>
-          <span class="alert alert-info" role="alert">Toca la imagen para activar la lupa - Toca el ícono para desactivarla:
-            <button class="zoomout" title="Desactivar lupa"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
-          </span>
-          <div class="radius-padding modal-body img-magnifier-container">
-            <img id="myimage" class="img-modal" src="" alt="">
-          </div>
-          <div class="modal-footer b-color-6CC">
-            <p> </p>
-          </div>
-        </div>
-      </div>
-    </div>
+    </section>    
   
     <!-- Hablilidades -->  
     <section class="skills-cards" id="skills-cards" data-aos="fade-up">
@@ -759,7 +736,7 @@
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="SASS">
-          <img th:src="@{/svg/SASS.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+          <img src="svg/SASS.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
               aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>            
@@ -837,14 +814,14 @@
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="React Native">
-          <img th:src="@{/svg/React.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+          <img src="svg/React.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%"
               aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="NodeJS">
-          <img th:src="@{/svg/NodeJS.svg}" alt="" class="position-absolute top-50 start-50 translate-middle" style="padding-top: 25px;">
+          <img src="svg/NodeJS.svg" alt="" class="position-absolute top-50 start-50 translate-middle" style="padding-top: 25px;">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
               aria-valuemin="0" aria-valuemax="100">55%</div>
@@ -858,21 +835,21 @@
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="JUnit 5">
-          <img th:src="@{/svg/JUnit.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+          <img src="svg/JUnit.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
               aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Mockito">
-          <img th:src="@{/svg/Mockito.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+          <img src="svg/Mockito.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
               aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Docker">
-          <img th:src="@{/svg/Docker.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+          <img src="svg/Docker.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%"
               aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>            
@@ -886,14 +863,14 @@
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Git - Git Bash">
-          <img th:src="@{/svg/Git.svg}" alt="" class="position-absolute top-50 start-50 translate-middle" style="padding-top: 1.5rem;">
+          <img src="svg/Git.svg" alt="" class="position-absolute top-50 start-50 translate-middle" style="padding-top: 1.5rem;">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%"
               aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="GitHub">
-          <img th:src="@{/svg/GitHub.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+          <img src="svg/GitHub.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%"
               aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
@@ -915,7 +892,7 @@
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Eclipse IDE">
-          <img th:src="@{/svg/Eclipse.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+          <img src="svg/Eclipse.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%"
               aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
@@ -979,7 +956,7 @@
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="Linux - Terminal">
-          <img th:src="@{/svg/Linux.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+          <img src="svg/Linux.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 55%"
               aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>
@@ -1058,7 +1035,28 @@
 
     </div>
     </section>
-
+  </div>
+  <!-- Portafolio Image Modal -->
+  <div class="modal fade" id="imgPopUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class="modal-content">
+        <div class="modal-header b-color-4B7">
+          <h6> </h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Cerrar"></button>
+          <!--btn-close-white-->
+        </div>
+        <span class="alert alert-info" role="alert">Toca la imagen para activar la lupa - Toca el ícono para desactivarla:
+          <button class="zoomout" title="Desactivar lupa"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+        </span>
+        <div class="radius-padding modal-body img-magnifier-container">
+          <img id="myimage" class="img-modal" src="" alt="">
+        </div>
+        <div class="modal-footer b-color-6CC">
+          <p> </p>
+        </div>
+      </div>
+    </div>
   </div>
   
   <!-- Footer -->
