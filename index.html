@@ -1,10 +1,25 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <!-- Head -->
-<head th:replace="layout/layout :: head"> </head> 
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
+  
+  <!-- CSS Only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    
+  <!-- Font Awesome Library -->    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <!-- Animate On Scroll Library (AOS)-->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- CSS Styles -->
+  <link rel="stylesheet" href="css/styles.css">   
+  
+  <title>Edgar Mauricio Barrueta Aguirre</title>    
+</head> 
 
 <!-- Body -->
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">
   <div class="main">  
     <!-- Loading page Gif -->
     <div id="loading" class="loading-page-gif">
@@ -49,15 +64,50 @@
     </header>  
     
     <span class="position-absolute trigger"></span> <!-- Span oculto que funciona como trigger usado para aplicar el efecto 'stuck' a la navbar -->
-    <!-- Navbar -->
-    <nav th:replace="layout/layout :: navbar"></nav>
-    <!-- Modal Spinner Lenguaje -->
-    <div th:replace="layout/layout :: modalSpinner"></div>
+    <!-- Navbar  -->  
+  <!--<nav id="navbar" class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark" th:fragment="navbar"> -->  
+  <nav id="navbar" class="navbar sticky-top navbar-expand-lg navbar-dark" th:fragment="navbar">  
+    <div class="container-fluid">  
+      <a class="navbar-brand">
+        <button class='switchlang' data-lang="es" title="Español"><img th:src="@{/svg/mx.svg}" alt="Español" loading="lazy"></button>
+        <button class='switchlang' data-lang="en" title="English"><img th:src="@{/svg/us.svg}" alt="English"></button>
+      </a>    
+      <button class="navbar-toggler ms-auto ms-sm-10" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav ms-2 align-items-end"> <!--navbar-nav-->
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#h-introduccion">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#aboutme">Sobre mí</a>
+          </li>            
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#portafolio">Portafolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#skills-cards">Habilidades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#contactme">Contáctame</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Loading Modal -->
+  <div class="modalSpinner modal fade" tabindex="-1" role="dialog" id="spinnerModal" th:fragment="modalSpinner">
+    <div class="modal-dialog modal-dialog-centered justify-content-center" role="document" style="box-shadow: none;">
+      <i class="fa-solid fa-sync fa-spin fa-8x"></i>&nbsp;<span id="spinnerSpan" data-es=" Traduciendo..." data-en=" Translating..."></span>
+  </div>   
+</div> 
   
     <!-- Sobre mí -->
     <section class="aboutme" id="aboutme">
       <div class="content" data-aos="fade-up">
-        <img th:src="@{/img/fondo.jpg}" alt="">
+        <img src="img/fondo.jpg" alt="">
         <div class="abtm-text radius10-padding1">
           <h1 class="radius-padding b-color-4B7"><i class="fa-solid fa-address-card fa-fw"></i>&nbsp;<span data-es="Sobre mí" data-en="About me"></span> </h1>                   
           <h5 class="radius-padding b-color-6CC" data-es="Me llamo Edgar Mauricio Barrueta Aguirre" data-en="My name is Edgar Mauricio Barrueta Aguirre"></h5>
@@ -87,18 +137,1037 @@
       </div>
     </section>
   
-    <!-- Portafolio -->    
-    <section th:replace="layout/layout :: portafolio"></section>    
+    <!-- Portafolio -->   
+  <section class="portafolio" id="portafolio" data-aos="fade-up">  
+    <h3 class="sectionTitles" data-es="Portafolio" data-en="Portfolio"></h3>  
+    <div class="p-cards-container">
+      <div class="p-card"> <!-- Memorama --> 
+          <div class="content">         
+            <div id="p-img">
+              <img src="img/Portafolio/Memorama.png" class="img-item" alt="Hecho con Java, la librería gráfica Java Swing y NetBeans IDE" 
+              data-title="Juego Memorama con temática de guitarristas">
+            </div>  
+            <div class="contentBx">
+              <h3 data-es="Juego Memorama" data-en="Concentration Game"></h3>
+            </div> 
+            <div class="t-icons"> <!-- Tecnologías -->
+              <ul class="p-tecnologies">            
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
+                  title="Java / Java Swing">
+                  <i><img class="Java-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
+                  <i><img class="NetBeans-Icon p-tec-svg-icons"></i>
+                </li>
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span>      
+            </div>
+          </div> 
+          <ul class="p-icons"> <!-- iconos -->        
+            <li>
+              <span>2017</span>
+            </li>          
+          </ul>
+      </div>
+    
+      <div class="p-card"> <!-- Buscaminas -->      
+          <div class="content">          
+            <div id="p-img">        
+              <img src="img/Portafolio/Buscaminas.png" class="img-item" alt="Hecho con Java, la librería gráfica Java Swing y NetBeans IDE"
+              data-title="Juego Buscaminas clásico">
+            </div>
+            <div class="contentBx">
+              <h3 data-es="Juego Buscaminas" data-en="Minesweeper Game"></h3>
+            </div>
+            <div class="t-icons">
+              <ul class="p-tecnologies"> <!-- Tecnologías -->          
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java / Java Swing">
+                  <i><img class="Java-Icon p-tec-svg-icons"></i>
+                </li>         
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
+                  <i><img class="NetBeans-Icon p-tec-svg-icons"></i>
+                </li>
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span> 
+            </div>        
+          </div>
+          <ul class="p-icons"> <!-- iconos -->        
+            <li>
+              <span>2017</span>
+            </li>
+          </ul>
+      </div>      
+    
+      <div class="p-card"> <!-- Proyecto Full-Stack -->      
+          <div class="content">          
+            <div id="p-img">
+              <img th:src="@{/img/Portafolio/Fullstack.png}" class="img-item" alt="Back end: Java, TypeScript y Spring Framework 
+              (Spring Web, Spring Data JPA)  -  Front end: Angular, HTML, CSS y Bootstrap  -  Servidor: Base de Datos SQL"
+              data-title="Práctica de una API RESTful con las funciones CRUD hecho con, a grandes rasgos, el framework Spring para el Back end
+               y el framework Angular para el Front end">
+            </div>  
+            <div class="contentBx">
+              <h3 data-es="API RESTful - Proyecto 'Full-Stack'" data-en="'Full-Stack' API RESTful Project"></h3>
+            </div>    
+            <div class="t-icons"> <!-- Tecnologías --> 
+              <ul class="p-tecnologies">         
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java">
+                  <i><img class="Java-Icon p-tec-svg-icons"></i>
+                </li>    
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="TypeScript">
+                  <i><img class="TypeScript-Icon p-tec-svg-icons"></i>
+                </li>               
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Spring Framework">
+                  <i><img class="Spring-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular">
+                  <i><img class="Angular-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
+                  <i><img class="HTML-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
+                  <i><img class="CSS-Icon p-tec-svg-icons"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
+                  <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="SQL">
+                  <i><img class="SQL-Icon p-tec-svg-icons"></i>
+                </li>   
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span> 
+            </div>        
+          </div>
+          <ul class="p-icons"> <!-- iconos -->     
+            <li>
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitio Web" style="visibility: hidden;"><i
+                  class="fa-solid fa-globe fa-fw fa-lg"></i></a>
+            </li>
+            <li>
+              <span>2022</span>
+            </li>
+            <li>
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="p-icons-a" title="Ver código"><i
+                  class="fa-brands fa-github fa-fw fa-lg"></i></a>
+            </li>
+          </ul>
+      </div>
+    
+      <div class="p-card"> <!-- Proyecto Sistema escuela -->      
+          <div class="content">          
+            <div id="p-img">
+              <img th:src="@{/img/Portafolio/Sistema Escuela.png}" class="img-item" alt="Back end: PHP  -  
+              Front end: HTML, CSS, JavaScript (jQuery / AJAX) y Bootstrap  -  La librería TCPDF de PHP para la creación de ficheros
+              -  Servidor: Base de Datos SQL"
+              data-title="Sistema de control de los horarios de entrada / salida y días de descanso de todo el personal escolar de la universidad, 
+              además de las funciones CRUD y la generación de reportes en formato PDF">
+            </div> 
+            <div class="contentBx">
+              <h3 data-es="Sistema de control del personal escolar" data-en="School Staff Control System"></h3>
+            </div>       
+            <div class="t-icons"> <!-- Tecnologías -->
+              <ul class="p-tecnologies">          
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PHP">
+                  <i><img class="PHP-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                </li>    
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
+                  <i><img class="HTML-Icon p-tec-svg-icons" ></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
+                  <i><img class="CSS-Icon p-tec-svg-icons"></i>
+                </li>     
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
+                  <i><img class="JavaScript-Icon  p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="jQuery">
+                  <i><img class="jQuery-Icon p-tec-svg-icons" ></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="AJAX">
+                  <i><img class="AJAX-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
+                  <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
+                </li>         
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="SQL">
+                  <i><img class="SQL-Icon p-tec-svg-icons"></i>
+                </li>  
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span> 
+            </div>        
+          </div>
+          <ul class="p-icons"> <!-- iconos -->     
+            <li>
+              <span>2018</span>
+            </li>
+          </ul>
+      </div>
+    
+      <div class="p-card"> <!-- Proyecto Red Social Egresados -->      
+          <div class="content">          
+            <div id="p-img">
+              <img th:src="@{/img/Portafolio/RedSocialEgresados.png}" class="img-item" alt="Back end: PHP  -  Front end: HTML, CSS, JavaScript 
+              (jQuery / AJAX) y Bootstrap  -  Servidor: Base de Datos MySQL" data-title="Red social para la interacción entre recién egresados 
+              y empresas en busca de vacantes, permite realizar publicaciones, solicitudes de amistad, postulaciones y cuenta con un chat 
+              para la comunicación entre ambas partes, ademas de las funciones CRUD">
+            </div> 
+            <div class="contentBx">
+              <h3 data-es="Red Social para recién egresados" data-en="Social Network for graduates"></h3>
+            </div>      
+            <div class="t-icons"> <!-- Tecnologías --> 
+              <ul class="p-tecnologies">         
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PHP">
+                  <i><img class="PHP-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                </li>   
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
+                  <i><img class="HTML-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
+                  <i><img class="CSS-Icon p-tec-svg-icons"></i>
+                </li>      
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
+                  <i><img class="JavaScript-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="jQuery">
+                  <i><img class="jQuery-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="AJAX">
+                  <i><img class="AJAX-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
+                  <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
+                </li>         
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="SQL">
+                  <i><img class="SQL-Icon p-tec-svg-icons"></i>
+                </li>  
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span> 
+            </div>        
+          </div>
+          <ul class="p-icons"> <!-- iconos -->     
+            <li>
+              <span>2019</span>
+            </li>
+          </ul>
+      </div>
+    
+      <div class="p-card"> <!-- Proyecto Angular puro -->      
+          <div class="content">          
+            <div id="p-img">
+              <img th:src="@{/img/Portafolio/Sistema Angular.png}" class="img-item" alt="Backend: TypeScript  -  Front end: Angular, HTML, 
+              CSS  -  Servidor: JSON Server (NPM) "
+              data-title="Práctica de un sistema 'e-commerce' el cual simula la compra de uno o varios productos por carrito de compras">
+            </div>
+            <div class="contentBx">
+              <h3 data-es="Sistema de compras por carrito (e-commerce)" data-en="e-commerce system with shopping cart"></h3>
+            </div>        
+            <div class="t-icons"> <!-- Tecnologías -->
+              <ul class="p-tecnologies"> 
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="TypeScript">
+                  <i><img class="TypeScript-Icon p-tec-svg-icons"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular">
+                  <i><img class="Angular-Icon p-tec-svg-icons"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
+                  <i><img class="HTML-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
+                  <i><img class="CSS-Icon p-tec-svg-icons"></i>
+                </li>    
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JSON">
+                  <i><img class="JSON-Icon p-tec-svg-icons"></i>
+                </li>                    
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="npm">
+                  <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.8rem;"></i>
+                </li>              
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span> 
+            </div>        
+          </div>
+          <ul class="p-icons"> <!-- iconos -->     
+            <li>
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Sitio Web" style="visibility: hidden;"><i
+                  class="fa-solid fa-globe fa-fw fa-lg"></i></a>
+            </li>
+            <li>
+              <span>2022</span>
+            </li>
+            <li>
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="p-icons-a" title="Ver código"><i
+                  class="fa-brands fa-github fa-fw fa-lg"></i></a>
+            </li>
+          </ul>
+      </div> 
+      <span id="visible"></span>     
+    
+      <div id="hidden" style="display: none;">
+        <div class="p-card"> <!-- Proyecto GFR --> 
+          <div class="content">          
+            <div id="p-img">
+              <img th:src="@{/img/Portafolio/Proyecto GFR.png}" class="img-item" alt=" Hecho con Java, la librería gráfica Java Swing, 
+               entre otras, la librería JasperReports para la creación de reportes y NetBeans IDE  -  Servidor: Base de Datos SQL" 
+               data-title="Sistema para el control del almacén de herramientas, así como también de las entradas y salidas de estas">
+            </div> 
+            <div class="contentBx">
+              <h3 data-es="Sistema para el control de un almacén" data-en="Tools Warehouse Control System"></h3>
+            </div>  
+            <div class="t-icons"> <!-- Tecnologías -->
+              <ul class="p-tecnologies">            
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java / Java Swing">
+                  <i><img class="Java-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
+                  <i><img th:src="@{/svg/JasperReports.svg}" class="p-tec-svg-icons"></i>
+                </li>             
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
+                  <i><img class="NetBeans-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="SQL">
+                  <i><img class="SQL-Icon p-tec-svg-icons"></i>
+                </li>
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span>       
+            </div>
+          </div> 
+          <ul class="p-icons"> <!-- iconos -->    
+            <li>
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Sitio Web" style="visibility: hidden;"><i
+                  class="fa-solid fa-globe fa-fw fa-lg"></i></a>
+            </li>    
+            <li>
+              <span>2018</span>
+            </li>
+            <li>
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="p-icons-a" title="Ver código"><i
+                  class="fa-brands fa-github fa-fw fa-lg"></i></a>
+            </li>
+          </ul>
+        </div>
   
-    <!-- Skills -->
-    <section th:replace="layout/layout :: skills"></section>
+        <div class="p-card"> <!-- Sistema Administrador de Usuarios -->      
+          <div class="content">          
+            <div id="p-img">
+              <img th:src="@{/img/Portafolio/Adminusuarios.png}" class="img-item" alt="Back end: Java y Spring Framework (Spring Web, 
+              Spring Security, Spring Data JPA, Thymeleaf, Spring Testing)  -  Front end: HTML, CSS, JavaScript (jQuery / AJAX) 
+              y Bootstrap  -  Servidor remoto: Base de Datos PostgreSQL  -  Control de versiones con GitLab"
+              data-title="Sistema que permite la administración de todos los usuarios registrados en las diferentes aplicaciónes pertenecientes
+              a un banco">
+            </div> 
+            <div class="contentBx">
+              <h3 data-es="Sistema administrador de usuarios" data-en="Users Management System"></h3>
+            </div>     
+            <div class="t-icons"> <!-- Tecnologías --> 
+              <ul class="p-tecnologies">         
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java">
+                  <i><img class="Java-Icon p-tec-svg-icons"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Spring Framework">
+                  <i><img class="Spring-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Thymeleaf">
+                  <i><img class="Thymeleaf-Icon p-tec-svg-icons"></i>
+                </li>               
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
+                  <i><img class="HTML-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
+                  <i><img class="CSS-Icon p-tec-svg-icons"></i>
+                </li> 
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
+                  <i><img class="JavaScript-Icon p-tec-svg-icons"></i>
+                </li>              
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
+                  <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PostgreSQL">
+                  <i><img class="PostgreSQL-Icon p-tec-svg-icons"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="GitLab">
+                  <i><img th:src="@{/svg/GitLab.svg}" class="p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                </li> 
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span> 
+            </div>        
+          </div>
+          <ul class="p-icons"> <!-- iconos -->     
+            <li>
+              <span>2020</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="p-card"> <!-- API RESTful con JSON Web Token -->      
+          <div class="content">
+            <div id="p-img">
+              <img th:src="@{/img/Portafolio/API REST JWT.png}" class="img-item" alt="Back end: Java y Spring Framework
+              (Spring Web, Spring Data JPA, Spring Security, Hibernate Validation) -  Estandar de autenticación JSON Web Token (JWT)  -   
+              Servidor: Base de Datos SQL  -  Herramienta Postman para probar la API"
+              data-title="API que simula el inicio de sesión, realización de publicaciones y de comentarios, además de las funciones CRUD
+              a partir de una autenticación por medio de un token exclusivo para cada usuario, además de que cada función requiere de un rol
+              específico (admin / usuario) para poder realizarse">
+            </div> 
+            <div class="contentBx">
+              <h3 data-es="API RESTful con autenticación por Token" data-en="Token Authentication API RESTful"></h3>
+            </div>     
+            <div class="t-icons"> <!-- Tecnologías --> 
+              <ul class="p-tecnologies">         
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java">
+                  <i><img class="Java-Icon p-tec-svg-icons"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Spring Framework">
+                  <i><img class="Spring-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JSON Web Token (JWT)">
+                  <i><img class="JWT-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="SQL">
+                  <i><img class="SQL-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JSON">
+                  <i><img class="JSON-Icon p-tec-svg-icons"></i>
+                </li>    
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Postman">
+                  <i><img class="Postman-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                </li> 
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span> 
+            </div>        
+          </div>
+          <ul class="p-icons"> <!-- iconos -->     
+            <li>
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Sitio Web" style="visibility: hidden;"><i
+                  class="fa-solid fa-globe fa-fw fa-lg"></i></a>
+            </li>    
+            <li>
+              <span>2021</span>
+            </li>
+            <li>
+              <a href="" data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="p-icons-a" title="Ver código"><i
+                  class="fa-brands fa-github fa-fw fa-lg"></i></a>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="p-card"> <!-- App Huevos --> 
+          <div class="content">          
+            <div id="p-img">
+              <img th:src="@{/img/Portafolio/App-Control-Huevos.jpg}" class="img-item" alt="Hecho con Java, el metalenguaje XML para el diseño
+              y el Entorno de Desarrollado Integrado Android Studio  -  Servidor: Google Firebase" 
+                data-title="Aplicación que sirve para llevar un control del número de huevos recogidos y total de alimento y dinero gastados
+                de una pequeña granja de gallinas ponedoras de huevos">
+            </div>  
+            <div class="contentBx">
+              <h3 data-es="App para mini granja de gallinas ponedoras" data-en="App for Laying Hens Farm"></h3>
+            </div> 
+            <div class="t-icons"> <!-- Tecnologías -->
+              <ul class="p-tecnologies">            
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java">
+                  <i><img class="Java-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="XML">
+                  <i><img th:src="@{/svg/XML.svg}" class="p-tec-svg-icons"></i>
+                </li>             
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Android Studio">
+                  <i><img class="AStudio-Icon p-tec-svg-icons"></i>
+                </li> 
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Gradle">
+                  <i><img th:src="@{/svg/Gradle.svg}" class="p-tec-svg-icons"></i>
+                </li> 
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Firebase">
+                  <i><img class="Firebase-Icon p-tec-svg-icons"></i>
+                </li>
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span>       
+            </div>
+          </div> 
+          <ul class="p-icons"> <!-- iconos -->        
+            <li>
+              <span>2021</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="p-card"> <!-- Juego Plataformas --> 
+          <div class="content">
+            <div id="p-img">
+              <img th:src="@{/img/Portafolio/Juego-2D.jpg}" class="img-item" alt="Hecho con C# y el motor de videojuegos multiplataforma Unity  -   
+              Adobe Photoshop para el diseño de 'sprites' y texturas" 
+              data-title="Juego para móviles en formato 2D del género RPG / Plataformas enfocado para niños/as con el fin de que estos aprendan y/o 
+              practiquen las tablas de multiplicar mientras se divierten jugando">
+            </div>
+            <div class="contentBx">
+              <h3 data-es="Juego móvil 2D 'Tablas de multiplicar'" data-en="2D Mobile Game 'Multiplication Tables'"></h3>
+            </div>   
+            <div class="t-icons"> <!-- Tecnologías -->
+              <ul class="p-tecnologies">            
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="C#">
+                  <i><img class="C-Icon p-tec-svg-icons"></i>
+                </li>              
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Unity">
+                  <i><img class="Unity-Icon p-tec-svg-icons"></i>
+                </li>   
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Adobe Photoshop">
+                  <i><img th:src="@{/svg/Photoshop.svg}" class="p-tec-svg-icons"></i>
+                </li>     
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span>       
+            </div>
+          </div> 
+          <ul class="p-icons"> <!-- iconos -->        
+            <li>
+              <span>2021</span>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="p-card"> <!-- Proyecto VR --> 
+          <div class="content">          
+            <div id="p-img">
+              <img th:src="@{/img/Portafolio/Proyecto VR.png}" class="img-item" alt="Hecho con C# y el motor de videojuegos multiplataforma Unity  -   
+              el programa de diseño gráfico Sketchup para los modelos 3D y los servicios de Realidad Virtual (VR) de Google Cardboard" 
+              data-title="Juego / Aplicación de Realidad Virtual cuyo objetivo es el de recorrer algunas de las zonas arqueológicas
+              más importantes de México, así como otros lugares de manera virtual, además de escuchar / leer información detallada
+              sobre cada uno de ellos">
+            </div>
+            <div class="contentBx">
+              <h3 data-es="Juego de Realidad Virtual de lugares de México" data-en="Virtual Reality Game of Places of Mexico"></h3>
+            </div>   
+            <div class="t-icons"> <!-- Tecnologías -->
+              <ul class="p-tecnologies">            
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="C#">
+                  <i><img class="C-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Sketchup">
+                  <i><img th:src="@{/svg/Sketchup.svg}" class="p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Google Cardboard VR ">
+                  <i><img th:src="@{/svg/VRCardboard.svg}" class="p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Unity">
+                  <i><img class="Unity-Icon p-tec-svg-icons"></i>
+                </li>                        
+              </ul>
+              <span data-es="Tecnologías" data-en="Technologies"></span>       
+            </div>
+          </div> 
+          <ul class="p-icons"> <!-- iconos -->        
+            <li>
+              <span>2019</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <button class="radius-padding b-color-4B7" id="show-more-btn" onclick="showMoreProjects()" title="Expandir / Expand">
+        <i class='fa-solid fa-caret-down fa-bounce'></i>
+      </button>
+
+    </div>  
+  </section>   
+  
+     <!-- Hablilidades -->  
+  <section class="skills-cards" id="skills-cards" data-aos="fade-up"> 
+    <h3 class="sectionTitles">Habilidades</h3>
+    <div class="cards-container">      
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Java">
+        <img alt="" class="Java-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="JavaScript">
+        <img alt="" class="JavaScript-Icon position-absolute top-50 start-50 translate-middle">
+        <!--Agregar esta clase o quitar-->
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="TypeScript">
+        <img alt="" class="TypeScript-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger"
+        title="C#">
+        <img alt="" class="C-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+              aria-valuemin="0" aria-valuemax="100">50%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger"
+        title="PHP">
+        <img alt="" class="PHP-Icon position-absolute top-50 start-50 translate-middle"
+          style=" padding-top: 1em">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 65%" aria-valuenow="65"
+              aria-valuemin="0" aria-valuemax="100">65%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="HTML">
+        <img alt="" class="HTML-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+              aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="CSS">
+        <img alt="" class="CSS-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+              aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="SASS">
+        <img th:src="@{/svg/SASS.svg}" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="jQuery">
+        <img alt="" class="jQuery-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65"
+              aria-valuemin="0" aria-valuemax="100">65%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="AJAX">
+        <img alt="" class="AJAX-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65"
+              aria-valuemin="0" aria-valuemax="100">65%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="JSON">
+        <img alt="" class="JSON-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="XML">
+        <img th:src="@{/svg/XML2.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+      </div>
+      <!-- Frameworks -->
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Spring Framework">
+        <img alt="" class="Spring-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Thymeleaf">
+        <img alt="" class=" Thymeleaf-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Hibernate">
+        <img th:src="@{/svg/Hibernate.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="Angular">
+        <img alt="" class="Angular-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Bootstrap">
+        <img alt="" class="Bootstrap-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+              aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger"
+        title="Firebase">
+        <img alt="" class="Firebase-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+              aria-valuemin="0" aria-valuemax="100">50%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger"
+        title="React Native">
+        <img th:src="@{/svg/React.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+              aria-valuemin="0" aria-valuemax="100">50%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger"
+        title="NodeJS">
+        <img th:src="@{/svg/NodeJS.svg}" alt="" class="position-absolute top-50 start-50 translate-middle"
+          style="padding-top: 25px;" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
+              aria-valuemin="0" aria-valuemax="100">55%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger"
+        title="npm">
+        <img alt="" class="NPM-Icon position-absolute top-50 start-50 translate-middle"
+          style="padding-top: 1.5rem;">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+              aria-valuemin="0" aria-valuemax="100">50%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="JUnit 5">
+        <img th:src="@{/svg/JUnit.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="Mockito">
+        <img th:src="@{/svg/Mockito.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="Docker">
+        <img th:src="@{/svg/Docker.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60"
+              aria-valuemin="0" aria-valuemax="100">60%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="JSON Web Token">
+        <img alt="" class="JWT-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Git - Git Bash">
+        <img th:src="@{/svg/Git.svg}" alt="" class="position-absolute top-50 start-50 translate-middle"
+          style="padding-top: 1.5rem;" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+              aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="GitHub">
+        <img th:src="@{/svg/GitHub.svg}" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+              aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </div>
+      </div>
+      <!-- Herramientas -->
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Visual Studio Code">
+        <img th:src="@{/svg/VSCode.svg}" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+              aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="NetBeans IDE">
+        <img alt="" class="NetBeans-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+              aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Eclipse IDE">
+        <img th:src="@{/svg/Eclipse.svg}" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+              aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Android Studio">
+        <img alt="" class="AStudio-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+              aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Unity">
+        <img alt="" class=" Unity-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+      </div>
+      <!-- Bases de Datos -->
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="WampServer - Apache">
+        <img th:src="@{/svg/WAMP.svg}" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+              aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="MySQL">
+        <img alt="" class="SQL-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+              aria-valuemin="0" aria-valuemax="100">85%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="PostgreSQL">
+        <img alt="" class="PostgreSQL-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning"
+        title="Oracle Database">
+        <img th:src="@{/svg/Oracle.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+              aria-valuemin="0" aria-valuemax="100">70%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="SQLite">
+        <img th:src="@{/svg/SQLite.svg}" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Postman">
+        <img alt="" class="Postman-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+              aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger"
+        title="Linux - Terminal">
+        <img th:src="@{/svg/Linux.svg}" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
+              aria-valuemin="0" aria-valuemax="100">55%</div>
+          </div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success"
+        title="Windows Terminal">
+        <img th:src="@{/svg/WTerminal.svg}" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills">
+          <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+              aria-valuemin="0" aria-valuemax="100">80%</div>
+          </div>
+        </div>
+      </div>     
+  </div>
+  </section>
   
     <!-- Contacto -->
-    <section th:replace="layout/layout :: contact"></section>  
+  <section class="contactme" id="contactme" th:fragment="contact" data-aos="fade-up">
+    <div class="content">
+     
+      <div class="contact-form radius10-padding1" data-aos="flip-right"> <!-- Contact Form -->
+        <h1 class="radius-padding b-color-4B7">
+          <span data-es="Envíame un mensaje" data-en="Send me a message"></span>
+          <i class="fa-solid fa-envelope fa-beat" style="--fa-beat-scale: 1.2;"></i>
+        </h1>        
+        <form id="c-form" action="">
+          <label for="name" class="form-label" data-es="Nombre completo" data-en="Full name"></label><span>*</span>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="name-icon"><i class="fa-solid fa-user"></i></span>
+            <input name="name" id="name" type="text" class="form-control" placeholder="Escribe aquí tu nombre" 
+              aria-describedby="name-icon" required>
+          </div>
+          <label for="email" class="form-label">E-mail</label><span>*</span>
+          <div class="input-group mb-3">
+            <span class="input-group-text" id="icon-email"><i class="fa-solid fa-at"></i></span>
+            <input name="email" id="email" type="email" class="form-control" placeholder="Ejemplo: email@email.com" 
+              aria-describedby="icon-email" required>                         
+          </div>
+          <div id="emailHelp" for="email" class="form-text" data-es="No compartiremos tu correo con nadie más" 
+              data-en="We'll never share your email with anyone else.">
+          </div>          
+          <div class="form-floating">            
+            <textarea name="message" class="form-control" id="message" placeholder="Mensaje:" required></textarea>
+            <label for="message" data-es="Texto" data-en="Message"></label>
+          </div>
+          <button id="btnSendEmail" class="btn"><span data-es="Enviar" data-en="Send"></span></button>          
+        </form>
+        <a href="mailto:mauba22@outlook.com" id="myEmail" style="opacity: 0;">mail</a> <!-- mailto -->
+      </div>
+
+      <div class="icons radius10-padding1" id="iconscon" data-aos="flip-left"> <!-- Contact Links -->
+        <h4 data-es="Correo electrónico:" data-en="E-mail:"></h4>
+        <p>
+          <input type="text" value="mauba22@outlook.com" id="email-copy" readonly>
+          <button id="copy-btn" onclick="copyEmail()" title="Copiar / Copy"><i class="fa-solid fa-copy"></i></button>
+        </p>               
+        <h4 data-es="Redes Sociales:" data-en="Social Networks"></h4>        
+        <div class="i-socialMedia radius-padding"> <!-- Social Media Icons -->                            
+          <a class="button" href="http://www.facebook.com/" target="_blank">                   
+            <div class="icon"><i class="fab fa-facebook-f"></i></div>
+            <span>Facebook</span>             
+          </a>
+          <a class="button" href="http://www.linkedin.com/in/mauricio-barrueta" target="_blank">
+            <div class="icon"><i class="fab fa-linkedin"></i></div>
+            <span>Linkedin</span>
+          </a>
+          <a class="button" href="http://www.facebook.com/" target="_blank">
+            <div class="icon"><i class="fab fa-telegram"></i></div>
+            <span>Telegram</span>
+          </a>
+          <a class="button" href="http://www.facebook.com/" target="_blank">
+            <div class="icon"><i class="fab fa-github"></i></div>
+            <span>GitHub</span>
+          </a>          
+        </div>
+      </div>     
+    </div>
+  </section> 
   </div>
 
-  <!-- Portafolio Image Modal -->
-  <div th:replace="layout/layout :: p-modal"></div>
+  <!-- Portafolio Image Modal --> 
+  <div class="modal fade" id="imgPopUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+      <div class="modal-content">
+        <div class="modal-header b-color-4B7">
+          <h6> </h6>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Cerrar"></button>
+          <!--btn-close-white-->
+        </div>
+        <span class="alert alert-info" role="alert">Toca la imagen para activar la lupa - Toca el ícono para desactivarla:
+          <button class="zoomout" title="Desactivar lupa"><i class="fa-solid fa-magnifying-glass-minus"></i></button>
+        </span>
+        <div class="radius-padding modal-body img-magnifier-container">
+          <img id="myimage" class="img-modal" src="" alt="">
+        </div>
+        <div class="modal-footer b-color-6CC">
+          <p> </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
   
   <!-- Footer -->
   <footer id="footer">
@@ -126,6 +1195,35 @@
   </footer>
   
   <!-- Scripts -->
-  <th:block th:replace="layout/layout :: end-scripts"></th:block>
+ <!-- JavaScript Bundle with Popper -->
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+ integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+</script>
+<!-- jQuery Script -->
+<script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" 
+ crossorigin="anonymous">
+</script>    
+<!-- Animate On Scroll Library Script -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<!-- Inicializar librería AOS -->
+<script>
+ AOS.init({
+     once: true,
+     duration: 1000,
+     delay: 0,
+     easing: 'ease-in-out'
+   });
+</script>
+<!-- Main Scripts -->
+<script type="text/javascript" src="js/main.js"></script>
+<!-- Magnifying Glass Script -->
+<script type="text/javascript" src="js/imgMagnifyingGlass.js"></script>
+<!-- Inicializar función 'Magnify' -->
+<script>magnify("myimage", 3);</script>    
+<!-- Tooltip Script -->
+<script>
+ var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+ var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+</script> 
 </body>
 </html>
