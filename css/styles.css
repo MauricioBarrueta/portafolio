@@ -3,7 +3,8 @@
 
 /* --------------------------------------------------------------------- GENERAL ------------------------------------------------------ */
 html, body { /* Para darle efecto al Scroll vertical */
-    scroll-behavior: smooth;  background-color: #F4F6F7;    
+    scroll-behavior: smooth;  background-color: #F4F6F7; 
+    max-width: 100vw; 
 } 
 * { 
     box-sizing: border-box; /*QUITAR ESTO*/
@@ -367,9 +368,7 @@ header {
 .portafolio .p-card .p-icons a { color: white; }
 
 /* --------------------------------------------------------------- Modal ---------------------------------------------------------------- */
-.modal-content { 
-    background-color: #F4F6F7;  
-}
+.modal-content { background-color: #F4F6F7; }
 .modal .modal-dialog {
     min-width: 85%; border-radius: 5px;    
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);    
@@ -381,15 +380,14 @@ header {
     position: relative;
 }
 #imgPopUpModal .modal-header h6 { /* Modal Title */
-    display: table-cell;  
-    width: 100%; 
+    display: table-cell; width: 100%; 
     font-size: 11px; line-height: 13px;
 }
 .modal-header .btn-close { /* Modal Close Button */
     margin: 2.5px; top: 0; right: 0;
     position: absolute;
     background-color: white; border: 1px solid black;
-    transition: 0.3s; opacity: 0.8;    
+    transition: 0.3s; opacity: 0.5;    
 }
 .modal-header .btn-close:hover { transform: translateY(5px); }
 #imgPopUpModal .modal-body { /* Modal Body */     
@@ -583,9 +581,8 @@ footer { /* Footer content */
 }
 .footer-content .social > a {  
     font-size: 25px; line-height: 35px; text-align: center;
-    margin: 0 8px;
-    display: inline-block;
-    height: 40px; width: 40px;    
+    margin: 0 8px; height: 40px; width: 40px;  
+    display: inline-block;      
     border-radius: 40px; box-sizing: border-box;  
     transition: 0.3s;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -649,7 +646,7 @@ footer { /* Footer content */
     .contact-form h1 { font-size: 15px; margin-bottom: 5px; }
     #c-form label, #c-form input, #c-form textarea { font-size: 12px; } 
     .contact-form #emailHelp { font-size: 8px; padding-bottom: 1.2rem; }
-    .contactme .icons { margin-top: 10px; min-width: 450px; }
+    .contactme .icons { margin-top: 10px; min-width: fit-content; }
     .contactme .icons p { font-size: 11px; }
     /* Footer */
     .footer-content .menu li { margin: 0 7px; }
@@ -673,7 +670,9 @@ footer { /* Footer content */
     /* Portafolio */
     .portafolio .p-card { width: calc(100% * (1/2) - 50px - 1px); }         
     .portafolio .p-card .content .p-tec-svg-icons { min-width: 30px;  min-height: 30px; }
+    .portafolio .p-cards-container #show-more-btn[data-title]:hover::after { font-size: 9px; }
     /* Portafolio Modal */
+    /* .modal .modal-content { height: 100vh; } */
     #imgPopUpModal .modal-header>h6, .modal-content>span, .modal-footer>p { font-size: 8px; }
     .modal-content .zoomout { font-size: 12px; }
     .img-magnifier-glass { width: 135px; height: 135px; }
@@ -684,7 +683,7 @@ footer { /* Footer content */
 
 @media screen and (max-width: 800px) {
     /* Portafolio */
-    #imgPopUpModal .modal-body {  max-height: 200px; overflow-y: auto;   }
+    #imgPopUpModal .modal-body { max-height: 300px; overflow-y: auto; }
     /* Skills */
     .skills-cards .card-skills { width: calc(100% * (1/4) - 20px - 5px); } 
     .card-skills { width: 80px; height: 80px; }
