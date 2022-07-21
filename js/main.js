@@ -1,8 +1,8 @@
 /* Oculta la animación al cargar toda la página y además le agrega 5s */
 $(window).on('load', function () {
-    setTimeout(function() {        
-        $('#loading').hide("fast");                             
-    }, 5000);    
+    setTimeout(function () {
+        $('#loading').hide("fast");
+    }, 5000);
 })
 
 /* Resalta en la navbar la sección en la que se encuentra */
@@ -51,7 +51,7 @@ document.addEventListener("click", function(e) {
         const myModal = new bootstrap.Modal(document.getElementById('imgPopUpModal'));        
         $("#imgPopUpModal p").text($(e.target).attr('alt')); /* Se pasa el valor de 'alt' de la imagen al elemento <p> */
         $("#imgPopUpModal h6").text($(e.target).attr('data-title')); /* Se pasa el valor de 'title' de la imagen al elemento <h6> */
-        myModal.show();
+        myModal.show();        
      }     
 });
 
@@ -71,11 +71,11 @@ function showMoreProjects() {
     var btnShow = document.getElementById("show-more-btn");
 
     if (cardsVisible.style.display === "none") {
-        btnShow.innerHTML = "<i class='fa-solid fa-caret-down fa-bounce'></i>"; btnShow.setAttribute("title", "Expandir - Expand");  
+        btnShow.innerHTML = "<i class='fa-solid fa-caret-down fa-bounce'></i>"; btnShow.setAttribute("data-title", "Mostrar más - Show more");  
         cardsVisible.style.display = "flex"; cardsHidden.style.display = "none";
     } else {
         cardsVisible.style.display = "none";
-        btnShow.innerHTML = "<i class='fa-solid fa-caret-up fa-bounce'></i>"; btnShow.setAttribute("title", "Reducir - Reduce");        
+        btnShow.innerHTML = "<i class='fa-solid fa-caret-up fa-bounce'></i>"; btnShow.setAttribute("data-title", "Mostrar menos - Show less");        
         cardsHidden.style.display = "flex"; cardsHidden.style.flexWrap = "wrap";
         cardsHidden.style.alignContent = "center"; cardsHidden.style.justifyContent = "space-around"; cardsHidden.style.gap = "15px";    
     }
