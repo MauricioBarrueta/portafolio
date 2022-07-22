@@ -1,8 +1,8 @@
-/* Oculta la animación al cargar toda la página y además le agrega 5s */
+/* Oculta la animación al cargar toda la página y además le agrega 4s */
 $(window).on('load', function () {
     setTimeout(function () {
         $('#loading').hide("fast");
-    }, 5000);
+    }, 3500);
 })
 
 /* Resalta en la navbar la sección en la que se encuentra */
@@ -43,10 +43,38 @@ window.addEventListener('scroll', e => {
     };
 })).observe(document.querySelector('.trigger'));
 
+/* Para activar el plugin de Google Translate al dar clic sobre una imagen */
+const img = document.querySelector('.img-item');
+img.addEventListener('click', googleTranslateElementInit) 
+function googleTranslateElementInit() {    
+    new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false        
+    },'google_translate_element');
+}
+/* Función que deshabilita el plugin de Google Translate y abajo se especifica que al cerrar el modal */
+function disableGoogleTranslate() {
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore = innerDoc.getElementsByTagName("button");
+    for (var i = 0; i < restore.length; i++) {
+        if (restore[i].id.indexOf("restore") >= 0) {
+            restore[i].click();
+            var close = innerDoc.getElementsByClassName("goog-close-link");
+            close[0].click();
+            return;
+        }
+    }
+}
+const ImageModal = document.getElementById('imgPopUpModal')
+ImageModal.addEventListener('hidden.bs.modal', disableGoogleTranslate);
+
 /* Obtiene el atributo src de la imagen seleccionada para pasarla al modal y mostrarlo */
 document.addEventListener("click", function(e) {
-    if (e.target.classList.contains('img-item')) {       
-        const src = e.target.getAttribute('src');
+    if (e.target.classList.contains('img-item')) {           
+        const src = e.target.getAttribute('src');        
         document.querySelector('.img-modal').src = src; 
         const myModal = new bootstrap.Modal(document.getElementById('imgPopUpModal'));        
         $("#imgPopUpModal p").text($(e.target).attr('alt')); /* Se pasa el valor de 'alt' de la imagen al elemento <p> */
@@ -122,12 +150,11 @@ function modalSpinner() {
 function switchLang(lang) {
     $("[data-" + lang + "]").text(function(i, e) { 
         return $(this).data(lang); 
-    });
+    });    
 }
 switchLang("es");
 /* Ejecuta la función para traducir y muestra el modal de carga al mismo tiempo */
 $(".switchlang").click(function() {
     modalSpinner();  
-    switchLang($(this).data("lang"))
+    switchLang($(this).data("lang"))    
 });
-

@@ -48,8 +48,8 @@
           <div class="h-back radius-padding b-color-4B7 transition04">
             <span class="transition04">Back end</span>
             <p class="transition04" 
-              data-es="Desarrollo Backend con énfasis en la codificación de las funciones del sistema, creando código limpio y a la par eficiente "
-              data-en="Text in english lol"></p>
+              data-es="Principalmente asumo el rol de desarrollador, ya que no tengo mucha experiencia en la parte del servidor de base de datos"
+              data-en="I mainly assume the developer role, cos I don't have much experience in the database server part"></p>
           </div>
           <div class="h-image">
             <img src="img/fondo.jpg" alt="">
@@ -57,8 +57,8 @@
           <div class="h-front radius-padding b-color-4B7 transition04">
             <span class="transition04">Front end</span>
             <p class="transition04" 
-              data-es="Más enfocado en la parte de la codificación de las funciones del proyecto"
-              data-en="Text in english lol"></p>
+              data-es="Diseño y desarrollo de la interfaz gráfica para el usuario (GUI), claramente no a un nivel 'profesional' pero se hace el intento"
+              data-en="Design and development of the Graphical User Interface (GUI), clearly not on a 'professional' level but the attempt is made"></p>
           </div>
         </div>
   
@@ -114,19 +114,19 @@
       <div class="content" data-aos="fade-up">
         <img src="img/fondo.jpg" alt="">
         <div class="abtm-text radius10-padding1">
-          <h1 class="radius-padding b-color-4B7"><i class="fa-solid fa-address-card fa-fw"></i>&nbsp;<span data-es="Sobre mí" data-en="About me"></span> </h1>                   
+          <h1 class="radius-padding b-color-4B7"><i class="fa-solid fa-address-card fa-flip" style="--fa-animation-duration: 2s;"></i>&nbsp;
+            <span data-es="Sobre mí" data-en="About me"></span>
+          </h1>                   
           <h5 class="radius-padding b-color-6CC" data-es="Me llamo Edgar Mauricio Barrueta Aguirre" data-en="My name is Edgar Mauricio Barrueta Aguirre"></h5>
           <pre 
-            data-es="Soy un desarrollador que por lo general usa lenguaje Java para programar, ya que la mayoría de los proyectos (aplicaciones de escritorio, páginas web y aplicaciones móviles) tienen como base dicho lenguaje, pero como cualquier otro programador, me apasiona aprender y usar nuevos lenguajes y frameworks. 
-            Egresado desde el año 2020 y desempleado desde entonces :c pero he ocupado mi tiempo en adquirir conocimientos por mi cuenta, que pienso yo sería una de mis cualidades más importantes, ya que varias de las habilidades con las que cuento las he adquirido gracias a eso, muchas de ellas solamente lo más basico y otras trato de aprenderlas más a fondo. 
-                      
-            Entre el desarrollo de software, desarrollo web y el desarrollo de aplicaciones, destacaría el desarrollo de páginas web, ya que en la actualidad una página web es una pieza fundamental para la publicidad y por ende, el crecimiento de cualquier tipo de empresa, negocio, etc,
-             además el hecho de ver desde 0 como el código HTML poco a poco empieza a tomar forma, tanto del lado funcional como del visual realmente provoca cierta emoción.
-                     
-                    "
-            data-en="I consider myself a Java Developer, since most of the projects I´ve worked on (desktop applications, webpages and mobile applications) have been in this language, but also I like to learn different languages ​​and frameworks.
-
-            ">
+            data-es="Soy un desarrollador que por lo general usa lenguaje Java para programar, ya que la mayoría de mis proyectos tanto aplicaciones de escritorio, páginas web y aplicaciones móviles tienen como base dicho lenguaje pero, como cualquier otro programador, me apasiona usar, y sobre todo aprender, nuevos lenguajes y nuevos frameworks. 
+              Egresado desde el año 2020 y desempleado desde entonces, durante todo este tiempo 'libre' me he dedicado a adquirir nuevos conocimientos por mi cuenta, que pienso yo sería una de mis cualidades más importantes, ya que varias de las habilidades con las que cuento las he aprendido gracias a eso, muchas de ellas solamente lo más basico y otras con conocimientos más avanzados.
+              
+              Entre el desarrollo para multiples plataformas destacaría el desarrollo de páginas web, ya que, actualmente, una buena página web es fundamental para cualquier tipo de empresa, además el hecho de ver como el simple código en HTML poco a poco empieza a tomar forma, y el hecho de que en la web existen miles de librerías para poder aplicar estilos, provoca cierta satisfacción."
+            data-en="I'm a developer who usually uses the Java language to develop, since most of my projects, both as desktop applications, web pages and mobile applications, are based on this language but, like any other developer, I like to use, and especially learn, new languages ​​and new frameworks.
+              Graduated since 2020 and unemployed since then, during all this 'free' time I've dedicated to acquiring new knowledge on my own, which I think would be one of my most important qualities, since several of my skills I have learned thanks to that, some of them only the most basic knowledge and others more advanced.
+            
+              Among the development for multiple platforms, I'd highlight web development, since, at present, a good web page is essential for any type of company, in addition to that, seeing how the simple HTML code little by little begins to taking shape, and thanks to the fact that there're thousands of libraries on the web to apply styles, it causes a certain kind of satisfaction.">
           </pre>
           <div class="abtm-footer radius-padding b-color-6CC">
             <h6>Hobbies:</h6>
@@ -1044,12 +1044,13 @@
       <div class="modal-content">
         <div class="modal-header b-color-4B7">
           <h6> </h6>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Cerrar / Close"></button>          
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Cerrar - Close"></button>          
         </div>
-        <span class="alert alert-light" role="alert">Toca la imagen para activar la lupa - Toca el siguiente ícono para desactivarla:
+        <div id="google_translate_element"></div>
+        <span class="alert alert-light span-info" role="alert">Toca la imagen para activar la lupa - Toca el siguiente ícono para desactivarla:
           <button class="zoomout" title="Desactivar lupa"><i class="fa-solid fa-magnifying-glass-minus fa-shake"></i></button>
         </span>
-        <div class="radius-padding modal-body img-magnifier-container">
+        <div class="modal-body img-magnifier-container radius-padding ">
           <img id="myimage" class="img-modal" src="" alt="">
         </div>
         <div class="modal-footer b-color-6CC">
@@ -1114,5 +1115,7 @@
     var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
   </script>
+  <!-- Google Translate Plugin -->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

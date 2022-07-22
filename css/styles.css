@@ -42,7 +42,7 @@ html, body { /* Para darle efecto al Scroll vertical */
 }
 
 /* ------------------------------------------------------------ GENERAL DISPLAY ------------------------------------------------------------------ */
-.loading-page-gif, header, .btn-h-contact, .aboutme, .abtm-text>h1, .btnCV, .p-card, .p-cards-container, .cards-container, 
+.loading-page-gif, header, .btn-h-contact, .aboutme, .abtm-text>h1, .btnCV, .p-card, .p-cards-container, #google_translate_element, .cards-container, 
 .contactme, #btnSendEmail, .footer-content, .menu {
     display: flex; justify-content: center; align-items: center; align-content: center;
 }
@@ -54,16 +54,15 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
 
 /* ----------------------------------------------------------- Scroll To Top Button -------------------------------------------------------*/
 .ScrollToTop {
-    position: fixed; z-index: 9997;        
-    /* right: 10px; bottom: 10px; */
+    position: fixed; z-index: 9997; 
     width: 60px; height: 60px;
     border-radius: 50%; padding: 0.5rem;    
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);      
-    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 5px #000;
+    /* text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 5px #000; */
     outline: none; display: none;
-    cursor: pointer; opacity: 0.8;
-    bottom: 10px; left: 50%;  
-    transform: translate(-50%, -50%);    
+    cursor: pointer; border: 1px solid white;
+    bottom: 10px; right: 10px;  
+    /* transform: translate(-50%, -50%);     */
 }
 .ScrollToTop:hover {
     width: 65px; height: 65px;
@@ -126,10 +125,11 @@ header {
 .h-introduccion .content .h-back, .h-front { /* Intr-Divs (back-front) */
     width: 350px; height: 108px;     
     margin: 5px; z-index: 1; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 .h-introduccion .content .h-back:hover, .h-front:hover {
     transform: translateY(-3px); cursor: pointer;
-    background-color: #F4F6F7; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #F4F6F7; border: 1px dotted #6CC6C9;
 } 
 .h-introduccion .content span { /* Intr-Divs Title */      
     font-size: 20px; display: table;
@@ -141,7 +141,7 @@ header {
 }
 .h-introduccion .content p { /* Intr-Divs text */
     text-align: center; font-size: 10px; margin-bottom: 30px;
-    color: #4B7F83; height: fit-content;  margin-top: -15px;
+    color: #4B7F83; height: fit-content;  margin-top: -20px;
 	transform: translateY(50px); opacity: 0;
     cursor: pointer;    
 }
@@ -232,8 +232,8 @@ header {
 }
 .abtm-text pre { /* Abtme-Content p */
     font-size: 12px; font-family: 'Press Start 2P', cursive;
-    letter-spacing: 1px; white-space: pre-line; line-height: 150%;
-    margin: 10px 0 0 0;
+    white-space: pre-line; line-height: 150%;
+    margin: 10px 0 8px 0;
     text-align: justify; color: #4B7F83;    
 }
 .aboutme .content .abtm-text .abtm-footer { /* Abtme-Content Hobbies Div */    
@@ -272,7 +272,7 @@ header {
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     border: 1px solid white; animation: blink 1s infinite step-end reverse;
     width: 50%; height: 35px; /*width: 150px*/
-    transition: 0.3s; margin: 10px 0 15px 0;
+    transition: 0.3s; margin: 15px 0 15px 0;
 }
 .portafolio .p-cards-container #show-more-btn[data-title]:hover::after {
     content: attr(data-title);
@@ -374,6 +374,26 @@ header {
     box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);    
     overflow-y: initial !important 
 }
+/* ------------------------ GOOGLE TRANSLATE ELEMENT -------------------- */
+#google_translate_element { 
+    width: 100%; font-size: 11px;
+    border-radius: 5px; padding: 0.2rem; margin-top: 5px;
+    color: #4B7F83; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+#google_translate_element:before {
+    content: "Traducir ->"; margin: 0 auto;   
+}
+#google_translate_element:after {
+    content: "<- Translate"; margin: 0 auto;
+}
+
+.goog-logo-link {
+    display:none !important;
+}     
+.goog-te-gadget { color: transparent !important; }
+
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+
 #imgPopUpModal .modal-header, .modal-footer {    
     display: table; text-align: center;  
     border-radius: 5px; margin: 0;
@@ -393,16 +413,16 @@ header {
 #imgPopUpModal .modal-body { /* Modal Body */     
     margin: 0; cursor: zoom-in;
 }
-.modal-content span { /* Modal Instructions */
+.modal-content .span-info { /* Modal Instructions */
     padding: 0.2rem; margin-top: 10px; border: 0;
-    font-size: 11px; color: #4B7F83; box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;     
-    border-bottom: 2px dotted #4B7F83; border-top: 2px dotted #4B7F83;
+    font-size: 11px; color: #F4F6F7; background-color: #6CC6C9; box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;   animation: blink 1s infinite step-end reverse;  
+    border-bottom: 2px dotted black; border-top: 2px dotted black
 }
 .modal-content .zoomout { /* Modal Close Magnifying Glass */
     cursor: zoom-out; font-size: 15px;
     border: 0; padding: 0 0.2rem 0 0.2rem; 
-    background-color: transparent; color: #4B7F83; 
+    background-color: transparent; color: #F4F6F7; 
     font-size: 14px; transition: 0.3s;        
 }
 .modal-content .zoomout:hover {
@@ -646,7 +666,7 @@ footer { /* Footer content */
     .contact-form h1 { font-size: 15px; margin-bottom: 5px; }
     #c-form label, #c-form input, #c-form textarea { font-size: 12px; } 
     .contact-form #emailHelp { font-size: 8px; padding-bottom: 1.2rem; }
-    .contactme .icons { margin-top: 10px; min-width: fit-content; }
+    .contactme .icons { margin-top: 10px; max-width: fit-content; }
     .contactme .icons p { font-size: 11px; }
     /* Footer */
     .footer-content .menu li { margin: 0 7px; }
