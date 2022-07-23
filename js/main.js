@@ -2,7 +2,7 @@
 $(window).on('load', function () {
     setTimeout(function () {
         $('#loading').hide("fast");
-    }, 3500);
+    }, 3000);
 })
 
 /* Resalta en la navbar la sección en la que se encuentra */
@@ -46,13 +46,23 @@ window.addEventListener('scroll', e => {
 /* Para activar el plugin de Google Translate al dar clic sobre una imagen */
 const img = document.querySelector('.img-item');
 img.addEventListener('click', googleTranslateElementInit) 
-function googleTranslateElementInit() {    
+function googleTranslateElementInit() {
     new google.translate.TranslateElement({
         pageLanguage: 'es',
         includedLanguages: 'en,es',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false        
-    },'google_translate_element');
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false
+    }, 'google_translate_element');
 }
+$(document).ready(function () {
+    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('Traducir / Translate');
+        $('.goog-te-menu-frame.skiptranslate').on('load', function () {
+            setTimeout(function () {
+                $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('Traducir / Translate');
+            }, 100);
+        });
+    });
+});
 /* Función que deshabilita el plugin de Google Translate y abajo se especifica que al cerrar el modal */
 function disableGoogleTranslate() {
     var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];

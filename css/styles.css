@@ -368,38 +368,17 @@ header {
 .portafolio .p-card .p-icons a { color: white; }
 
 /* --------------------------------------------------------------- Modal ---------------------------------------------------------------- */
-.modal-content { background-color: #F4F6F7; }
+.modal-content { background-color: #F4F6F7; border: 1px solid white; box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);  }
 .modal .modal-dialog {
-    min-width: 85%; border-radius: 5px;    
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);    
+    min-width: 85%; border-radius: 5px;       
     overflow-y: initial !important 
 }
-/* ------------------------ GOOGLE TRANSLATE ELEMENT -------------------- */
-#google_translate_element { 
-    width: 100%; font-size: 11px;
-    border-radius: 5px; padding: 0.2rem; margin-top: 5px;
-    color: #4B7F83; background-color: white; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
-}
-#google_translate_element:before {
-    content: "Traducir ->"; margin: 0 auto;   
-}
-#google_translate_element:after {
-    content: "<- Translate"; margin: 0 auto;
-}
-
-.goog-logo-link {
-    display:none !important;
-}     
-.goog-te-gadget { color: transparent !important; }
-
-.goog-te-banner-frame.skiptranslate { display: none !important; }
-
 #imgPopUpModal .modal-header, .modal-footer {    
     display: table; text-align: center;  
     border-radius: 5px; margin: 0;
     position: relative;
 }
-#imgPopUpModal .modal-header h6 { /* Modal Title */
+#imgPopUpModal .modal-header h6, .modal-footer>p { /* Modal Title */
     display: table-cell; width: 100%; 
     font-size: 11px; line-height: 13px;
 }
@@ -413,16 +392,35 @@ header {
 #imgPopUpModal .modal-body { /* Modal Body */     
     margin: 0; cursor: zoom-in;
 }
-.modal-content .span-info { /* Modal Instructions */
+/* ----------------------------------------------- GOOGLE TRANSLATE ELEMENT ------------------------------------------------- */
+#google_translate_element { /* GooTr- Div*/
+    width: 100%; font-size: 11px;
+    border-radius: 5px; padding: 0.2rem; margin-top: 5px; border: none;
+    color: #4B7F83; background-color: transparent; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+}
+#google_translate_element>span { margin-right: 10px; }
+#google_translate_element>span>i { font-size: 35px; } 
+.goog-te-gadget-simple { /* GooTr-Box*/
+    background-color:white !important; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    padding: 0.2rem; border-radius: 5px; transition: 0.3s;
+}
+.goog-te-gadget-simple:hover{border: 2px solid #6CC6C9;}
+.goog-te-gadget-simple a.goog-te-menu-value span{color:#4B7F83; font-size: 11px;} /* GooTr-Box text*/
+/* #google_translate_element:before { content: "Traducir ->"; margin: 0 auto; }
+#google_translate_element:after { content: "<- Translate"; margin: 0 auto; } */
+.goog-logo-link { display:none !important; } 
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+
+.modal-content .span-info { /* Modal Magnifying Glass Instructions */
     padding: 0.2rem; margin-top: 10px; border: 0;
-    font-size: 11px; color: #F4F6F7; background-color: #6CC6C9; box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-    text-align: center;   animation: blink 1s infinite step-end reverse;  
-    border-bottom: 2px dotted black; border-top: 2px dotted black
+    font-size: 11px; color: white; background-color: #4B7F83; box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    text-align: center;   animation: blink 1s infinite step-end normal;  
+    border-bottom: 2px dotted white; border-top: 2px dotted white;
 }
 .modal-content .zoomout { /* Modal Close Magnifying Glass */
     cursor: zoom-out; font-size: 15px;
     border: 0; padding: 0 0.2rem 0 0.2rem; 
-    background-color: transparent; color: #F4F6F7; 
+    background-color: transparent; color: white; 
     font-size: 14px; transition: 0.3s;        
 }
 .modal-content .zoomout:hover {
@@ -437,7 +435,7 @@ header {
     border-radius: 50%; cursor: move;   
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
-#imgPopUpModal .img-modal, .modal-footer p { width: 100%; font-size: 12px; } /* Modal Magnifying Glass Instructions */
+#imgPopUpModal .modal-footer { margin-top: 5px; }
 
 /* ------------------------------------------------------------- SKILLS --------------------------------------------------------------- */
 .skills-cards { padding: 1em; }
@@ -666,7 +664,7 @@ footer { /* Footer content */
     .contact-form h1 { font-size: 15px; margin-bottom: 5px; }
     #c-form label, #c-form input, #c-form textarea { font-size: 12px; } 
     .contact-form #emailHelp { font-size: 8px; padding-bottom: 1.2rem; }
-    .contactme .icons { margin-top: 10px; max-width: fit-content; }
+    .contactme .content .icons { margin-top: 10px; min-width: 300px; max-width: 305px; }
     .contactme .icons p { font-size: 11px; }
     /* Footer */
     .footer-content .menu li { margin: 0 7px; }
@@ -692,8 +690,7 @@ footer { /* Footer content */
     .portafolio .p-card .content .p-tec-svg-icons { min-width: 30px;  min-height: 30px; }
     .portafolio .p-cards-container #show-more-btn[data-title]:hover::after { font-size: 9px; }
     /* Portafolio Modal */
-    /* .modal .modal-content { height: 100vh; } */
-    #imgPopUpModal .modal-header>h6, .modal-content>span, .modal-footer>p { font-size: 8px; }
+    #imgPopUpModal .modal-header>h6, .modal-content>.span-info, .modal-footer>p { font-size: 9px; }
     .modal-content .zoomout { font-size: 12px; }
     .img-magnifier-glass { width: 135px; height: 135px; }
     /* Footer */
@@ -702,8 +699,9 @@ footer { /* Footer content */
   }
 
 @media screen and (max-width: 800px) {
-    /* Portafolio */
-    #imgPopUpModal .modal-body { max-height: 300px; overflow-y: auto; }
+    /* Portafolio Modal */
+    #imgPopUpModal .modal-body { max-height: 300px; overflow-y: auto; }     
+    /* #google_translate_element:before, #google_translate_element:after { content: ""; } */
     /* Skills */
     .skills-cards .card-skills { width: calc(100% * (1/4) - 20px - 5px); } 
     .card-skills { width: 80px; height: 80px; }
