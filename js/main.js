@@ -1,29 +1,31 @@
-/* Oculta la animación al cargar toda la página y además le agrega 4s */
 $(window).on('load', function () {
-    setTimeout(function () {
-        $('#loading').hide("fast");
-    }, 3000);
+    /* Oculta el gif al cargar toda la página y agrega 3s como plus */
+    setTimeout(function() {        
+        $('#loading').hide("fast");                             
+    }, 3000);    
 })
 
-/* Resalta en la navbar la sección en la que se encuentra */
 $(document).ready(function () {
+    /* Resalta en la navbar la sección en la que se encuentra */
     $('.navbar').on('click', 'a', function () {
         $('.navbar a.active').removeClass('active');
         $(this).addClass('active');
     });
     $('body').scrollspy({ target: '.navbar' });
 
-    /* Efecto parallax del footer */
-    siteFooter();	
-	$(window).resize(function() { 
-        siteFooter(); 
-    });	
-	function siteFooter() {
-		var siteContent = $('.main');
-		var siteFooter = $('#footer');
-		var siteFooterHeight = siteFooter.height();
-		siteContent.css({ "margin-bottom" : siteFooterHeight + 50 });
-	};
+    /* Oculta el gadget de Google Translate */
+    $(".goog-logo-link").empty();
+    $('.goog-te-gadget').html($('.goog-te-gadget').children());
+
+    /* Cambia el texto de la barra de Google Translate */
+    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+        $('.goog-te-menu-value span:first').html('Translate');
+        $('.goog-te-menu-frame.skiptranslate').on('load', function () {
+            setTimeout(function () {
+                $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('Translate');
+            }, 100);
+        });
+    });
 })
 
 /* Botón Scroll To Top */
@@ -43,56 +45,6 @@ window.addEventListener('scroll', e => {
     };
 })).observe(document.querySelector('.trigger'));
 
-/* Para activar el plugin de Google Translate al dar clic sobre una imagen */
-const img = document.querySelector('.img-item');
-img.addEventListener('click', googleTranslateElementInit) 
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'es',
-        includedLanguages: 'en,es',
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE, autoDisplay: false
-    }, 'google_translate_element');
-}
-$(document).ready(function () {
-    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
-        $('.goog-te-menu-value span:first').html('Traducir / Translate');
-        $('.goog-te-menu-frame.skiptranslate').on('load', function () {
-            setTimeout(function () {
-                $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('Traducir / Translate');
-            }, 100);
-        });
-    });
-});
-/* Función que deshabilita el plugin de Google Translate y abajo se especifica que al cerrar el modal */
-function disableGoogleTranslate() {
-    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
-    if (!iframe) return;
-    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
-    var restore = innerDoc.getElementsByTagName("button");
-    for (var i = 0; i < restore.length; i++) {
-        if (restore[i].id.indexOf("restore") >= 0) {
-            restore[i].click();
-            var close = innerDoc.getElementsByClassName("goog-close-link");
-            close[0].click();
-            return;
-        }
-    }
-}
-const ImageModal = document.getElementById('imgPopUpModal')
-ImageModal.addEventListener('hidden.bs.modal', disableGoogleTranslate);
-
-/* Obtiene el atributo src de la imagen seleccionada para pasarla al modal y mostrarlo */
-document.addEventListener("click", function(e) {
-    if (e.target.classList.contains('img-item')) {           
-        const src = e.target.getAttribute('src');        
-        document.querySelector('.img-modal').src = src; 
-        const myModal = new bootstrap.Modal(document.getElementById('imgPopUpModal'));        
-        $("#imgPopUpModal p").text($(e.target).attr('alt')); /* Se pasa el valor de 'alt' de la imagen al elemento <p> */
-        $("#imgPopUpModal h6").text($(e.target).attr('data-title')); /* Se pasa el valor de 'title' de la imagen al elemento <h6> */
-        myModal.show();        
-     }     
-});
-
 /* Hace zoom a la imagen de las cards del portafolio cada que se pone el cursor */
 $(".img-item").hover(function() {
     $(this).closest(".img-item").css("z-index", 1);    
@@ -102,7 +54,44 @@ $(".img-item").hover(function() {
     $(this).animate({ height: "200", width: "300" }, "fast");
 });
 
-/* Función del botón para mostrar/ocultar los proyectos */
+/* Obtiene el atributo src, alt y title de la imagen seleccionada para pasarla al modal y mostrarlo */
+document.addEventListener("click", function(e) {
+    if (e.target.classList.contains('img-item')) {       
+        const src = e.target.getAttribute('src');
+        document.querySelector('.img-modal').src = src; 
+        const myModal = new bootstrap.Modal(document.getElementById('imgPopUpModal'));        
+        $("#imgPopUpModal p").text($(e.target).attr('alt')); /* Se pasa el valor de 'alt' de la imagen al elemento <p> */
+        $("#imgPopUpModal h6").text($(e.target).attr('data-title')); /* Se pasa el valor de 'title' de la imagen al elemento <h6> */
+        myModal.show();
+     }     
+});
+
+/* Activa el la barra de Google Translate al dar clic sobre una imagen */
+$('.img-item').on('click', function() {
+    new google.translate.TranslateElement({
+        pageLanguage: 'es',
+        includedLanguages: 'en,es',
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+    }, 'google_translate_element');
+});
+/* Función que restaura el idioma original, ya sea data-es o data-en, al cerrar el modal */
+const ImageModal = document.getElementById('imgPopUpModal')
+ImageModal.addEventListener('hidden.bs.modal', function () {    
+    var iframe = document.getElementsByClassName('goog-te-banner-frame')[0];
+    if (!iframe) return;
+    var innerDoc = iframe.contentDocument || iframe.contentWindow.document;
+    var restore = innerDoc.getElementsByTagName("button");
+    for (var i = 0; i < restore.length; i++) {
+        if (restore[i].id.indexOf("restore") >= 0) {
+            restore[i].click();
+            var close = innerDoc.getElementsByClassName("goog-close-link");
+            close[0].click();            
+            return;
+        }
+    }    
+});
+
+/* Función del botón para mostrar y ocultar los demás proyectos */
 function showMoreProjects() {
     var cardsVisible = document.getElementById("visible");
     var cardsHidden = document.getElementById("hidden");
@@ -131,7 +120,7 @@ function onSubmit(event) {
     const btnHtmlElements = btnSendEmail.html() // Almacena las caracteristicas del botón    
     $(btnSendEmail).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>&nbsp; Procesando...').prop('disabled', true)
     
-    /* Función que agrega un spinner antes de completar el envío del formulario */
+    /* Función que agrega un spinner y texto al botón antes de completar el envío del formulario */
     setTimeout(function () {
         $(btnSendEmail).html(btnHtmlElements).prop('disabled', false) // Regresa el btn a como estaba originalmente
         btnEmailTo.setAttribute('href', `mailto:mauba22@outlook.com?subject=Quiero contactar: ${form.get('name')} - ${form.get('email')}&body=${form.get('message')}`)
@@ -139,7 +128,7 @@ function onSubmit(event) {
     }, 4000) 
 }
 
-/* Función para copiar el email al portapapeles */
+/* Función para copiar texto al portapapeles */
 function copyEmail() {
     var copyText = document.getElementById("email-copy");
     copyText.select();
@@ -160,11 +149,11 @@ function modalSpinner() {
 function switchLang(lang) {
     $("[data-" + lang + "]").text(function(i, e) { 
         return $(this).data(lang); 
-    });    
+    });
 }
 switchLang("es");
 /* Ejecuta la función para traducir y muestra el modal de carga al mismo tiempo */
 $(".switchlang").click(function() {
     modalSpinner();  
-    switchLang($(this).data("lang"))    
+    switchLang($(this).data("lang"))
 });

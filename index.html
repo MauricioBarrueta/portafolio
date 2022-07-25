@@ -28,7 +28,8 @@
     </div>
 
     <!-- Bóton para regresar al inicio -->
-    <button class="ScrollToTop btn b-color-4B7 transition04" title="Volver al inicio / Back to top">
+    <button class="ScrollToTop btn b-color-4B7 transition04" data-bs-toggle="tooltip" data-bs-placement="top" 
+      data-bs-custom-class="p-tec-tooltip" title="Inicio / Top">
       <i class="fa-solid fa-arrow-up fa-bounce"></i>     
     </button>  
        
@@ -42,7 +43,10 @@
           <h1 class="radius-padding b-color-4B7"><i class="fa-solid fa-terminal fa-fw"></i><span data-es="'Hola Mundo!!'_" data-en="'Hello World!!'_"></span></h1>
         </div>
         <div class="h-subtitle">
-          <h5 class="radius-padding b-color-6CC" data-es="if(Desarrollador == true){ //Inicia el if" data-en="if(Developer == true){ //Start if"></h5>
+          <h5 class="radius-padding b-color-6CC" 
+          data-es="if(Desarrollador == true){ //Inicio del if" 
+          data-en="if(Developer == true){ //Start if statement">
+          </h5>
         </div>  
         <div class="content">
           <div class="h-back radius-padding b-color-4B7 transition04">
@@ -62,7 +66,7 @@
           </div>
         </div>
   
-        <h5 class="radius-padding b-color-6CC" id="h5-final"><span data-es="} //Termina el if" data-en="} //End if"></span> </h5>
+        <h5 class="radius-padding b-color-6CC" id="h5-final"><span data-es="} //Termina el if" data-en="} //End if statement"></span> </h5>
         <a href="#contactme" class="btn-h-contact btn radius-padding"><span data-es="Contáctame" data-en="Contact me"></span></a>       
       </section>
     </header>      
@@ -112,21 +116,23 @@
     <!-- Sobre mí -->
     <section class="aboutme" id="aboutme">
       <div class="content" data-aos="fade-up">
-        <img src="img/fondo.jpg" alt="">
+        <div class="abtme-img-container radius10-padding1">
+          <img src="img/me.png" alt="">
+        </div>        
         <div class="abtm-text radius10-padding1">
-          <h1 class="radius-padding b-color-4B7"><i class="fa-solid fa-address-card fa-flip" style="--fa-animation-duration: 2s;"></i>&nbsp;
+          <h1 class="radius-padding b-color-4B7"><i class="fa-solid fa-address-card fa-beat-fade"></i>&nbsp;
             <span data-es="Sobre mí" data-en="About me"></span>
           </h1>                   
           <h5 class="radius-padding b-color-6CC" data-es="Me llamo Edgar Mauricio Barrueta Aguirre" data-en="My name is Edgar Mauricio Barrueta Aguirre"></h5>
           <pre 
-            data-es="Soy un desarrollador que por lo general usa lenguaje Java para programar, ya que la mayoría de mis proyectos tanto aplicaciones de escritorio, páginas web y aplicaciones móviles tienen como base dicho lenguaje pero, como cualquier otro programador, me apasiona usar, y sobre todo aprender, nuevos lenguajes y nuevos frameworks. 
-              Egresado desde el año 2020 y desempleado desde entonces, durante todo este tiempo 'libre' me he dedicado a adquirir nuevos conocimientos por mi cuenta, que pienso yo sería una de mis cualidades más importantes, ya que varias de las habilidades con las que cuento las he aprendido gracias a eso, muchas de ellas solamente lo más basico y otras con conocimientos más avanzados.
+            data-es="Soy un desarrollador que principalmente usa el lenguaje Java para programar, como se puede apreciar en la mayoría de mis proyectos, tanto aplicaciones de escritorio, páginas web y aplicaciones móviles, pero al igual que cualquier otro programador, me gusta usar, y sobre todo aprender, nuevos lenguajes y nuevos frameworks. 
+              Egresado de la Ingeniería en TIC desde el año 2020, desde entonces me he dedicado a estudiar y adquirir más conocimientos por mi cuenta, ya que una de mis cualidades es precisamente esa, que me gusta ser autodidacta y gracias a eso he adquirido nuevas habilidades, algunas solamente las más básicas y otras un poco más 'avanzadas'. 
               
-              Entre el desarrollo para multiples plataformas destacaría el desarrollo de páginas web, ya que, actualmente, una buena página web es fundamental para cualquier tipo de empresa, además el hecho de ver como el simple código en HTML poco a poco empieza a tomar forma, y el hecho de que en la web existen miles de librerías para poder aplicar estilos, provoca cierta satisfacción."
-            data-en="I'm a developer who usually uses the Java language to develop, since most of my projects, both as desktop applications, web pages and mobile applications, are based on this language but, like any other developer, I like to use, and especially learn, new languages ​​and new frameworks.
-              Graduated since 2020 and unemployed since then, during all this 'free' time I've dedicated to acquiring new knowledge on my own, which I think would be one of my most important qualities, since several of my skills I have learned thanks to that, some of them only the most basic knowledge and others more advanced.
+              Entre el desarrollo para las distintas plataformas elegiría en primer lugar el desarrollo web, la razón sería el hecho de que actualmente una buena página web es fundamental para cualquier tipo de empresa, y personalmente disfruto mucho todo el proceso de ver cómo es que la página poco a poco empieza a tomar forma, tanto del lado back end como del lado front end."
+            data-en="I'm a developer who mainly uses Java language to develop, as can be seen in most of my projects, both as desktop applications, web pages and mobile applications, but like any other developer, like any other developer, I like to use, and especially learn, new languages ​​and new frameworks.
+              Graduated of Degree in ICT on 2020, since then I've dedicated to studying and acquiring more knowledge on my own, cos one of my qualities is precisely that, I like to be self-taught, and thanks to that I've acquired new skills, some just the most basic knowledge and others a little more 'advanced'.
             
-              Among the development for multiple platforms, I'd highlight web development, since, at present, a good web page is essential for any type of company, in addition to that, seeing how the simple HTML code little by little begins to taking shape, and thanks to the fact that there're thousands of libraries on the web to apply styles, it causes a certain kind of satisfaction.">
+              Among the development for the different platforms, I'd choose web development in the first place, the reason would be the fact that at present, a good web page is essential for any type of company, and personally I really enjoy the whole process of seeing how the page gradually begins to taking shape, both Back-end side and Front-end side.">
           </pre>
           <div class="abtm-footer radius-padding b-color-6CC">
             <h6>Hobbies:</h6>
@@ -681,7 +687,7 @@
   
     <!-- Hablilidades -->  
     <section class="skills-cards" id="skills-cards" data-aos="fade-up">
-      <h3 class="sectionTitles">Habilidades</h3>
+      <h3 class="sectionTitles" data-es="Habilidades" data-en="Skills"></h3>
       <div class="cards-container">
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Java">
           <img alt="" class="Java-Icon position-absolute top-50 start-50 translate-middle">
@@ -979,16 +985,16 @@
           <i class="fa-solid fa-envelope fa-beat" style="--fa-beat-scale: 1.2;"></i>
         </h1>        
         <form id="c-form" action="">
-          <label for="name" class="form-label" data-es="Nombre completo" data-en="Full name"></label><span>*</span>
+          <label for="name" class="form-label" data-es="Nombre completo / Empresa:" data-en="Full name / Company:"></label><span>*</span>
           <div class="input-group mb-3">
             <span class="input-group-text" id="name-icon"><i class="fa-solid fa-user"></i></span>
-            <input name="name" id="name" type="text" class="form-control" placeholder="Escribe aquí tu nombre" 
+            <input name="name" id="name" type="text" class="form-control" placeholder="Escribe tu nombre/Write your name"
               aria-describedby="name-icon" required>
           </div>
-          <label for="email" class="form-label">E-mail</label><span>*</span>
+          <label for="email" class="form-label">E-mail:</label><span>*</span>
           <div class="input-group mb-3">
             <span class="input-group-text" id="icon-email"><i class="fa-solid fa-at"></i></span>
-            <input name="email" id="email" type="email" class="form-control" placeholder="Ejemplo: email@email.com" 
+            <input name="email" id="email" type="email" class="form-control" placeholder="Ejemplo/Example: email@email.com" 
               aria-describedby="icon-email" required>                         
           </div>
           <div id="emailHelp" for="email" class="form-text" data-es="No compartiremos tu correo con nadie más" 
@@ -996,7 +1002,7 @@
           </div>          
           <div class="form-floating">            
             <textarea name="message" class="form-control" id="message" placeholder="Mensaje:" required></textarea>
-            <label for="message" data-es="Texto" data-en="Message"></label>
+            <label for="message" data-es="Texto:" data-en="Message:"></label>
           </div>
           <button id="btnSendEmail" class="btn"><span data-es="Enviar" data-en="Send"></span></button>          
         </form>
@@ -1038,29 +1044,31 @@
     </section>
   </div>
   <!-- Portafolio Image Modal -->
-  <div class="modal fade" id="imgPopUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
-    data-bs-backdrop="static" data-bs-keyboard="false">
-    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-      <div class="modal-content">
-        <div class="modal-header b-color-4B7">
-          <h6> </h6>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Cerrar - Close"></button>          
-        </div>
-        <div id="google_translate_element"><span> <!-- Google Translate Plugin -->
-          <i class="fa-solid fa-language fa-flip" style="--fa-flip-x: 1; --fa-flip-y: 0; --fa-animation-duration: 3s;"></i></span>
-        </div>
-        <span class="alert alert-light span-info" role="alert">Toca la imagen para activar la lupa - Toca el siguiente ícono para desactivarla:
-          <button class="zoomout" title="Desactivar lupa"><i class="fa-solid fa-magnifying-glass-minus fa-shake"></i></button>
-        </span>
-        <div class="modal-body img-magnifier-container radius-padding ">
-          <img id="myimage" class="img-modal" src="" alt="">
-        </div>
-        <div class="modal-footer b-color-6CC">
-          <p> </p>
+  <div class="modal fade" id="imgPopUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" 
+      data-bs-backdrop="static" data-bs-keyboard="false">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div class="modal-header b-color-4B7">             
+            <h6> </h6>                   
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Cerrar - Close"></button> <!--btn-close-white-->
+          </div>
+          <div id="google_translate_element"> <!-- Google Translate Plugin -->
+            <span data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="m-gt-tooltip" title="Para traducir el texto a inglés">
+              <i class="fa-solid fa-language fa-shake"></i>
+            </span>
+          </div>
+          <span class="alert alert-light span-info" role="alert">Toca la imagen para activar la lupa - Toca el siguiente ícono para desactivarla:
+            <button class="zoomout" title="Desactivar lupa"><i class="fa-solid fa-magnifying-glass-minus fa-shake"></i></button>
+          </span>          
+          <div class="modal-body img-magnifier-container radius-padding ">
+            <img id="myimage" class="img-modal" src="" alt="">
+          </div> 
+          <div class="modal-footer b-color-6CC">
+            <p> </p>
+          </div>         
         </div>
       </div>
     </div>
-  </div>
   
   <!-- Footer -->
   <footer id="footer">
@@ -1070,14 +1078,15 @@
         <a href="#" title="Spotify"><i class="fab fa-spotify"></i></a>
         <a href="#" title="YouTube"><i class="fab fa-youtube"></i></a>        
         <a href="#" title="Reddit"><i class="fab fa-reddit"></i></a>
+        <a href="#" title="Stack-Overflow"><i class="fab fa-stack-overflow"></i></a>
       </div>
       
       <ul class="menu radius-padding b-color-4B7">
-        <li><a href="#h-introduccion">Inicio</a></li>
-        <li><a href="#aboutme">Sobre mí</a></li>
-        <li><a href="#portafolio">Portafolio</a></li>
-        <li><a href="#skills-cards">Habilidades</a></li>
-        <li><a href="#contactme">Contacto</a></li>
+        <li><a href="#h-introduccion"><span data-es="Inicio" data-en="Home"></span></a></li>
+        <li><a href="#aboutme"><span data-es="Sobre mí" data-en="About me"></span></a></li>
+        <li><a href="#portafolio"><span data-es="Portafolio" data-en="Portfolio"></span></a></li>
+        <li><a href="#skills-cards"><span data-es="Habilidades" data-en="Skills"></span></a></li>
+        <li><a href="#contactme"><span data-es="Contáctame" data-en="Contact me"></span></a></li>
       </ul>       
       <p data-es="Página desarrollada por:" data-en="Web page developed by:"></p>
     </div>
