@@ -30,7 +30,7 @@
     <!-- Bóton para regresar al inicio -->
     <button class="ScrollToTop btn b-color-4B7 transition04" title="Volver al inicio / Back to top">
       <i class="fa-solid fa-arrow-up fa-bounce"></i>     
-    </button>  
+    </button>   
        
     <!-- Header -->
     <header id="h-introduccion">
@@ -49,19 +49,19 @@
         </div>  
         <div class="content">
           <div class="h-back radius-padding b-color-4B7 transition04">
-            <span class="transition04">Back end</span>
+            <span class="transition04 back">Back end</span>
             <p class="transition04" 
-              data-es="Principalmente asumo el rol de desarrollador, ya que no tengo mucha experiencia en la parte del servidor de base de datos"
-              data-en="I mainly assume the developer role, cos I don't have much experience in the database server part"></p>
+              data-es="Principalmente asumiendo el rol de desarrollador, me encargo de crear el puente (API) entre el servidor de base de datos y el lado de la interfaz, lo que el usuario verá, implementando las funciones que la página, o aplicación, necesita para funcionar"
+              data-en="Mainly assuming the role of developer, I'm in charge of creating the bridge (API) between the database server and the interface side, what the user will see, implementing the functions that the page, or application, needs to run"></p>
           </div>
           <div class="h-image">
-            <img src="img/fondo.jpg" alt="">
+            <img src="img/back-front.gif" alt="">
           </div>
           <div class="h-front radius-padding b-color-4B7 transition04">
-            <span class="transition04">Front end</span>
+            <span class="transition04 front">Front end</span>
             <p class="transition04" 
-              data-es="Diseño y desarrollo de la interfaz gráfica para el usuario (GUI), claramente no a un nivel 'profesional' pero se hace el intento"
-              data-en="Design and development of the Graphical User Interface (GUI), clearly not on a 'professional' level but the attempt is made"></p>
+              data-es="Enfocado en los roles del maquetador y del desarrollador, en el maquetado, se diseña y crea la interfaz gráfica sin ninguna función, del lado como desarrollador, se crea toda la funcionalidad de la interfaz, es aquí donde se crea el puente con el lado Back-end" 
+              data-en="Focused on the roles of the layout designer and developer, in the layout the GUI is designed and created without any type of function, on developer side, all the functionality of the interface is created, this's where the bridge with the Back-end side is created"></p>
           </div>
         </div>
   
@@ -685,294 +685,311 @@
     </section>    
   
     <!-- Hablilidades -->  
-    <section class="skills-cards" id="skills-cards" data-aos="fade-up">
-      <h3 class="sectionTitles" data-es="Habilidades" data-en="Skills"></h3>
-      <div class="cards-container">
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Java">
-          <img alt="" class="Java-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"
-              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="JavaScript">
-          <img alt="" class="JavaScript-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">        
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
-              aria-valuemin="0" aria-valuemax="100">70%</div>        
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="TypeScript">
-          <img alt="" class="TypeScript-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="C#">
-          <img alt="" class="C-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%"
-              aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="PHP">
-          <img alt="" class="PHP-Icon position-absolute top-50 start-50 translate-middle" style=" padding-top: 1em">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 65%"
-              aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="HTML">
-          <img alt="" class="HTML-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%"
-              aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="CSS">
-          <img alt="" class="CSS-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%"
-              aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="SASS">
-          <img src="svg/SASS.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="jQuery">
-          <img alt="" class="jQuery-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%"
-              aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="AJAX">
-          <img alt="" class="AJAX-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%"
-              aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="JSON">
-          <img alt="" class="JSON-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"
-              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="XML">
-          <img src="svg/XML2.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"
-              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>            
-          </div>
-        </div>
-        <!-- Frameworks -->
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Spring Framework">
-          <img alt="" class="Spring-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"
-              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Thymeleaf">
-          <img alt="" class=" Thymeleaf-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"
-              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Hibernate">
-          <img src="svg/Hibernate.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"
-              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Angular">
-          <img alt="" class="Angular-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Bootstrap">
-          <img alt="" class="Bootstrap-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">            
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%"
-              aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="Firebase">
-          <img alt="" class="Firebase-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%"
-              aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="React Native">
-          <img src="svg/React.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%"
-              aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="NodeJS">
-          <img src="svg/NodeJS.svg" alt="" class="position-absolute top-50 start-50 translate-middle" style="padding-top: 25px;">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
-              aria-valuemin="0" aria-valuemax="100">55%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="npm">
-          <img alt="" class="NPM-Icon position-absolute top-50 start-50 translate-middle" style="padding-top: 1.5rem;">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%"
-              aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">50%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="JUnit 5">
-          <img src="svg/JUnit.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Mockito">
-          <img src="svg/Mockito.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Docker">
-          <img src="svg/Docker.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%"
-              aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="JSON Web Token">
-          <img alt="" class="JWT-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Git - Git Bash">
-          <img src="svg/Git.svg" alt="" class="position-absolute top-50 start-50 translate-middle" style="padding-top: 1.5rem;">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%"
-              aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="GitHub">
-          <img src="svg/GitHub.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%"
-              aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-          </div>
-        </div>
-        <!-- Herramientas -->
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Visual Studio Code">
-          <img src="svg/VSCode.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%"
-              aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="NetBeans IDE">
-          <img alt="" class="NetBeans-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%"
-              aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Eclipse IDE">
-          <img src="svg/Eclipse.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%"
-              aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Android Studio">
-          <img alt="" class="AStudio-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%"
-              aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>            
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Unity">
-          <img alt="" class=" Unity-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"
-              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-          </div>
-        </div>
-        <!-- Bases de Datos -->
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="WampServer - Apache">
-          <img src="svg/WAMP.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%"
-              aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="MySQL">
-          <img alt="" class="SQL-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%"
-              aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="PostgreSQL">
-          <img alt="" class="PostgreSQL-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Oracle Database">
-          <img src="svg/Oracle.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%"
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="SQLite">
-          <img src="svg/SQLite.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%"
-              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Postman">
-          <img alt="" class="Postman-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%"
-              aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="Linux - Terminal">
-          <img src="svg/Linux.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 55%"
-              aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">55%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Windows Terminal">
-          <img src="svg/WTerminal.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%"
-              aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
-          </div>
+  <section class="skills-cards" id="skills-cards" data-aos="fade-up"> 
+    <h3 class="sectionTitles" data-es="Habilidades" data-en="Skills"></h3>
+    <div class="cards-container">      
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Java">
+        <img alt="" class="Java-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">        
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">75%</div>        
         </div>
       </div>
-    </section>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Python">
+        <img alt="" class="Python-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 0%" aria-valuenow="0"
+            aria-valuemin="0" aria-valuemax="100"></div>
+            <small class="justify-content-center d-flex position-absolute w-100 pb-small-txt" data-es="En proceso.." data-en="In process.."></small>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="TypeScript">
+        <img alt="" class="TypeScript-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65"
+            aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="C#">
+        <img alt="" class="C-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+            aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="PHP">
+        <img alt="" class="PHP-Icon position-absolute top-50 start-50 translate-middle" style=" padding-top: 1em">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 60%" aria-valuenow="60"
+            aria-valuemin="0" aria-valuemax="100">60%</div>          
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="JavaScript">
+        <img alt="" class="JavaScript-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100">70%</div>          
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="jQuery">
+        <img alt="" class="jQuery-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="AJAX">
+        <img alt="" class="AJAX-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65"
+            aria-valuemin="0" aria-valuemax="100">65%</div>
+        </div>
+      </div>      
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="HTML">
+        <img alt="" class="HTML-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+            aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="CSS">
+        <img alt="" class="CSS-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+            aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="SASS">
+        <img src="svg/SASS.svg" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>      
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="JSON">
+        <img alt="" class="JSON-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="XML">
+        <img src="svg/XML.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <!-- Frameworks y Librerías -->
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Spring Framework">
+        <img alt="" class="Spring-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Thymeleaf">
+        <img alt="" class=" Thymeleaf-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>  
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Hibernate">
+        <img src="svg/Hibernate.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65"
+            aria-valuemin="0" aria-valuemax="100">65%</div>
+        </div>
+      </div>      
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Angular">
+        <img alt="" class="Angular-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Bootstrap">
+        <img alt="" class="Bootstrap-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+            aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="Firebase">
+        <img alt="" class="Firebase-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+            aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="React Native">
+        <img src="svg/React.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+            aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="JUnit 5">
+        <img src="svg/JUnit.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60"
+            aria-valuemin="0" aria-valuemax="100">60%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Mockito">
+        <img src="svg/Mockito.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="NodeJS">
+        <img src="svg/NodeJS.svg" alt="" class="position-absolute top-50 start-50 translate-middle" style="padding-top: 25px;" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+            aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="npm">
+        <img alt="" class="NPM-Icon position-absolute top-50 start-50 translate-middle" style="padding-top: 1.5rem;">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+            aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+      </div>      
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="JSON Web Token">
+        <img alt="" class="JWT-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60"
+            aria-valuemin="0" aria-valuemax="100">60%</div>
+        </div>
+      </div> 
+      <!-- Herramientas -->
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Git / Git Bash">
+        <img src="svg/Git.svg" alt="" class="position-absolute top-50 start-50 translate-middle" style="padding-top: 1.5rem;" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="GitHub">
+        <img src="svg/GitHub.svg" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Postman">
+        <img alt="" class="Postman-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Docker">
+        <img src="svg/Docker.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 0%" aria-valuenow="0"
+            aria-valuemin="0" aria-valuemax="100"></div>
+            <small class="justify-content-center d-flex position-absolute w-100 pb-small-txt" data-es="En proceso.." data-en="In process.."></small>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Visual Studio Code">
+        <img src="svg/VSCode.svg" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+            aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="NetBeans IDE">
+        <img alt="" class="NetBeans-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 85%" aria-valuenow="85"
+            aria-valuemin="0" aria-valuemax="100">85%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Eclipse IDE">
+        <img src="svg/Eclipse.svg" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Android Studio">
+        <img alt="" class="AStudio-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+            aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Unity">
+        <img alt="" class=" Unity-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>
+      <!-- Bases de Datos -->      
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="MySQL">
+        <img alt="" class="SQL-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+            aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="PostgreSQL">
+        <img alt="" class="PostgreSQL-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65"
+            aria-valuemin="0" aria-valuemax="100">65%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Oracle Database">
+        <img src="svg/Oracle.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60"
+            aria-valuemin="0" aria-valuemax="100">60%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="SQLite">
+        <img src="svg/SQLite.svg" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 80%" aria-valuenow="80"
+            aria-valuemin="0" aria-valuemax="100">80%</div>
+        </div>
+      </div>      
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="Linux / Terminal">
+        <img src="svg/Linux.svg" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" style="width: 55%" aria-valuenow="55"
+            aria-valuemin="0" aria-valuemax="100">55%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Windows Terminal">
+        <img src="svg/WTerminal.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+            <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+              aria-valuemin="0" aria-valuemax="100">75%</div>
+        </div>
+      </div>      
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Adobe Photoshop">
+        <img  alt="" class="Photoshop-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 0%" aria-valuenow="0"
+            aria-valuemin="0" aria-valuemax="100"></div>
+            <small class="justify-content-center d-flex position-absolute w-100 pb-small-txt" data-es="En proceso.." data-en="In process.."></small>
+        </div>
+      </div>      
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Microsoft Excel">
+        <img src="svg/Excel.svg"  alt="" class="position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 65%" aria-valuenow="65"
+            aria-valuemin="0" aria-valuemax="100">65%</div>
+        </div>
+      </div>    
+  </div>
+  </section>
   
     <!-- Contacto -->
     <section class="contactme" id="contactme" th:fragment="contact" data-aos="fade-up">

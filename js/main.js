@@ -1,8 +1,8 @@
 $(window).on('load', function () {
     /* Oculta el gif al cargar toda la página y agrega 3s como plus */
     setTimeout(function() {        
-        $('#loading').hide("fast");                             
-    }, 3000);    
+        $('#loading').hide("fast");                                     
+    }, 3000);      
 })
 
 $(document).ready(function () {
