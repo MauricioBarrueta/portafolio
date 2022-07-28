@@ -118,7 +118,7 @@ function onSubmit(event) {
     const form = new FormData(this)
     const btnSendEmail = $('#btnSendEmail')
     const btnHtmlElements = btnSendEmail.html() // Almacena las caracteristicas del botón    
-    $(btnSendEmail).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>&nbsp; Procesando...').prop('disabled', true)
+    $(btnSendEmail).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>').prop('disabled', true)
     
     /* Función que agrega un spinner y texto al botón antes de completar el envío del formulario */
     setTimeout(function () {
@@ -137,14 +137,6 @@ function copyEmail() {
     alert(copyText.value + " copiado al portapapeles");
 }
 
-/* Muestra un modal con un 'loader' por 3s al traducir la página */
-function modalSpinner() {
-    $('.modalSpinner').modal('show');
-    setTimeout(function () {        
-        $('.modalSpinner').modal('hide');
-    }, 3000);
- }
-
  /* Función para traducir entre español e inglés */
 function switchLang(lang) {
     $("[data-" + lang + "]").text(function(i, e) { 
@@ -157,3 +149,11 @@ $(".switchlang").click(function() {
     modalSpinner();  
     switchLang($(this).data("lang"))
 });
+
+/* Muestra un modal con un 'loader' por 3s al traducir la página */
+function modalSpinner() {
+    $('.modalSpinner').modal('show');
+    setTimeout(function () {        
+        $('.modalSpinner').modal('hide');
+    }, 3000);
+ }

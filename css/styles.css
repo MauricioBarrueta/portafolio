@@ -147,8 +147,10 @@ header {
     transform: translateY(0px); opacity: 1;
 }
 .h-introduccion .content .h-image img { /* Intr-Img */
-    height: auto; max-width: 350px; border-radius: 5px;     
+    height: auto; max-width: 350px; border-radius: 5px; cursor: pointer;     
 }
+img.h-image-img { content: url(../img/b-f.png); filter: blur(3px); transition: 0.3s; } /* Intr-Img-png */
+img.h-image-img:hover { content: url(../img/b-fgif.gif); filter: blur(0); } /* Intr-Img-gif */
 .h-introduccion .btn-h-contact { /* Intr-Contact Me Button with effect */     
     border: 1px solid white; 
     margin: 0 auto; width: fit-content;
@@ -440,7 +442,7 @@ iframe.goog-te-banner-frame{ display: none !important;}
 .img-magnifier-glass {
     width: 185px; height: 185px;
     position: absolute;
-    border: 5px solid #4B7F83; background-color: #F4F6F7; 
+    border: 5px solid #6CC6C9; background-color: #F4F6F7; 
     border-radius: 50%; cursor: move;   
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
