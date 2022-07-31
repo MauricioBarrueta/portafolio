@@ -106,6 +106,9 @@ function showMoreProjects() {
         cardsHidden.style.display = "flex"; cardsHidden.style.flexWrap = "wrap";
         cardsHidden.style.alignContent = "center"; cardsHidden.style.justifyContent = "space-around"; cardsHidden.style.gap = "15px";    
     }
+    if(btnShow.getAttribute("data-title", "Mostrar más - Show more") && cardsHidden.style.display === "none") {
+        document.querySelector('#portafolio').scrollIntoView({ behavior: 'smooth' });
+    }
 }
 
 /* Función que obtiene los datos del formulario para enviar el correo electrónico */

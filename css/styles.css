@@ -742,7 +742,7 @@ footer { /* Footer content */
     .aboutme .content .abtm-text .abtm-footer h6 { font-size: 12px; }
     /* Skills */
     .card-skills img { width: 50px; height: 50px; } 
-    .pb-small-txt { font-size: 5.3px; }
+    .pb-small-txt { font-size: 4.5px; padding: 0.2rem; }
     /* Footer */
     .footer-content .menu li { margin: 0 5px; }
     .footer-content .menu a { font-size: 7px; }
