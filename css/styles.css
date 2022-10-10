@@ -405,7 +405,7 @@ img.h-image-img:hover { content: url(../img/b-fgif.gif); filter: blur(0); } /* I
 #google_translate_element>span { margin-right: 10px; }
 .m-gt-tooltip .tooltip-inner { /* Modal Translate text-Icon Tooltip */  
     font-size: 10px; text-align: center;  
-    background-color: #6CC6C9; color: white;   
+    background-color: #4B7F83; color: white;   
     border: 1px solid white; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 #google_translate_element>span>i { font-size: 35px; cursor: help; } 
@@ -587,8 +587,8 @@ iframe.goog-te-banner-frame{ display: none !important;}
   /* Social Media-Icons & Text Colors*/
 .i-socialMedia .button:nth-child(1):hover .icon { background: #4267B2; } .button:nth-child(1) span { color: #4267B2; }
 .i-socialMedia .button:nth-child(2):hover .icon { background: #0e76a8; } .button:nth-child(2) span { color: #0e76a8; }
-.i-socialMedia .button:nth-child(3):hover .icon { background: #2AABEE; } .button:nth-child(3) span { color: #2AABEE; }
-.i-socialMedia .button:nth-child(4):hover .icon { background: #171515; } .button:nth-child(4) span { color: #171515; }
+.i-socialMedia .button:nth-child(3):hover .icon { background: #171515; } .button:nth-child(3) span { color: #171515; }
+.i-socialMedia .button:nth-child(4):hover .icon { background: #F47F24; } .button:nth-child(4) span { color: #F47F24; }
 .i-socialMedia .button:nth-child(5):hover .icon { background: #000000; } .button:nth-child(5) span { color: #000000; }
 
 /* ------------------------------------------------------ FOOTER PARALLAX EFFECT ------------------------------------------------------ */
