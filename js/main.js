@@ -72,15 +72,19 @@ $(".h-image-img").hover(function () {
     $(this).attr('src', '../img/static.png');
 });
 
+$('.h-image-img').bind('touchstart touchend', function(e) {
+    $(this).attr('src', $(this).data('hover'));
+})
+
 // var event = ('ontouchstart' in window) ? 'click' : 'mouseenter mouseleave';
 
-const gif = document.querySelector('.h-image-img');
-gif.addEventListener('touchstart', function () { 
-    gif.style.filter = "blur(0)";
-    gif.setAttribute('src', '../img/gif.gif')    
-    // $('.h-image-img').attr('src', '../img/gif.gif');
+// const gif = document.querySelector('.h-image-img');
+// gif.addEventListener('touchstart', function () { 
+//     gif.style.filter = "blur(0)";
+//     gif.setAttribute('src', '../img/gif.gif')    
+//     // $('.h-image-img').attr('src', '../img/gif.gif');
 
- })
+//  })
 // $('.h-image-img').on(event, function () {
 //     $(this).attr('src', '../img/gif.gif');
 // });
