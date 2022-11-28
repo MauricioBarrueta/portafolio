@@ -68,15 +68,29 @@ window.addEventListener("scroll", function () {
 /* Función que hace la transición de la imagen de la introducción, entre .png y .gif */
 $(".h-image-img").hover(function () {
     $(this).attr('src', '../img/gif.gif');
+    hola();
 }, function () {
     $(this).attr('src', '../img/static.png');
+    adios();
 });
 
-const imageOnPhone = document.querySelector('.h-image-img');
-imageOnPhone.addEventListener('touchstart', function () { 
+// const imageOnPhone = document.querySelector('.h-image-img');
+// imageOnPhone.addEventListener('touchstart', function () { 
+//     imageOnPhone.style.filter = "blur(0)";
+//     // imageOnPhone.src = '../img/gif.gif'; 
+//  })
+
+ const imageOnPhone = document.querySelector('.h-image-img');
+ function hola () { 
     imageOnPhone.style.filter = "blur(0)";
     imageOnPhone.src = '../img/gif.gif'; 
- })
+
+  }
+
+  function adios () {
+    imageOnPhone.style.filter = "blur(3px)";
+    imageOnPhone.src = '../img/static.png';
+  }
 
 
 
