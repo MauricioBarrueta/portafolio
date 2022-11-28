@@ -67,6 +67,11 @@ $(".h-image-img").hover(function () {
 }, function () {
     $(this).attr('src', '../img/static.png');
 });
+$(".h-image-img").click(function () {
+    $(this).attr('src', '../img/gif.gif');
+}, function () {
+    $(this).attr('src', '../img/static.png');
+});
 
 /* Función que permite regresar al inicio al dar clic en el botón */
 const btnScrollToTop = document.querySelector('.ScrollToTop');
