@@ -1,12 +1,12 @@
-// /* Evento que muestra un gif mientras se termina de cargar la página, además de mostrarlo por 3seg más */
-// $(window).on('load', function () { 
-//     setTimeout(function () {
-//         $('#loading').hide("fast");
-//         /* Se activa la animación del texto "Hola Mundo" y la Scroll Bar del navegador */
-//         $('.h1-h').css("animation-delay", "3.2s");
-//         $('html').css("overflow", "auto");
-//     }, 3000);
-// })
+/* Evento que muestra un gif mientras se termina de cargar la página, además de mostrarlo por 3seg más */
+$(window).on('load', function () { 
+    setTimeout(function () {
+        $('#loading').hide("fast");
+        /* Se activa la animación del texto "Hola Mundo" y la Scroll Bar del navegador */
+        $('.h1-h').css("animation-delay", "3.2s");
+        $('html').css("overflow", "auto");
+    }, 3000);
+})
 
 $(document).ready(function () {
     /* Se inicializa AOS Library */

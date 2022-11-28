@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /* --------------------------------------------------------------------- GENERAL ------------------------------------------------------ */
-/* html { overflow: hidden; } Oculta la ScrollBar mientras se carga la página */
+html { overflow: hidden; } /* Oculta la ScrollBar mientras se carga la página */
 html, body { /* Para darle efecto al Scroll vertical */
     scroll-behavior: smooth;  background-color: #F4F6F7;   
 } 
