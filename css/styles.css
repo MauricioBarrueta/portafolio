@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 /* --------------------------------------------------------------------- GENERAL ------------------------------------------------------ */
-html { overflow: hidden; } /* Oculta la ScrollBar mientras se carga la página */
+/* html { overflow: hidden; } Oculta la ScrollBar mientras se carga la página */
 html, body { /* Para darle efecto al Scroll vertical */
     scroll-behavior: smooth;  background-color: #F4F6F7;   
 } 
@@ -462,11 +462,9 @@ iframe.goog-te-banner-frame{ display: none !important;}
 }
 .img-magnifier-container { position: relative; } /* Modal Magnifying Glass */ 
 .img-magnifier-glass {
-    width: 185px; height: 185px;
-    position: absolute;
-    border: 8px solid #4B7F83; background-color: #F4F6F7; 
-    border-radius: 50%; cursor: move;   
-    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    width: 185px; height: 185px; position: absolute;
+    border: 5px solid #6CC6C9; border-radius: 50%; cursor: move;   
+    background-color: #F4F6F7; box-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
 }
 #imgPopUpModal .modal-footer { margin-top: 5px; }
 
@@ -743,7 +741,7 @@ footer { /* Footer content */
     .portafolio .p-cards-container #show-more-btn { width: 90%; }
     .portafolio .p-cards-container #show-more-btn[data-title]:hover::after { font-size: 9px; top: -60%;}
     /* Portafolio Modal */
-    #imgPopUpModal .modal-header>h6, .modal-content>.span-info, .modal-footer>p { font-size: 9px; }
+    #imgPopUpModal .modal-header>h6, .modal-content>.span-info, .modal-footer>p { font-size: 8px; line-height: 12px; }
     .modal-content .zoomout { font-size: 12px; }
     .img-magnifier-glass { width: 165px; height: 165px; }
     /* Footer */
@@ -757,34 +755,38 @@ footer { /* Footer content */
     /* Portafolio Modal */
     #imgPopUpModal .modal-body { max-height: 300px; overflow-y: auto; }  
     /* Skills */
-    .skills-cards .card-skills { width: calc(100% * (1/4) - 10px - 10px); } 
+    /* .skills-cards .card-skills { width: calc(100% * (1/4) - 10px - 10px); }  */
+    .skills-cards .card-skills { width: calc(100% * (1/6) - -30px - 30px); } 
+
     .card-skills { width: 80px; height: 80px; }
     .card-skills img { width: 70px; height: 70px; }      
 }
 
 @media screen and (max-width: 650px) {
     /* Header */
-    .scrolldown-wrapper { margin: -15px 0 0 200px !important; }  
+    .scrolldown-wrapper { left: 92% !important; bottom: -1.5%; }
     .scrolldown-wrapper .scrolldown {
         border: 2px solid #4B7F83 !important;	
         height: 35px !important; width: 25px !important;
         margin: 0 auto 8px;	text-align: center; border-radius: 30px;	
     }
+    .h-introduccion #h5-final, .h-introduccion .h-subtitle h5 { font-size: 10px; } 
     /* Modal Spinner */
-    .modalSpinner .fa-spin, .modalSpinner #spinnerSpan { font-size: 20px; }
+    .modalSpinner .fa-spin, .modalSpinner #spinnerSpan { font-size: 12.5px; }
     /* About me */
     .abtm-text { width: 100%; }        
     .abtm-text h1 { font-size: 16px; margin-bottom: 5px; }     
     .abtm-text h5 { font-size: 12px; text-align: center; margin-bottom: 5px; } 
-    .abtm-text pre { font-size: 9px; line-height: 160%; }  
+    .abtm-text pre { font-size: 9.5px; line-height: 172%; }  
     .aboutme .content .abtm-text .abtm-footer h6 { font-size: 12px; }
     /* Skills */
     .card-skills img { width: 50px; height: 50px; } 
     .pb-small-txt { font-size: 4.5px; padding: 0.2rem; }
     /* Contact */
     .contact-form { width: 100%; }
+    .contact-form h1 { font-size: 13px; margin-bottom: 5px; }
     /* Footer */
-    .footer-content .menu li { margin: 0 8px; }
+    .footer-content .menu li { margin: 0 6px 6px; }
     .footer-content .menu a { font-size: 7px; }
     .footer-content .menu a:hover { font-size: 7.2px; }
 }
