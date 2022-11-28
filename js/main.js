@@ -35,14 +35,18 @@ $(document).ready(function () {
 })
 
 /* Oculta la la lista de la barra de navegación cuando se encuentra desplegada (pantallas pequeñas) */
-const navbarLinks = document.querySelectorAll('.nav-link')
-const navbarToggler = document.getElementById('navbarNav')
-const bsNavbarCollapse = new bootstrap.Collapse(navbarToggler)
-navbarLinks.forEach((link) => {
-    link.addEventListener('click', () => { 
-        bsNavbarCollapse.toggle() 
-    });
-})
+// const navbarLinks = document.querySelectorAll('.nav-item')
+// const navbarToggler = document.querySelector('.navbar-collapse')
+// const bsNavbarCollapse = new bootstrap.Collapse(navbarToggler)
+// navbarLinks.forEach((link) => {
+//     link.addEventListener('click', () => { 
+//         bsNavbarCollapse.toggle() 
+//     });
+// })
+
+$('.navbar-nav>li>a').on('click', function(){
+    $('.navbar-collapse').collapse('hide');
+});
 
 /* Función que da el efecto 'parallax' a la imagen de fondo al hacer scroll */
 const parallaxMain = document.querySelectorAll('.main');
@@ -74,7 +78,7 @@ const gif = document.querySelector('.h-image-img');
 gif.addEventListener('touchstart', function () { 
     gif.style.filter = "blur(0)";
     gif.style.visibility = "visible";
-    gif.setAttribute('src', '../img/gif.gif')
+    // gif.setAttribute('src', '../img/gif.gif')
     // $(this).attr('src', '../img/gif.gif');
 
  })
