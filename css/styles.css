@@ -742,7 +742,7 @@ footer { /* Footer content */
     .portafolio .p-cards-container #show-more-btn[data-title]:hover::after { font-size: 9px; top: -60%;}
     /* Portafolio Modal */
     #imgPopUpModal .modal-header>h6, .modal-content>.span-info, .modal-footer>p { font-size: 8px; line-height: 12px; }
-    #imgPopUpModal .modal-header, .modal-footer { font-size: 7px; text-align: justify; padding: 0.5rem; }
+    #imgPopUpModal .modal-header, .modal-footer { font-size: 7px !important; padding: 0.5rem; }
     .modal-content .zoomout { font-size: 12px; }
     .img-magnifier-glass { width: 165px; height: 165px; }
     /* Footer */
