@@ -62,16 +62,19 @@ window.addEventListener("scroll", function () {
 })
 
 /* Función que hace la transición de la imagen de la introducción, entre .png y .gif */
+const gif = document.querySelector('.h-image-img');
 $(".h-image-img").hover(function () {
     $(this).attr('src', '../img/gif.gif');
 }, function () {
     $(this).attr('src', '../img/static.png');
 });
-$(".h-image-img").click(function () {
+
+gif.addEventListener('touchstart', function () { 
     $(this).attr('src', '../img/gif.gif');
-}, function () {
+ });
+ gif.addEventListener('touchend', function () {
     $(this).attr('src', '../img/static.png');
-});
+})
 
 /* Función que permite regresar al inicio al dar clic en el botón */
 const btnScrollToTop = document.querySelector('.ScrollToTop');
