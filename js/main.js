@@ -62,21 +62,25 @@ window.addEventListener("scroll", function () {
 })
 
 /* Función que hace la transición de la imagen de la introducción, entre .png y .gif */
-const gif = document.querySelector('.h-image-img');
 $(".h-image-img").hover(function () {
     $(this).attr('src', '../img/gif.gif');
 }, function () {
     $(this).attr('src', '../img/static.png');
 });
 
+// var event = ('ontouchstart' in window) ? 'click' : 'mouseenter mouseleave';
 
+const gif = document.querySelector('.h-image-img');
+gif.addEventListener('touchstart', function () { 
+    gif.style.filter = "blur(0)";
+    $(this).attr('src', '../img/gif.gif');
 
-// gif.addEventListener('touchstart', function () { 
+ })
+// $('.h-image-img').on(event, function () {
 //     $(this).attr('src', '../img/gif.gif');
-//  });
-//  gif.addEventListener('touchend', function () {
-//     $(this).attr('src', '../img/static.png');
-// })
+// });
+
+
 
 /* Función que permite regresar al inicio al dar clic en el botón */
 const btnScrollToTop = document.querySelector('.ScrollToTop');

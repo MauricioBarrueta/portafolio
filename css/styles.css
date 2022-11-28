@@ -159,7 +159,7 @@ header {
 .h-introduccion .content .h-image img { /* Intr-Img */
     height: auto; max-width: 350px; border-radius: 5px; cursor: pointer;     
 }
-img.h-image-img, img.h-image-img:disabled { filter: blur(3px); transition: 0.3s; }  /* Intr-Img-png */
+img.h-image-img { filter: blur(3px); transition: 0.3s; }  /* Intr-Img-png */
 img.h-image-img:hover, img.h-image-img:active { filter: blur(0); } /* Intr-Img-gif */
 
 .h-introduccion .btn-h-contact { /* Intr-Contact Me Button with effect */     
