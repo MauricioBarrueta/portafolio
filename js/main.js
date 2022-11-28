@@ -69,12 +69,14 @@ $(".h-image-img").hover(function () {
     $(this).attr('src', '../img/static.png');
 });
 
-gif.addEventListener('touchstart', function () { 
-    $(this).attr('src', '../img/gif.gif');
- });
- gif.addEventListener('touchend', function () {
-    $(this).attr('src', '../img/static.png');
-})
+
+
+// gif.addEventListener('touchstart', function () { 
+//     $(this).attr('src', '../img/gif.gif');
+//  });
+//  gif.addEventListener('touchend', function () {
+//     $(this).attr('src', '../img/static.png');
+// })
 
 /* Función que permite regresar al inicio al dar clic en el botón */
 const btnScrollToTop = document.querySelector('.ScrollToTop');
