@@ -73,7 +73,9 @@ $(".h-image-img").hover(function () {
 const gif = document.querySelector('.h-image-img');
 gif.addEventListener('touchstart', function () { 
     gif.style.filter = "blur(0)";
-    $(this).attr('src', '../img/gif.gif');
+    gif.style.visibility = "visible";
+    gif.setAttribute('src', '../img/gif.gif')
+    // $(this).attr('src', '../img/gif.gif');
 
  })
 // $('.h-image-img').on(event, function () {
