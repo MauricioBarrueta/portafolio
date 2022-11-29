@@ -34,16 +34,7 @@ $(document).ready(function () {
     });
 })
 
-/* Oculta la la lista de la barra de navegación cuando se encuentra desplegada (pantallas pequeñas) */
-// const navbarLinks = document.querySelectorAll('.nav-item')
-// const navbarToggler = document.querySelector('.navbar-collapse')
-// const bsNavbarCollapse = new bootstrap.Collapse(navbarToggler)
-// navbarLinks.forEach((link) => {
-//     link.addEventListener('click', () => { 
-//         bsNavbarCollapse.toggle() 
-//     });
-// })
-
+/* Oculta la la lista de la barra de navegación cuando se encuentra desplegada después de dar click (pantallas pequeñas) */
 $('.navbar-nav>li>a').on('click', function(){
     $('.navbar-collapse').collapse('hide');
 });
@@ -66,17 +57,9 @@ window.addEventListener("scroll", function () {
 })
 
 /* Función que hace la transición de la imagen de la introducción, entre .png y .gif */
-$(".h-image-img").hover(function () {
-    $(this).attr('src', '../img/gif.gif');
-}, function () {
-    $(this).attr('src', '../img/static.png');
-});
-
-// const imageOnPhone = document.querySelector('.h-image-img');
-// imageOnPhone.addEventListener('touchstart', function () { 
-//     imageOnPhone.style.filter = "blur(0)";
-//     // imageOnPhone.src = '../img/gif.gif'; 
-//  })
+$(".h-image-img").hover(function () { $(this).attr('src', '../img/gif.gif'); }, 
+    function () { $(this).attr('src', '../img/static.png'); }
+);
 
 /* Función que permite regresar al inicio al dar clic en el botón */
 const btnScrollToTop = document.querySelector('.ScrollToTop');
@@ -161,7 +144,6 @@ function showMoreProjects() {
         document.querySelector('#portafolio').scrollIntoView({ behavior: 'smooth' });
     }
 }
-
 showMoreProjectsBtn.addEventListener('click', showMoreProjects);
 
 /* Función que obtiene los datos del formulario para enviar el correo electrónico */
@@ -186,20 +168,21 @@ function onSubmit(event) {
 
 /* Función para copiar texto al portapapeles */
 const btnCopyEmail = document.querySelector('.copy-btn')
-function copyEmail() {
+function copyEmailToClipboard() {
     var copyText = document.getElementById("email-copy");
     copyText.select();
     copyText.setSelectionRange(0, 99999); /* Para móviles */
-    navigator.clipboard.writeText(copyText.value);
-    alert("Correo electrónico copiado al portapapeles");
+    navigator.clipboard
+      .writeText(copyText.value)
+      .then(() => { alert("Correo electrónico copiado al portapapeles"); })
+      .catch(() => { alert("Error inesperado, si deseas copiar selecciona el correo manualmente"); });
 }
-btnCopyEmail.addEventListener('click', copyEmail);
+btnCopyEmail.addEventListener('click', copyEmailToClipboard);
+
 
 /* Función para traducir entre español e inglés */
 function switchLang(lang) {
-    $("[data-" + lang + "]").text(function (i, e) {
-        return $(this).data(lang);
-    });
+    $("[data-" + lang + "]").text(function (i, e) { return $(this).data(lang); });
 }
 switchLang("es");
 /* Ejecuta la función para traducir y muestra el modal de carga al mismo tiempo */
