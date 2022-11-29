@@ -669,7 +669,7 @@ footer { /* Footer content */
 }
 .footer-bottom { /* Footer-Bottom div */  
     background-color: black; color: white;
-    width: 100%; padding: 0.5rem; opacity: 1;
+    width: 100%; padding: 0.5rem; opacity: 1; position: relative; bottom: 0%;
     text-align: center; float: inline-end; 
 }
 .footer-bottom p { /* Footer-Bottom div text */
@@ -771,6 +771,8 @@ footer { /* Footer content */
         margin: 0 auto 8px;	text-align: center; border-radius: 30px;	
     }
     .h-introduccion #h5-final, .h-introduccion .h-subtitle h5 { font-size: 10px; } 
+    img.h-image-img { content: url(../img/static.png); }
+    img.h-image-img:hover { filter: blur(0); content: url(../img/gif.gif); }
     /* Modal Spinner */
     .modalSpinner .fa-spin, .modalSpinner #spinnerSpan { font-size: 11px; }
     /* About me */
@@ -779,6 +781,13 @@ footer { /* Footer content */
     .abtm-text h5 { font-size: 12px; text-align: center; margin-bottom: 5px; } 
     .abtm-text pre { font-size: 9.5px; line-height: 172%; }  
     .aboutme .content .abtm-text .abtm-footer h6 { font-size: 12px; }
+    /* Portfolio */
+    #google_translate_element { font-size: 9px; }
+    #google_translate_element span>i { font-size: 24px; }
+    /* .goog-te-gadget-icon { width: 10px !important; height: 10px !important; } */
+    .goog-te-gadget-simple {  font-size: 5pt !important; padding: 1px 0 1px 0 !important; }
+    .goog-te-gadget-simple a.goog-te-menu-value span { font-size: 9px !important; }
+    .modal-content .span-info { margin-top: 5px; }    
     /* Skills */
     .card-skills img { width: 50px; height: 50px; } 
     .pb-small-txt { font-size: 4.5px; padding: 0.2rem; }
@@ -789,9 +798,6 @@ footer { /* Footer content */
     .footer-content .menu li { margin: 0 6px 6px; }
     .footer-content .menu a { font-size: 7px; }
     .footer-content .menu a:hover { font-size: 7.2px; }
-
-    img.h-image-img { content: url(../img/static.png); }
-    img.h-image-img:hover { filter: blur(0); content: url(../img/static.png); }
 }
 
 /* ---------------------------------------------------------------- BROWSER SCROLLBAR -------------------------------------------------------*/
