@@ -35,7 +35,7 @@ $(document).ready(function () {
 })
 
 /* Oculta la la lista de la barra de navegación cuando se encuentra desplegada después de dar click (pantallas pequeñas) */
-$('.navbar-nav>li>a').on('click', function(){
+$('.navbar-nav>li>a').on('click', function() {
     $('.navbar-collapse').collapse('hide');
 });
 
@@ -57,9 +57,10 @@ window.addEventListener("scroll", function () {
 })
 
 /* Función que hace la transición de la imagen de la introducción, entre .png y .gif */
-$(".h-image-img").hover(function () { $(this).attr('src', '../img/gif.gif'); }, 
-    function () { $(this).attr('src', '../img/static.png'); }
-);
+$(".h-image-img").hover(function () { 
+    $(this).attr('src', '../img/gif.gif'); }, 
+    function () { $(this).attr('src', '../img/static.png'); 
+});
 
 /* Función que permite regresar al inicio al dar clic en el botón */
 const btnScrollToTop = document.querySelector('.ScrollToTop');
@@ -87,7 +88,7 @@ $(".img-item").hover(function () {
 });
 
 /* Obtiene el atributo src, alt y title de la imagen seleccionada para pasarla al modal y mostrarlo */
-document.addEventListener("click", function (e) {
+document.addEventListener('click', function (e) {
     if (e.target.classList.contains('img-item')) {
         const src = e.target.getAttribute('src');
         document.querySelector('.img-modal').src = src;
@@ -132,11 +133,11 @@ function showMoreProjects() {
     var btnShowHiddenCards = document.getElementById("show-more-btn");
 
     if (cardsVisible.style.display === "none") {
-        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-caret-down fa-bounce'></i>"; 
+        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-down fa-bounce'></i>"; 
         btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more"); cardsVisible.style.display = "flex"; cardsHidden.style.display = "none";
     } else {
         cardsVisible.style.display = "none";
-        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-caret-up fa-bounce'></i>"; 
+        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-up fa-bounce'></i>"; 
         btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less"); cardsHidden.style.display = "flex"; cardsHidden.style.flexWrap = "wrap";
         cardsHidden.style.alignContent = "center"; cardsHidden.style.justifyContent = "space-around"; cardsHidden.style.gap = "15px";
     }
