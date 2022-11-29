@@ -420,9 +420,8 @@ img.h-image-img:hover { filter: blur(0); } /* Intr-Img-gif */
 }
 /* ----------------------------------------------- GOOGLE TRANSLATE ELEMENT ------------------------------------------------- */
 #google_translate_element { /* GooTr- Div*/
-    width: 100%; font-size: 11px;
-    border-radius: 5px; padding: 0.2rem; margin-top: 5px; border: none;
-    color: #4B7F83; background-color: transparent; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    width: 100%; font-size: 11px; border-radius: 5px; margin-top: 5px; 
+    color: #4B7F83; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
 }
 #google_translate_element>span { margin-right: 10px; }
 .m-gt-tooltip .tooltip-inner { /* Modal Translate text-Icon Tooltip */  
@@ -430,7 +429,8 @@ img.h-image-img:hover { filter: blur(0); } /* Intr-Img-gif */
     background-color: #4B7F83; color: white;   
     border: 1px solid white; box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
-#google_translate_element>span>i { font-size: 35px; cursor: help; } 
+#google_translate_element>span>i { font-size: 35px; cursor: help; }
+.goog-te-gadget { font-family: "Press Start 2P", Arial, Helvetica, sans-serif !important; } 
 .goog-te-gadget-simple { /* GooTr-Box*/
     background-color:white !important; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
     padding: 0.2rem; border-radius: 5px; transition: 0.3s;
@@ -442,7 +442,6 @@ img.h-image-img:hover { filter: blur(0); } /* Intr-Img-gif */
 .goog-logo-link { display:none !important; } 
 .goog-te-banner-frame.skiptranslate { display: none !important; visibility: hidden; margin: 0; padding: 0; z-index: -99;} 
 iframe.goog-te-banner-frame{ display: none !important;}
-
 
 .modal-content .span-info { /* Modal Magnifying Glass Instructions */
     padding: 0.2rem; margin-top: 10px; border: 0;
@@ -462,8 +461,8 @@ iframe.goog-te-banner-frame{ display: none !important;}
 }
 .img-magnifier-container { position: relative; } /* Modal Magnifying Glass */ 
 .img-magnifier-glass {
-    width: 185px; height: 185px; position: absolute;
-    border: 5px solid #6CC6C9; border-radius: 50%; cursor: move;   
+    width: 200px; height: 200px; position: absolute;
+    border: 6px double #000; border-radius: 50%; cursor: move;   
     background-color: #F4F6F7; box-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
 }
 #imgPopUpModal .modal-footer { margin-top: 5px; }
@@ -744,7 +743,7 @@ footer { /* Footer content */
     #imgPopUpModal .modal-header>h6, .modal-content>.span-info, .modal-footer>p { font-size: 8px; line-height: 12px; }
     #imgPopUpModal .modal-header, .modal-footer { font-size: 7px !important; padding: 0.5rem; }
     .modal-content .zoomout { font-size: 12px; }
-    .img-magnifier-glass { width: 165px; height: 165px; }
+    .img-magnifier-glass { width: 175px; height: 175px; }
     /* Footer */
     .footer-content>p { font-size: 10px; } 
     .footer-bottom>p { font-size: 10px; }
@@ -791,7 +790,8 @@ footer { /* Footer content */
     .footer-content .menu a { font-size: 7px; }
     .footer-content .menu a:hover { font-size: 7.2px; }
 
-    img.h-image-img:hover { filter: blur(0); content: url(../img/photo.png); }
+    img.h-image-img { content: url(../img/static.png); }
+    img.h-image-img:hover { filter: blur(0); content: url(../img/static.png); }
 }
 
 /* ---------------------------------------------------------------- BROWSER SCROLLBAR -------------------------------------------------------*/
