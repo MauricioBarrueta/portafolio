@@ -401,7 +401,7 @@ img.h-image-img:hover { filter: blur(0); } /* Intr-Img-gif */
     background-color: #B2071D; border: 1px solid white;
 }
 #imgPopUpModal .modal-body { /* Modal Body */     
-    margin: 0; cursor: zoom-in;
+    margin: 0; cursor: zoom-in; margin-top: -15px;
 }
 /* ----------------------------------------------- GOOGLE TRANSLATE ELEMENT ------------------------------------------------- */
 #google_translate_element { /* GooTr- Div*/
@@ -427,7 +427,7 @@ img.h-image-img:hover { filter: blur(0); } /* Intr-Img-gif */
 iframe.goog-te-banner-frame{ display: none !important;}
 
 .modal-content .span-info { /* Modal Magnifying Glass Instructions */
-    padding: 0.2rem; margin-top: 10px; border: 0;
+    padding: 0.2rem; margin-top: 5px; border: 0;
     font-size: 11px; color: white; background-color: #4B7F83; box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     text-align: center;   animation: blink 1s infinite step-end normal;  
     border-bottom: 2px dotted white; border-top: 2px dotted white;
