@@ -60,11 +60,11 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
 .ScrollToTop {
     position: fixed; z-index: 9997;  width: 60px; height: 60px;
     border-radius: 50%; padding: 0.5rem; bottom: 12px; right: 12px;  
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);      
+    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); border: none; opacity: 0.8;  
 }
 .ScrollToTop:hover {
     background-color: #4B7F83; color: white; font-size: 20px;    
-    animation: shake 0.35s step-end normal;       
+    animation: shake 0.35s step-end normal; border: none;  opacity: 1;     
 }
 .modalSpinner .fa-spin, .modalSpinner #spinnerSpan { /* Modal Spinner */
     color: white; font-size: 32px; text-align: center;
@@ -144,9 +144,11 @@ header {
 }
 .main-introduction .content .h-back i, .main-introduction .content .h-front i { padding-top: 1em; margin-top: -10px; }
 .main-introduction .content .h-back:hover i, .main-introduction .content .h-front:hover i { visibility: hidden; }
-.main-introduction .content .h-image img { height: auto; max-width: 350px; border-radius: 5px; cursor: pointer; } /* Intr-Img */
-img.h-image-img { content: url(../img/static.png); filter: blur(3px); transition: 0.3s; }  /* Intr-Img-png */
+.main-introduction .content .h-image img { height: auto; max-width: 350px; border-radius: 5px; cursor: pointer; transition: 0.3s;  } /* Intr-Img */
+
 img.h-image-img:hover { filter: blur(0); content: url(../img/gif.gif); } /* Intr-Img-gif */
+img.h-image-img:not(:hover) { content: url(../img/static.png); filter: blur(3px); }
+
 .main-introduction .btn-h-contact { /* Intr-Contact Me Button with effect */     
     border: 1px solid white; background-color: #4B7F83; color: white;
     margin: 0 auto; width: fit-content;   
@@ -442,7 +444,7 @@ iframe.goog-te-banner-frame{ display: none !important;}
 #imgPopUpModal .modal-footer { margin-top: 5px; }
 
 /* ------------------------------------------------------------- SKILLS --------------------------------------------------------------- */
-.skills-cards { padding: 1em; box-shadow: 0 10px 5px rgba(0, 0, 0, 0.65); } /*box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);*/
+.skills-cards { padding: 1em; box-shadow: 0 10px 5px rgba(0, 0, 0, 0.35); } /*box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);*/
 .skills-cards .cards-container {
     align-content: space-around; gap: 10px;     
 }
@@ -756,6 +758,7 @@ footer { /* Footer content */
     .modal-content .span-info { margin-top: 5px; }    
     /* Skills */
     .card-skills img { width: 50px; height: 50px; } 
+    .card-skills>.img-pdng { padding-top: 18px !important; }
     .pb-small-txt { font-size: 4.5px; padding: 0.2rem; }
     /* Contact */
     .contact-form { width: 100%; }
