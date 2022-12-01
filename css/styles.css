@@ -22,7 +22,7 @@ body { position: static !important; top: 0px !important; }
 
 .main { /* Main div content */
     position: relative; z-index: 1;  
-    box-shadow: #000000 0 8px 30px 10px; /* 0 7px 35px 0*/
+    box-shadow: #000 0 5px 20px 10px; /* 0 7px 35px 0*/
     background-image: url(../img/main.jpg); background-size: 50%; background-position: center;
 }
 
@@ -330,7 +330,7 @@ img.h-image-img:hover { filter: blur(0); content: url(../img/gif.gif); } /* Intr
 .portafolio .p-card .content .t-icons:hover span { transform: translateY(0px); opacity: 0; }
 .portafolio .p-card .content .t-icons span::after { /* Tech-Icons Title Cursor Icon */
     content: "\f245"; font-family: FontAwesome;
-    position: absolute; top: 100%; right: -53.5%;
+    position: absolute; top: 100%; right: -60%;
     -webkit-text-fill-color: white; -webkit-text-stroke-width: 1px; -webkit-text-stroke-color: black;
 }
 .portafolio .p-card .content .t-icons .p-tecnologies { /* Portafolio-Cards Tech-Icons icons */     
@@ -418,7 +418,7 @@ img.h-image-img:hover { filter: blur(0); content: url(../img/gif.gif); } /* Intr
 iframe.goog-te-banner-frame{ display: none !important;}
 
 .modal-content .span-info { /* Modal Magnifying Glass Instructions */
-    padding: 0.2rem; margin-top: 5px; border: 0;
+    padding: 0.2rem; margin-top: 5px; border: 0; z-index: 1;
     font-size: 11px; color: white; background-color: #4B7F83; box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
     text-align: center;   animation: blink 1s infinite step-end normal;  
     border-bottom: 2px dotted white; border-top: 2px dotted white;
@@ -442,7 +442,7 @@ iframe.goog-te-banner-frame{ display: none !important;}
 #imgPopUpModal .modal-footer { margin-top: 5px; }
 
 /* ------------------------------------------------------------- SKILLS --------------------------------------------------------------- */
-.skills-cards { padding: 1em; box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5); }
+.skills-cards { padding: 1em; box-shadow: 0 10px 5px rgba(0, 0, 0, 0.65); } /*box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);*/
 .skills-cards .cards-container {
     align-content: space-around; gap: 10px;     
 }
@@ -591,7 +591,7 @@ iframe.goog-te-banner-frame{ display: none !important;}
 /* ---------------------------------------------------------------- FOOTER ----------------------------------------------------------------- */
 footer { /* Footer content */
     /* height: 30vh;  */
-    padding: 25px 0; background-color: #F4F6F7; z-index: -1; opacity: 0.85;
+    padding: 25px 0; background-color: #F4F6F7; z-index: -1; opacity: 0.8;
     background-image: url(../img/contact-footer.jpg); background-size: cover; background-position: center;
 }
 .footer-content { /* Footer-Content div*/
@@ -599,7 +599,7 @@ footer { /* Footer content */
 }
 .footer-content h3 { /* Footer-content Title*/
      font-size: 13px; font-weight: 400;
-     margin: 0 2px auto; color: white;
+     margin: 0 0 5px 0; color: white;
      text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 5px #000;
 }
 .footer-content .social { /* Footer-Content div Title */ 
@@ -635,13 +635,13 @@ footer { /* Footer content */
     text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 5px #000;
 }
 .footer-content p { /* Footer-Content div Subtitle */
-    max-width: 500px; margin: 5px auto;
+    max-width: 500px; margin: 0;
     line-height: 28px; font-size: 12px; color: white;
     text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 5px #000;
 }
 .footer-bottom { /* Footer-Bottom div */  
     background-color: black; color: white;
-    width: 100%; padding: 0.5rem; opacity: 1; position: relative; bottom: 0%;
+    width: 100%; padding: 0.5rem; 
     text-align: center; float: inline-end; 
 }
 .footer-bottom p { /* Footer-Bottom div text */
