@@ -57,10 +57,7 @@ window.addEventListener("scroll", function () {
 })
 
 /* Función que hace la transición de la imagen de la introducción, entre .png y .gif */
-$(".h-image-img").hover(function () { 
-    $(this).attr('src', '../img/gif.gif'); }, 
-    function () { $(this).attr('src', '../img/static.png'); 
-});
+/* $(".h-image-img").hover(function () { $(this).attr('src', '../img/gif.gif'); }, function () { $(this).attr('src', '../img/static.png'); }); */
 
 /* Función que permite regresar al inicio al dar clic en el botón */
 const btnScrollToTop = document.querySelector('.ScrollToTop');
