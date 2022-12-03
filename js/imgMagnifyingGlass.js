@@ -8,12 +8,10 @@ function startMagnifyingGlass(img_id, zoom_value) {
   getImgClick.addEventListener("click", function () {
     var selectedImage, magnifyingGlass, width, height, bw;
     selectedImage = document.getElementById(img_id);
-
     /* Se crea el div y su clase que conendrá la Magnifying Glass */
     magnifyingGlass = document.createElement("div");
     magnifyingGlass.setAttribute("class", "img-magnifier-glass");
     selectedImage.parentElement.insertBefore(magnifyingGlass, selectedImage);
-
     /* Se le asignan las propiedades */
     magnifyingGlass.style.backgroundImage = "url('" + selectedImage.src + "')";
     magnifyingGlass.style.backgroundRepeat = "no-repeat";
@@ -25,7 +23,6 @@ function startMagnifyingGlass(img_id, zoom_value) {
     /* Ejecuta la función al mover la lupa sobre la imagen */
     magnifyingGlass.addEventListener("mousemove", moveMagnifier);
     selectedImage.addEventListener("mousemove", moveMagnifier);
-
     /* Para pantallas touch */
     magnifyingGlass.addEventListener("touchmove", moveMagnifier, { passive: true });
     selectedImage.addEventListener("touchmove", moveMagnifier, { passive: true });
@@ -37,7 +34,6 @@ function startMagnifyingGlass(img_id, zoom_value) {
       cursorPosition = getCursorPos(e); /* Se le asigna a la variable la posición del cursor obtenida en la función */
       x = cursorPosition.x;
       y = cursorPosition.y;
-
       /* Para prevenir que la lupa se posicione fuera de la imagen */
       if (x > selectedImage.width - (width / zoom_value)) { x = selectedImage.width - (width / zoom_value); }
       if (x < width / zoom_value) { x = width / zoom_value; }
@@ -47,7 +43,6 @@ function startMagnifyingGlass(img_id, zoom_value) {
       /* Manda la posición de la lupa */
       magnifyingGlass.style.left = (x - width) + "px";
       magnifyingGlass.style.top = (y - height) + "px";
-
       /* Muestra lo que la lupa esta observando */
       magnifyingGlass.style.backgroundPosition = "-" + ((x * zoom_value) - width + bw) + "px -" + ((y * zoom_value) - height + bw) + "px";
     }
@@ -66,7 +61,6 @@ function startMagnifyingGlass(img_id, zoom_value) {
       y = y - window.pageYOffset;
       return { x: x, y: y };
     }
-
   })
 
   /* Función que desactiva el zoom al tocar el botón */

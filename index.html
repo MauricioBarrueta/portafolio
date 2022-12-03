@@ -19,18 +19,15 @@
   <link rel="icon" type="image/x-icon" href="/img/favicon.ico">   
 </head> 
 
-<body class="body" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">    
-  <div class="main"> 
-    <!-- Loading Page Gif -->
-    <div id="loading" class="loading-page-gif"><img src="img/loading.gif" alt=""></div>
+<body class="body" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">  
 
-    <!-- Scroll To Top Button -->
-    <button class="ScrollToTop btn b-color-4B7 transition03">
-      <!-- <i class="fa-solid fa-arrow-up fa-bounce"></i> -->
-      <!-- <i class="fa-solid fa-hand-point-up fa-bounce fa-lg"></i> -->
-      <i class="fa-solid fa-angles-up fa-bounce fa-lg"></i>
-    </button> 
-          
+  <!-- Main Content -->
+  <div class="main"> 
+    
+    <div id="loading" class="loading-page-gif"><img src="img/loading.gif" alt=""></div> <!-- Loading Page Gif -->
+    
+    <button class="ScrollToTop btn b-color-4B7 transition03"><i class="fa-solid fa-angles-up fa-bounce fa-lg"></i></button> <!-- Scroll To Top Button -->
+    
     <header id="Main">
       <div class="scroll-down-l"><span class="sd-span bounce" data-es="Desliza hacia abajo " data-en="Scroll down "></span></div>           
       <div class="scroll-down-r"><span class="sd-span bounce" data-es="Desliza hacia abajo " data-en="Scroll down "></span></div>      
@@ -78,9 +75,8 @@
         </div>       
       </section>
     </header>   
-    <!-- Span cuya única función es como 'trigger' usado para aplicar el efecto 'stuck' a la navbar -->
-    <span class="position-absolute trigger"></span> 
-    <!-- Navbar  -->  
+
+    <span class="position-absolute trigger"></span> <!-- Trigger Span Navbar -->
     <nav id="navbar" class="navbar sticky-top navbar-expand-xl navbar-dark">
       <div class="container-fluid">
         <a class="navbar-brand">
@@ -118,25 +114,23 @@
           </ul>
         </div>
       </div>
-    </nav>
-      
-    <!-- Sobre mí -->
+    </nav>      
+    
     <section class="aboutme" id="About">
       <div class="content" data-aos="fade-up">
         <div class="abtme-img-container radius10-padding1">
           <img src="img/photo.png" alt="">         
         </div>    
         <div class="abtm-text radius10-padding1">
-          <h1 class="radius-padding b-color-4B7"><i class="fa-solid fa-address-card fa-beat-fade"></i>
+          <h1 class="radius-padding b-color-4B7"><i class="fa-solid fa-address-card fa-shake"></i>
             &nbsp; <span data-es="Sobre mí" data-en="About me"></span>
           </h1>                   
           <h5 class="radius-padding b-color-6CC" data-es="Me llamo Edgar Mauricio Barrueta Aguirre" data-en="My name is Edgar Mauricio Barrueta Aguirre"></h5>
-          <pre 
-            data-es="Me considero un desarrollador web dado que la mayoría de prácticas y proyectos que he realizado desde mis inicios en el mundo de la programación son páginas web, pero claro, sin dejar de lado el desarrollo de software y de aplicaciones móviles.
+          <pre data-es="Me considero un desarrollador web dado que la mayoría de prácticas y proyectos que he realizado desde mis inicios en el mundo de la programación son páginas web, pero claro, sin dejar de lado el desarrollo de software y de aplicaciones móviles.
               Además del buen manejo de HTML y CSS, los lenguajes de programación con los que más me familiarizo son: Java, JavaScript, TypeScript, PHP y C#, este último usado para un par de proyectos hechos en Unity, así como también algunos de los frameworks más demandados, como Spring Framework, Angular, React Native, herramientas y librerías indispensables para el desarrollo web, como Node.js, NPM, Bootstrap, etc. El uso de varios IDE y por supuesto el manejo de Git.
             
               Como plus agregaría que una de mis principales cualidades es que me gusta ser autodidacta, aprender y adquirir nuevos conocimientos por mi propia cuenta me ha ayudado a ampliar mis conocimientos y habilidades, que, si bien no son avanzados, tengo las bases para poder implementarlos."
-            data-en="I consider myself a web developer since most of the practices and projects that I've done since my beginnings in the world of programming are web pages, but of course, without neglecting software and mobile application development.
+              data-en="I consider myself a web developer since most of the practices and projects that I've done since my beginnings in the world of programming are web pages, but of course, without neglecting software and mobile application development.
               In addition to my knowledge of HTML and CSS, the programming languages ​​that I've worked the most are: Java, JavaScript, TypeScript, PHP and C#, the latter used for a couple of projects done in Unity, as well as some of the most demanded frameworks, like Spring Framework, Angular, React Native, essential tools and libraries for web development, such as Node.js, NPM, Bootstrap, etc. The use of multiple IDE's and of course, knowledge of Git.
                               
               As a plus, I would add that one of my main qualities is that I like to be self-taught, learning and acquiring new knowledge on my own has helped me expand my knowledge and skills, that, although they're not advanced, I've the bases to be able to implement them.">
@@ -151,28 +145,85 @@
             <i class="fa-solid fa-book fa-fw fa-xl"></i>
             <i class="fa-solid fa-mug-hot fa-fw fa-xl"></i>
           </div>
-          <a href="files/Edgar Mauricio Barrueta Aguirre CV - Resume.pdf" class="btnCV btn " target="_blank"><span data-es="Mi Currículum" data-en="My Resume"></span></a>
+          <a href="files/Currículum - Edgar Mauricio Barrueta Aguirre.pdf" class="btnCV btn " target="_blank"><span data-es="Mi Currículum" data-en="My Resume"></span></a>
         </div>
       </div>
-    </section>
-  
-    <!-- Portafolio -->
+    </section>  
+    
     <section class="portafolio" id="Projects" data-aos="fade-up">
       <h3 class="sectionTitles" data-es="Portafolio" data-en="Portfolio"></h3>
-      <div class="p-cards-container"> 
-        <div class="p-card"> <!-- Proyecto control del Archivo, etc -->
+      <div class="p-cards-container">  
+        <div class="p-card">
+          <div class="content">
+            <div id="p-img">
+              <img src="img/Portafolio/Pokedex.png" class="img-item" alt="HTML para la estructuración y JavaScript junto con jQuery para la funcionalidad, 
+              CSS y Bootstrap para los estilos y el módulo gh-pages de NPM para la publicación de la página en GitHub Pages - Servidor: API de Pokémon 'PokéApi' (https://pokeapi.co)." 
+              data-title="Página que simula el Pokédex, permite consultar los datos de cualquier Pokémon dispoible, además de que se pueden listar todos 
+              y cada uno de ellos con su respectiva carta y datos correspondientes.">
+            </div>
+            <div class="contentBx">
+              <h3 data-es="Pokémon 'Pokédex'" data-en="Pokémon 'Pokédex'"></h3>
+            </div>
+            <div class="t-icons"> <!-- Tecnologías -->
+              <ul class="p-tecnologies">  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
+                  <i><img class="JavaScript-Icon p-tec-svg-icons"></i>
+                </li>                
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="jQuery">
+                  <i><img class="jQuery-Icon p-tec-svg-icons"></i>
+                </li>              
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
+                  <i><img class="HTML-Icon p-tec-svg-icons"></i>
+                </li>                
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
+                  <i><img class="CSS-Icon p-tec-svg-icons"></i>
+                </li>                
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
+                  <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
+                </li>        
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Node.js">
+                  <i><img src="svg/NodeJS.svg" class="p-tec-svg-icons" style="padding-top: 0.6rem;"></i>
+                </li>        
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NPM">
+                  <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.6rem;"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Git y GitHub Pages">
+                  <i><img src="svg/GitHub.svg" class="p-tec-svg-icons"></i>
+                </li>            
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PokéApi">
+                  <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons" ></i>
+                </li>     
+              </ul>
+              <span data-es="Hecho con: " data-en="Made with: "></span>
+            </div>
+          </div>
+          <ul class="p-icons"> <!-- iconos -->
+            <li>
+              <a href="https://mauriciobarrueta.github.io/pokemonPokedex/" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-icons-a" title="Página Web" target="_blank">
+                <i class="fa-solid fa-globe fa-fw fa-lg"></i>
+              </a>
+            </li>
+            <li><span>2022</span></li>
+            <li>
+              <a href="https://github.com/MauricioBarrueta/edgarmauriciobaag.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-icons-a" title="Repositorio" target="_blank">
+                <i class="fa-brands fa-github fa-fw fa-lg"></i>
+              </a>
+            </li>
+          </ul>
+        </div>       
+        <div class="p-card">
             <div class="content">
               <div id="p-img">
-                <img src="img/Portafolio/Control del Archivo.png" class="img-item"
+                <img src="img/Portafolio/ControlArchivo.png" class="img-item"
                   alt=" Hecho con Java, la librería gráfica Java Swing, el framework de gestión de proyectos de software Maven, 
-                  la librería JasperReports para la creación de reportes y NetBeans IDE - Servidor: Base de Datos MySQL"
-                  data-title="Sistema para el control del archivo por año, las actas de recepción, el inventario para baja y 
-                  las entradas - salidas de documentos">
+                  la librería JasperReports para la creación de reportes y NetBeans IDE - Servidor: Base de Datos MySQL."
+                  data-title="Sistema que permite llevar el control del archivo manejado por año, el inventario de documentos dados de baja y 
+                  llevar un registro de las entradas y salidas de documentos del archivo y del empleado que lo solicitó.">
               </div>
               <div class="contentBx">
-                <h3 data-es="Sistema para el control de archivos" data-en="Files control system"></h3>
+                <h3 data-es="Sistema para el control del archivo" data-en="Files control system"></h3>
               </div>
-              <div class="t-icons"> <!-- Tecnologías -->
+              <div class="t-icons">
                 <ul class="p-tecnologies">
                   <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java y Java Swing">
                     <i><img class="Java-Icon p-tec-svg-icons"></i>
@@ -193,20 +244,22 @@
                 <span data-es="Hecho con: " data-en="Made with: "></span>
               </div>
             </div>
-            <ul class="p-icons"> <!-- iconos -->              
+            <ul class="p-icons">              
               <li><span>2022</span></li>              
             </ul>
         </div>
-        <div class="p-card"> <!-- Portafolio Web -->
+        <div class="p-card">
           <div class="content">
             <div id="p-img">
-              <img src="img/Portafolio/Portafolio.png" class="img-item" alt="HTML para la estructuración y el lenguaje de programación JavaScript y jQuery para la funcionalidad, CSS y la librería Bootstrap para los estilos" 
-              data-title="Portafolio web donde muestro mi experiencia como desarrollador, permite descargar mi Currículum en formato PDF y además, envíar un correo electrónico directamente a mi bandeja de entrada, entre otras funciones">
+              <img src="img/Portafolio/PortafolioWeb.png" class="img-item" alt="HTML para la estructuración y el lenguaje de programación JavaScript y jQuery 
+              para la funcionalidad, CSS y la librería Bootstrap para los estilos y el módulo gh-pages de NPM para la publicación de la página en GitHub Pages." 
+              data-title="Portafolio web en el cuál muestro mi experiencia como desarrollador, permite descargar mi Currículum en formato PDF y además, 
+              envíar un correo electrónico directamente a mi bandeja de entrada, entre otras funciones">
             </div>
             <div class="contentBx">
               <h3 data-es="Portafolio web" data-en="Portfolio website"></h3>
             </div>
-            <div class="t-icons"> <!-- Tecnologías -->
+            <div class="t-icons">
               <ul class="p-tecnologies"> 
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
                   <i><img class="JavaScript-Icon p-tec-svg-icons"></i>
@@ -236,33 +289,32 @@
               <span data-es="Hecho con: " data-en="Made with: "></span>
             </div>
           </div>
-          <ul class="p-icons"> <!-- iconos -->
+          <ul class="p-icons">
             <li>
-              <a href="https://mauriciobarrueta.github.io/portafolio/" data-bs-toggle="tooltip" data-bs-placement="left" title="Sitio Web"
-                data-bs-custom-class="p-icons-a" target="_blank"><i class="fa-solid fa-globe fa-fw fa-lg"></i>
+              <a href="https://mauriciobarrueta.github.io/portafolio/" data-bs-toggle="tooltip" data-bs-placement="top" title="Página Web" data-bs-custom-class="p-icons-a" target="_blank">
+                <i class="fa-solid fa-globe fa-fw fa-lg"></i>
               </a>
             </li>
+            <li><span>2022</span></li>
             <li>
-              <span>2022</span>
-            </li>
-            <li>
-              <a href="https://github.com/MauricioBarrueta/portafolio.git" data-bs-toggle="tooltip" data-bs-placement="left" 
-              data-bs-custom-class="p-icons-a" title="Ver código" target="_blank"><i class="fa-brands fa-github fa-fw fa-lg"></i></a>
+              <a href="https://github.com/MauricioBarrueta/portafolio.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-icons-a" title="Repositorio" target="_blank">
+                <i class="fa-brands fa-github fa-fw fa-lg"></i>
+              </a>
             </li>
           </ul>
         </div>
-        <div class="p-card"> <!-- API RESTful JSON Web Token -->
+        <div class="p-card">
           <div class="content">
             <div id="p-img">
-              <img src="img/Portafolio/API REST JWT.png" class="img-item" alt="Back end: Java y Spring Framework
-                (Spring Web, Spring Data JPA, Spring Security, Hibernate) - Estandar de autenticación JSON Web Token - 
-                Servidor: Base de Datos MySQL - Postman para realizar pruebas a la API" data-title="Práctica que simula un inicio de sesión, realización de publicaciones - comentarios y las funciones CRUD
-                a partir de una autenticación por medio de un token exclusivo para cada usuario">
+              <img src="img/Portafolio/APIRestJWT.png" class="img-item" alt="Back end: Java y Spring Framework (Spring Web, Spring Data JPA, 
+                Spring Security, Hibernate) - Estandar de autenticación JSON Web Token - Servidor: Base de Datos MySQL - Postman para las pruebas a la API." 
+                data-title="Práctica que simula un inicio de sesión, realización de publicaciones - comentarios y las operaciones CRUD a partir de 
+                una autenticación por medio de un token exclusivo de cada usuario.">
             </div>
             <div class="contentBx">
               <h3 data-es="Práctica: API REST con autenticación por Token" data-en="Practice: Token Authentication API REST"></h3>
             </div>
-            <div class="t-icons"> <!-- Tecnologías -->
+            <div class="t-icons">
               <ul class="p-tecnologies">
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java">
                   <i><img class="Java-Icon p-tec-svg-icons"></i>
@@ -286,32 +338,29 @@
               <span data-es="Hecho con: " data-en="Made with: "></span>
             </div>
           </div>
-          <ul class="p-icons"> <!-- iconos -->
-            <li>
-              <a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Sitio Web"
-                  style="visibility: hidden;"><i class="fa-solid fa-globe fa-fw fa-lg"></i>
-              </a>
-            </li>
+          <ul class="p-icons">
+            <li><a href="" data-bs-toggle="tooltip" data-bs-placement="top" title="Página Web" style="visibility: hidden;"><i class="fa-solid fa-globe fa-fw fa-lg"></i></a></li>
             <li><span>2022</span></li>
             <li>
-              <a href="https://github.com/MauricioBarrueta/API-RESTful-con-JWT.git" data-bs-toggle="tooltip" data-bs-placement="left" 
-                data-bs-custom-class="p-icons-a" title="Ver código" target="_blank"><i class="fa-brands fa-github fa-fw fa-lg"></i>
+              <a href="https://github.com/MauricioBarrueta/API-RESTful-con-JWT.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-icons-a" title="Repositorio" target="_blank">
+                <i class="fa-brands fa-github fa-fw fa-lg"></i>
               </a>
             </li>
           </ul>
         </div>      
-        <div class="p-card"> <!-- Proyecto Full-Stack -->
+        <div class="p-card">
           <div class="content">
             <div id="p-img">
-              <img src="img/Portafolio/Fullstack.png" class="img-item"
-                alt="Back end: Java, TypeScript y Spring Framework (Spring Web, Spring Data JPA) - Front end: Angular, CSS y Bootstrap - 
-                  Servidor: Base de Datos MySQL" data-title="Práctica de una API RESTful la cual permite realizar las funciones CRUD,
-                  simulando un proyecto en donde el lado Backend y el Frontend son desarrollados de manera independiente, pero al mismo tiempo son dependientes uno de otro">
+              <img src="img/Portafolio/FullStack.png" class="img-item"
+                alt="Back end: Java, TypeScript, el framework Maven para la gestión del proyecto y Spring Framework (Spring Web, Spring Data JPA) 
+                  - Front end: HTML para la estructuración, Angular, CSS y Bootstrap para los estilos - Servidor: Base de Datos MySQL." 
+                  data-title="Práctica de una API RESTful la cual permite realizar las operaciones CRUD, simulando un proyecto en donde el lado Backend 
+                  y el lado Frontend son desarrollados de manera independiente, pero que al mismo tiempo son dependientes uno de otro.">
             </div>
             <div class="contentBx">
-              <h3 data-es="Práctica: API REST 'Full Stack'" data-en="Practice: 'Full-Stack' API REST"></h3>
+              <h3 data-es="Práctica: API REST 'Proyecto Full Stack'" data-en="Practice: 'Full-Stack Project' API REST"></h3>
             </div>
-            <div class="t-icons"> <!-- Tecnologías -->
+            <div class="t-icons">
               <ul class="p-tecnologies">
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java">
                   <i><img class="Java-Icon p-tec-svg-icons"></i>
@@ -352,77 +401,18 @@
                 data-bs-custom-class="p-icons-a" title="Ver código"  target="_blank"><i class="fa-brands fa-github fa-fw fa-lg"></i></a>
             </li>
           </ul>
-        </div>
-        <div class="p-card"> <!-- Pokémon Pokédex -->
+        </div>        
+        <div class="p-card"> 
           <div class="content">
             <div id="p-img">
-              <img src="img/Portafolio/Pokedex.png" class="img-item" alt="HTML para la estructuración y JavaScript junto con jQuery para la funcionalidad, CSS y la librería Bootstrap para los estilos
-                y como servidor se usó la API de Pokémon 'PokéApi' (https://pokeapi.co)" 
-              data-title="Página que simula el Pokédex, permite consultar los datos de cualquier Pokémon dispoible, además de que se pueden listar todos y cada uno de ellos con su respectiva carta y datos correspondientes.">
-            </div>
-            <div class="contentBx">
-              <h3 data-es="Pokémon 'Pokédex'" data-en="Pokémon 'Pokédex'"></h3>
-            </div>
-            <div class="t-icons"> <!-- Tecnologías -->
-              <ul class="p-tecnologies">  
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
-                  <i><img class="JavaScript-Icon p-tec-svg-icons"></i>
-                </li>                
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="jQuery">
-                  <i><img class="jQuery-Icon p-tec-svg-icons"></i>
-                </li>              
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
-                  <i><img class="HTML-Icon p-tec-svg-icons"></i>
-                </li>                
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
-                  <i><img class="CSS-Icon p-tec-svg-icons"></i>
-                </li>                
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
-                  <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
-                </li>        
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Node.js">
-                  <i><img src="svg/NodeJS.svg" class="p-tec-svg-icons" style="padding-top: 0.6rem;"></i>
-                </li>        
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NPM">
-                  <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.6rem;"></i>
-                </li>  
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Git y GitHub Pages">
-                  <i><img src="svg/GitHub.svg" class="p-tec-svg-icons"></i>
-                </li>            
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PokéApi">
-                  <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons" ></i>
-                </li>     
-              </ul>
-              <span data-es="Hecho con: " data-en="Made with: "></span>
-            </div>
-          </div>
-          <ul class="p-icons"> <!-- iconos -->
-            <li>
-              <a href="https://mauriciobarrueta.github.io/pokemonPokedex/" data-bs-toggle="tooltip" data-bs-placement="left" 
-                data-bs-custom-class="p-icons-a" title="Sitio Web" target="_blank">
-                <i class="fa-solid fa-globe fa-fw fa-lg"></i>
-              </a>
-            </li>
-            <li><span>2022</span></li>
-            <li>
-              <a href="https://github.com/MauricioBarrueta/edgarmauriciobaag.git" data-bs-toggle="tooltip" data-bs-placement="left" 
-                data-bs-custom-class="p-icons-a" title="Ver código" target="_blank">
-                <i class="fa-brands fa-github fa-fw fa-lg"></i>
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="p-card"> <!-- Proyecto Angular -->
-          <div class="content">
-            <div id="p-img">
-              <img src="img/Portafolio/Sistema Angular.png" class="img-item" alt="Backend: TypeScript - Front end: Angular, Angular Material,  
-                  CSS y Bootstrap - Servidor: JSON Server (NPM)"
-                data-title="Práctica de un sistema 'e-commerce' el cual simula la compra de uno o varios productos por carrito de compras">
+              <img src="img/Portafolio/AngularEcommerce.png" class="img-item" alt="Backend: TypeScript - Front end: HTML para la estructuración, 
+                Angular, Angular Material, CSS y la librería Bootstrap para los estilos - Servidor: JSON Server (NPM)."
+                data-title="Práctica de un sistema 'e-commerce' el cual simula la compra de uno o varios productos por medio de un carrito de compras.">
             </div>
             <div class="contentBx">
               <h3 data-es="Práctica: Sistema e-commerce hecho en Angular" data-en="Practice: 'e-commerce' system made in Angular"></h3>
             </div>
-            <div class="t-icons"> <!-- Tecnologías -->
+            <div class="t-icons">
               <ul class="p-tecnologies">
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="TypeScript">
                   <i><img class="TypeScript-Icon p-tec-svg-icons"></i>
@@ -452,34 +442,31 @@
               <span data-es="Hecho con: " data-en="Made with: "></span>
             </div>
           </div>
-          <ul class="p-icons"> <!-- iconos -->
-            <li>
-              <a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Sitio Web" style="visibility: hidden;">
-                <i class="fa-solid fa-globe fa-fw fa-lg"></i></a>
-            </li>
+          <ul class="p-icons">
+            <li><a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Página Web" style="visibility: hidden;"><i class="fa-solid fa-globe fa-fw fa-lg"></i></a></li>
             <li><span>2022</span></li>
             <li>
-              <a href="https://github.com/MauricioBarrueta/Practica-Sistema-e-commerce.git" data-bs-toggle="tooltip" data-bs-placement="left" 
-              data-bs-custom-class="p-icons-a" title="Ver código" target="_blank"><i class="fa-brands fa-github fa-fw fa-lg"></i></a>
+              <a href="https://github.com/MauricioBarrueta/Practica-Sistema-e-commerce.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-icons-a" title="Repositorio" target="_blank">
+                <i class="fa-brands fa-github fa-fw fa-lg"></i>
+              </a>
             </li>
           </ul>
         </div>
+        <span id="cardsLimit"></span> <!-- Límite de proyectos visibles -->
 
-        <span id="visible"></span>    
-
-        <div id="hidden" style="display: none;">
-          <div class="p-card"> <!-- App Control de granja -->
+        <div id="hiddenCards" style="display: none;"> <!-- Proyectos ocultos -->
+          <div class="p-card">
             <div class="content">
               <div id="p-img">
-                <img src="img/Portafolio/App-Control-Huevos.jpg" class="img-item" alt="Hecho con Java, el metalenguaje XML para el diseño de la interfaz, 
-                    el Entorno de Desarrollado Integrado Android Studio y el sistema de compilación Gradle  -  Servidor: Google Firebase" 
-                    data-title="Aplicación desarrollada con el propósito de llevar un control del número de huevos recogidos y del total de alimento y dinero gastado
-                    de una pequeña granja de gallinas ponedoras de huevos">
+                <img src="img/Portafolio/AppGallinasPonedoras.jpg" class="img-item" alt="Hecho con Java, el metalenguaje XML para el diseño de la 
+                  interfaz, el Entorno de Desarrollado Integrado Android Studio y el sistema de compilación Gradle  -  Servidor: Google Firebase." 
+                    data-title="Aplicación desarrollada con el propósito de llevar un control del número de huevos recogidos y del total de alimento 
+                    y dinero gastado de una pequeña granja de gallinas ponedoras de huevos.">
               </div>
               <div class="contentBx">
                 <h3 data-es="App para mini granja de gallinas ponedoras" data-en="App for Laying Hens Farm"></h3>
               </div>
-              <div class="t-icons"> <!-- Tecnologías -->
+              <div class="t-icons">
                 <ul class="p-tecnologies">
                   <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java">
                     <i><img class="Java-Icon p-tec-svg-icons"></i>
@@ -500,20 +487,22 @@
                 <span data-es="Hecho con: " data-en="Made with: "></span>
               </div>
             </div>
-            <ul class="p-icons"> <!-- iconos -->
+            <ul class="p-icons">
               <li><span>2022</span></li>
             </ul>
           </div>
-          <div class="p-card"> <!-- Juego Plataformas -->
+          <div class="p-card">
             <div class="content">
               <div id="p-img">
-                <img src="img/Portafolio/Juego-2D.jpg" class="img-item" alt="Hecho con C# y el motor de videojuegos multiplataforma Unity y Adobe Photoshop para el diseño de algunos sprites y texturas" 
-                  data-title="Juego en formato 2D del género RPG y plataformas para dispositivos móviles enfocado a que los niños/as aprendan y practiquen las tablas de multiplicar mientras se divierten jugando">
+                <img src="img/Portafolio/Juego2D.jpg" class="img-item" alt="Hecho con C#, el motor de videojuegos multiplataforma Unity y 
+                  Adobe Photoshop para el diseño de algunos sprites y texturas." 
+                  data-title="Juego en formato 2D del género RPG y Plataformas desarrollado para dispositivos móviles enfocado a que los niños/as 
+                  aprendan y practiquen las tablas de multiplicar mientras se divierten jugando.">
               </div>
               <div class="contentBx">
                 <h3 data-es="Juego móvil 2D 'Tablas de multiplicar'" data-en="2D Mobile Game 'Multiplication Tables'"></h3>
               </div>
-              <div class="t-icons"> <!-- Tecnologías -->
+              <div class="t-icons">
                 <ul class="p-tecnologies">
                   <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="C#">
                     <i><img class="C-Icon p-tec-svg-icons"></i>
@@ -532,18 +521,19 @@
               <li><span>2021</span></li>
             </ul>
           </div>
-           <div class="p-card"> <!-- Sistema Administrador de Usuarios -->
+          <div class="p-card">
               <div class="content">
                 <div id="p-img">
-                  <img src="img/Portafolio/Adminusuarios.png" class="img-item" alt="Back end: Java y Spring Framework (Spring Web, 
-                    Spring Security, Spring Data JPA, Thymeleaf, Spring Testing) - Front end: JavaScript, jQuery y AJAX para la funcionalidad, 
-                    CSS y Bootstrap para los estilos - Servidor: Base de Datos PostgreSQL - Control de versiones con GitLab y GitHub"
-                    data-title="Sistema que permite la administración de toda la información de los usuarios registrados en las diferentes aplicaciónes pertenecientes a un banco">
+                  <img src="img/Portafolio/AdministradorUsuarios.png" class="img-item" alt="Back end: Java y Spring Framework (Spring Web, 
+                    Spring Security, Spring Data JPA, Thymeleaf) - Front end: HTML para la estructuración, JavaScript, jQuery y AJAX para la 
+                    funcionalidad, CSS y Bootstrap para los estilos - Servidor: Base de Datos PostgreSQL - Control de versiones con GitLab y GitHub."
+                    data-title="Sistema que permite la administración de toda la información de los usuarios registrados en las diferentes 
+                    aplicaciónes pertenecientes a un banco">
                 </div>
                 <div class="contentBx">
                   <h3 data-es="Sistema administrador de usuarios" data-en="Users Management System"></h3>
                 </div>
-                <div class="t-icons"> <!-- Tecnologías -->
+                <div class="t-icons">
                   <ul class="p-tecnologies">
                     <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java">
                       <i><img class="Java-Icon p-tec-svg-icons"></i>
@@ -576,22 +566,22 @@
                   <span data-es="Hecho con: " data-en="Made with: "></span>
                 </div>
               </div>
-              <ul class="p-icons"> <!-- iconos -->
+              <ul class="p-icons">
                 <li><span>2020</span></li>
               </ul>
           </div>   
-          <div class="p-card"> <!-- Proyecto Red Social Egresados -->
+          <div class="p-card">
             <div class="content">
               <div id="p-img">
-                <img src="img/Portafolio/RedSocialEgresados.png" class="img-item" alt="
-                Hecho con PHP, JavaScript, jQuery y AJAX para la funcionalidad y HTML, CSS y la librería Bootstrap para los estilos - Servidor: Base de Datos MySQL" 
-                data-title="Red social para recién egresados y empresas en busca de nuevos talentos, permite realizar publicaciones, 
-                solicitudes de amistad, postulaciones y además de un chat en donde ambas partes se pueden comunicar">
+                <img src="img/Portafolio/RedSocialEgresados.png" class="img-item" alt="Hecho con PHP, JavaScript, jQuery y AJAX, HTML para la estructuración, 
+                  CSS y la librería Bootstrap para los estilos - Servidor: Base de Datos MySQL." 
+                  data-title="Red social enfocada a recién egresados y empresas en busca de nuevos talentos, permite realizar publicaciones, enviar solicitudes 
+                  de amistad, postulaciones y además, cuenta con un chat en donde ambas partes se pueden comunicar.">
               </div>
               <div class="contentBx">
                 <h3 data-es="Red Social para recién egresados" data-en="Social Network for graduates"></h3>
               </div>
-              <div class="t-icons"> <!-- Tecnologías -->
+              <div class="t-icons">
                 <ul class="p-tecnologies">
                   <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PHP">
                     <i><img class="PHP-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
@@ -621,24 +611,25 @@
                 <span data-es="Hecho con: " data-en="Made with: "></span>
               </div>
             </div>
-            <ul class="p-icons"> <!-- iconos -->
+            <ul class="p-icons">
               <li><span>2019</span></li>
             </ul>
           </div>
-          <div class="p-card"> <!-- Proyecto VR -->
+          <div class="p-card">
             <div class="content">
               <div id="p-img">
-                <img src="img/Portafolio/Proyecto VR.png" class="img-item"
-                  alt="Hecho con C# y el motor de videojuegos multiplataforma Unity  -   
-                  el programa de diseño gráfico Sketchup para el modelado 3D, Adobe Photoshop para el diseño de algunas texturas y los servicios de Realidad Virtual (VR) de Google Cardboard" 
+                <img src="img/Portafolio/AppVR.png" class="img-item" alt="Hecho con C# y el motor de videojuegos multiplataforma Unity - 
+                  el programa de diseño gráfico Sketchup para el modelado 3D, Adobe Photoshop para el diseño de algunas texturas y los servicios 
+                  de Realidad Virtual (VR) de Google Cardboard." 
                   data-title="Aplicación de Realidad Virtual la cual permite hacer un 'recorrido' virtual por algunas de las zonas arqueológicas
-                  más importantes de México, así como otros lugares de importancia histórica, al mismo tiempo que se va escuchando y/o leyendo información importante sobre cada uno de ellos">
+                  más importantes de México, así como otros lugares de importancia histórica, al mismo tiempo que se va escuchando y/o leyendo 
+                  información importante sobre cada uno de ellos.">
               </div>
               <div class="contentBx">
                 <h3 data-es="Juego de Realidad Virtual de lugares de México"
                   data-en="Virtual Reality Game of Places of Mexico"></h3>
               </div>
-              <div class="t-icons"> <!-- Tecnologías -->
+              <div class="t-icons">
                 <ul class="p-tecnologies">
                   <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="C#">
                     <i><img class="C-Icon p-tec-svg-icons"></i>
@@ -659,21 +650,22 @@
                 <span data-es="Hecho con: " data-en="Made with: "></span>
               </div>
             </div>
-            <ul class="p-icons"> <!-- iconos -->
+            <ul class="p-icons">
               <li><span>2019</span></li>
             </ul>
           </div>
-          <div class="p-card"> <!-- Proyecto control de herramientas -->
+          <div class="p-card">
             <div class="content">
               <div id="p-img">
-                <img src="img/Portafolio/Proyecto GFR.png" class="img-item"
-                  alt=" Hecho con Java, la librería gráfica Java Swing, entre otras, la librería JasperReports para la creación de reportes y el Entorno de Desarrollo Integrado NetBeans IDE  -  Servidor: Base de Datos MySQL"
-                  data-title="Sistema que permite el control del almacén de herramientas de una empresa, así como también del control de los préstamos y devoluciones de las mismas por parte de los empleados">
+                <img src="img/Portafolio/ProyectoInventario.png" class="img-item" alt=" Hecho con Java, la librería gráfica Java Swing, entre otras, 
+                  la librería JasperReports para la creación de reportes y el Entorno de Desarrollo Integrado NetBeans IDE  -  Servidor: Base de Datos MySQL."
+                  data-title="Sistema que permite el control del almacén de herramientas de una empresa, así como también del control de los préstamos 
+                  y devoluciones de las mismas por parte de los empleados">
               </div>
               <div class="contentBx">
                 <h3 data-es="Sistema para el control de un almacén" data-en="Tools Warehouse Control System"></h3>
               </div>
-              <div class="t-icons"> <!-- Tecnologías -->
+              <div class="t-icons">
                 <ul class="p-tecnologies">
                   <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"  title="Java y Java Swing">
                     <i><img class="Java-Icon p-tec-svg-icons"></i>
@@ -691,23 +683,22 @@
                 <span data-es="Hecho con: " data-en="Made with: "></span>
               </div>
             </div>
-            <ul class="p-icons"> <!-- iconos -->              
-              <li>
-                <span>2018</span>
-              </li>              
+            <ul class="p-icons">             
+              <li><span>2018</span></li>              
             </ul>
           </div>
-          <div class="p-card"> <!-- Proyecto Sistema escuela -->
+          <div class="p-card">
             <div class="content">
               <div id="p-img">
-                <img src="img/Portafolio/Sistema Escuela.png" class="img-item" alt="
-                Hecho con PHP, JavaScript, jQuery y AJAX para la funcionalidad, HTML, CSS y Bootstrap para los estilos y La librería TCPDF de PHP para la creación de ficheros - Servidor: Base de Datos MySQL"
-                data-title="Sistema para el control de los horarios de entrada y salida, permisos y días de descanso de todo el personal docente y administrativo de una universidad, entre sus funciones se encuentra la generación de reportes en formato PDF">
+                <img src="img/Portafolio/ControlUniversidad.png" class="img-item" alt="Hecho con PHP, JavaScript, jQuery y AJAX, HTML para la estructuración, 
+                  CSS y Bootstrap para los estilos, la librería TCPDF de PHP para la creación de ficheros PDF - Servidor: Base de Datos MySQL."
+                  data-title="Sistema para el control de los horarios de entrada y salida, permisos y días de descanso de todo el personal docente 
+                  y administrativo de una universidad, entre sus funciones se encuentra la generación de reportes en formato PDF.">
               </div>
               <div class="contentBx">
                 <h3 data-es="Sistema de control del personal escolar" data-en="School Staff Control System"></h3>
               </div>
-              <div class="t-icons"> <!-- Tecnologías -->
+              <div class="t-icons">
                 <ul class="p-tecnologies">
                   <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PHP">
                     <i><img class="PHP-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
@@ -743,16 +734,16 @@
               </li>
             </ul>
           </div>
-          <div class="p-card"> <!-- Memorama -->
+          <div class="p-card">
             <div class="content">
               <div id="p-img">
-                <img src="img/Portafolio/Memorama.png" class="img-item"
-                  alt="Hecho con Java, la librería gráfica Java Swing y el Entorno de Desarrollo Integrado NetBeans IDE" data-title="Juego 'Memorama'  con temática de guitarristas para computadora">
+                <img src="img/Portafolio/Memorama.png" class="img-item" alt="Hecho con Java, la librería gráfica Java Swing y el Entorno de Desarrollo 
+                  Integrado NetBeans IDE." data-title="Juego 'Memorama'  con temática de guitarristas para computadora.">
               </div>
               <div class="contentBx">
                 <h3 data-es="Juego Memorama" data-en="Concentration Game"></h3>
               </div>
-              <div class="t-icons"> <!-- Tecnologías -->
+              <div class="t-icons">
                 <ul class="p-tecnologies">
                   <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java y Java Swing">
                     <i><img class="Java-Icon p-tec-svg-icons"></i>
@@ -764,22 +755,21 @@
                 <span data-es="Hecho con: " data-en="Made with: "></span>
               </div>
             </div>
-            <ul class="p-icons"> <!-- iconos -->
-              <li>
-                <span>2017</span>
-              </li>
+            <ul class="p-icons">
+              <li><span>2017</span></li>
             </ul>
           </div>
-          <div class="p-card"> <!-- Buscaminas -->
+          <div class="p-card">
             <div class="content">
               <div id="p-img">
-                <img src="img/Portafolio/Buscaminas.png" class="img-item" alt="Hecho con Java, la librería gráfica Java Swing y el Entorno de Desarrollo Integrado NetBeans IDE" data-title="Juego 'Buscaminas' clásico para computadora">
+                <img src="img/Portafolio/Buscaminas.png" class="img-item" alt="Hecho con Java, la librería gráfica Java Swing y el Entorno de Desarrollo 
+                  Integrado NetBeans IDE." data-title="Juego 'Buscaminas' clásico para computadora.">
               </div>
               <div class="contentBx">
                 <h3 data-es="Juego Buscaminas" data-en="Minesweeper Game"></h3>
               </div>
               <div class="t-icons">
-                <ul class="p-tecnologies"> <!-- Tecnologías -->
+                <ul class="p-tecnologies">
                   <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java y Java Swing">
                     <i><img class="Java-Icon p-tec-svg-icons"></i>
                   </li>
@@ -790,22 +780,17 @@
                 <span data-es="Hecho con: " data-en="Made with: "></span>
               </div>
             </div>
-            <ul class="p-icons"> <!-- iconos -->
-              <li>
-                <span>2017</span>
-              </li>
+            <ul class="p-icons">
+              <li><span>2017</span></li>
             </ul>
           </div>
         </div>
-    
-        <button class="radius-padding b-color-4B7 show-more-btn" id="show-more-btn" data-title="Mostrar más - Show more">
-          <i class='fa-solid fa-angle-down fa-bounce'></i>
-        </button>
+        
+        <button class="radius-padding b-color-4B7 show-more-btn" id="show-more-btn" data-title="Mostrar más - Show more"><i class='fa-solid fa-angle-down fa-bounce'></i></button>
     
       </div>
-    </section>    
-  
-    <!-- Habilidades -->  
+    </section> 
+     
     <section class="skills-cards" id="Skills" data-aos="fade-up"> 
     <h3 class="sectionTitles" data-es="Mis habilidades" data-en="My skills"></h3>
     <div class="cards-container">      
@@ -1126,8 +1111,7 @@
       </div>      
     </div>
     </section>
-  
-    <!-- Contacto -->
+    
     <section class="contactme" id="Contact" th:fragment="contact">      
     <div class="content">
       <!-- Form -->
@@ -1194,45 +1178,8 @@
       </div> 
     </div>
     </section>
-
   </div>
 
-  <!-- Modal mostrado al traducir la página -->
-  <div class="modalSpinner modal fade" tabindex="-1" role="dialog" id="spinnerModal">
-    <div class="modal-dialog modal-dialog-centered justify-content-center" role="document" style="box-shadow: none;">
-      <span id="spinnerSpan" data-es=" Traduciendo, por favor espere..." data-en=" Translating, please wait..."></span>&nbsp;
-      <i class="fa-solid fa-gear fa-spin"></i>
-    </div>
-  </div>
-
-  <!-- Modal Proyectos -->
-  <div class="modal fade" id="imgPopUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" 
-      data-bs-keyboard="false"> <!-- data-bs-backdrop="static" -->
-      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
-        <div class="modal-content">
-          <div class="modal-header b-color-4B7">             
-            <h6> </h6> <!-- Detalle del proyecto -->                  
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Cerrar - Close"></button> <!--btn-close-white-->
-          </div>
-          <div id="google_translate_element"> <!-- Google Translate Plugin -->
-            <span data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="m-gt-tooltip" title="Para traducir el texto a inglés">
-              <i class="fa-solid fa-language fa-beat-fade" style="--fa-beat-fade-opacity: 0.65; --fa-beat-fade-scale: 1.075;"></i>
-            </span>
-          </div>
-          <span class="alert alert-light span-info" role="alert">
-            Toca la imagen para activar la lupa - Toca el siguiente ícono para desactivarla:
-            <button class="zoomout" title="Desactivar lupa"><i class="fa-solid fa-magnifying-glass-minus fa-shake"></i></button>
-          </span>          
-          <div class="modal-body img-magnifier-container radius-padding ">
-            <img id="myimage" class="img-modal" src="" alt="">
-          </div> 
-          <div class="modal-footer b-color-6CC">
-            <p> </p> <!-- Herramientas que se usaron -->
-          </div>         
-        </div>
-      </div>
-  </div>
-  
   <footer class="footer" id="footer">
     <div class="footer-content">
       <h3 data-es="Sígueme" data-en="Follow me"></h3>
@@ -1258,6 +1205,41 @@
     </div>
   </footer>
 
+  <!-- Projects Modal -->
+  <div class="modal fade" id="imgPopUpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" 
+      data-bs-keyboard="false"> <!-- data-bs-backdrop="static" -->
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div class="modal-header b-color-4B7">             
+            <h6> </h6>                 
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Cerrar - Close"></button>
+          </div>
+          <div id="google_translate_element"> <!-- Google Translate Plugin -->
+            <span data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="m-gt-tooltip" title="Para traducir el texto a inglés">
+              <i class="fa-solid fa-language fa-beat-fade" style="--fa-beat-fade-opacity: 0.65; --fa-beat-fade-scale: 1.075;"></i>
+            </span>
+          </div>
+          <span class="alert alert-light span-info" role="alert">
+            Toca la imagen para activar la lupa - Toca el siguiente ícono para desactivarla:
+            <button class="zoomout" title="Desactivar lupa"><i class="fa-solid fa-magnifying-glass-minus fa-shake"></i></button>
+          </span>          
+          <div class="modal-body img-magnifier-container radius-padding ">
+            <img id="myimage" class="img-modal" src="" alt="">
+          </div> 
+          <div class="modal-footer b-color-6CC">
+            <p> </p>
+          </div>         
+        </div>
+      </div>
+  </div>
+  <!-- Language Spinner Modal -->
+  <div class="modalSpinner modal fade" tabindex="-1" role="dialog" id="spinnerModal">
+    <div class="modal-dialog modal-dialog-centered justify-content-center" role="document" style="box-shadow: none;">
+      <span id="spinnerSpan" data-es=" Traduciendo, por favor espere..." data-en=" Translating, please wait..."></span>&nbsp;
+      <i class="fa-solid fa-gear fa-spin"></i>
+    </div>
+  </div>
+
   <!-- Scripts -->
   <div class="page-scripts">
     <!-- JavaScript Bundle with Popper -->
@@ -1273,7 +1255,6 @@
     <script type="text/javascript" src="js/imgMagnifyingGlass.js"></script>    
     <!-- Google Translate Plugin -->
     <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>   
-  </div>
-  
+  </div>  
 </body>
 </html>
