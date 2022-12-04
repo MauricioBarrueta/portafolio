@@ -110,57 +110,53 @@ ImageModal.addEventListener('hidden.bs.modal', function () {
 
 /* Función del botón para mostrar y ocultar los proyectos que no aparecen en la lista inicial */
 const showMoreProjectsBtn = document.querySelector('.show-more-btn');
-function showOrHideProjects() {
+showMoreProjectsBtn.addEventListener('click', function showOrHideProjects() {
     var cardsVisible = document.getElementById("cardsLimit");
     var cardsHidden = document.getElementById("hiddenCards");
     var btnShowHiddenCards = document.getElementById("show-more-btn");
 
     if (cardsVisible.style.display === "none") {
-        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-down fa-bounce'></i>"; 
+        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-down fa-bounce'></i>";
         btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more"); cardsVisible.style.display = "flex"; cardsHidden.style.display = "none";
     } else {
         cardsVisible.style.display = "none";
-        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-up fa-bounce'></i>"; 
+        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-up fa-bounce'></i>";
         btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less"); cardsHidden.style.display = "flex"; cardsHidden.style.flexWrap = "wrap";
         cardsHidden.style.alignContent = "center"; cardsHidden.style.justifyContent = "space-around"; cardsHidden.style.gap = "15px";
     }
     if (btnShowHiddenCards.getAttribute("data-title", "Mostrar más - Show more") && cardsHidden.style.display === "none") {
         document.querySelector('#Projects').scrollIntoView({ behavior: 'smooth' });
     }
-}
-showMoreProjectsBtn.addEventListener('click', showOrHideProjects);
+});
 
 /* Función que obtiene los datos del formulario para enviar el correo electrónico */
 const emailForm = document.querySelector('#c-form');
 const btnEmailTo = document.querySelector('#myEmail');
-emailForm.addEventListener('submit', onSubmit)
-function onSubmit(event) {
+emailForm.addEventListener('submit', function onSubmit(event) {
     event.preventDefault()
     const form = new FormData(this)
     const btnSendEmail = $('#btnSendEmail')
-    const btnHtmlElements = btnSendEmail.html() // Almacena las caracteristicas del botón    
-    $(btnSendEmail).html('<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>').prop('disabled', true)
+    const btnHtmlElements = btnSendEmail.html() /* Almacena las caracteristicas del botón */
     /* Agrega un spinner y texto al botón antes de completar el envío del formulario */
+    $(btnSendEmail).html('Procesando...&nbsp;<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>').prop('disabled', true)
     setTimeout(function () {
         $(btnSendEmail).html(btnHtmlElements).prop('disabled', false) /* Restaura el botón a su valor inicial */
         btnEmailTo.setAttribute('href', `mailto:mauba22@outlook.com?subject=Quiero contactar: ${form.get('name')} - ${form.get('email')}&body=${form.get('message')}`)
         btnEmailTo.click();
     }, 4000)
-}
+});
 
 /* Función para copiar el correo electrónico al portapapeles */
 const btnCopyEmail = document.querySelector('.copy-btn')
-function copyEmailToClipboard() {
+btnCopyEmail.addEventListener('click', function copyEmailToClipboard() {
     var copyText = document.getElementById("email-copy");
     copyText.select();
     copyText.setSelectionRange(0, 99999); /* Para dispositivos móviles */
     navigator.clipboard
-      .writeText(copyText.value)
-      .then(() => { alert("Correo electrónico copiado al portapapeles"); })
-      .catch(() => { alert("Error inesperado, si aún deseas copiar selecciona el correo manualmente"); });
-}
-btnCopyEmail.addEventListener('click', copyEmailToClipboard);
-
+        .writeText(copyText.value)
+        .then(() => { alert("Correo electrónico copiado al portapapeles"); })
+        .catch(() => { alert("Error inesperado, si aún deseas copiar selecciona el correo manualmente"); });
+});
 
 /* Función para traducir la página entre Inglés y Español */
 function switchLang(lang) {
@@ -168,7 +164,7 @@ function switchLang(lang) {
         return $(this).data(lang); 
     });
 }
-switchLang("es"); /* Se manda el idioma Español por defecto */
+switchLang("es"); /* Se manda el idioma Español como predeterminado */
 $(".switchlang").click(function () { /* Se llama a la función para traducir y muestra el modal de carga al mismo tiempo */
     modalSpinner();
     switchLang($(this).data("lang"))
