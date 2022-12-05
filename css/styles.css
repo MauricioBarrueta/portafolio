@@ -522,7 +522,6 @@ footer { /* Footer content */
     .main { background-size: 100%; }
     /* Header */
     header { background-size: 35% }
-    .scroll-down, .scroll-down-r { font-size: 11px; }
     .main-introduction .content { flex-flow: column; }
     .main-introduction .content .h-image { flex-grow: 0; flex-basis: 50%; }
     .main-introduction, .aboutme { width: 100%; } /* header y aboutme */     
@@ -584,14 +583,11 @@ footer { /* Footer content */
     /* Titles */
     .sectionTitles { font-size: 15px; border-radius: 5px !important; }
     /* Introduction */
-    .h-back::after {
-        content: "\f577"; font-family: FontAwesome;        
-        position: absolute; bottom: 64.5%; left: 88%;
-    }
-    .h-front::after {
-        content: "\f577"; font-family: FontAwesome;        
-        position: absolute; bottom: 15.5%; left: 88%;
-    }
+    .scroll-down-l, .scroll-down-r { font-size: 10.5px; }
+    .h-back::after, .h-front::after {
+        content: "\f577"; font-family: FontAwesome;     
+        position: relative; bottom: -5%; left: 43%;
+    }    
     /* Portafolio */
     .portafolio .p-card .content .t-icons span::after { /* Tech-Icons Title Cursor Icon */
         content: "\f577"; font-family: FontAwesome;        
@@ -632,7 +628,7 @@ footer { /* Footer content */
     /* Skills */
     .card-skills img { width: 50px; height: 50px; } 
     .card-skills>.img-pdng { padding-top: 18px !important; }
-    .card-skills::after { font-size: 11px; left: 78%; bottom: -1%; }
+    .card-skills::after { font-size: 10.5px; left: 79%; bottom: -2%; }
     .pb-small-txt { font-size: 4.5px; padding: 0.2rem; }
     /* Contact */
     .contact-form { width: 100%; }
