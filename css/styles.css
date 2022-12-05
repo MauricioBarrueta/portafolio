@@ -104,6 +104,7 @@ header {
 .main-introduction .content .back::before { content: "{ "; } .main-introduction .content .back::after { content: " }"; }
 .main-introduction .content .front::before { content: "< "; } .main-introduction .content .front::after { content: " />"; }
 .main-introduction .content .h-back:hover, .h-front:hover { transform: translateY(-3px); cursor: pointer; background-color: #F4F6F7; } 
+.main-introduction .content .h-back:hover::after, .h-front:hover::after { opacity: 0; }
 .main-introduction .content span { /* Intr-Divs Title */      
     font-size: 20px; display: table; margin: 0 auto; position: relative; 
     transform: translateY(50px); opacity: 1;
@@ -582,6 +583,15 @@ footer { /* Footer content */
 @media screen and (max-width: 800px) {    
     /* Titles */
     .sectionTitles { font-size: 15px; border-radius: 5px !important; }
+    /* Introduction */
+    .h-back::after {
+        content: "\f577"; font-family: FontAwesome;        
+        position: absolute; bottom: 64.5%; left: 88%;
+    }
+    .h-front::after {
+        content: "\f577"; font-family: FontAwesome;        
+        position: absolute; bottom: 15.5%; left: 88%;
+    }
     /* Portafolio */
     .portafolio .p-card .content .t-icons span::after { /* Tech-Icons Title Cursor Icon */
         content: "\f577"; font-family: FontAwesome;        
