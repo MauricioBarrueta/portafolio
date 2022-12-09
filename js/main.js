@@ -114,7 +114,6 @@ showMoreProjectsBtn.addEventListener('click', function showOrHideProjects() {
     var cardsVisible = document.getElementById("cardsLimit");
     var cardsHidden = document.getElementById("hiddenCards");
     var btnShowHiddenCards = document.getElementById("show-more-btn");
-
     if (cardsVisible.style.display === "none") {
         btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-down fa-bounce'></i>";
         btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more"); cardsVisible.style.display = "flex"; cardsHidden.style.display = "none";
