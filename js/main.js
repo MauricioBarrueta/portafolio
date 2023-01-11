@@ -116,12 +116,18 @@ showMoreProjectsBtn.addEventListener('click', function showOrHideProjects() {
     var btnShowHiddenCards = document.getElementById("show-more-btn");
     if (cardsVisible.style.display === "none") {
         btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-down fa-bounce'></i>";
-        btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more"); cardsVisible.style.display = "flex"; cardsHidden.style.display = "none";
+        btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more"); 
+        cardsVisible.style.display = "flex"; 
+        cardsHidden.style.display = "none";
     } else {
         cardsVisible.style.display = "none";
         btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-up fa-bounce'></i>";
-        btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less"); cardsHidden.style.display = "flex"; cardsHidden.style.flexWrap = "wrap";
-        cardsHidden.style.alignContent = "center"; cardsHidden.style.justifyContent = "space-around"; cardsHidden.style.gap = "15px";
+        btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less"); 
+        cardsHidden.style.display = "flex"; 
+        cardsHidden.style.flexWrap = "wrap";
+        cardsHidden.style.alignContent = "center"; 
+        cardsHidden.style.justifyContent = "space-around"; 
+        cardsHidden.style.gap = "15px";
     }
     if (btnShowHiddenCards.getAttribute("data-title", "Mostrar más - Show more") && cardsHidden.style.display === "none") {
         document.querySelector('#Projects').scrollIntoView({ behavior: 'smooth' });
@@ -171,9 +177,7 @@ $(".switchlang").click(function () { /* Se llama a la función para traducir y m
 /* Muestra un modal con un 'loader' por 3s al traducir la página */
 function modalSpinner() {
     $('.modalSpinner').modal('show');
-    setTimeout(function () {
-        $('.modalSpinner').modal('hide');
-    }, 3000);
+    setTimeout(function () { $('.modalSpinner').modal('hide'); }, 3000);
 }
 
 /* Bootstrap Tooltip */
