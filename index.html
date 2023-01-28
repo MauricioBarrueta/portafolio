@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-MX">
-<head>
+<h>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">
@@ -11,6 +11,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
   <!-- Animate On Scroll Library (AOS)-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Animate.css Library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
   <!-- CSS Styles -->
   <link rel="stylesheet" href="css/styles.css">   
   
@@ -22,8 +24,7 @@
 <body class="body" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">  
 
   <!-- Main Content -->
-  <div class="main"> 
-    
+  <div class="main">     
     <div id="loading" class="loading-page-gif"><img src="img/loading.gif" alt=""></div> <!-- Loading Page Gif -->
     
     <button class="ScrollToTop btn b-color-4B7 transition03"><i class="fa-solid fa-angles-up fa-bounce fa-lg"></i></button> <!-- Scroll To Top Button -->
@@ -43,8 +44,8 @@
           <div class="h-back radius-padding b-color-4B7 transition03">
             <span class="transition03 back">Back-end</span>
             <p class="transition03" 
-              data-es="Como desarrollador Backend siempre trato de escribir código lo más optimizado posible, con el fin de que sea un código entendible, limpio y sobre todo eficiente."
-              data-en="As a Backend developer I always try to write the most optimized code possible, with the purpose of making it an understandable, clean and above all efficient code.">
+              data-es="Como desarrollador Back end siempre trato de escribir código lo más optimizado posible, con el fin de que sea un código entendible, limpio y sobre todo eficiente."
+              data-en="As a Back end developer I always try to write the most optimized code possible, with the purpose of making it an understandable, clean and above all efficient code.">
             </p>
             <i class="fa-solid fa-code"></i>
           </div>
@@ -54,8 +55,8 @@
           <div class="h-front radius-padding b-color-4B7 transition03">
             <span class="transition03 front">Front-end</span>
             <p class="transition03" 
-              data-es="Como desarrollador Frontend el objetivo es crear una interfaz funcional, creativa, adaptable y sobre todo que sea fácil de usar para el usuario final." 
-              data-en="As a Frontend developer, the objective is to create a functional, creative, adaptable interface and above all that's easy to use for the end user.">
+              data-es="Como desarrollador Front end el objetivo es crear una interfaz funcional, creativa, adaptable y sobre todo que sea fácil de usar para el usuario final." 
+              data-en="As a Front end developer, the objective is to create a functional, creative, adaptable interface and above all that's easy to use for the end user.">
             </p>
             <i class="fa-solid fa-laptop-code" style="margin-top: -5px;"></i>
           </div>
@@ -146,7 +147,49 @@
     
     <section class="portafolio" id="Projects" data-aos="fade-up">
       <h3 class="sectionTitles" data-es="Portafolio" data-en="Portfolio"></h3>
-      <div class="p-cards-container">                
+      <div class="p-cards-container">   
+
+       <div class="project-card">
+        <div class="img-container">
+            <img class="img-item" src="img/Portafolio/RickAndMortyAPI.png" alt="images">
+        </div>
+        <div class="details">
+            <h2>API Rest de Rick and Morty</h2>
+            <div class="t-icons">
+              <ul class="p-tecnologies">  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
+                  <i><img class="JavaScript-Icon p-tec-svg-icons"></i>
+                </li>                
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="jQuery">
+                  <i><img class="jQuery-Icon p-tec-svg-icons"></i>
+                </li>              
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
+                  <i><img class="HTML-Icon p-tec-svg-icons"></i>
+                </li>                
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
+                  <i><img class="CSS-Icon p-tec-svg-icons"></i>
+                </li>                
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
+                  <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
+                </li>        
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Node.js">
+                  <i><img src="svg/NodeJS.svg" class="p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                </li>        
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NPM">
+                  <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Git y GitHub Pages">
+                  <i><img src="svg/GitHub.svg" class="p-tec-svg-icons"></i>
+                </li>            
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PokéApi">
+                  <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons" ></i>
+                </li>     
+              </ul>
+            </div>
+        </div>
+      </div>    
+ 
+
         <div class="p-card">
             <div class="content">
               <div id="p-img">
@@ -563,7 +606,46 @@
               <ul class="p-icons">
                 <li><span>2020</span></li>
               </ul>
-          </div>   
+          </div>  
+          <div class="p-card">
+            <div class="content">
+              <div id="p-img">
+                <img src="img/Portafolio/AppVR.png" class="img-item" alt="Hecho con C# y el motor de videojuegos multiplataforma Unity - 
+                  el programa de diseño gráfico Sketchup para el modelado 3D, Adobe Photoshop para el diseño de algunas texturas y los servicios 
+                  de Realidad Virtual (VR) de Google Cardboard." 
+                  data-title="Aplicación de Realidad Virtual la cual permite hacer un 'recorrido' virtual por algunas de las zonas arqueológicas
+                  más importantes de México, así como otros lugares de importancia histórica, al mismo tiempo que se va escuchando y/o leyendo 
+                  información importante sobre cada uno de ellos.">
+              </div>
+              <div class="contentBx">
+                <h3 data-es="Juego de Realidad Virtual de lugares de México"
+                  data-en="Virtual Reality Game of Places of Mexico"></h3>
+              </div>
+              <div class="t-icons">
+                <ul class="p-tecnologies">
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="C#">
+                    <i><img class="C-Icon p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Unity">
+                    <i><img class="Unity-Icon p-tec-svg-icons" style="scale: 2; margin: 0 15px 0 15px;"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Adobe Photoshop">
+                    <i><img src="svg/Photoshop.svg" class="p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Sketchup">
+                    <i><img src="svg/Sketchup.svg" class="p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Google Cardboard VR ">
+                    <i><img src="svg/VRCardboard.svg" class="p-tec-svg-icons"></i>
+                  </li>                  
+                </ul>
+                <span data-es="Hecho con: " data-en="Made with: "></span>
+              </div>
+            </div>
+            <ul class="p-icons">
+              <li><span>2019</span></li>
+            </ul>
+          </div>
           <div class="p-card">
             <div class="content">
               <div id="p-img">
@@ -607,78 +689,6 @@
             </div>
             <ul class="p-icons">
               <li><span>2019</span></li>
-            </ul>
-          </div>
-          <div class="p-card">
-            <div class="content">
-              <div id="p-img">
-                <img src="img/Portafolio/AppVR.png" class="img-item" alt="Hecho con C# y el motor de videojuegos multiplataforma Unity - 
-                  el programa de diseño gráfico Sketchup para el modelado 3D, Adobe Photoshop para el diseño de algunas texturas y los servicios 
-                  de Realidad Virtual (VR) de Google Cardboard." 
-                  data-title="Aplicación de Realidad Virtual la cual permite hacer un 'recorrido' virtual por algunas de las zonas arqueológicas
-                  más importantes de México, así como otros lugares de importancia histórica, al mismo tiempo que se va escuchando y/o leyendo 
-                  información importante sobre cada uno de ellos.">
-              </div>
-              <div class="contentBx">
-                <h3 data-es="Juego de Realidad Virtual de lugares de México"
-                  data-en="Virtual Reality Game of Places of Mexico"></h3>
-              </div>
-              <div class="t-icons">
-                <ul class="p-tecnologies">
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="C#">
-                    <i><img class="C-Icon p-tec-svg-icons"></i>
-                  </li>
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Unity">
-                    <i><img class="Unity-Icon p-tec-svg-icons" style="scale: 2; margin: 0 15px 0 15px;"></i>
-                  </li>
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Adobe Photoshop">
-                    <i><img src="svg/Photoshop.svg" class="p-tec-svg-icons"></i>
-                  </li>
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Sketchup">
-                    <i><img src="svg/Sketchup.svg" class="p-tec-svg-icons"></i>
-                  </li>
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Google Cardboard VR ">
-                    <i><img src="svg/VRCardboard.svg" class="p-tec-svg-icons"></i>
-                  </li>                  
-                </ul>
-                <span data-es="Hecho con: " data-en="Made with: "></span>
-              </div>
-            </div>
-            <ul class="p-icons">
-              <li><span>2019</span></li>
-            </ul>
-          </div>
-          <div class="p-card">
-            <div class="content">
-              <div id="p-img">
-                <img src="img/Portafolio/ProyectoInventario.png" class="img-item" alt=" Hecho con Java, la librería gráfica Java Swing, entre otras, 
-                  la librería JasperReports para la creación de reportes y el Entorno de Desarrollo Integrado NetBeans IDE  -  Servidor: Base de Datos MySQL."
-                  data-title="Sistema que permite el control del almacén de herramientas de una empresa, así como también del control de los préstamos 
-                  y devoluciones de las mismas por parte de los empleados">
-              </div>
-              <div class="contentBx">
-                <h3 data-es="Sistema para el control de un almacén" data-en="Tools Warehouse Control System"></h3>
-              </div>
-              <div class="t-icons">
-                <ul class="p-tecnologies">
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"  title="Java y Java Swing">
-                    <i><img class="Java-Icon p-tec-svg-icons"></i>
-                  </li>
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
-                    <i><img src="svg/JasperReports.svg" style="scale: 2; margin: 0 15px 0 15px;" class="p-tec-svg-icons"></i>
-                  </li>
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
-                    <i><img class="NetBeans-Icon p-tec-svg-icons"></i>
-                  </li>
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="MySQL">
-                    <i><img class="SQL-Icon p-tec-svg-icons"></i>
-                  </li>
-                </ul>
-                <span data-es="Hecho con: " data-en="Made with: "></span>
-              </div>
-            </div>
-            <ul class="p-icons">             
-              <li><span>2018</span></li>              
             </ul>
           </div>
           <div class="p-card">
@@ -728,6 +738,39 @@
               </li>
             </ul>
           </div>
+          <div class="p-card">
+            <div class="content">
+              <div id="p-img">
+                <img src="img/Portafolio/ProyectoInventario.png" class="img-item" alt=" Hecho con Java, la librería gráfica Java Swing, entre otras, 
+                  la librería JasperReports para la creación de reportes y el Entorno de Desarrollo Integrado NetBeans IDE  -  Servidor: Base de Datos MySQL."
+                  data-title="Sistema que permite el control del almacén de herramientas de una empresa, así como también del control de los préstamos 
+                  y devoluciones de las mismas por parte de los empleados">
+              </div>
+              <div class="contentBx">
+                <h3 data-es="Sistema para el control de un almacén" data-en="Tools Warehouse Control System"></h3>
+              </div>
+              <div class="t-icons">
+                <ul class="p-tecnologies">
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"  title="Java y Java Swing">
+                    <i><img class="Java-Icon p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
+                    <i><img src="svg/JasperReports.svg" style="scale: 2; margin: 0 15px 0 15px;" class="p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
+                    <i><img class="NetBeans-Icon p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="MySQL">
+                    <i><img class="SQL-Icon p-tec-svg-icons"></i>
+                  </li>
+                </ul>
+                <span data-es="Hecho con: " data-en="Made with: "></span>
+              </div>
+            </div>
+            <ul class="p-icons">             
+              <li><span>2018</span></li>              
+            </ul>
+          </div>          
           <div class="p-card">
             <div class="content">
               <div id="p-img">
@@ -864,11 +907,11 @@
             aria-valuemin="0" aria-valuemax="100">85%</div>
         </div>
       </div>
-      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="SASS">
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="SASS">
         <img src="svg/SASS.svg" alt="" class="position-absolute top-50 start-50 translate-middle" >
         <div class="info-skills progress">
-          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
-            aria-valuemin="0" aria-valuemax="100">70%</div>
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">75%</div>
         </div>
       </div>  
       <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Bootstrap">
@@ -885,18 +928,18 @@
             aria-valuemin="0" aria-valuemax="100">75%</div>
         </div>
       </div>
-      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Thymeleaf">
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Thymeleaf">
         <img alt="" class=" Thymeleaf-Icon position-absolute top-50 start-50 translate-middle">
         <div class="info-skills progress">
-          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 75%" aria-valuenow="75"
-            aria-valuemin="0" aria-valuemax="100">75%</div>
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 72%" aria-valuenow="72"
+            aria-valuemin="0" aria-valuemax="100">72%</div>
         </div>
       </div>  
       <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Hibernate">
         <img src="svg/Hibernate.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
         <div class="info-skills progress">
-          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 70%" aria-valuenow="70"
-            aria-valuemin="0" aria-valuemax="100">70%</div>
+          <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 72%" aria-valuenow="72"
+            aria-valuemin="0" aria-valuemax="100">72%</div>
         </div>
       </div>      
       <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Angular">
@@ -1228,7 +1271,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" title="Cerrar - Close"></button>
           </div>
           <div id="google_translate_element"> <!-- Google Translate Plugin -->
-            <span data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="m-gt-tooltip" title="Para traducir el texto a inglés">
+            <span data-bs-toggle="tooltip" data-bs-placement="left" data-bs-custom-class="m-gt-tooltip" title="Traducir ventana al inglés">
               <i class="fa-solid fa-language fa-beat-fade" style="--fa-beat-fade-opacity: 0.65; --fa-beat-fade-scale: 1.075;"></i>
             </span>
           </div>
@@ -1252,6 +1295,15 @@
       <i class="fa-solid fa-gear fa-spin"></i>
     </div>
   </div>  
+
+  <!-- Alert Span -->
+  <div class="alertSpan hide" id="alertSpan">
+    <span class="fas fa-exclamation-circle"></span>
+    <span class="alert-text" id="alert-text"></span>
+    <span class="close-alert" data-bs-toggle="tooltip" data-bs-custom-class="alertDialogTooltip" data-bs-placement="top" data-bs-title="Cerrar">
+        <span class="fas fa-times fa-shake"></span>
+    </span>
+  </div>
 
   <!-- Scripts -->
   <div class="page-scripts">

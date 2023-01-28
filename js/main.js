@@ -50,12 +50,12 @@ window.addEventListener("scroll", function () {
 })
 
 /* Hace visible el bóton al iniciar el scroll hacia abajo */
-window.addEventListener('scroll', e => {
+window.addEventListener('scroll', () => {
     btnScrollToTop.style.display = window.scrollY > 150 ? 'block' : 'none';
 });
 /* Función que permite regresar al inicio al dar clic en el botón */
 const btnScrollToTop = document.querySelector('.ScrollToTop');
-btnScrollToTop.addEventListener('click', function () {
+btnScrollToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 });
 
@@ -69,18 +69,18 @@ $('.navbar-nav>li>a').on('click', function() {
 });
 
 /* Hace zoom a la imagen de las cards del portafolio cada que se pone el cursor */
-$(".img-item").hover(function () {
-    $(this).closest(".img-item").css("z-index", 1);
-    $(this).animate({ height: "205", width: "305" }, "fast");
-}, function () {
-    $(this).closest(".img-item").css("z-index", 0);
-    $(this).animate({ height: "200", width: "300" }, "fast");
-});
+// $(".img-item").hover(function () {
+//     $(this).closest(".img-item").css("z-index", 1);
+//     $(this).animate({ height: "205", width: "305" }, "fast");
+// }, function () {
+//     $(this).closest(".img-item").css("z-index", 0);
+//     $(this).animate({ height: "200", width: "300" }, "fast");
+// });
 /* Obtiene el atributo src, alt y title de la imagen seleccionada para pasarla al modal y mostrarlo */
 document.addEventListener('click', function (e) {
     if (e.target.classList.contains('img-item')) {
-        const src = e.target.getAttribute('src');
-        document.querySelector('.img-modal').src = src;
+        const imgSrc = e.target.getAttribute('src');
+        document.querySelector('.img-modal').src = imgSrc;
         const myModal = new bootstrap.Modal(document.getElementById('imgPopUpModal'));
         $("#imgPopUpModal p").text($(e.target).attr('alt')); /* Se pasa el valor de 'alt' de la imagen al elemento <p> del Modal */
         $("#imgPopUpModal h6").text($(e.target).attr('data-title')); /* Se pasa el valor de 'title' de la imagen al elemento <h6> del Modal */
@@ -110,7 +110,7 @@ ImageModal.addEventListener('hidden.bs.modal', function () {
 
 /* Función del botón para mostrar y ocultar los proyectos que no aparecen en la lista inicial */
 const showMoreProjectsBtn = document.querySelector('.show-more-btn');
-showMoreProjectsBtn.addEventListener('click', function showOrHideProjects() {
+showMoreProjectsBtn.addEventListener('click', () => {
     var cardsVisible = document.getElementById("cardsLimit");
     var cardsHidden = document.getElementById("hiddenCards");
     var btnShowHiddenCards = document.getElementById("show-more-btn");
@@ -137,7 +137,7 @@ showMoreProjectsBtn.addEventListener('click', function showOrHideProjects() {
 /* Función que obtiene los datos del formulario para enviar el correo electrónico */
 const emailForm = document.querySelector('#c-form');
 const btnEmailTo = document.querySelector('#myEmail');
-emailForm.addEventListener('submit', function onSubmit(event) {
+emailForm.addEventListener('submit', (event) => {
     event.preventDefault()
     const form = new FormData(this)
     const btnSendEmail = $('#btnSendEmail')
@@ -153,14 +153,14 @@ emailForm.addEventListener('submit', function onSubmit(event) {
 
 /* Función para copiar el correo electrónico al portapapeles */
 const btnCopyEmail = document.querySelector('.copy-btn')
-btnCopyEmail.addEventListener('click', function copyEmailToClipboard() {
+btnCopyEmail.addEventListener('click', () => {
     var copyText = document.getElementById("email-copy");
     copyText.select();
     copyText.setSelectionRange(0, 99999); /* Para dispositivos móviles */
     navigator.clipboard
         .writeText(copyText.value)
-        .then(() => { alert("Correo electrónico copiado al portapapeles"); })
-        .catch(() => { alert("Error inesperado, si aún deseas copiar selecciona el correo manualmente"); });
+        .then(() => { showAlertSpan(); alertText.innerHTML = `Copiado al portapapeles - Copied to clipboard '<i class="fa-solid fa-clipboard"></i>'`})
+        .catch(() => { showAlertSpan(); alertText.innerHTML = `Error inesperado, si aún deseas copiar selecciona el correo manualmente '<i class="fa-solid fa-triangle-exclamation"></i>'`});
 });
 
 /* Función para traducir la página entre Inglés y Español */
@@ -179,6 +179,25 @@ function modalSpinner() {
     $('.modalSpinner').modal('show');
     setTimeout(function () { $('.modalSpinner').modal('hide'); }, 3000);
 }
+
+/* Muestra un Alert dependiendo la acción que lo requiera */
+const alertDialog = document.getElementById('alertSpan');
+const alertText = document.getElementById('alert-text');
+const closeAlert = document.querySelector('.close-alert');
+
+const showAlertSpan = () => {   
+    alertDialog.classList.remove('hide');
+    alertDialog.classList.add('show');   
+    setTimeout(function () { 
+        closeAlertSpan(); 
+    }, 5000);
+}
+/* Función para ocultar el Alert Span */
+const closeAlertSpan = () => {
+    alertDialog.classList.remove('show');
+    alertDialog.classList.add('hide');     
+}
+closeAlert.addEventListener('click', closeAlertSpan)
 
 /* Bootstrap Tooltip */
 var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
