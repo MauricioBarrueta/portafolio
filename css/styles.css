@@ -9,6 +9,7 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
     box-sizing: border-box; max-width: 100%; max-width: 100vw; margin: 0; padding: 0;     
     font-family: 'Press Start 2P', cursive, Arial, Helvetica;    
 }
+.showInfo { visibility: hidden; }
 
 /* --------------------------------------------------------------- GENERAL STYLES -------------------------------------------------------- */
 .radius-padding, .contentBx, .p-tec-tooltip .tooltip-inner, .p-icons-a .tooltip-inner, .icons>h4 { border-radius: 5px; padding: 0.5rem; }
@@ -592,6 +593,15 @@ footer { /* Footer content */
     }
     /* Alert Span */
     .alertSpan .alert-text { font-size: 7.2px !important; white-space: nowrap; }
+    
+    .project-card>.showInfo {
+        width: 30px; height: 30px;
+        visibility: visible; position: absolute; right: -10px; bottom: -10px; 
+        margin-left: auto; margin-right: auto; z-index: 1;
+        background-color: #4B7F83; color: #F4F6F7; 
+        border-radius: 50%; border: 0;
+        display: flex; justify-content: center; align-items: center;
+    }
 }
 @media screen and (max-width: 650px) {
     .scrolldown-wrapper { left: 92% !important; bottom: -1.5%; } /* Header */
@@ -716,7 +726,8 @@ img.Firebase-Icon { content: url(../svg/Firebase.svg); } img.Unity-Icon { conten
 }
 .project-card::before, .project-card::after {
     width: 100%; height: 100%;
-    position: absolute; top: 0; left: 0;
+    position: absolute; 
+    top: 0; left: 0;
     content:"";
     border-radius: 5px; background-color: white;
     transition: 0.5s; z-index:-1;
@@ -735,6 +746,10 @@ img.Firebase-Icon { content: url(../svg/Firebase.svg); } img.Unity-Icon { conten
       object-fit: cover; cursor: zoom-in;
       border: 2px solid #4B7F83; border-radius: 5px;
 }
+
+
+
+
 .project-card .details {
       position: absolute; left: 10px; right: 10px;
       bottom: 16px; height: 60px;
