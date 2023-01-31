@@ -68,14 +68,6 @@ $('.navbar-nav>li>a').on('click', function() {
     $('.navbar-collapse').collapse('hide');
 });
 
-/* Hace zoom a la imagen de las cards del portafolio cada que se pone el cursor */
-// $(".img-item").hover(function () {
-//     $(this).closest(".img-item").css("z-index", 1);
-//     $(this).animate({ height: "205", width: "305" }, "fast");
-// }, function () {
-//     $(this).closest(".img-item").css("z-index", 0);
-//     $(this).animate({ height: "200", width: "300" }, "fast");
-// });
 /* Obtiene el atributo src, alt y title de la imagen seleccionada para pasarla al modal y mostrarlo */
 document.addEventListener('click', function (e) {
     if (e.target.classList.contains('img-item')) {
