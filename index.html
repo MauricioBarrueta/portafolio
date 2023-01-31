@@ -12,7 +12,7 @@
   <!-- Animate On Scroll Library (AOS)-->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- Animate.css Library -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" /> -->
   <!-- CSS Styles -->
   <link rel="stylesheet" href="css/styles.css">   
   
@@ -149,46 +149,97 @@
       <h3 class="sectionTitles" data-es="Portafolio" data-en="Portfolio"></h3>
       <div class="p-cards-container">   
 
-       <div class="project-card">
-        <div class="img-container">
+        <div class="project-card">
+          <div class="img-container">
             <img class="img-item" src="img/Portafolio/RickAndMortyAPI.png" alt="images">
-        </div>
-        <button class="showInfo"><i class="fa-solid fa-fingerprint fa-beat"></i></button>
-        <div class="details">
+          </div>
+          <button class="showInfo"><i class="fa-solid fa-fingerprint fa-beat"></i></button>
+          <div class="details">
             <h2>API Rest de Rick and Morty</h2>
-            <div class="t-icons">
-              <ul class="p-tecnologies">  
+            <div class="tec-icons">
+              <ul class="p-tecnologies">
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
                   <i><img class="JavaScript-Icon p-tec-svg-icons"></i>
-                </li>                
+                </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="jQuery">
                   <i><img class="jQuery-Icon p-tec-svg-icons"></i>
-                </li>              
+                </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
                   <i><img class="HTML-Icon p-tec-svg-icons"></i>
-                </li>                
+                </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
                   <i><img class="CSS-Icon p-tec-svg-icons"></i>
-                </li>                
+                </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
                   <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
-                </li>        
+                </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Node.js">
                   <i><img src="svg/NodeJS.svg" class="p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
-                </li>        
+                </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NPM">
                   <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
-                </li>  
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Git y GitHub Pages">
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
+                  title="Git y GitHub Pages">
                   <i><img src="svg/GitHub.svg" class="p-tec-svg-icons"></i>
-                </li>            
+                </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PokéApi">
-                  <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons" ></i>
-                </li>     
+                  <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons"></i>
+                </li>
               </ul>
             </div>
+            <ul class="web-icons">
+              <li>
+                <a href="https://mauriciobarrueta.github.io/pokemonPokedex/" data-bs-toggle="tooltip" data-bs-placement="top"
+                  data-bs-custom-class="web-icons-a" title="Página Web" target="_blank">
+                  <i class="fa-solid fa-globe fa-shake"></i>
+                </a>
+              </li>
+              <li><span>2022</span></li>
+              <li>
+                <a href="https://github.com/MauricioBarrueta/edgarmauriciobaag.git" data-bs-toggle="tooltip"
+                  data-bs-placement="top" data-bs-custom-class="web-icons-a" title="Repositorio" target="_blank">
+                  <i class="fa-brands fa-github fa-shake"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
-      </div>    
+        <div class="project-card">
+          <div class="img-container">
+            <img src="img/Portafolio/ControlArchivo.png" class="img-item"
+              alt=" Hecho con Java, la librería gráfica Java Swing, el framework de gestión de proyectos de software Maven, 
+              la librería JasperReports para la creación de reportes y NetBeans IDE - Servidor: Base de Datos MySQL."
+              data-title="Sistema que permite llevar el control del archivo manejado por año, el inventario de documentos dados de baja y 
+              llevar un registro de las entradas y salidas de documentos del archivo y del empleado que lo solicitó.">
+          </div>
+          <button class="showInfo"><i class="fa-solid fa-fingerprint fa-beat"></i></button>
+          <div class="details">
+            <h2 data-es="Sistema para el control del archivo" data-en="Files control system"></h2>
+            <div class="tec-icons">
+              <ul class="p-tecnologies">
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Java y Java Swing">
+                  <i><img class="Java-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
+                  <i><img src="svg/JasperReports.svg" class="p-tec-svg-icons" style="scale: 2; margin-left: 15px;"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Apache Maven">
+                  <i><img src="svg/maven.svg" class="p-tec-svg-icons" style="padding-top: 0.5rem; scale: 2.5; margin-left: 15px;"></i>
+                </li>                 
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
+                  <i><img class="NetBeans-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="MySQL">
+                  <i><img class="SQL-Icon p-tec-svg-icons"></i>
+                </li>
+              </ul>
+            </div>
+            <ul class="web-icons">              
+              <li><span>2022</span></li>              
+            </ul>
+          </div>
+        </div>
  
 
         <div class="p-card">
