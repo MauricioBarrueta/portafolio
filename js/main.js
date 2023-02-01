@@ -22,14 +22,14 @@ $(document).ready(function () {
     $('.goog-te-gadget').html($('.goog-te-gadget').children());
 
     /* Cambia el texto de la barra de Google Translate */
-    $('#google_translate_element').bind('DOMNodeInserted', function (event) {
-        $('.goog-te-menu-value span:first').html('Translate');
-        $('.goog-te-menu-frame.skiptranslate').on('load', function () {
-            setTimeout(function () {
-                $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('Translate');
-            }, 100);
-        });
-    });
+    // $('#google_translate_element').bind('DOMNodeInserted', function (event) {
+    //     $('.goog-te-menu-value span:first').html('Translate');
+    //     $('.goog-te-menu-frame.skiptranslate').on('load', function () {
+    //         setTimeout(function () {
+    //             $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('Translate');
+    //         }, 100);
+    //     });
+    // });
 })
 
 /* Función que da el efecto 'parallax' a la imagen de fondo al hacer scroll */
