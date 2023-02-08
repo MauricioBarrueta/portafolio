@@ -131,14 +131,14 @@ const emailForm = document.querySelector('#c-form');
 const btnEmailTo = document.querySelector('#myEmail');
 emailForm.addEventListener('submit', (event) => {
     event.preventDefault()
-    const form = new FormData(this)
+    const formData = new FormData(emailForm)
     const btnSendEmail = $('#btnSendEmail')
     const btnHtmlElements = btnSendEmail.html() /* Almacena las caracteristicas del botón */
     /* Agrega un spinner y texto al botón antes de completar el envío del formulario */
     $(btnSendEmail).html('Procesando...&nbsp;<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>').prop('disabled', true)
     setTimeout(function () {
         $(btnSendEmail).html(btnHtmlElements).prop('disabled', false) /* Restaura el botón a su valor inicial */
-        btnEmailTo.setAttribute('href', `mailto:mauba22@outlook.com?subject=Quiero contactar: ${form.get('name')} - ${form.get('email')}&body=${form.get('message')}`)
+        btnEmailTo.setAttribute('href', `mailto:mauba22@outlook.com?subject=Quiero contactar: ${formData.get('name')} - ${formData.get('email')}&body=${formData.get('message')}`)
         btnEmailTo.click();
     }, 4000)
 });
@@ -180,9 +180,7 @@ const closeAlert = document.querySelector('.close-alert');
 const showAlertSpan = () => {   
     alertDialog.classList.remove('hide');
     alertDialog.classList.add('show');   
-    setTimeout(function () { 
-        closeAlertSpan(); 
-    }, 5000);
+    setTimeout(function () { closeAlertSpan(); }, 6000);
 }
 /* Función para ocultar el Alert Span */
 const closeAlertSpan = () => {

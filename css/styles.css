@@ -61,7 +61,7 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
 .loading-page-gif>img { width: 200px; height: 200px; z-index: 9999; }
 
 .main { /* Main Div */
-    position: relative; z-index: 1; box-shadow: #000 0 5px 20px 5px; /* 0 7px 35px 0*/
+    position: relative; z-index: 1; 
     background-image: url(../img/main.jpg); background-size: 50%; background-position: center;
 }
 
@@ -156,7 +156,7 @@ img.h-image-img:not(:hover) { content: url(../img/static.png); filter: blur(3px)
 }
 .navbar-brand .switchlang img:hover { scale: 1.1; opacity: 1; }
 .navbar .navbar-collapse a { margin-left: 25px; } /* Navbar a space-between */
-.navbar .navbar-collapse i { position: absolute; margin: 2px -25px; }
+.navbar .navbar-collapse i { position: absolute; margin: 2.5px -25px; }
 .navbar .navbar-collapse a:hover {
     border-radius: 10px; text-decoration: underline;
     transition: 0.3s; transform: translateY(3px);
@@ -223,7 +223,7 @@ img.h-image-img:not(:hover) { content: url(../img/static.png); filter: blur(3px)
 .portafolio .p-cards-container #show-more-btn[data-title]:hover::after { /* Portafolio Show-More btn-Title */
     content: attr(data-title);     
     position: absolute; width: 100%; transition: 0.3s;  
-    color: #4B7F83; text-align: center; font-size: 12px; text-decoration: underline 2px solid;
+    color: #4B7F83; text-align: center; font-size: 12px; text-decoration: underline 2px dotted;
     top: -65%; left: 0;
 }
 .portafolio .p-cards-container #show-more-btn:hover { transform: translateY(5px); }
@@ -338,7 +338,8 @@ img.h-image-img:not(:hover) { content: url(../img/static.png); filter: blur(3px)
     padding: 0.2rem; border-radius: 5px; transition: 0.3s; border: none !important;
 }
 .goog-te-gadget-simple:hover{ text-decoration: underline dotted 2px #4B7F83;}
-.goog-te-gadget-simple a.goog-te-menu-value span{ color:#4B7F83; font-size: 10px; } /* GooTr-Box text*/
+.goog-te-gadget-simple a.goog-te-menu-value span{ color:#4B7F83 !important; font-size: 10px; } /* GooTr-Box text*/
+.goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span { color: #4B7F83; font-size: 11px; }
 .goog-logo-link { display: none !important; } 
 .goog-te-banner-frame.skiptranslate { display: none !important; visibility: hidden; margin: 0; padding: 0; z-index: -99;} 
 iframe.goog-te-banner-frame{ display: none !important;}
@@ -377,26 +378,27 @@ iframe.goog-te-banner-frame{ display: none !important;}
     font-size: 6px; height: 100%; align-items: center;
     color: #4B7F83; background-color: white;
 }
+.card-skills .info-skills .progress-bar { 
+    font-size: 8px; text-align: left; 
+    padding-left: 5px; border-radius: 0 5px 5px 0; box-shadow: 5px 0px 5px -5px rgba(0,0,0,0.8);
+}
   /* Custom ToolTips */
 .tooltip-success { --bs-tooltip-bg: var(--bs-success); } 
-.tooltip-warning { --bs-tooltip-bg: var(--bs-warning); }
-.tooltip-warning .tooltip-inner, .bg-warning { color: black; }
+.tooltip-warning { --bs-tooltip-bg: var(--bs-warning); } .tooltip-warning .tooltip-inner, .bg-warning { color: black; }
 .tooltip-danger {  --bs-tooltip-bg: var(--bs-danger); } 
-.tooltip-success>.tooltip-inner, .tooltip-warning>.tooltip-inner, .tooltip-danger>.tooltip-inner { font-size: 12px; }
+.tooltip-success>.tooltip-inner, .tooltip-warning>.tooltip-inner, .tooltip-danger>.tooltip-inner { font-size: 10.5px; border: 2px solid white; }
  
 /* ----------------------------------------------------------- CONTÁCTAME --------------------------------------------------------------- */  
-.contactme {    
-    z-index: -1; position: relative;
-    background-image: url(../img/contact-footer.jpg); background-size: cover; background-position: center;    
-}
+.contactme, footer { background-image: url(../img/contact-footer.jpg); background-size: cover; background-position: center; }
+.contactme { z-index: -1; position: relative; box-shadow: 0px 15px 10px -5px rgba(0,0,0,0.5); }
 .contact-form { /* Contact-Form Div*/  
     width: 625px;
     background-color: #F4F6F7; color: #4B7F83; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
-.contact-form h1 { text-align: center; font-size: 20px; margin-bottom: 10px; } /* Contact-Form Div Title */  
+.contact-form h1 { text-align: center; font-size: 20px; margin-bottom: 10px; cursor: default; } /* Contact-Form Div Title */  
 #c-form > span { font-size: 11px; color: red; }
 .contact-form #message { height: 150px; margin-top: 5px; color: #4B7F83; }
-.contact-form #emailHelp { font-size: 11px; padding-bottom: 1em; }
+.contact-form #emailHelp { font-size: 10px; padding-bottom: 1em; color: #4B7F83; }
 .input-group>input { color: #4B7F83 !important; } /* Contact-Form Input/TextArea text color */
 .form-control, .form-control::placeholder { /* Contact-Form Input/placeholder color */
     color: #4B7F83; opacity: 0.88;
@@ -465,11 +467,11 @@ iframe.goog-te-banner-frame{ display: none !important;}
 .i-socialMedia .button:nth-child(5):hover .icon { background: #25D366; } .button:nth-child(5) span { color: #25D366; }
 
 /* ---------------------------------------------------------------- FOOTER ----------------------------------------------------------------- */
-footer { /* Footer content */
-    padding: 25px 0; background-color: #F4F6F7; z-index: -1; opacity: 0.8;
-    background-image: url(../img/contact-footer.jpg); background-size: cover; background-position: center;
-}
-.footer-content { flex-direction: column; text-align: center; } /* Footer-Content div*/
+.footer-content { 
+    padding-top: 1em;
+    background-image: url(../svg/wave-down.svg), url(../svg/wave-up.svg); 
+    background-position: center top, center bottom; background-repeat: repeat-x; background-size: 10%;
+    flex-direction: column; text-align: center; } /* Footer-Content div*/
 .footer-content h3 { /* Footer-content Title*/
      font-size: 13px; font-weight: 400;
      margin: 0 0 5px 0; color: white;
@@ -485,8 +487,9 @@ footer { /* Footer content */
 .footer-content .social a:hover { color: white; }
 .footer-content .social>a:nth-child(1):hover { background-color: #81b71a; scale: 1.1; }
 .footer-content .social>a:nth-child(2):hover { background-color: #b2071d; scale: 1.1; }
-.footer-content .social>a:nth-child(3):hover { background-color: #FF4500; scale: 1.1; } 
-.footer-content .social>a:nth-child(4):hover { background-color: #F47F24; scale: 1.1; }
+.footer-content .social>a:nth-child(3):hover { background-color: #43e660; scale: 1.1; } .footer-content .social>a:nth-child(3):hover>img { filter:  brightness(0) invert(1) !important; }
+.footer-content .social>a:nth-child(4):hover { background-color: #FF4500; scale: 1.1; } 
+.footer-content .social>a:nth-child(5):hover { background-color: #F47F24; scale: 1.1; }
 
 .footer-content .menu { list-style: none; width: 100%; margin: 5px auto; } /* Footer-Content div Menu */
 .footer-content .menu li { margin: 0 20px; }
@@ -605,14 +608,16 @@ footer { /* Footer content */
     #google_translate_element span>i { font-size: 24px; }
     .goog-te-gadget-simple {  font-size: 5pt !important; padding: 1px 0 1px 0 !important; }
     .goog-te-gadget-simple a.goog-te-menu-value span { font-size: 8px !important; }
+    .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span { font-size: 8px !important; }
     .modal-content .span-info { margin-top: 5px; }       
     .card-skills img { width: 50px; height: 50px; } /* Skills */
     .card-skills>.img-pdng { padding-top: 18px !important; }
     .card-skills::after { font-size: 10.5px; left: 79%; bottom: -2%; }
-    .pb-small-txt { font-size: 4.5px; padding: 0.2rem; }    
+    .pb-small-txt { font-size: 4.3px; padding: 0.2rem; white-space: nowrap; }    
     .contact-form { width: 100%; } /* Contact */
     .contact-form h1 { font-size: 13px; margin-bottom: 5px; }    
     .footer-content .menu { margin: 10px auto; } /* Footer */
+    .footer-content { background-size: 35%; }
     .footer-content .menu li { margin: -10px 6px 0 6px; }
     .footer-content .menu a { font-size: 7px; }
     .footer-content .menu a:hover { font-size: 7.2px; }
