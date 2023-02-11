@@ -102,29 +102,30 @@ ImageModal.addEventListener('hidden.bs.modal', function () {
 
 /* Función del botón para mostrar y ocultar los proyectos que no aparecen en la lista inicial */
 const showMoreProjectsBtn = document.querySelector('.show-more-btn');
-showMoreProjectsBtn.addEventListener('click', () => {
+const showHideProjects = () => {
     var cardsVisible = document.getElementById("cardsLimit");
     var cardsHidden = document.getElementById("hiddenCards");
     var btnShowHiddenCards = document.getElementById("show-more-btn");
     if (cardsVisible.style.display === "none") {
         btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-down fa-bounce'></i>";
-        btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more"); 
-        cardsVisible.style.display = "flex"; 
+        btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more");
+        cardsVisible.style.display = "flex";
         cardsHidden.style.display = "none";
     } else {
         cardsVisible.style.display = "none";
         btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-angle-up fa-bounce'></i>";
-        btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less"); 
-        cardsHidden.style.display = "flex"; 
+        btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less");
+        cardsHidden.style.display = "flex";
         cardsHidden.style.flexWrap = "wrap";
-        cardsHidden.style.alignContent = "center"; 
-        cardsHidden.style.justifyContent = "space-around"; 
+        cardsHidden.style.alignContent = "center";
+        cardsHidden.style.justifyContent = "space-around";
         cardsHidden.style.gap = "15px";
     }
     if (btnShowHiddenCards.getAttribute("data-title", "Mostrar más - Show more") && cardsHidden.style.display === "none") {
         document.querySelector('#Projects').scrollIntoView({ behavior: 'smooth' });
     }
-});
+}
+showMoreProjectsBtn.addEventListener('click', showHideProjects);
 
 /* Función que obtiene los datos del formulario para enviar el correo electrónico */
 const emailForm = document.querySelector('#c-form');
