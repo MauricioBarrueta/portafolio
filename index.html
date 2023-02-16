@@ -596,8 +596,14 @@
                   </li>
                 </ul>
               </div>
-              <ul class="web-icons">              
-                <li><span>2020</span></li>       
+              <ul class="web-icons">  
+                <li><a href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitio Web" style="visibility: hidden;"><i class="fa-solid fa-globe fa-shake"></i></a></li>
+                <li><span>2020</span></li>  
+                <li>
+                  <a data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="Médicos Hoy S.A de C.V">
+                    <i class="fa-solid fa-star fa-shake"></i>
+                  </a>
+                </li>      
               </ul>
             </div>
           </div>
@@ -631,7 +637,7 @@
                   </li>                  
                 </ul>
               </div>
-              <ul class="web-icons">              
+              <ul class="web-icons">  
                 <li><span>2019</span></li>       
               </ul>
             </div>
@@ -748,8 +754,14 @@
                   </li>
                 </ul>
               </div>
-              <ul class="web-icons">              
-                <li><span>2018</span></li>       
+              <ul class="web-icons">   
+                <li><a href="" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Sitio Web" style="visibility: hidden;"><i class="fa-solid fa-globe fa-shake"></i></a></li>
+                <li><span>2018</span></li>  
+                <li>
+                  <a data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GFR Telecomm">
+                    <i class="fa-solid fa-star fa-shake"></i>
+                  </a>
+                </li>     
               </ul>
             </div>
           </div>
@@ -826,12 +838,12 @@
     </section> 
 
     <section class="experience" id="experience">
-      <h1 class="exp-section-title" data-es="Experiencia" data-en="Professional experience"></h1>
+      <h1 class="exp-section-title" data-es="Experiencia" data-en="Experience"></h1>
       <div class="experience-container">
         <div class="experience-card" data-aos="flip-down">
           <div class="experience-img"><img src="img/Otras/Medicos Hoy.png"></div>
           <div class="experience-body">
-            <a href="https://medicoshoy.com/" target="_blank" title="Ir al sitio" class="exp-title">Médicos Hoy S.A de C.V</a>
+            <a href="https://medicoshoy.com/" target="_blank" title="Ir al sitio - Go to the website" class="exp-title">Médicos Hoy S.A de C.V</a>
             <div class="time">
               <h3 data-es="Periodo:" data-en="Time: "></h3>
               <span data-es="Ene." data-en="Jan."></span><span>-</span><span data-es="Abr." data-en="Apr."></span><span>2020</span>
@@ -844,7 +856,7 @@
         <div class="experience-card" data-aos="flip-down">
           <div class="experience-img"><img src="img/Otras/GFR.png"></div>
           <div class="experience-body">
-            <a href="https://www.gfr.com.mx/" target="_blank" title="Ir al sitio" class="exp-title">GFR Telecomm</a>
+            <a href="https://www.gfr.com.mx/" target="_blank" title="Ir al sitio - Go to the website" class="exp-title">GFR Telecomm</a>
             <div class="time">
               <h3 data-es="Periodo:" data-en="Time: "></h3>
               <span data-es="May." data-en="May."></span><span>-</span><span data-es="Ago." data-en="Aug."></span><span>2018</span>
@@ -1190,7 +1202,7 @@
           <div class="face back-face">
             <div class="certification-content">
               <h3 class="certification-card-title" data-es="Programador Orientado a Objetos (POO) en Java" data-en="Java Object-Oriented Programming (OOP)"></h3>
-              <a href="https://it-okcenter.com/" target="_blank" title="Ir al sitio">IT Open Knowledge Center</a>
+              <a href="https://it-okcenter.com/" target="_blank" title="Ir al sitio - Go to the website">IT Open Knowledge Center</a>
               <img class="certification-company-img" src="img/Otras/IT OK Center.png" alt="">
               <p data-es="Fecha de emisión: Febrero 2021" data-en="Issue date: February 2021"></p>
               <a href="files/Certificado Java.pdf" target="_blank" class="certification-file" data-es="Archivo" data-en="File"></a>        
@@ -1206,7 +1218,7 @@
           <div class="face back-face">
             <div class="certification-content">
               <h3 class="certification-card-title">Android Professional Qualified Developer</h3>
-              <a href="https://www.develop.com.mx/" target="_blank" title="Ir al sitio">Develop Talent & Technology</a>
+              <a href="https://www.develop.com.mx/" target="_blank" title="Ir al sitio - Go to the website">Develop Talent & Technology</a>
               <img class="certification-company-img" src="img/Otras/Develop.png" alt="">
               <p data-es="Fecha de emisión: Noviembre 2019" data-en="Issue date: November 2021"></p>
               <a href="files/Certificado Android.pdf" target="_blank" class="certification-file" data-es="Archivo" data-en="File"></a>        
@@ -1216,16 +1228,15 @@
     </div>   
     </section>
     
-    <section class="contactme" id="Contact" th:fragment="contact">      
-    <div class="content">
-      <!-- Form -->
-      <div class="contact-form radius10-padding1" data-aos="fade-up"> <!-- Contact Form -->
+    <section class="contactme" id="Contact" data-aos="fade-up">      
+    <div class="content">      
+      <div class="contact-form radius10-padding1" data-aos="flip-down"> 
         <h1 class="radius-padding b-color-4B7">
           <i class="fa-solid fa-envelope fa-shake"></i>
           <span data-es="Envíame un mensaje" data-en="Send me a message"></span>
           <i class="fa-solid fa-envelope fa-shake"></i>
         </h1>        
-        <form id="c-form" action="">
+        <form id="c-form" action=""><!-- Contact Form -->
           <label for="name" class="form-label" data-es="Nombre(s): / Empresa:" data-en="Full name: / Company:"></label><span>*</span>
           <div class="input-group mb-3">
             <span class="input-group-text" id="name-icon"><i class="fa-solid fa-user"></i></span>
@@ -1248,9 +1259,8 @@
           <button id="btnSendEmail" class="btn"><span data-es="Enviar" data-en="Send"></span></button>          
         </form>
         <a href="mailto:mauba22@outlook.com" id="myEmail" style="opacity: 0;">mail</a> <!-- mailto -->
-      </div>
-      <!-- Social Media Icons -->
-      <div class="icons radius10-padding1" id="iconscon" data-aos="fade-up"> <!-- Contact Links -->
+      </div>      
+      <div class="icons radius10-padding1" id="iconscon" data-aos="flip-down"> <!-- Contact Links -->
         <h4 data-es="Mi correo electrónico:" data-en="My e-mail:"></h4>
         <p>
           <input type="text" value="mauba22@outlook.com" id="email-copy" style="text-decoration: underline;" readonly>
@@ -1284,7 +1294,7 @@
     </section>
   </div>
 
-  <footer class="footer" id="footer">
+  <footer class="footer" id="footer" data-aos="fade-down">
     <div class="footer-content">
       <h3 data-es="Sígueme" data-en="Follow me"></h3>
       <div class="social radius-padding">
@@ -1306,7 +1316,7 @@
       <p data-es="Página desarrollada por:" data-en="Web page developed by:"></p>
     </div>
     <div class="footer-bottom">
-      <p><span>&copy; 2023</span> Edgar Mauricio Barrueta Aguirre&nbsp;<i class="fa-regular fa-face-kiss fa-beat"></i></p>
+      <p><span>&copy; 2023</span> Edgar Mauricio Barrueta Aguirre&nbsp;<i class="fa-regular fa-face-kiss fa-shake"></i></p>
     </div>
   </footer>
 

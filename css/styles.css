@@ -27,6 +27,15 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
     border-radius: 5px 5px 0 0; padding: 0.5rem; margin-bottom: 0; text-align: center; font-size: 18px;        
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); 
 }
+.exp-section-title, .cert-section-title { /* Experience Section Title */
+    font-size: 14px; font-weight: 500; text-align: center; letter-spacing: 2px; text-decoration: underline 2px dotted;
+    color: #4B7F83;     
+    display: grid; align-items: center; grid-template-columns: 1fr max-content 1fr; grid-gap: 20px;  
+}    
+.exp-section-title:after, .exp-section-title:before, .cert-section-title::after, .cert-section-title::before {
+    content: ""; display: block; height: 5px;
+    border-bottom: 1px solid #4B7F83; border-top: 1px solid #4B7F83; background-color: transparent;
+}
 
 /* ------------------------------------------------------------ GENERAL DISPLAY ------------------------------------------------------------------ */
 .loading-page-gif, header, .scroll-down-l, .scroll-down-r, .btn-h-contact, .aboutme, .abtm-text>h1, .btnCV, .p-cards-container, 
@@ -227,7 +236,7 @@ img.h-image-img:not(:hover) { content: url(../img/static.png); filter: blur(3px)
 .portafolio .p-cards-container #show-more-btn[data-title]:hover::after { /* Portafolio Show-More btn-Title */
     content: attr(data-title);     
     position: absolute; width: 100%; transition: 0.3s;  
-    color: #4B7F83; text-align: center; font-size: 12px; text-decoration: underline 2px dotted;
+    color: #4B7F83; text-align: center; font-size: 12px; text-decoration: underline 1px;
     top: -65%; left: 0;
 }
 .portafolio .p-cards-container #show-more-btn:hover { transform: translateY(5px); }
@@ -324,7 +333,7 @@ img.h-image-img:not(:hover) { content: url(../img/static.png); filter: blur(3px)
 }
 #imgPopUpModal .modal-footer { margin-top: 5px; } 
 
-/* ----------------------------------------------- GOOGLE TRANSLATE ELEMENT ------------------------------------------------- */
+/* ---------------------------------------------------- GOOGLE TRANSLATE ELEMENT ------------------------------------------------------ */
 #google_translate_element { /* GooTr- Div*/
     width: 100%; font-size: 11px; border-radius: 5px; margin-top: 5px; z-index: 1;
     color: #4B7F83; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
@@ -346,7 +355,70 @@ img.h-image-img:not(:hover) { content: url(../img/static.png); filter: blur(3px)
 .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span { color: #4B7F83; font-size: 11px; }
 .goog-logo-link { display: none !important; } 
 .goog-te-banner-frame.skiptranslate { display: none !important; visibility: hidden; margin: 0; padding: 0; z-index: -99;} 
-iframe.goog-te-banner-frame{ display: none !important;}
+iframe.goog-te-banner-frame{ display: none !important; }
+
+/* --------------------------------------------------------------- EXPERIENCE --------------------------------------------------------------*/
+.experience-container { padding: 0 1em 0 1em; height: fit-content; } /* Experience Cards */
+.experience-container .experience-card { /* Experience Cards */
+    width: 300px; height: 300px;
+    position: relative;  overflow: hidden;    
+    border-radius: 5px; cursor: pointer; margin: 15px 15px 10px 15px;
+    background: #F4F6F7; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}  
+.experience-container .experience-card:before {
+    content: ''; position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: #6CC6C9; clip-path: circle(200px at 80% 20%);
+    transition: 0.5s ease-in-out;
+}  
+.experience-container .experience-card:hover:before { clip-path: circle(250px at 80% -20%); }
+.experience-container .experience-card:after { position: absolute; top: 30%; left: 0; }
+.experience-container .experience-card .experience-img {
+    width: 100%; height: 220px;  
+    position: absolute; top: 50%;
+    transform: translateY(-50%); transition: 0.5s; z-index: 10000;      
+}  
+.experience-container .experience-card:hover .experience-img { top: 0%; transform: translateY(0%); }  
+.experience-container .experience-card .experience-img img {
+    position: absolute; width: 250px;
+    top: 35%; left: 50%;
+    transform: translate(-50%, -50%) rotate(-15deg);    
+}  
+.experience-container .experience-card .experience-body {
+    width: 100%; height: 40px; 
+    position: absolute; bottom: 0;
+    text-align: center; transition: 1s; 
+}  
+.experience-container .experience-card:hover .experience-body { height: 115px; }  
+.experience-container .experience-card .experience-body .exp-title {
+    position: relative; z-index: 10000;
+    font-size: 13px; font-weight: 500; color: #4B7F83; margin: 5px 10px 5px 10px;    
+}  
+.experience-card .experience-body .time, .experience-card .experience-body .charge {
+    display: flex; justify-content: center; align-items: center;    
+    transition: 0.5s; opacity: 0; visibility: hidden;    
+}  
+.experience-container .experience-card:hover .experience-body .time { opacity: 1; visibility: visible; transition-delay: 0.5s; }
+.experience-container .experience-card:hover .experience-body .charge { opacity: 1; visibility: visible; transition-delay: 0.6s; } 
+.experience-body .time { /* Experience Card Time Div */    
+    padding: 2px; margin: 10px; border-radius: 5px;
+    background-color: #4B7F83;
+}
+.experience-card .experience-body .time h3, .experience-card .experience-body .charge h3 {
+    color: white;
+    font-size: 10px; font-weight: 300; 
+    margin-right: 5px; padding-top: 7px;
+}  
+.experience-card .experience-body .time span {
+    font-size: 10px; text-align: center; line-height: 25px; display: inline-block;
+    color: white; padding: 2px; margin: 0 5px; transition: 0.5s; border-radius: 5px;    
+}
+.time>span:nth-child(3) { font-size: 5px !important; padding: 0 !important; margin: 0 2px 0 -3px !important; } 
+.experience-card .charge { padding: 5px; } /* Experience Card Charge Div*/
+.experience-container .experience-card .experience-body .charge span { 
+    font-size: 10px; text-align: center; text-transform: uppercase; 
+    color: #4B7F83; 
+}
 
 /* ------------------------------------------------------------- SKILLS --------------------------------------------------------------- */
 .skills-cards { padding: 1em; } /*box-shadow: 0 15px 10px rgba(0, 0, 0, 0.5);*/
@@ -392,6 +464,58 @@ iframe.goog-te-banner-frame{ display: none !important;}
 .tooltip-danger {  --bs-tooltip-bg: var(--bs-danger); } 
 .tooltip-success>.tooltip-inner, .tooltip-warning>.tooltip-inner, .tooltip-danger>.tooltip-inner { font-size: 10.5px; border: 2px solid white; }
  
+/* ---------------------------------------------------------- CERTIFICATIONS ----------------------------------------------------------- */
+.certifications { box-shadow: 0 10px 5px rgba(0, 0, 0, 0.35); }
+.certification-container { position: relative; height: fit-content; padding: 1em; }
+.certification-container .card { /* Certification Card */
+    width: 300px; height: 200px;
+    position: relative;
+    border-radius: 10px; margin: 0 15px auto; cursor: pointer;
+    background-color: transparent; border: 0;
+}
+.certification-container .card .certification-img-container {
+    width: 100%;height: 100%;    
+    transition: 0.5s; z-index: 1;
+}
+.certification-container .card .certification-img-container img { width: 300px; height: 200px; border-radius: 5px; }
+.certification-container .card .face {
+    width: 300px; height: 200px;
+    transition: 0.5s; border-radius: 5px;
+}
+.certification-container .card .face.front-face {
+    position: relative; display: flex; justify-content: center; align-items: center;
+    z-index: 1; background-color: #F4F6F7; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.certification-container .card:hover .face.front-face { opacity: 0; }
+.certification-container .card:hover .face.front-face .certification-content { opacity: 1; }
+.certification-container .card .face.back-face {
+    position: absolute;
+    padding: 1em; text-align: center; opacity: 0;
+    background-color: #F4F6F7; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.certification-container .card:hover .face.back-face { opacity: 1; }
+.certification-container .card .face.back-face .certification-content .certification-card-title {
+    font-size: 10px; line-height: 15px; text-transform: uppercase;
+    padding: 0.5rem; border-radius: 5px; margin: 0;
+    background-color: #4B7F83; color: white;
+} 
+.certification-container .card .face.back-face .certification-content>a:nth-child(2) {
+    font-size: 9px; text-decoration: underline;
+    margin-top: 10px; padding: 0; z-index: 10000; position: relative; transition: 0.2s;   
+    color: #4B7F83;
+} 
+.certification-container .card .face.back-face .certification-content>a:nth-child(2):hover { font-size: 9.5px; }
+.certification-container .card .face.back-face .certification-content .certification-company-img { height: 50px; margin: 5px 0 10px 0; }
+.certification-container .card .face.back-face .certification-content>p {
+    font-size: 8px; color: #4B7F83; margin: 0;
+}
+.certification-container .card .face.back-face .certification-content .certification-file {
+    width: 100%; z-index: 1000;
+    position: relative; display: inline-block;
+    font-size: 8px; text-align: center; padding-top: 5px;
+    border-top: 1px solid #4B7F83; color: #2D4C4E;
+}
+
 /* ----------------------------------------------------------- CONTÁCTAME --------------------------------------------------------------- */  
 .contactme, footer { background-image: url(../img/contact-footer.jpg); background-size: cover; background-position: center; }
 .contactme { z-index: -1; position: relative; box-shadow: 0px 15px 10px -5px rgba(0,0,0,0.5); }
@@ -587,6 +711,20 @@ iframe.goog-te-banner-frame{ display: none !important;}
         position: absolute; bottom: 0%; left: 85%; font-size: 11px;
         animation: beating 2s ease 0s infinite;
     }
+    .experience-container .experience-card::after { /* Experience Cards */
+        content: "\f577"; font-family: FontAwesome; 
+        display: block; z-index: 1; text-align: center;
+        position: relative; top: 90%; left: 45%; 
+        color: #4B7F83; animation: beating 1.5s ease 0s infinite; 
+    }
+    .certification-container .card::after { /* Certifications Cards */
+        content: "\f577"; font-family: FontAwesome; 
+        display: block; z-index: 1; text-align: center;
+        position: relative; bottom: 13%; left: 45%; 
+        color: #4B7F83; animation: beating 1.5s ease 0s infinite; 
+    }    
+    .certification-container .card:nth-child(2):after { color: white; }
+    .certification-container .card:nth-child(2):hover::after { color: #4B7F83; }
     /* Alert Span */
     .alertSpan .alert-text { font-size: 7.2px !important; white-space: nowrap; }
     .project-card>.showInfo { /* Project Cards Touch Icon */
@@ -713,127 +851,3 @@ img.JSON-Icon { content: url(../svg/json.svg); } img.NPM-Icon { content: url(../
 img.Thymeleaf-Icon { content: url(../svg/Thymeleaf.svg); } img.Photoshop-Icon { content: url(../svg/Photoshop.svg); }
 img.JWT-Icon { content: url(../svg/JWT.svg); } img.Postman-Icon { content: url(../svg/Postman.svg); }
 img.Firebase-Icon { content: url(../svg/Firebase.svg); } img.Unity-Icon { content: url(../svg/Unity2.svg); }
-
-.exp-section-title, .cert-section-title { /* Experience Section Title */
-    font-size: 14px; font-weight: 500; text-align: center; letter-spacing: 2px; text-decoration: underline 2px dotted;
-    color: #4B7F83;     
-    display: grid; align-items: center; grid-template-columns: 1fr max-content 1fr; grid-gap: 20px; /* grid-template-rows: 27px 0; */   
-}    
-.exp-section-title:after, .exp-section-title:before, .cert-section-title::after, .cert-section-title::before {
-    content: ""; display: block; height: 5px;
-    border-bottom: 1px solid #4B7F83; border-top: 1px solid #4B7F83; background-color: transparent;
-}
-/* --------------------------------------------------------------- EXPERIENCE --------------------------------------------------------------*/
-.experience-container { padding: 0 1em 0 1em; height: fit-content; } /* Experience Cards */
-.experience-container .experience-card { /* Experience Cards */
-    width: 300px; height: 300px;
-    position: relative;  overflow: hidden;    
-    border-radius: 5px; cursor: pointer; margin: 15px 15px 10px 15px;
-    background: #F4F6F7; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}  
-.experience-container .experience-card:before {
-    content: ''; position: absolute; top: 0; left: 0;
-    width: 100%; height: 100%;
-    background: #6CC6C9; clip-path: circle(200px at 80% 20%);
-    transition: 0.5s ease-in-out;
-}  
-.experience-container .experience-card:hover:before { clip-path: circle(250px at 80% -20%); }
-.experience-container .experience-card:after { position: absolute; top: 30%; left: 0; }
-.experience-container .experience-card .experience-img {
-    width: 100%; height: 220px;  
-    position: absolute; top: 50%;
-    transform: translateY(-50%); transition: 0.5s; z-index: 10000;      
-}  
-.experience-container .experience-card:hover .experience-img { top: 0%; transform: translateY(0%); }  
-.experience-container .experience-card .experience-img img {
-    position: absolute; width: 250px;
-    top: 35%; left: 50%;
-    transform: translate(-50%, -50%) rotate(-15deg);    
-}  
-.experience-container .experience-card .experience-body {
-    width: 100%; height: 40px; 
-    position: absolute; bottom: 0;
-    text-align: center; transition: 1s; 
-}  
-.experience-container .experience-card:hover .experience-body { height: 115px; }  
-.experience-container .experience-card .experience-body .exp-title {
-    position: relative; z-index: 10000;
-    font-size: 13px; font-weight: 500; color: #4B7F83; margin: 5px 10px 5px 10px;    
-}  
-.experience-card .experience-body .time, .experience-card .experience-body .charge {
-    display: flex; justify-content: center; align-items: center;    
-    transition: 0.5s; opacity: 0; visibility: hidden;    
-}  
-.experience-container .experience-card:hover .experience-body .time { opacity: 1; visibility: visible; transition-delay: 0.5s; }
-.experience-container .experience-card:hover .experience-body .charge { opacity: 1; visibility: visible; transition-delay: 0.6s; } 
-.experience-body .time { /* Experience Card Time Div */    
-    padding: 2px; margin: 10px; border-radius: 5px;
-    background-color: #4B7F83;
-}
-.experience-card .experience-body .time h3, .experience-card .experience-body .charge h3 {
-    color: white;
-    font-size: 10px; font-weight: 300; 
-    margin-right: 5px; padding-top: 7px;
-}  
-.experience-card .experience-body .time span {
-    font-size: 10px; text-align: center; line-height: 25px; display: inline-block;
-    color: white; padding: 2px; margin: 0 5px; transition: 0.5s; border-radius: 5px;    
-}
-.time>span:nth-child(3) { font-size: 5px !important; padding: 0 !important; margin: 0 2px 0 -3px !important; } 
-.experience-card .charge { padding: 5px; } /* Experience Card Charge Div*/
-.experience-container .experience-card .experience-body .charge span { 
-    font-size: 10px; text-align: center; text-transform: uppercase; 
-    color: #4B7F83; 
-}
-
-/* ---------------------------------------------------------- CERTIFICATIONS ----------------------------------------------------------- */
-.certifications { box-shadow: 0 10px 5px rgba(0, 0, 0, 0.35); }
-.certification-container { position: relative; height: fit-content; padding: 1em; }
-.certification-container .card { /* Certification Card */
-    width: 300px; height: 200px;
-    position: relative;
-    border-radius: 10px; margin: 0 15px auto; cursor: pointer;
-    background-color: transparent; border: 0;
-}
-.certification-container .card .certification-img-container {
-    width: 100%;height: 100%;    
-    transition: 0.5s; z-index: 1;
-}
-.certification-container .card .certification-img-container img { width: 300px; height: 200px; border-radius: 5px; }
-.certification-container .card .face {
-    width: 300px; height: 200px;
-    transition: 0.5s; border-radius: 5px;
-}
-.certification-container .card .face.front-face {
-    position: relative; display: flex; justify-content: center; align-items: center;
-    z-index: 1; background-color: #F4F6F7; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-.certification-container .card:hover .face.front-face { opacity: 0; }
-.certification-container .card:hover .face.front-face .certification-content { opacity: 1; }
-.certification-container .card .face.back-face {
-    position: absolute;
-    padding: 1em; text-align: center; opacity: 0;
-    background-color: #F4F6F7; box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-}
-.certification-container .card:hover .face.back-face { opacity: 1; }
-.certification-container .card .face.back-face .certification-content .certification-card-title {
-    font-size: 10px; line-height: 15px; text-transform: uppercase;
-    padding: 0.5rem; border-radius: 5px; margin: 0;
-    background-color: #4B7F83; color: white;
-} 
-.certification-container .card .face.back-face .certification-content>a:nth-child(2) {
-    font-size: 9px; text-decoration: underline;
-    margin-top: 10px; padding: 0; z-index: 10000; position: relative; transition: 0.2s;   
-    color: #4B7F83;
-} 
-.certification-container .card .face.back-face .certification-content>a:nth-child(2):hover { font-size: 9.5px; }
-.certification-container .card .face.back-face .certification-content .certification-company-img { height: 50px; margin: 5px 0 10px 0; }
-.certification-container .card .face.back-face .certification-content>p {
-    font-size: 8px; color: #4B7F83; margin: 0;
-}
-.certification-container .card .face.back-face .certification-content .certification-file {
-    width: 100%; z-index: 1000;
-    position: relative; display: inline-block;
-    font-size: 8px; text-align: center; padding-top: 5px;
-    border-top: 1px solid #4B7F83; color: #2D4C4E;
-}
