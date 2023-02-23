@@ -27,12 +27,13 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
     border-radius: 5px 5px 0 0; padding: 0.5rem; margin-bottom: 0; text-align: center; font-size: 18px;        
     box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); 
 }
-.exp-section-title, .cert-section-title { /* Experience Section Title */
+.exp-section-title, .cert-section-title, .skills-section-subtitle { /* Experience Section Title */
     font-size: 14px; font-weight: 500; text-align: center; letter-spacing: 2px; text-decoration: underline 2px dotted;
     color: #4B7F83;     
     display: grid; align-items: center; grid-template-columns: 1fr max-content 1fr; grid-gap: 20px;  
 }    
-.exp-section-title:after, .exp-section-title:before, .cert-section-title::after, .cert-section-title::before {
+.exp-section-title:after, .exp-section-title:before, .cert-section-title::after, .cert-section-title::before,
+.skills-section-subtitle::after, .skills-section-subtitle::before {
     content: ""; display: block; height: 5px;
     border-bottom: 1px solid #4B7F83; border-top: 1px solid #4B7F83; background-color: transparent;
 }
@@ -288,7 +289,7 @@ img.h-image-img:not(:hover) { content: url(../img/static.png); filter: blur(3px)
 }
 .project-card .details .web-icons li { display: table-cell; list-style: none; }
 .project-card .details .web-icons li>span { margin: 0 auto; cursor: default; font-size: 10px; }
-.project-card .details .web-icons a, .project-card .details .web-icons span { color: #4B7F83; }
+.project-card .details .web-icons a, .project-card .details .web-icons span { color: #4B7F83; cursor: pointer; }
 .web-icons-a .tooltip-inner { background-color: #324B4D; font-size: 10px; border: 1px solid white; }
 .p-tec-tooltip .tooltip-inner { background-color: #324B4D; font-size: 10.5px; border: 1px solid white; text-shadow: 1px 1px #000; }
 
@@ -392,7 +393,7 @@ iframe.goog-te-banner-frame{ display: none !important; }
 .experience-container .experience-card:hover .experience-body { height: 115px; }  
 .experience-container .experience-card .experience-body .exp-title {
     position: relative; z-index: 10000;
-    font-size: 13px; font-weight: 500; color: #4B7F83; margin: 5px 10px 5px 10px;    
+    font-size: 12px; font-weight: 500; color: #4B7F83; margin: 5px 10px 5px 10px;    
 }  
 .experience-card .experience-body .time, .experience-card .experience-body .charge {
     display: flex; justify-content: center; align-items: center;    
@@ -463,7 +464,12 @@ iframe.goog-te-banner-frame{ display: none !important; }
 .tooltip-warning { --bs-tooltip-bg: var(--bs-warning); } .tooltip-warning .tooltip-inner, .bg-warning { color: black; }
 .tooltip-danger {  --bs-tooltip-bg: var(--bs-danger); } 
 .tooltip-success>.tooltip-inner, .tooltip-warning>.tooltip-inner, .tooltip-danger>.tooltip-inner { font-size: 10.5px; border: 2px solid white; }
- 
+
+.skills-section-subtitle {
+    width: 100%;
+    font-size: 11px; margin-bottom: 0 !important;
+}
+
 /* ---------------------------------------------------------- CERTIFICATIONS ----------------------------------------------------------- */
 .certifications { box-shadow: 0 10px 5px rgba(0, 0, 0, 0.35); }
 .certification-container { position: relative; height: fit-content; padding: 1em; }
@@ -511,9 +517,14 @@ iframe.goog-te-banner-frame{ display: none !important; }
 }
 .certification-container .card .face.back-face .certification-content .certification-file {
     width: 100%; z-index: 1000;
-    position: relative; display: inline-block;
+    position: relative; display: inline-block; transition: 0.2s;
     font-size: 8px; text-align: center; padding-top: 5px;
     border-top: 1px solid #4B7F83; color: #2D4C4E;
+}
+.face.back-face .certification-content .certification-file:hover { font-size: 8.25px !important; color: #4B7F83; }
+.face.back-face .certification-content .certification-file::after {
+    content: "\f1c1"; font-family: FontAwesome;
+    color: #2D4C4E; padding-left: 10px;
 }
 
 /* ----------------------------------------------------------- CONTÁCTAME --------------------------------------------------------------- */  

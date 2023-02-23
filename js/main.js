@@ -3,7 +3,7 @@ $(window).on('load', function () {
     setTimeout(function () {
         $('#loading').hide("fast");
         /* Se activa la animación del texto de la introducción y la barra del navegador */
-        $('.h1-h').css("animation-delay", "3.2s");
+        $('.h1-h').css("animation-delay", "3.22s");
         $('html').css("overflow", "auto");
     }, 3000);
 })
@@ -20,16 +20,6 @@ $(document).ready(function () {
     /* Oculta el gadget de Google Translate para mostrarlo únicamente cuando se muestre el Modal */
     $(".goog-logo-link").empty();
     $('.goog-te-gadget').html($('.goog-te-gadget').children());
-
-    /* Cambia el texto de la barra de Google Translate */
-    // $('#google_translate_element').bind('DOMNodeInserted', function (event) {
-    //     $('.goog-te-menu-value span:first').html('Translate');
-    //     $('.goog-te-menu-frame.skiptranslate').on('load', function () {
-    //         setTimeout(function () {
-    //             $('.goog-te-menu-frame.skiptranslate').contents().find('.goog-te-menu2-item-selected .text').html('Translate');
-    //         }, 100);
-    //     });
-    // });
 })
 
 /* Función que da el efecto 'parallax' a la imagen de fondo al hacer scroll */
