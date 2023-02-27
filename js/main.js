@@ -60,23 +60,27 @@ $('.navbar-nav>li>a').on('click', function() {
 
 /* Obtiene el atributo src, alt y title de la imagen seleccionada para pasarla al modal y mostrarlo */
 document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('img-item')) {
+    if (e.target.classList.contains('img-item')) {  
         const imgSrc = e.target.getAttribute('src');
         document.querySelector('.img-modal').src = imgSrc;
         const myModal = new bootstrap.Modal(document.getElementById('imgPopUpModal'));
         $("#imgPopUpModal p").text($(e.target).attr('alt')); /* Se pasa el valor de 'alt' de la imagen al elemento <p> del Modal */
         $("#imgPopUpModal h6").text($(e.target).attr('data-title')); /* Se pasa el valor de 'title' de la imagen al elemento <h6> del Modal */
-        /* Se activa el la barra de Google Translate */
+        
+        /* Se activa la barra de Google Translate */
         new google.translate.TranslateElement({ pageLanguage: 'es', includedLanguages: 'en,es', 
-        layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
+        layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element'); 
+        $('.VIpgJd-ZVi9od-xl07Ob-lTBxed').attr("href", "#/"); /* Evita que se vuelva al inicio al elegir un idioma del plugin de Google */
+        
         myModal.show();
-    }
+        $('html').css("overflow", "hidden")        
+    } else { $('html').css("overflow", "auto") }
 });
 
 /* Función que restaura el idioma original de la página al cerrar el Modal */
 const ImageModal = document.getElementById('imgPopUpModal')
 ImageModal.addEventListener('hidden.bs.modal', function () {
-    var googleTranslateFrame = document.getElementsByClassName('goog-te-banner-frame')[0];
+    var googleTranslateFrame = document.getElementsByClassName('VIpgJd-ZVi9od-ORHb-OEVmcd')[0]; /* goog-te-banner-frame */
     if (!googleTranslateFrame) return;
     var innerDoc = googleTranslateFrame.contentDocument || googleTranslateFrame.contentWindow.document;
     var restore = innerDoc.getElementsByTagName("button");

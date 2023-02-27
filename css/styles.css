@@ -355,8 +355,9 @@ img.h-image-img:not(:hover) { content: url(../img/static.png); filter: blur(3px)
 .goog-te-gadget-simple a.goog-te-menu-value span{ color:#4B7F83 !important; font-size: 10px; } /* GooTr-Box text*/
 .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span { color: #4B7F83; font-size: 11px; }
 .goog-logo-link { display: none !important; } 
-.goog-te-banner-frame.skiptranslate { display: none !important; visibility: hidden; margin: 0; padding: 0; z-index: -99;} 
-iframe.goog-te-banner-frame{ display: none !important; }
+.goog-te-banner-frame.skiptranslate { display: none !important; visibility: hidden !important; margin: 0; padding: 0; z-index: -99;} 
+.skiptranslate.VIpgJd-ZVi9od-ORHb-OEVmcd { display: none !important; visibility: hidden !important; margin: 0; padding: 0; z-index: -99;} 
+iframe.goog-te-banner-frame{ display: none !important; visibility: hidden !important; }
 
 /* --------------------------------------------------------------- EXPERIENCE --------------------------------------------------------------*/
 .experience-container { padding: 0 1em 0 1em; height: fit-content; } /* Experience Cards */
