@@ -3,11 +3,11 @@ const img = document.querySelector('.img-modal');
 img.addEventListener('click', startMagnifyingGlass("myimage", 2.5));
 
 /* Función que habilita la lupa (Magnifying Glass) */
-function startMagnifyingGlass(img_id, zoom_value) {  
+function startMagnifyingGlass(imgId, zoomValue) {  
   const getImgClick = document.querySelector('.img-modal');
   getImgClick.addEventListener("click", function () {
     var selectedImage, magnifyingGlass, width, height, bw;
-    selectedImage = document.getElementById(img_id);
+    selectedImage = document.getElementById(imgId);
     /* Se crea el div y su clase que conendrá la Magnifying Glass */
     magnifyingGlass = document.createElement("div");
     magnifyingGlass.setAttribute("class", "img-magnifier-glass");
@@ -15,7 +15,7 @@ function startMagnifyingGlass(img_id, zoom_value) {
     /* Se le asignan las propiedades */
     magnifyingGlass.style.backgroundImage = "url('" + selectedImage.src + "')";
     magnifyingGlass.style.backgroundRepeat = "no-repeat";
-    magnifyingGlass.style.backgroundSize = (selectedImage.width * zoom_value) + "px " + (selectedImage.height * zoom_value) + "px";
+    magnifyingGlass.style.backgroundSize = (selectedImage.width * zoomValue) + "px " + (selectedImage.height * zoomValue) + "px";
     bw = 3;
     width = magnifyingGlass.offsetWidth / 2;
     height = magnifyingGlass.offsetHeight / 2;
@@ -35,16 +35,16 @@ function startMagnifyingGlass(img_id, zoom_value) {
       x = cursorPosition.x;
       y = cursorPosition.y;
       /* Para prevenir que la lupa se posicione fuera de la imagen */
-      if (x > selectedImage.width - (width / zoom_value)) { x = selectedImage.width - (width / zoom_value); }
-      if (x < width / zoom_value) { x = width / zoom_value; }
-      if (y > selectedImage.height - (height / zoom_value)) { y = selectedImage.height - (height / zoom_value); }
-      if (y < height / zoom_value) { y = height / zoom_value; }
+      if (x > selectedImage.width - (width / zoomValue)) { x = selectedImage.width - (width / zoomValue); }
+      if (x < width / zoomValue) { x = width / zoomValue; }
+      if (y > selectedImage.height - (height / zoomValue)) { y = selectedImage.height - (height / zoomValue); }
+      if (y < height / zoomValue) { y = height / zoomValue; }
 
       /* Manda la posición de la lupa */
       magnifyingGlass.style.left = (x - width) + "px";
       magnifyingGlass.style.top = (y - height) + "px";
       /* Muestra lo que la lupa esta observando */
-      magnifyingGlass.style.backgroundPosition = "-" + ((x * zoom_value) - width + bw) + "px -" + ((y * zoom_value) - height + bw) + "px";
+      magnifyingGlass.style.backgroundPosition = "-" + ((x * zoomValue) - width + bw) + "px -" + ((y * zoomValue) - height + bw) + "px";
     }
 
     /* Funcion que obtiene las posiciones 'x', 'y' del cursor */

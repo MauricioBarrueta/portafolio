@@ -70,10 +70,11 @@ document.addEventListener('click', function (e) {
         /* Se activa la barra de Google Translate */
         new google.translate.TranslateElement({ pageLanguage: 'es', includedLanguages: 'en,es', 
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element'); 
-        $('.VIpgJd-ZVi9od-xl07Ob-lTBxed').attr("href", "#/"); /* Evita que se vuelva al inicio al elegir un idioma del plugin de Google */
-        
+        // $('.VIpgJd-ZVi9od-xl07Ob-lTBxed').attr("href", "#/"); /* Evita que se vuelva al inicio al elegir un idioma del plugin de Google */
+        $('.VIpgJd-ZVi9od-xl07Ob-lTBxed').removeAttr('href') /* Se le quita el atributo 'href' a la barra de Google Translate */
+
         myModal.show();
-        $('html').css("overflow", "hidden")        
+        $('html').css("overflow", "hidden")            
     } else { $('html').css("overflow", "auto") }
 });
 
@@ -83,10 +84,10 @@ ImageModal.addEventListener('hidden.bs.modal', function () {
     var googleTranslateFrame = document.getElementsByClassName('VIpgJd-ZVi9od-ORHb-OEVmcd')[0]; /* goog-te-banner-frame */
     if (!googleTranslateFrame) return;
     var innerDoc = googleTranslateFrame.contentDocument || googleTranslateFrame.contentWindow.document;
-    var restore = innerDoc.getElementsByTagName("button");
-    for (var i = 0; i < restore.length; i++) {
-        if (restore[i].id.indexOf("restore") >= 0) {
-            restore[i].click();
+    var restoreLang = innerDoc.getElementsByTagName("button");
+    for (var i = 0; i < restoreLang.length; i++) {
+        if (restoreLang[i].id.indexOf("restore") >= 0) {
+            restoreLang[i].click();
             var close = innerDoc.getElementsByClassName("goog-close-link");
             close[0].click();
             return;
@@ -96,7 +97,7 @@ ImageModal.addEventListener('hidden.bs.modal', function () {
 
 /* Función del botón para mostrar y ocultar los proyectos que no aparecen en la lista inicial */
 const showMoreProjectsBtn = document.querySelector('.show-more-btn');
-const showHideProjects = () => {
+const showAndHideProjects = () => {
     var cardsVisible = document.getElementById("cardsLimit");
     var cardsHidden = document.getElementById("hiddenCards");
     var btnShowHiddenCards = document.getElementById("show-more-btn");
@@ -119,7 +120,7 @@ const showHideProjects = () => {
         document.querySelector('#Projects').scrollIntoView({ behavior: 'smooth' });
     }
 }
-showMoreProjectsBtn.addEventListener('click', showHideProjects);
+showMoreProjectsBtn.addEventListener('click', showAndHideProjects);
 
 /* Función que obtiene los datos del formulario para enviar el correo electrónico */
 const emailForm = document.querySelector('#c-form');
@@ -133,7 +134,7 @@ emailForm.addEventListener('submit', (event) => {
     $(btnSendEmail).html('Procesando...&nbsp;<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>').prop('disabled', true)
     setTimeout(function () {
         $(btnSendEmail).html(btnHtmlElements).prop('disabled', false) /* Restaura el botón a su valor inicial */
-        btnEmailTo.setAttribute('href', `mailto:mauba22@outlook.com?subject=Quiero contactar: ${formData.get('name')} - ${formData.get('email')}&body=${formData.get('message')}`)
+        btnEmailTo.setAttribute('href', `mailto:mauba22@outlook.com?subject=Te contacto desde tu portafolio: ${formData.get('name')} - ${formData.get('email')}&body=${formData.get('message')}`)
         btnEmailTo.click();
     }, 4000)
 });
@@ -144,10 +145,13 @@ btnCopyEmail.addEventListener('click', () => {
     var copyText = document.getElementById("email-copy");
     copyText.select();
     copyText.setSelectionRange(0, 99999); /* Para dispositivos móviles */
-    navigator.clipboard
-        .writeText(copyText.value)
-        .then(() => { showAlertSpan(); alertText.innerHTML = `Copiado al portapapeles - Copied to clipboard '<i class="fa-solid fa-clipboard"></i>'`})
-        .catch(() => { showAlertSpan(); alertText.innerHTML = `Error inesperado, si aún deseas copiar selecciona el correo manualmente '<i class="fa-solid fa-triangle-exclamation"></i>'`});
+    navigator.clipboard.writeText(copyText.value)
+        .then(() => {
+            showAlertSpan(); alertText.innerHTML = `Copiado al portapapeles - Copied to clipboard '<i class="fa-solid fa-clipboard"></i>'`
+        })
+        .catch(() => {
+            showAlertSpan(); alertText.innerHTML = `Error inesperado, si aún deseas copiar selecciona el correo manualmente '<i class="fa-solid fa-triangle-exclamation"></i>'`
+        });
 });
 
 /* Función para traducir la página entre Inglés y Español */
@@ -167,11 +171,10 @@ function modalSpinner() {
     setTimeout(function () { $('.modalSpinner').modal('hide'); }, 3000);
 }
 
-/* Muestra un Alert dependiendo la acción que lo requiera */
 const alertDialog = document.getElementById('alertSpan');
 const alertText = document.getElementById('alert-text');
 const closeAlert = document.querySelector('.close-alert');
-
+/* Muestra un Alert dependiendo la acción que lo requiera */
 const showAlertSpan = () => {   
     alertDialog.classList.remove('hide');
     alertDialog.classList.add('show');   
