@@ -22,19 +22,17 @@
   <div class="main">     
     <div id="loading" class="loading-page-gif"><img src="img/loading.gif"></div>
     <button class="ScrollToTop btn b-color-4B7 transition03"></button> 
-    
-    <header id="Main">
+   
+    <header id="Main">     
       <div class="scroll-down-l"><span class="sd-span bounce" data-es="Desliza hacia abajo " data-en="Scroll down "></span></div>           
       <div class="scroll-down-r"><span class="sd-span bounce" data-es="Desliza hacia abajo " data-en="Scroll down "></span></div>      
-      <!-- Introducción -->
+      
       <section class="main-introduction radius10-padding1">       
         <div class="h-title">
-          <h1 class="h1-h radius-padding b-color-4B7">
-            <i class="fa-solid fa-terminal fa-fw"></i><span data-es="'Hola Mundo!!'_" data-en="'Hello World!!'_"></span>
-          </h1>
+          <h1 class="h1-h radius-padding b-color-4B7"><span data-es="'Hola Mundo!!'_" data-en="'Hello World!!'_"></span></h1>
         </div>
         <div class="h-subtitle">
-          <h5 class="radius-padding b-color-6CC" data-es="if(explorarPortafolio == true) { " data-en="if(explorePortfolio == true) {"></h5>        
+          <h5 class="radius-padding b-color-6CC" data-es="if(explorarPortafolio) { " data-en="if(explorePortfolio) {"></h5>        
         </div>  
         <div class="content">
           <div class="h-back radius-padding b-color-4B7 transition03">
@@ -114,19 +112,19 @@
       <div class="content" data-aos="fade-up">
         <div class="abtme-img-container radius10-padding1">
           <img src="img/photo.png">
-          <span data-es="Este soy yo! :D" data-en="Hello there! :D"></span>
+          <span data-es="Este soy yo!" data-en="Hello there!"></span>
         </div>    
         <div class="abtm-text radius10-padding1">
           <h1 class="radius-padding b-color-4B7">
             <i class="fa-solid fa-address-card fa-shake"></i>&nbsp;<span data-es="Sobre mí" data-en="About me"></span>
           </h1>                   
-          <h5 class="radius-padding b-color-6CC" data-es="Me llamo Edgar Mauricio Barrueta Aguirre" data-en="My name is Edgar Mauricio Barrueta Aguirre"></h5>
+          <h3 class="abtm-name" data-label="Edgar Mauricio Barrueta Aguirre" data-label-hover="Web Developer"></h3>
           <pre data-es="Me considero un desarrollador web dado que la mayoría de prácticas y proyectos que he realizado desde mis inicios en el mundo de la programación son páginas web, pero claro, sin dejar de lado el desarrollo de software y de aplicaciones móviles.
-              Además del buen manejo de HTML y CSS, los lenguajes de programación con los que más me familiarizo son: Java, JavaScript y TypeScript, un poco con PHP y C#, este último usado para un par de proyectos hechos en Unity, así como también algunos de los frameworks más demandados, como Spring Framework, Angular, React Native, herramientas y librerías indispensables para el desarrollo web, como Node.js, NPM, Bootstrap, etc. El uso de varios IDE y por supuesto el manejo de Git.
+              Además del buen manejo de HTML y CSS, los lenguajes de programación con los que más me familiarizo son: Java, JavaScript y TypeScript, un poco con PHP y C#, este último usado para un par de proyectos hechos en Unity, así como también algunos de los frameworks más demandados, como Spring Framework, Angular y un poco de React Native, herramientas y librerías indispensables para el desarrollo web, como Node.js, NPM, Bootstrap, etc. El uso de varios IDE y por supuesto el manejo de Git.
             
               Como plus agregaría que una de mis principales cualidades es que me gusta ser autodidacta, aprender y adquirir nuevos conocimientos por mi propia cuenta me ha ayudado en mi preparación y en ampliar mis habilidades, que, si bien no son avanzadas, tengo las bases para poder implementarlas."
               data-en="I consider myself a web developer since most of the practices and projects that I've done since my beginnings in the world of programming are web pages, but of course, without neglecting software and mobile application development.
-              In addition to my knowledge of HTML and CSS, the programming languages ​​that I've worked the most are: Java, JavaScript and TypeScript, a little with PHP and C#, the latter used for a couple of projects done in Unity, as well as some of the most demanded frameworks, like Spring Framework, Angular, React Native, essential tools and libraries for web development, such as Node.js, NPM, Bootstrap, etc. The use of multiple IDE's and of course, knowledge of Git.
+              In addition to my knowledge of HTML and CSS, the programming languages ​​that I've worked the most are: Java, JavaScript and TypeScript, a little with PHP and C#, the latter used for a couple of projects done in Unity, as well as some of the most demanded frameworks, like Spring Framework, Angular and a little of React Native, essential tools and libraries for web development, such as Node.js, NPM, Bootstrap, etc. The use of multiple IDE's and of course, knowledge of Git.
                               
               As a plus, I would add that one of my main qualities is that I like to be self-taught, learning and acquiring new knowledge on my own has helped me in my preparation and in expanding my skills, that, although they're not advanced, I've the bases to be able to implement them.">
           </pre>
@@ -147,7 +145,7 @@
     
     <section class="portafolio" id="Projects" data-aos="fade-up">
       <h3 class="sectionTitles" data-es="Mis proyectos" data-en="My projects" aria-labelledby="titleInfo"></h3>      
-      <div id="titleInfo" class="form-text" data-es="** Los proyectos no estan ordenados por fecha de creación **" data-en="** Projects aren't ordered by creation date **"></div>
+      <div id="titleInfo" class="form-text" data-es="Los proyectos no estan ordenados por fecha de creación" data-en="Projects aren't ordered by creation date"></div>
       <div class="p-cards-container">         
         <div class="project-card">
           <div class="img-container">
@@ -205,6 +203,36 @@
                 <a href="https://github.com/MauricioBarrueta/edgarmauriciobaag.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="Repositorio" target="_blank">
                   <i class="fa-brands fa-github fa-shake"></i>
                 </a>
+              </li>             
+            </ul>
+          </div>
+        </div> 
+        <div class="project-card">
+          <div class="img-container">
+            <img src="img/Portafolio/APIClima.png" class="img-item" alt="HTML para la estructuración y JavaScript junto con jQuery para la funcionalidad, 
+              CSS y Bootstrap para los estilos y el módulo gh-pages de NPM para la publicación de la página en GitHub Pages - Servidor: API 'OpenWeatherMap'(https://openweathermap.org/)." 
+              data-title="Página que muestra el pronóstico del clima de manera detallada, ya sea que se ingrese el nombre de la ciudad o las coordenadas, 
+              además de que obtiene la hora actual, la hora en la que amanece y anochece de acuerdo a la zona horaria de la ciudad.">
+          </div>
+          <button class="showInfo"><i class="fa-solid fa-fingerprint fa-beat"></i></button>
+          <div class="details">
+            <h2 data-es="API Web 'Pronóstico del clima'" data-en="'Weather Forecast' Web API"></h2>
+            <div class="tec-icons"> 
+              <ul class="static-projects-icons p-tecnologies"> 
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Moment.js">
+                  <i><img src="svg/momentjs.svg" class="p-tec-svg-icons"></i>
+                </li>                 
+              </ul>  
+            </div> 
+            <ul class="web-icons">              
+              <li>
+                <a href="https://mauriciobarrueta.github.io/currentWeatherAPI/" data-bs-toggle="tooltip" data-bs-placement="top" 
+                  data-bs-custom-class="web-icons-a" title="Página Web" target="_blank"><i class="fa-solid fa-globe fa-shake"></i></a>
+              </li>
+              <li><span>Web</span></li>
+              <li>
+                <a href="https://github.com/MauricioBarrueta/currentWeatherAPI" data-bs-toggle="tooltip" data-bs-placement="top" 
+                  data-bs-custom-class="web-icons-a" title="Repositorio" target="_blank"><i class="fa-brands fa-github fa-shake"></i></a>
               </li>             
             </ul>
           </div>
@@ -329,10 +357,9 @@
         </div>
         <div class="project-card">
           <div class="img-container">
-            <img src="img/Portafolio/AdministradorUsuarios.png" class="img-item"
-              alt="Back end: Java y Spring Framework (Spring Data JPA, Thymeleaf, Hibernate) - Front end: HTML para la estructuración, JavaScript, 
-              jQuery y AJAX para la funcionalidad, CSS y Bootstrap para los estilos - Servidor: Base de Datos remoto PostgreSQL - Control de 
-              versiones con GitLab y GitHub." 
+            <img src="img/Portafolio/AdministradorUsuarios.png" class="img-item" alt="Back end: Java y Spring Framework (Spring Data JPA, Thymeleaf, Hibernate) - Front end: HTML para la estructuración, JavaScript, 
+                      jQuery y AJAX para la funcionalidad, CSS y Bootstrap para los estilos - Servidor: Base de Datos remoto PostgreSQL - Control de 
+                      versiones con GitLab y GitHub."
               data-title="Sistema que permite la administración de toda la información de los usuarios registrados en las diferentes aplicaciónes pertenecientes a un banco">
           </div>
           <button class="showInfo"><i class="fa-solid fa-fingerprint fa-beat"></i></button>
@@ -341,15 +368,17 @@
             <div class="tec-icons">
               <ul class="java-project-icon p-tecnologies">
                 <!-- Template -->
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript y jQuery">
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
+                  title="JavaScript y jQuery">
                   <i><img class="JavaScript-Icon p-tec-svg-icons"></i>
                 </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Spring Framework">
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
+                  title="Spring Framework">
                   <i><img class="Spring-Icon p-tec-svg-icons"></i>
                 </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Thymeleaf">
                   <i><img class="Thymeleaf-Icon p-tec-svg-icons"></i>
-                </li>                
+                </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
                   <i><img class="HTML-Icon p-tec-svg-icons"></i>
                 </li>
@@ -426,59 +455,57 @@
               </li>         
             </ul>
           </div>
-        </div>
-        <div class="project-card">
-          <div class="img-container">
-            <img src="img/Portafolio/AngularEcommerce.png" class="img-item" alt="Backend: TypeScript - Front end: HTML para la estructuración, 
-                Angular, Angular Material, CSS y la librería Bootstrap para los estilos - Servidor: JSON Server (NPM)."
-                data-title="Práctica de un sistema 'e-commerce' el cual simula la compra de uno o varios productos por medio de un carrito de compras.">
-          </div>
-          <button class="showInfo"><i class="fa-solid fa-fingerprint fa-beat"></i></button>
-          <div class="details">
-            <h2 data-es="Práctica: Sistema e-commerce" data-en="Practice: 'e-commerce' system"></h2>
-            <div class="tec-icons">
-              <ul class="p-tecnologies">
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="TypeScript">
-                  <i><img class="TypeScript-Icon p-tec-svg-icons"></i>
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular">
-                  <i><img class="Angular-Icon p-tec-svg-icons"></i>
-                </li>                
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular Material">
-                  <i><img src="svg/AngularMaterial.svg" class="p-tec-svg-icons"></i>
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
-                  <i><img class="HTML-Icon p-tec-svg-icons"></i>
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
-                  <i><img class="CSS-Icon p-tec-svg-icons"></i>
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
-                  <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JSON (Server)">
-                  <i><img class="JSON-Icon p-tec-svg-icons"></i>
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NPM">
-                  <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
-                </li>                
+        </div>          
+        <span id="cardsLimit"></span> <!-- Límite de proyectos visibles -->
+        <div id="hiddenCards" style="display: none;"> <!-- Proyectos ocultos -->     
+          <div class="project-card">
+            <div class="img-container">
+              <img src="img/Portafolio/AngularEcommerce.png" class="img-item" alt="Backend: TypeScript - Front end: HTML para la estructuración, 
+                  Angular, Angular Material, CSS y la librería Bootstrap para los estilos - Servidor: JSON Server (NPM)."
+                  data-title="Práctica de un sistema 'e-commerce' el cual simula la compra de uno o varios productos por medio de un carrito de compras.">
+            </div>
+            <button class="showInfo"><i class="fa-solid fa-fingerprint fa-beat"></i></button>
+            <div class="details">
+              <h2 data-es="Práctica: Sistema e-commerce" data-en="Practice: 'e-commerce' system"></h2>
+              <div class="tec-icons">
+                <ul class="p-tecnologies">
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="TypeScript">
+                    <i><img class="TypeScript-Icon p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular">
+                    <i><img class="Angular-Icon p-tec-svg-icons"></i>
+                  </li>                
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular Material">
+                    <i><img src="svg/AngularMaterial.svg" class="p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
+                    <i><img class="HTML-Icon p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
+                    <i><img class="CSS-Icon p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
+                    <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JSON (Server)">
+                    <i><img class="JSON-Icon p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NPM">
+                    <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                  </li>                
+                </ul>
+              </div>
+              <ul class="web-icons">              
+                <li><a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Página Web" style="visibility: hidden;"><i class="fa-solid fa-globe fa-shake"></i></a></li>
+                <li><span>Web</span></li>
+                <li>
+                  <a href="https://github.com/MauricioBarrueta/Practica-Sistema-e-commerce.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="Repositorio" target="_blank">
+                    <i class="fa-brands fa-github fa-shake"></i>
+                </a>
+                </li>        
               </ul>
             </div>
-            <ul class="web-icons">              
-              <li><a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Página Web" style="visibility: hidden;"><i class="fa-solid fa-globe fa-shake"></i></a></li>
-              <li><span>Web</span></li>
-              <li>
-                <a href="https://github.com/MauricioBarrueta/Practica-Sistema-e-commerce.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="Repositorio" target="_blank">
-                  <i class="fa-brands fa-github fa-shake"></i>
-              </a>
-              </li>        
-            </ul>
-          </div>
-        </div>     
-
-        <span id="cardsLimit"></span> <!-- Límite de proyectos visibles -->
-
-        <div id="hiddenCards" style="display: none;"> <!-- Proyectos ocultos -->
+          </div>  
           <div class="project-card">
             <div class="img-container">
               <img src="img/Portafolio/RedSocialEgresados.png" class="img-item" alt="Hecho con PHP, JavaScript, jQuery y AJAX, HTML para la estructuración, 
@@ -702,7 +729,8 @@
         <div class="experience-card" data-aos="zoom-out">
           <div class="experience-img"><img src="img/Otras/Medicos Hoy.png"></div>
           <div class="experience-body">
-            <a href="https://medicoshoy.com/" target="_blank" title="Ir al sitio - Go to the website" class="exp-title">Médicos Hoy S.A de C.V</a>
+            <a href="https://medicoshoy.com/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" class="exp-title"
+              data-bs-title="Sitio web - Website" data-bs-custom-class="p-tec-tooltip" >Médicos Hoy S.A de C.V</a>
             <div class="time">
               <h3 data-es="Periodo:" data-en="Time: "></h3>
               <span data-es="Ene." data-en="Jan."></span><span>-</span><span data-es="Abr." data-en="Apr."></span><span>2020</span>
@@ -715,7 +743,8 @@
         <div class="experience-card" data-aos="zoom-out">
           <div class="experience-img"><img src="img/Otras/GFR.png"></div>
           <div class="experience-body">
-            <a href="https://www.gfr.com.mx/" target="_blank" title="Ir al sitio - Go to the website" class="exp-title">GFR Telecomm</a>
+            <a href="https://www.gfr.com.mx/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="top" class="exp-title"
+              data-bs-title="Sitio web - Website" data-bs-custom-class="p-tec-tooltip">GFR Telecomm</a>
             <div class="time">
               <h3 data-es="Periodo:" data-en="Time: "></h3>
               <span data-es="May." data-en="May."></span><span>-</span><span data-es="Ago." data-en="Aug."></span><span>2018</span>
@@ -738,13 +767,6 @@
             aria-valuemin="0" aria-valuemax="100">70%</div>        
         </div>
       </div>  
-      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="C#">
-        <img alt="" class="C-Icon position-absolute top-50 start-50 translate-middle" >
-        <div class="info-skills progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
-            aria-valuemin="0" aria-valuemax="100">50%</div>
-        </div>
-      </div> 
       <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="JavaScript">
         <img alt="" class="JavaScript-Icon position-absolute top-50 start-50 translate-middle">
         <div class="info-skills progress">
@@ -752,20 +774,6 @@
             aria-valuemin="0" aria-valuemax="100">70%</div>          
         </div>
       </div>       
-      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="jQuery">
-        <img alt="" class="jQuery-Icon position-absolute top-50 start-50 translate-middle">
-        <div class="info-skills progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
-            aria-valuemin="0" aria-valuemax="100">70%</div>
-        </div>
-      </div> 
-      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="AJAX">
-        <img alt="" class="AJAX-Icon position-absolute top-50 start-50 translate-middle">
-        <div class="info-skills progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60"
-            aria-valuemin="0" aria-valuemax="100">60%</div>
-        </div>
-      </div> 
       <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="TypeScript">
         <img alt="" class="TypeScript-Icon position-absolute top-50 start-50 translate-middle" >
         <div class="info-skills progress">
@@ -773,6 +781,13 @@
             aria-valuemin="0" aria-valuemax="100">70%</div>
         </div>
       </div>       
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="C#">
+        <img alt="" class="C-Icon position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 50%" aria-valuenow="50"
+            aria-valuemin="0" aria-valuemax="100">50%</div>
+        </div>
+      </div> 
       <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="PHP">
         <img alt="" class="PHP-Icon position-absolute top-50 start-50 translate-middle">
         <div class="info-skills progress">
@@ -821,14 +836,7 @@
           <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
             aria-valuemin="0" aria-valuemax="100">70%</div>
         </div>
-      </div>  
-      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Hibernate">
-        <img src="svg/Hibernate.svg" alt="" class="position-absolute top-50 start-50 translate-middle">
-        <div class="info-skills progress">
-          <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
-            aria-valuemin="0" aria-valuemax="100">70%</div>
-        </div>
-      </div>      
+      </div>       
       <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Angular">
         <img alt="" class="Angular-Icon position-absolute top-50 start-50 translate-middle">
         <div class="info-skills progress">
@@ -850,6 +858,20 @@
             aria-valuemin="0" aria-valuemax="100">40%</div>
         </div>
       </div>   
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="jQuery">
+        <img alt="" class="jQuery-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div> 
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="AJAX">
+        <img alt="" class="AJAX-Icon position-absolute top-50 start-50 translate-middle">
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 60%" aria-valuenow="60"
+            aria-valuemin="0" aria-valuemax="100">60%</div>
+        </div>
+      </div> 
       <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Node.js">
         <img src="svg/NodeJS.svg" alt="" class="position-absolute top-50 start-50 translate-middle img-pdng" style="padding-top: 25px;" >
         <div class="info-skills progress">
@@ -873,6 +895,13 @@
       </div>
       <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="GitHub">
         <img src="svg/GitHub.svg" alt="" class="position-absolute top-50 start-50 translate-middle" >
+        <div class="info-skills progress">
+          <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
+            aria-valuemin="0" aria-valuemax="100">70%</div>
+        </div>
+      </div>
+      <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="GitLab">
+        <img src="svg/GitLab.svg" alt="" class="position-absolute top-50 start-50 translate-middle" >
         <div class="info-skills progress">
           <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
             aria-valuemin="0" aria-valuemax="100">70%</div>
@@ -942,7 +971,7 @@
         </div>
       </div>     
       <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="MySQL">
-        <img alt="" class="SQL-Icon position-absolute top-50 start-50 translate-middle" >
+        <img alt="" class="SQL-Icon position-absolute top-50 start-50 translate-middle" style="margin-top: -5px;" >
         <div class="info-skills progress">
           <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" aria-valuenow="70"
             aria-valuemin="0" aria-valuemax="100">70%</div>
@@ -1046,43 +1075,45 @@
 
     <section class="certifications" id="certifications">
       <h1 class="cert-section-title" data-es="Certificaciones" data-en="Certifications"></h1>
-      <div class="certification-container">
-        <div class="card" data-aos="zoom-out">
-          <div class="face front-face">
-            <div class="certification-content">
-              <div class="certification-img-container"><img src="img/Otras/Certificado Java.png" alt=""></div>
+      <div class="certification-container">        
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/Otras/Certificado Java.png" alt="">
+            </div>
+            <div class="flip-card-back">
+              <div class="certification-content">
+                <h3 class="certification-card-title" data-es="Programador Orientado a Objetos (POO) en Java" data-en="Java Object-Oriented Programming (OOP)"></h3>
+                <a href="https://it-okcenter.com/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="left" 
+                  data-bs-title="Sitio web - Website" data-bs-custom-class="p-tec-tooltip">IT Open Knowledge Center</a>
+                <img class="certification-company-img" src="img/Otras/IT OK Center.png" alt="">
+                <p data-es="Fecha de emisión: Febrero 2021" data-en="Issue date: February 2021"></p>
+                <a href="files/Certificado Java.pdf" target="_blank" class="certification-file" data-es="Archivo" data-en="File"></a>  
+              </div>
             </div>
           </div>
-          <div class="face back-face">
-            <div class="certification-content">
-              <h3 class="certification-card-title" data-es="Programador Orientado a Objetos (POO) en Java" data-en="Java Object-Oriented Programming (OOP)"></h3>
-              <a href="https://it-okcenter.com/" target="_blank" title="Ir al sitio - Go to the website">IT Open Knowledge Center</a>
-              <img class="certification-company-img" src="img/Otras/IT OK Center.png" alt="">
-              <p data-es="Fecha de emisión: Febrero 2021" data-en="Issue date: February 2021"></p>
-              <a href="files/Certificado Java.pdf" target="_blank" class="certification-file" data-es="Archivo" data-en="File"></a>        
+        </div>
+        <div class="flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/Otras/Certificado Android.png" alt="">
             </div>
-          </div>
-        </div>        
-        <div class="card" data-aos="zoom-out">
-          <div class="face front-face">
-            <div class="certification-content">
-              <div class="certification-img-container"><img src="img/Otras/Certificado Android.png" alt=""></div>
-            </div>
-          </div>
-          <div class="face back-face">
-            <div class="certification-content">
-              <h3 class="certification-card-title">Android Professional Qualified Developer</h3>
-              <a href="https://www.develop.com.mx/" target="_blank" title="Ir al sitio - Go to the website">Develop Talent & Technology</a>
-              <img class="certification-company-img" src="img/Otras/Develop.png" alt="">
-              <p data-es="Fecha de emisión: Noviembre 2019" data-en="Issue date: November 2021"></p>
-              <a href="files/Certificado Android.pdf" target="_blank" class="certification-file" data-es="Archivo" data-en="File"></a>        
+            <div class="flip-card-back">
+              <div class="certification-content">
+                <h3 class="certification-card-title">Android Professional Qualified Developer</h3>
+                <a href="https://www.develop.com.mx/" target="_blank" data-bs-toggle="tooltip" data-bs-placement="right" 
+                  data-bs-title="Sitio web - Website" data-bs-custom-class="p-tec-tooltip">Develop Talent & Technology</a>
+                <img class="certification-company-img" src="img/Otras/Develop.png" alt="">
+                <p data-es="Fecha de emisión: Noviembre 2019" data-en="Issue date: November 2021"></p>
+                <a href="files/Certificado Android.pdf" target="_blank" class="certification-file" data-es="Archivo" data-en="File"></a>       
+              </div>
             </div>
           </div>
         </div> 
     </div>   
     </section>
      
-    <section class="triangle"></section>
+    <section class="contact-section-separator"></section>
     <section class="contactme" id="Contact" data-aos="fade-up"> 
       <div class="content">
         <!-- Contact Form -->
@@ -1114,7 +1145,9 @@
           <h4 data-es="Mi correo electrónico:" data-en="My e-mail:"></h4>
           <p>
             <input type="text" value="mauba22@outlook.com" id="email-copy" style="text-decoration: underline;" readonly>
-            <button class="copy-btn" id="copy-btn" title="Copiar - Copy"><i class="fa-solid fa-copy fa-shake"></i></button>
+            <button class="copy-btn" id="copy-btn" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Copiar - Copy" data-bs-custom-class="p-tec-tooltip">
+              <!-- <i class="fa-solid fa-copy fa-shake"></i> -->
+            </button>
           </p>
           <h4 data-es="Mis redes sociales:" data-en="Social media"></h4>
           <div class="i-socialMedia radius-padding"> <!-- Social Media Icons -->
@@ -1145,8 +1178,7 @@
   </div>
 
   <footer class="footer" id="footer">
-    <div class="footer-content">
-      <h3 data-es="Sígueme" data-en="Follow me"></h3>
+    <div class="footer-content">      
       <div class="social radius-padding">
         <a href="https://stackoverflow.com/users/20207506/mauricio-barrueta" title="Stack-Overflow" target="_blank"></a>
         <a title="CodePen" style="cursor: pointer;"><i class="fab fa-codepen"></i></a>
