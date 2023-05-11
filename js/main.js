@@ -1,7 +1,7 @@
 /* Evento que muestra un gif mientras se termina de cargar la página, además de mostrarlo por 3seg más */
 $(window).on('load', function () { 
     setTimeout(function () {
-        $('#loading').hide("fast");
+        $('#loading').toggle(322);
         /* Se activa la animación del texto de la introducción y la barra del navegador */
         $('.h1-h').css("animation-delay", "3.22s");
         $('html').css("overflow", "auto");
@@ -144,7 +144,7 @@ btnCopyEmail.addEventListener('click', () => {
             showAlertSpan(); alertText.innerHTML = `Copiado al portapapeles - Copied to clipboard '<i class="fa-solid fa-clipboard"></i>'`
         })
         .catch(() => {
-            showAlertSpan(); alertText.innerHTML = `Error inesperado, si aún deseas copiar selecciona el correo manualmente '<i class="fa-solid fa-triangle-exclamation"></i>'`
+            showAlertSpan(); alertText.innerHTML = `'<i class="fa-solid fa-triangle-exclamation"></i>' Error inesperado!! Copia el correo electrónico manualmente`
         });
 });
 
@@ -165,9 +165,8 @@ function modalSpinner() {
     setTimeout(function () { $('.modalSpinner').modal('hide'); }, 3000);
 }
 
-const alertDialog = document.getElementById('alertSpan');
-const alertText = document.getElementById('alert-text');
-const closeAlert = document.querySelector('.close-alert');
+const alertDialog = document.getElementById('alertSpan'), alertText = document.getElementById('alert-text'),
+    closeAlert = document.querySelector('.close-alert');
 /* Muestra un Alert dependiendo la acción que lo requiera */
 const showAlertSpan = () => {   
     alertDialog.classList.remove('hide');
