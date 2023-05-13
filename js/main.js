@@ -13,7 +13,7 @@ $(document).ready(function () {
     /* Resalta el texto en la navbar de acuerdo a la sección en la que se encuentra */
     $('.navbar').on('click', 'a', function () {
         $('.navbar a.active').removeClass('active');
-        $(this).addClass('active');        
+        $(this).addClass('active');  
     });
     $('body').scrollspy({ target: '.navbar' });
 
