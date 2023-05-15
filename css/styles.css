@@ -271,9 +271,9 @@ header {
     white-space: pre-line; line-height: 170%; margin: 10px 0 8px 0; text-align: justify; color: #4B7F83;    
 }
 .aboutme .content .abtm-text .abtm-footer { /* Abtme-Content Hobbies Div */ 
-    width: 100%; text-align: center; font-size: 24px;
-    margin-bottom: 10px; } 
-.aboutme .content .abtm-text .abtm-footer h6 { font-size: 15px; text-align: center; border-bottom: 1px solid white; }  /* Abtme-Content Hobbies Title */
+    width: 100%; text-align: center; font-size: 24px; margin-bottom: 10px; 
+} 
+.aboutme .content .abtm-text .abtm-footer h6 { font-size: 15px; text-align: center; border-bottom: 1px solid white; } 
 .aboutme .content .abtm-text .abtm-footer>i:hover {
     transform: translateY(-2.5px); cursor: pointer; text-shadow: var(--textShadowCustom);
 }
@@ -883,6 +883,7 @@ iframe.goog-te-banner-frame{ display: none !important; visibility: hidden !impor
     .abtm-name{ font-size: 11px; text-align: center; margin-bottom: 5px; }
     .abtm-text pre { font-size: 9.5px; line-height: 172%; }  
     .aboutme .content .abtm-text .abtm-footer h6 { font-size: 12px; }
+    .abtm-text .abtm-footer>i { font-size: 20px !important; margin-right: -5px;}
     #google_translate_element { font-size: 9px; } /* Portfolio */
     #google_translate_element span>i { font-size: 24px; }
     .goog-te-gadget-simple {  font-size: 5pt !important; padding: 1px 0 1px 0 !important; }
