@@ -23,9 +23,8 @@ $(document).ready(function () {
 })
 
 /* Función que da el efecto 'parallax' a la imagen de fondo al hacer scroll */
-const parallaxMain = document.querySelectorAll('.main');
-const parallaxContact = document.querySelectorAll(".contactme");
-const parallaxFooter = document.querySelectorAll('.footer');
+const parallaxMain = document.querySelectorAll('.main'),  parallaxContact = document.querySelectorAll(".contactme"), 
+    parallaxFooter = document.querySelectorAll('.footer');
 window.addEventListener("scroll", function () {
     let offset = window.pageYOffset;
     parallaxMain.forEach(function (parallaxEffect, i) {
@@ -117,8 +116,7 @@ const showAndHideProjects = () => {
 showMoreProjectsBtn.addEventListener('click', showAndHideProjects);
 
 /* Función que obtiene los datos del formulario para enviar el correo electrónico */
-const emailForm = document.querySelector('#c-form');
-const btnEmailTo = document.querySelector('#myEmail');
+const emailForm = document.querySelector('#c-form'), btnEmailTo = document.querySelector('#myEmail');
 emailForm.addEventListener('submit', (event) => {
     event.preventDefault()
     const formData = new FormData(emailForm)

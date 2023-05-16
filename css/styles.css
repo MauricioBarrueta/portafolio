@@ -15,7 +15,7 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
     --textShadowCustom: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 5px #000;
     --jellyBeanBlue: #4B7F83; --moonstoneBlue: #6CC6C9; --customWhite: #F4F6F7;
     --fa-shake-animation: fa-shake 1s ease-out infinite; --fa-bounce-animation: fa-bounce 1s ease-out infinite; --beating-animation: beating 2s ease 0s infinite;
-    --border-white: 1px solid white; --borderBoxShadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    --border-white: 1px solid white; --borderBoxShadow: 0 0 10px rgba(0, 0, 0, 0.5); --boxShadowBottom: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
 /* --------------------------------------------------------------- GENERAL STYLES -------------------------------------------------------- */
 .rad-pad-505, .p-icons-a .tooltip-inner, .icons>h4 { border-radius: 5px; padding: 0.5rem; }
@@ -60,7 +60,7 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
 .ScrollToTop {
     position: fixed; z-index: 9997;  width: 60px; height: 60px;
     border-radius: 50%; padding: 0.5rem; bottom: 12px; right: 12px;  
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5); border: none; opacity: 0.85; transition: 0.35s;  
+    box-shadow: var(--boxShadowBottom); border: none; opacity: 0.85; transition: 0.35s;  
 }
 .ScrollToTop::after {
     content: "\f102"; font-family: FontAwesome; font-size: 18px;
@@ -255,7 +255,7 @@ header {
 }
 .abtm-name { /* Abtme-Content Name */
     font-size: 14px; color: var(--jellyBeanBlue); cursor: pointer;
-    padding: 0.25rem 0 0.5rem 0 !important; padding-block: var(--lineWeight); border-bottom: 2px solid #4B7F83;
+    padding: 0.25rem 0 0.5rem 0 !important; padding-block: var(--lineWeight); border-bottom: 2px solid var(--jellyBeanBlue);
     --lineWeight: 0.1em; --lineColor: #2D4C4E;        
     background: linear-gradient(var(--lineColor) 50%, #000 0) 0% calc(100% - var(--animationPct, 0%)) / 100% 200%,
         linear-gradient(var(--lineColor) 0 0) 0% var(--animationPct, 0%) / var(--animationPct, 0%) var(--lineWeight) no-repeat;
@@ -270,7 +270,7 @@ header {
 .abtm-name:hover::after { content: attr(data-label-hover); }
 .abtm-text pre { /* Abtme-Content p */
     font-size: 12px; font-family: 'Press Start 2P', cursive;
-    white-space: pre-line; line-height: 170%; margin: 10px 0 8px 0; text-align: justify; color: #4B7F83;    
+    white-space: pre-line; line-height: 170%; margin: 10px 0 8px 0; text-align: justify; color: var(--jellyBeanBlue);    
 }
 .aboutme .content .abtm-text .abtm-footer { /* Abtme-Content Hobbies Div */ 
     width: 100%; text-align: center; font-size: 24px; margin-bottom: 10px; 
@@ -279,7 +279,7 @@ header {
 .aboutme .content .abtm-text .abtm-footer>i:hover {
     transform: translateY(-2.5px); cursor: pointer; text-shadow: var(--textShadowCustom);
 }
-.aboutme .content .abtm-text .btnCV { width: 100%; background-color: #4B7F83; color: white; } /* Abtme-Content CV Button with effect */
+.aboutme .content .abtm-text .btnCV { width: 100%; background-color: var(--jellyBeanBlue); color: white; } /* Abtme-Content CV Button with effect */
 .aboutme .content .abtm-text .btnCV::after {
     content: "\f56d"; font-family: FontAwesome;
     display: block; width: 0px; height: 24px;
@@ -302,7 +302,7 @@ header {
     margin-inline: 8px; text-decoration: none !important;
 }
 .portafolio .p-cards-container #show-more-btn { /* Portafolio Show-More btn */
-    box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--boxShadowBottom);
     border: var(--border-white); animation: blink 1s infinite step-end reverse;
     width: 50%; height: 40px;
     transition: 0.3s; margin: 20px 0 10px 0;
@@ -356,6 +356,9 @@ header {
 .tec-icons .p-tecnologies { padding: 0.1rem; margin: 0; }
 .tec-icons .p-tecnologies li { list-style: none; margin: 0 5px; cursor: pointer; }
 .tec-icons .p-tecnologies li .p-tec-svg-icons { width: 22px; height: 22px; padding: 0; border: 0; margin: 0; }
+.tec-icons .p-tecnologies li .p-tec-svg-icons:hover {
+    animation: var(--fa-bounce-animation); animation-iteration-count: 1;
+}
 .project-card .details .web-icons { /* Project Cards Links Icons */
     width: 100%; font-size: 11px;
 	display: table; text-align: center;
@@ -380,7 +383,7 @@ header {
 /* --------------------------------------------------------------- Modal ---------------------------------------------------------------- */
 .modal-content { 
     background-color: #F4F6F7; border: var(--border-white); 
-    box-shadow: 0px 0px 5px rgba(45, 76, 78, 1); /* box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);  */
+    box-shadow: 0px 0px 5px rgba(45, 76, 78, 1); 
 }
 .modal .modal-dialog { min-width: 95%; border-radius: 5px; overflow-y: initial !important }
 #imgPopUpModal { padding-right: 0 !important; }
@@ -402,21 +405,16 @@ header {
 #imgPopUpModal .modal-body { margin: 0; cursor: zoom-in; margin-top: -15px; } /* Modal Body */ 
 .modal-content .span-info { /* Modal Magnifying Glass Instructions */
     padding: 0.2rem; margin-top: 5px; border: 0; z-index: 1; cursor: default;
-    font-size: 11px; color: white; background-color: #4B7F83; box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);
-    text-align: center; animation: blink 1s infinite step-end normal;  
-    border-bottom: 2px dotted white; border-top: 2px dotted white;
+    font-size: 11px; text-align: center; color: white; background-color: #4B7F83; box-shadow: var(--boxShadowBottom);    
+    border-bottom: 2px dotted white; border-top: 2px dotted white; animation: blink 1s infinite step-end normal;      
 }
 .modal-content .zoomout { /* Modal Close Magnifying Glass */
-    cursor: zoom-out; 
-    border: 0; padding: 0 0.2rem 0 0.2rem; 
+    cursor: zoom-out; border: 0; padding: 0 0.2rem; 
     background-color: transparent; color: white; text-shadow: 1px 1px #000;
-    font-size: 14px; transition: 0.2s;        
+    font-size: 16px; transition: 0.2s;        
 }
-.modal-content .zoomout:hover { scale: 1.1; color: #F4F6F7; }
-.modal-content .zoomout::after { 
-    content: "\f010"; font-family: FontAwesome;
-    display: inline-block; animation: var(--fa-shake-animation); 
-}
+.modal-content .zoomout::after { content: "\f010"; font-family: FontAwesome; display: inline-block; }
+.modal-content .zoomout:hover::after { animation: var(--fa-bounce-animation); animation-iteration-count: 1; }
 .img-magnifier-container { position: relative; } /* Modal Magnifying Glass */ 
 .img-magnifier-glass {
     width: 215px; height: 215px; position: absolute;
@@ -437,6 +435,7 @@ header {
     border: var(--border-white); box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
 }
 #google_translate_element>span>i { font-size: 35px; cursor: help; }
+#google_translate_element>span>i:hover { animation: var(--fa-shake-animation); animation-iteration-count: 1; }
 .goog-te-gadget { font-family: "Press Start 2P", Arial, Helvetica, sans-serif !important; border-radius: 5px; } 
 .goog-te-gadget-simple { /* GooTr-Box*/
     background-color:#F4F6F7 !important;
@@ -527,7 +526,7 @@ iframe.goog-te-banner-frame{ display: none !important; visibility: hidden !impor
 .card-skills { /* Skills Cards */
     width: 90px; height: 90px; 
     padding: 0.5rem; position: relative; display: grid; align-items: center; cursor: pointer;  
-    background-color: #F4F6F7; border: 2px solid #4B7F83; box-shadow: 0px 7px 10px rgba(0, 0, 0, 0.5);  
+    background-color: #F4F6F7; border: 2px solid #4B7F83; box-shadow: var(--boxShadowBottom);  
     width: calc(100% * (1/8) - 50px - 15px); 
 }
 .wng { border: 2px solid #DC3545; } /* Skills marcadas como pendientes */
@@ -590,7 +589,7 @@ iframe.goog-te-banner-frame{ display: none !important; visibility: hidden !impor
 .certification-content .certification-card-title {   
     font-size: 10px; line-height: 15px; text-transform: uppercase;
     padding: 0.5rem; border-radius: 5px 5px 0 0; margin: 0;
-    background-color: #4B7F83; color: white;
+    background-color: var(--jellyBeanBlue); color: white;
 } 
 .certification-content>a:nth-child(2) {
     position: relative; display: inline-block; margin-top: 10px; padding: 0;
@@ -602,24 +601,22 @@ iframe.goog-te-banner-frame{ display: none !important; visibility: hidden !impor
     font-size: 8px; color: #4B7F83; margin: 0; border-bottom: 1px solid #4B7F83;
 }
 .certification-content .certification-file {    
-    position: relative; display: inline-block; transition: 0.2s;
+    position: relative; display: inline-block; transition: 0.2s; z-index: 9999;
     font-size: 8px; text-align: center; padding-top: 5px; color: #2D4C4E;
 }
 .certification-content .certification-file::before {
     content: "\f1c1"; font-family: FontAwesome;
     color: #2D4C4E; padding-right: 10px;
 }
-.certification-content .certification-file:hover { font-size: 8.5px;}
+.certification-content .certification-file:hover { animation: var(--fa-bounce-animation); animation-iteration-count: 1; }
 
 /* ----------------------------------------------------------- CONTÁCTAME --------------------------------------------------------------- */  
 .contact-section-separator {
-    position: relative;
-    background: #2D4C4E; height: 2.5vh; margin-top: 15px;
+    position: relative; background: #2D4C4E; height: 2.5vh; margin-top: 15px;
     box-sizing: border-box; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); 
 }
 .contact-section-separator::after {
-    content: ''; position: absolute;
-    bottom: 0; left: 50%; width: 0; height: 0;
+    content: ''; position: absolute; bottom: 0; left: 50%; width: 0; height: 0;
     border-style: solid; border-width: 50px 50px 0 50px; border-color: #2D4C4E transparent transparent transparent;    
     transform: translateX(-50%) translateY(100%);
     filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.5));
@@ -627,7 +624,7 @@ iframe.goog-te-banner-frame{ display: none !important; visibility: hidden !impor
 .contactme { z-index: -1; position: relative; box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.5); }
 .contact-form { /* Contact-Form Div*/  
     width: 625px;
-    background-color: #F4F6F7; color: #4B7F83; box-shadow: var(--borderBoxShadow);
+    background-color: var(--customWhite); color: var(--jellyBeanBlue); box-shadow: var(--borderBoxShadow);
 }
 .contact-form h1 { text-align: center; font-size: 18px; margin-bottom: 10px; cursor: default; } /* Contact-Form Div Title */  
 .contact-form>h1::before, .contact-form>h1::after { 
@@ -672,10 +669,9 @@ iframe.goog-te-banner-frame{ display: none !important; visibility: hidden !impor
     background-color: #F4F6F7; color: #4B7F83; transition: 0.3s;
 }
 .contactme .content .icons p>input:focus { outline: none; }
-.contactme .content .icons #copy-btn:hover { scale: 1.1; }
+.contactme .content .icons #copy-btn:hover::before { animation: var(--fa-shake-animation); animation-iteration-count: 1; }
 .contactme .content .icons #copy-btn::before {
-    content: "\f0c5"; font-family: FontAwesome; font: var(--fa-font-solid); font-weight: 900;
-    display: inline-block; animation: var(--fa-shake-animation);
+    content: "\f0c5"; font-family: FontAwesome; font: var(--fa-font-solid); font-weight: 900;  display: inline-block;  
 }
 .contactme .content .icons h4 { font-size: 13px; margin-top: 5px; text-align: center; }
 /* ----------------------------------------------------------- Social Media Icons ----------------------------------------------------------*/
@@ -785,7 +781,7 @@ iframe.goog-te-banner-frame{ display: none !important; visibility: hidden !impor
     .skills-cards .card-skills { width: calc(100% * (1/8) - 30px - 5px); } /* Skills */     
     .contact-form { width: 80%; } /* Contact */         
     .contact-form h1 { font-size: 15px; margin-bottom: 5px; }
-    .contact-form>h1::after, .contact-form>h1::before { font-size: 14px; }
+    .contact-form>h1::after, .contact-form>h1::before { font-size: 14px; margin-inline: 10px; }
     #c-form label, #c-form input, #c-form textarea,  .contactme .icons p { font-size: 11px; } 
     .contact-form #emailHelp { font-size: 8px; padding-bottom: 1.2rem; }
     .contactme .content .icons { margin-top: 15px; min-width: 400px; max-width: 450px; }       
@@ -816,15 +812,16 @@ iframe.goog-te-banner-frame{ display: none !important; visibility: hidden !impor
     /* Tocuh Icon */
     .header-card::after, .showInfo::before, .card-skills::after, .experience-card::after, .flip-card::after { 
         content: "\f577"; font-family: FontAwesome; text-align: center; color: var(--jellyBeanBlue);        
-        position: absolute; animation: var(--beating-animation); display: block;
+        position: absolute; animation: var(--beating-animation); display: block; cursor: default;
     }
     .header-card:hover::after { color: white; } /* Header Cards */  
     .header-card::after { position: relative; bottom: 15%; left: 45%; } 
     .main-introduction .content .header-card:nth-child(1):after { color: white; }
     .card-skills::after { font-size: 10.5px; left: 78%; bottom: 0%; } /* Skills */
-    .experience-container .experience-card::after { font-size: 14px; position: relative; top: 92%; left: 46%; z-index: 1; } /* Experience Cards */
-    .certification-container .flip-card::after { /* Certifications Cards */        
-        font-size: 14px; z-index: 1; position: relative; bottom: 13%; left: 45%; 
+    .experience-card::after { font-size: 14px; position: relative; top: 92%; left: 46%; z-index: 1; } /* Experience Cards */
+    .flip-card::after { /* Certifications Cards */        
+        width: fit-content; position: relative; bottom: 13%; left: 92%; 
+        font-size: 14px; z-index: 1;
     }    
     .certification-container .flip-card:nth-child(2):after { color: white; }
     .certification-container .flip-card:nth-child(2):hover::after { color: var(--jellyBeanBlue); }
