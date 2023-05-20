@@ -46,6 +46,11 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
     border-bottom: 1px solid var(--jellyBeanBlue); border-top: 1px solid var(--jellyBeanBlue); background-color: transparent;
 }
 
+.main { /* Main Div */
+    position: relative; z-index: 1; 
+    background-image: url(../img/main.jpg); background-size: 50%; background-position: center;
+}
+
 /* ------------------------------------------------------------ GENERAL DISPLAY ------------------------------------------------------------------ */
 .loading-page-gif, header, .scroll-down-l, .scroll-down-r, .header-card-content, .btn-h-contact, .aboutme, .abtm-text>h1, .btnCV, .p-cards-container, 
 .p-tecnologies, #show-more-btn[data-title]:hover::after, #google_translate_element, .cards-container, .contactme, #btnSendEmail, 
@@ -67,21 +72,19 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
 }
 .ScrollToTop:hover {
     background-color: var(--jellyBeanBlue); color: white; opacity: 1; 
-    animation: var(--fa-bounce-animation); animation-iteration-count: 1;        
+    border: var(--border-white); animation: var(--fa-bounce-animation); animation-iteration-count: 1;        
 }
 /* ----------------------------------------------------------- Loading GIF ---------------------------------------------------------------- */
 .modalSpinner .fa-spin, .modalSpinner #spinnerSpan { /* Modal Spinner */
     color: white; font-size: 32px; text-align: center; text-shadow: var(--textShadowCustom);
 }
 .loading-page-gif { /* Modal Spinner-Loader */
-    position: fixed; top: 0; left: 0; width: 100%; height: 100%;    
+    width: 100%; height: 100%; position: fixed; top: 0; left: 0;   
     background-color: var(--customWhite); z-index: 9998;   
 }  
-.loading-page-gif>img { width: 150px; height: 150x; z-index: 9999; filter: drop-shadow(5px 5px 5px #000); }
-
-.main { /* Main Div */
-    position: relative; z-index: 1; 
-    background-image: url(../img/main.jpg); background-size: 50%; background-position: center;
+.loading-page-gif>img { 
+    width: 150px; height: 150x; 
+    filter: drop-shadow(10px 2.5px 5px #000); 
 }
 
 /* -------------------------------------------------------------- HEADER ------------------------------------------------------------------ */
@@ -641,11 +644,12 @@ header {
 .form-floating>label::after { content: "*"; }
 .contact-form #message { height: 150px; margin-top: 5px; color: var(--jellyBeanBlue); }
 .contact-form #emailHelp { font-size: 10px; padding-bottom: 1em; color: var(--jellyBeanBlue); }
+#name::placeholder, #email::placeholder { font-size: 10px; } /* name-email Input Placeholder */
 .input-group>input { color: var(--jellyBeanBlue) !important; } /* Contact-Form Input/TextArea text color */
 .form-control, .form-control::placeholder { /* Contact-Form Input/placeholder color */
-    color: var(--jellyBeanBlue); opacity: 0.85; letter-spacing: -1.5px; 
+    color: var(--jellyBeanBlue); opacity: 0.75; letter-spacing: -1px; 
 } 
-.form-control::placeholder { opacity: 0.5; }
+.form-control::placeholder { opacity: 0.75; }
 .form-control:focus { /* Contact-Form Input Focus Border-Color */
     border-color: var(--moonstoneBlue); box-shadow: 0 0 0 0.2rem rgba(108, 198, 201, 0.5); 
 } 
@@ -821,7 +825,7 @@ header {
     .header-card::after { position: relative; bottom: 15%; left: 45%; } /* Header Cards */ 
     .card-skills::after { font-size: 10.5px; left: 78%; bottom: 0%; } /* Skills */
     .experience-card::after { position: relative; top: 92%; left: 46%; z-index: 1; } /* Experience Cards */
-    .flip-card::after { width: fit-content; position: relative; bottom: 13%; left: 92%; z-index: 1; } /* Certifications Cards */ 
+    .flip-card::after { width: fit-content; position: relative; bottom: 13%; left: 92%; z-index: 1; } /* Certifications Cards */    
     .project-card>.showInfo { /* Projects Cards */
         width: 35px; height: 35px; position: absolute; right: -15px; bottom: -10px;
         margin: 0 auto; z-index: 1; border-radius: 50%; border: 0; visibility: visible;
@@ -830,7 +834,8 @@ header {
     .showInfo::before { cursor: pointer !important; }
     .header-card::after, .certification-container .flip-card:nth-child(2)::after, .showInfo::before { color: white; }
     .certification-container .flip-card:nth-child(2):hover::after { color: var(--jellyBeanBlue); } 
-    .experience-card::after, .flip-card::after, .showInfo::before { font-size: 14px; }   
+    .experience-card::after, .flip-card::after, .showInfo::before { font-size: 14px; }
+    #name::placeholder, #email::placeholder { font-size: 8px; } /* Contact */   
 }
 @keyframes beating { /* Beating Animation */
     0%, 50%, 100% { transform: scale(1.15, 1.15); }
@@ -869,7 +874,7 @@ header {
     .modal-content .span-info { margin-top: 5px; } /* Project Modal */       
     .card-skills img { width: 50px; height: 50px; } /* Skills */
     .card-skills>.img-pdng { padding-top: 15px !important; }    
-    .pb-small-txt { font-size: 5.5px; padding: 0.2rem; }      
+    .pb-small-txt { font-size: 5px; padding: 0.2rem; font-weight: lighter; }      
     .contact-form h1 { font-size: 13px; } /* Contact */
     .footer-content .menu { margin: 10px auto; } /* Footer */
     .footer-content { background-size: 35%; }
