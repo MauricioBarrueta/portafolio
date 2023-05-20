@@ -12,10 +12,11 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
 .showInfo { visibility: hidden; }
 
 :root {
-    --basicTextShadow: 1px 1px #000; --textShadowCustom: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 5px #000;
+    --basicTextShadow: 1px 1px 2px #000; --textShadowCustom: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 5px #000;
     --jellyBeanBlue: #4B7F83; --moonstoneBlue: #6CC6C9; --darkSlateGray: #2D4C4E; --customWhite: #F4F6F7; --customRed: #DC3545;
     --fa-shake-animation: fa-shake 1s ease-out infinite; --fa-bounce-animation: fa-bounce 1s ease-out infinite; --fa-beat-animation: fa-beat .25s ease-out infinite; --beating-animation: beating 2s ease 0s infinite;
-    --border-white: 1px solid white; --borderBoxShadow: 0 0 10px rgba(0, 0, 0, 0.5); --boxShadowBottom: 0px 7px 10px rgba(0, 0, 0, 0.5);
+    --border-white: 1px solid white; --scrollbarShadow: box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5); 
+    --borderBoxShadow: 0 0 10px rgba(0, 0, 0, 0.5); --boxShadowBottom: 0px 7px 10px rgba(0, 0, 0, 0.5);
 }
 /* --------------------------------------------------------------- GENERAL STYLES -------------------------------------------------------- */
 .rad-pad-505, .p-icons-a .tooltip-inner, .icons>h4 { border-radius: 5px; padding: 0.5rem; }
@@ -102,6 +103,7 @@ header {
 }
 .scroll-down-l>.sd-span::after, .scroll-down-r>.sd-span::after { content: "\f103"; font-family: FontAwesome; }
 .scroll-down-l>.bounce, .scroll-down-r>.bounce { animation-name: bounce; animation-timing-function: ease; }
+/* Bounce Animation */
 @keyframes bounce {
     0%   { transform: translateY(0); }
     50%  { transform: translateY(-25px); }
@@ -120,8 +122,9 @@ header {
 .main-introduction .h-title span::before {
     content: "\f120"; font-family: FontAwesome; font-size: 30px;
 }
-@keyframes typing { from { width: 0; } } /* Animación escritura*/
-@keyframes blink { 50% { border-color: transparent; } } /* Animación cursór */
+/* Tiping and Blinking Animations */
+@keyframes typing { from { width: 0; } } 
+@keyframes blink { 50% { border-color: transparent; } } 
 
 .main-introduction .h-subtitle h5, #h5-final { margin: 10px 0 10px 0; text-align: left; font-size: 22px; } /* Intr-Subtitle and Footer */ 
 #h5-final>span::after {
@@ -193,7 +196,8 @@ header {
 	animation-duration: 1.5s; animation-name: scrolldown; animation-iteration-count: infinite; fill: var(--jellyBeanBlue);
 }  
 .scrolldown-wrapper .scrolldown .scrolldown-p2 { animation-delay: .75s; }
-@keyframes scrolldown { /* Scroll Down Icon Animation */
+/* Scroll Down Icon Animation */
+@keyframes scrolldown { 
 	0% { opacity: 0; transform: translate(0, -8px);	}
 	50% { opacity: 1; transform: translate(0, 0); }
 	100% { opacity: 0; transform: translate(0, 8px); }
@@ -252,7 +256,8 @@ header {
     filter: blur(0) drop-shadow(10px 10px 5px #000);
     animation: shake 0.35s step-end normal; 
 }
-@keyframes shake { /* Shake-Animation */
+/* Shake Animation */
+@keyframes shake { 
     0% { transform: translate(1px, 1px) rotate(0deg); } 10% { transform: translate(-1px, -2px) rotate(-1deg); } 20% { transform: translate(-3px, 0px) rotate(1deg); }
     30% { transform: translate(3px, 2px) rotate(0deg); } 40% { transform: translate(1px, -1px) rotate(1deg); } 50% { transform: translate(-1px, 2px) rotate(-1deg); }
     60% { transform: translate(-3px, 1px) rotate(0deg); } 70% { transform: translate(3px, 1px) rotate(-1deg); } 80% { transform: translate(-1px, -1px) rotate(1deg); }
@@ -434,7 +439,10 @@ header {
     background-color: transparent; color: white; text-shadow: var(--basicTextShadow);
     font-size: 16px; transition: 0.2s;        
 }
-.modal-content .zoomout::after { content: "\f010"; font-family: FontAwesome; display: inline-block; }
+.modal-content .zoomout::after { 
+    content: "\f010"; font-family: FontAwesome; display: inline-block; 
+    animation: var(--fa-shake-animation); 
+}
 .modal-content .zoomout:hover::after { animation: var(--fa-bounce-animation); animation-iteration-count: 1; }
 .img-magnifier-container { position: relative; } /* Modal Magnifying Glass */ 
 .img-magnifier-glass {
@@ -835,16 +843,17 @@ header {
     .header-card::after, .certification-container .flip-card:nth-child(2)::after, .showInfo::before { color: white; }
     .certification-container .flip-card:nth-child(2):hover::after { color: var(--jellyBeanBlue); } 
     .experience-card::after, .flip-card::after, .showInfo::before { font-size: 14px; }
-    #name::placeholder, #email::placeholder { font-size: 8px; } /* Contact */   
+    #name::placeholder, #email::placeholder { font-size: 7.5px; } /* Contact */   
 }
-@keyframes beating { /* Beating Animation */
+/* Beating Animation */
+@keyframes beating { 
     0%, 50%, 100% { transform: scale(1.15, 1.15); }
     30%, 80% { transform: scale(1, 1); }
 }
 @media screen and (max-width: 800px) { 
     .ScrollToTop { width: 55px; height: 55px;  } /* STT button */      
     .sectionTitles { font-size: 15px; border-radius: 5px !important; } /* Titles */    
-    .scroll-down-l, .scroll-down-r { font-size: 10.5px; } /* Header */        
+    .scroll-down-l, .scroll-down-r { font-size: 10px; } /* Header */        
     #titleInfo { right: 0; left: 0; width: 98%; } /* Projects */ 
     .portafolio .p-cards-container { margin-top: 18px; }  
     #imgPopUpModal .modal-body { max-height: 300px; overflow-y: auto; } /* Modal */   
@@ -855,6 +864,7 @@ header {
     .card-skills .info-skills .progress-bar { font-size: 6.5px; }   
     .alertSpan .alert-text { font-size: 7.2px !important; white-space: nowrap; } /* Alert Span */   
 }
+
 @media screen and (max-width: 650px) {
     .scrolldown-wrapper { left: 92% !important; bottom: -1.5%; } /* Header Icon-Scroll Animation */
     .scrolldown-wrapper .scrolldown {
@@ -883,15 +893,13 @@ header {
     .footer-content .menu a:hover { font-size: 7.2px; }
     .footer-content>p { font-size: 9px; }
     .goog-te-gadget-simple a.goog-te-menu-value span, .footer-bottom p { font-size: 8px; }
-    .abtm-text h1, .abtm-name, .contact-form h1 { margin-bottom: 5px; }
-}
+    .abtm-text h1, .abtm-name, .contact-form h1 { margin-bottom: 5px; }}
 
 /* ---------------------------------------------------------------- BROWSER SCROLLBAR -------------------------------------------------------*/
 ::-webkit-scrollbar { width: 12px; } /* Scrollbar Width */  
-::-webkit-scrollbar-track { box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5); } /* Scrollbar-Rail */      
+::-webkit-scrollbar-track { box-shadow: var(--scrollbarShadow); } /* Scrollbar-Rail */      
 ::-webkit-scrollbar-thumb { /* Scrollbar-Bar */
-    background: var(--moonstoneBlue); border-radius: 5px;
-    box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.5);
+    background: var(--moonstoneBlue); border-radius: 5px; box-shadow: var(--scrollbarShadow);
 }
 ::-webkit-scrollbar-thumb:hover { background-color: var(--jellyBeanBlue); }
 
@@ -903,6 +911,7 @@ header {
     box-shadow: -8px -3px 5px 0 rgba(0, 0, 0, 0.5);
 }
 .alertSpan.show { animation: slide 1s ease forwards; } /* Alert Show Animation */
+/* Slide element Animation */
 @keyframes slide {
     0% { transform: translateX(100%); }
     40% { transform: translateX(-10%); }
@@ -920,6 +929,7 @@ header {
     transform: translateY(-50%); background-color: var(--jellyBeanBlue); padding: 15px 12px; cursor: pointer;
     animation: closeButtonBgColor 1s ease-in-out; animation-iteration-count: infinite; animation-direction: reverse;
 }
+/* Background Color blinking Animation */
 @keyframes closeButtonBgColor {
     0% { background-color: var(--darkSlateGray); }
     50% { background-color: var(--jellyBeanBlue); }
