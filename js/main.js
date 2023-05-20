@@ -1,4 +1,3 @@
-/* Evento que muestra un gif mientras se termina de cargar la página, además de mostrarlo por 3seg más */
 $(window).on('load', function () { 
     setTimeout(function () {
         $('#loading').toggle(322);
@@ -9,9 +8,8 @@ $(window).on('load', function () {
 })
 
 $(document).ready(function () {
-    AOS.init({ once: true, duration: 850, delay: 0, easing: 'ease-in-out' }); /* Se inicializa AOS Library */
-    /* Resalta el texto en la navbar de acuerdo a la sección en la que se encuentra */
-    $('.navbar').on('click', 'a', function () {
+    AOS.init({ once: true, duration: 850, delay: 0, easing: 'ease-in-out' }); /* Se inicializa AOS Library */    
+    $('.navbar').on('click', 'a', function () { /* Resalta el texto en la navbar de acuerdo a la sección en la que se encuentra */
         $('.navbar a.active').removeClass('active');
         $(this).addClass('active');  
     });
@@ -38,11 +36,10 @@ window.addEventListener("scroll", function () {
     })   
 })
 
-/* Hace visible el bóton al iniciar el scroll hacia abajo */
+/* Hace visible el bóton al iniciar el scroll hacia abajo y se crea la función que permite volver al inicio */
 window.addEventListener('scroll', () => {
     btnScrollToTop.style.display = window.scrollY > 150 ? 'block' : 'none';
 });
-/* Función que permite regresar al inicio al dar clic en el botón */
 const btnScrollToTop = document.querySelector('.ScrollToTop');
 btnScrollToTop.addEventListener('click', () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -52,35 +49,34 @@ btnScrollToTop.addEventListener('click', () => {
 (new IntersectionObserver(function (e, o) {
     e[0].intersectionRatio > 0 ? document.documentElement.removeAttribute('class') : document.documentElement.setAttribute('class', 'stuck');
 })).observe(document.querySelector('.trigger'));
-/* Oculta la lista desplegable de la Navbar después de seleccionar un link (para pantallas pequeñas) */
+/* Oculta la lista desplegable de la navbar después de seleccionar un link (pantallas pequeñas) */
 $('.navbar-nav>li>a').on('click', function() {
     $('.navbar-collapse').collapse('hide');
 });
 
-/* Obtiene el atributo src, alt y title de la imagen seleccionada para pasarla al modal y mostrarlo */
+/* Obtiene el atributo src, alt y title de la imagen del proyecto seleccionado y se pasan al Modal */
 document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('img-item')) {  
-        const imgSrc = e.target.getAttribute('src');
-        document.querySelector('.img-modal').src = imgSrc;
+    if (e.target.classList.contains('img-item')) {         
+        $('html').css("overflow", "hidden") /* Se deshabilita el scroll de la página mientras la ventana esté abierta */  
+        const projectImage = e.target.getAttribute('src');
+        document.querySelector('.img-modal').src = projectImage;
         const myModal = new bootstrap.Modal(document.getElementById('imgPopUpModal'));
-        $("#imgPopUpModal p").text($(e.target).attr('alt')); /* Se pasa el valor de 'alt' de la imagen al elemento <p> del Modal */
-        $("#imgPopUpModal h6").text($(e.target).attr('data-title')); /* Se pasa el valor de 'title' de la imagen al elemento <h6> del Modal */
+        $("#imgPopUpModal p").text($(e.target).attr('alt')); 
+        $("#imgPopUpModal h6").text($(e.target).attr('data-title')); 
         
         /* Se activa la barra de Google Translate */
         new google.translate.TranslateElement({ pageLanguage: 'es', includedLanguages: 'en,es', 
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element'); 
-        // $('.VIpgJd-ZVi9od-xl07Ob-lTBxed').attr("href", "#/"); /* Evita que se vuelva al inicio al elegir un idioma del plugin de Google */
         $('.VIpgJd-ZVi9od-xl07Ob-lTBxed').removeAttr('href') /* Se le quita el atributo 'href' a la barra de Google Translate */
-
-        myModal.show();
-        $('html').css("overflow", "hidden")            
-    } else { $('html').css("overflow", "auto") }
+        myModal.show();                    
+    }     
 });
 
 /* Función que restaura el idioma original de la página al cerrar el Modal */
 const ImageModal = document.getElementById('imgPopUpModal')
 ImageModal.addEventListener('hidden.bs.modal', function () {
-    var googleTranslateFrame = document.getElementsByClassName('VIpgJd-ZVi9od-ORHb-OEVmcd')[0]; /* goog-te-banner-frame */
+    $('html').css("overflow", "auto"); /* Se habilita nuevamente el scroll de la página al cerrar la ventana */
+    var googleTranslateFrame = document.getElementsByClassName('VIpgJd-ZVi9od-ORHb-OEVmcd')[0];
     if (!googleTranslateFrame) return;
     var innerDoc = googleTranslateFrame.contentDocument || googleTranslateFrame.contentWindow.document;
     var restoreLang = innerDoc.getElementsByTagName("button");
@@ -97,15 +93,16 @@ ImageModal.addEventListener('hidden.bs.modal', function () {
 /* Función del botón para mostrar y ocultar los proyectos que no aparecen en la lista inicial */
 const showMoreProjectsBtn = document.querySelector('.show-more-btn');
 const showAndHideProjects = () => {
-    var cardsVisible = document.getElementById("cardsLimit");
-    var cardsHidden = document.getElementById("hiddenCards");
-    var btnShowHiddenCards = document.getElementById("show-more-btn");
+    var cardsVisible = document.getElementById("cardsLimit"), cardsHidden = document.getElementById("hiddenCards"),
+        btnShowHiddenCards = document.getElementById("show-more-btn");
     if (cardsVisible.style.display === "none") {
-        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-chevron-down fa-bounce'></i>", btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more");
+        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-chevron-down fa-bounce'></i>", 
+            btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more");
         cardsVisible.style.display = "flex", cardsHidden.style.display = "none";
     } else {
         cardsVisible.style.display = "none";
-        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-chevron-up fa-bounce'></i>", btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less");
+        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-chevron-up fa-bounce'></i>", 
+            btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less");
         cardsHidden.style.display = "flex", cardsHidden.style.flexWrap = "wrap", cardsHidden.style.alignContent = "center",
         cardsHidden.style.justifyContent = "space-around", cardsHidden.style.gap = "15px";
     }
@@ -115,7 +112,7 @@ const showAndHideProjects = () => {
 }
 showMoreProjectsBtn.addEventListener('click', showAndHideProjects);
 
-/* Función que obtiene los datos del formulario para enviar el correo electrónico */
+/* Función que obtiene los datos del formulario para enviar el correo electrónico mediante el esquema 'mailto' */
 const emailForm = document.querySelector('#c-form'), btnEmailTo = document.querySelector('#myEmail');
 emailForm.addEventListener('submit', (event) => {
     event.preventDefault()
@@ -148,30 +145,26 @@ btnCopyEmail.addEventListener('click', () => {
 
 /* Función para traducir la página entre Inglés y Español */
 function switchLang(lang) {
-    $("[data-" + lang + "]").text(function (i, e) { 
-        return $(this).data(lang); 
-    });
+    $("[data-" + lang + "]").text(function (i, e) { return $(this).data(lang);  });
 }
 switchLang("es"); /* Se manda el idioma Español como predeterminado */
-$(".switchlang").click(function () { /* Se llama a la función para traducir y muestra el modal de carga al mismo tiempo */
+$(".switchlang").click(function () {
     modalSpinner();
     switchLang($(this).data("lang"))
 });
-/* Muestra un modal con un 'loader' por 3s al traducir la página */
 function modalSpinner() {
     $('.modalSpinner').modal('show');
     setTimeout(function () { $('.modalSpinner').modal('hide'); }, 3000);
 }
 
+/* Función que muestra un Alert dependiendo la acción que lo requiera */
 const alertDialog = document.getElementById('alertSpan'), alertText = document.getElementById('alert-text'),
     closeAlert = document.querySelector('.close-alert');
-/* Muestra un Alert dependiendo la acción que lo requiera */
 const showAlertSpan = () => {   
     alertDialog.classList.remove('hide');
     alertDialog.classList.add('show');   
     setTimeout(function () { closeAlertSpan(); }, 6000);
 }
-/* Función para ocultar el Alert Span */
 const closeAlertSpan = () => {
     alertDialog.classList.remove('show');
     alertDialog.classList.add('hide');     
