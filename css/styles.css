@@ -253,8 +253,7 @@ header {
     border-radius: 10px; transition: 0.35s; cursor: pointer; filter: blur(3px);    
 }
 .aboutme .content img:hover { 
-    filter: blur(0) drop-shadow(10px 10px 5px #000);
-    animation: shake 0.35s step-end normal; 
+    filter: blur(0) drop-shadow(5px 5px 5px #000);  animation: shake 0.35s step-end normal; 
 }
 /* Shake Animation */
 @keyframes shake { 
@@ -464,7 +463,7 @@ header {
 }
 .modal-tooltip .tooltip-inner {
     font-size: 8.5px; text-align: center; color: white;
-    background-color: var(--jellyBeanBlue); border: var(--border-white); border-color: var(--darkSlateGray); border-width: 2px;
+    background-color: var(--jellyBeanBlue); border: var(--border-white); border-width: 2px;
 }
 
 /* ---------------------------------------------------- GOOGLE TRANSLATE ELEMENT ------------------------------------------------------ */
