@@ -1,14 +1,14 @@
 $(window).on('load', function () { 
     setTimeout(function () {
-        $('#loading').toggle(322);
+        $('#loading').hide(322);        
         /* Se activa la animación del texto de la introducción y la barra del navegador */
         $('.h1-h').css("animation-delay", "3.22s");
-        $('html').css("overflow", "auto");
+        $('html').css("overflow", "auto");        
     }, 3000);
 })
 
 $(document).ready(function () {
-    AOS.init({ once: true, duration: 850, delay: 0, easing: 'ease-in-out' }); /* Se inicializa AOS Library */    
+    AOS.init({ once: true, duration: 850, delay: 0, easing: 'ease-in-out' }); /* Se inicializa AOS Library */      
     $('.navbar').on('click', 'a', function () { /* Resalta el texto en la navbar de acuerdo a la sección en la que se encuentra */
         $('.navbar a.active').removeClass('active');
         $(this).addClass('active');  
@@ -49,10 +49,9 @@ btnScrollToTop.addEventListener('click', () => {
 (new IntersectionObserver(function (e, o) {
     e[0].intersectionRatio > 0 ? document.documentElement.removeAttribute('class') : document.documentElement.setAttribute('class', 'stuck');
 })).observe(document.querySelector('.trigger'));
+
 /* Oculta la lista desplegable de la navbar después de seleccionar un link (pantallas pequeñas) */
-$('.navbar-nav>li>a').on('click', function() {
-    $('.navbar-collapse').collapse('hide');
-});
+$('.navbar-nav>li>a').on('click', function() { $('.navbar-collapse').collapse('hide'); });
 
 /* Obtiene el atributo src, alt y title de la imagen del proyecto seleccionado y se pasan al Modal */
 document.addEventListener('click', function (e) {
@@ -163,7 +162,7 @@ const alertDialog = document.getElementById('alertSpan'), alertText = document.g
 const showAlertSpan = () => {   
     alertDialog.classList.remove('hide');
     alertDialog.classList.add('show');   
-    setTimeout(function () { closeAlertSpan(); }, 6000);
+    setTimeout(function () { closeAlertSpan(); }, 5000);
 }
 const closeAlertSpan = () => {
     alertDialog.classList.remove('show');
