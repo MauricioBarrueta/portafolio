@@ -85,7 +85,7 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
     background-color: var(--customWhite); z-index: 9999;
 }  
 .loading-page-gif>img { 
-    width: 150px; height: 150x; filter: drop-shadow(10px 2.5px 5px #000); 
+    width: 150px; height: 150x; filter: drop-shadow(8px 5px 5px #000); 
 }
 
 /* -------------------------------------------------------------- HEADER ------------------------------------------------------------------ */
@@ -234,7 +234,9 @@ header {
 .stuck .navbar.sticky-top { background-color: var(--jellyBeanBlue); box-shadow: 0 2px 10px rgba(0, 0, 0, 1); } /* Navbar-Sticky Styles */
 .navbar-nav { margin-left: 50px; }
 .navbar-nav a.nav-link, .stuck .navbar.sticky-top .navbar-nav a.nav-link { text-shadow: 1px 1px 2px #000; }
-.navbar-nav a.nav-link.active, .stuck .navbar.sticky-top .navbar-nav a.nav-link.active { text-shadow: var(--textShadowCustom); } 
+.navbar-nav a.nav-link.active, .stuck .navbar.sticky-top .navbar-nav a.nav-link.active { 
+    text-shadow: var(--textShadowCustom); opacity: .85;
+} 
 .navbar-nav a.nav-link, a.nav-link.active, .stuck .navbar.sticky-top .navbar-nav a.nav-link.active, a.nav-link {    
      transition: 0.25s; margin-right: 5px;
 }
@@ -389,10 +391,15 @@ header {
 .project-card .details .web-icons li>span::after {    
     font-size: 12px; font-family: FontAwesome; display: inline-block; transition: scale 0.35s, animation 0.5s;
 }
-.project-card .details .web-icons li>span.web::after { content: "\f1eb"; }
+
+.project-card .details .web-icons li>span.web { /* Project Web App Type icon */
+    content: url('../svg/webApp.svg'); width: 13.5px; 
+    display: inline-block; transition: all 0.25s;
+}
+
 .project-card .details .web-icons li>span.desktop::after { content: "\e4e5"; }
 .project-card .details .web-icons li>span.app::after { content: "\f3cf"; }
-.project-card .details .web-icons li>span:hover::after {     
+.project-card .details .web-icons li>span:hover::after, .project-card .details .web-icons li>span.web:hover {     
     scale: 1.1; animation: var(--fa-shake-animation); animation-iteration-count: 1;
 }
 /* Links Icons */
@@ -491,16 +498,16 @@ header {
 /* --------------------------------------------------------------- EXPERIENCE --------------------------------------------------------------*/
 .experience-container { padding: 0 1em; height: fit-content; }
 .experience-container .experience-card { /* Experience Cards */
-    width: 300px; height: 300px;
+    width: 300px; height: 285px;
     position: relative;  overflow: hidden;    
     border-radius: 5px; cursor: pointer; margin: 10px 15px;
     background: var(--customWhite); box-shadow: var(--borderBoxShadow);
 }  
 .experience-container .experience-card:before {
     content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--moonstoneBlue); clip-path: circle(200px at 80% 20%); transition: 0.35s ease-in-out;
+    background: var(--moonstoneBlue); clip-path: circle(175px at 80% 20%); transition: 0.35s ease-in-out;
 }  
-.experience-container .experience-card:hover:before { clip-path: circle(250px at 80% -20%); }
+.experience-container .experience-card:hover:before { clip-path: circle(230px at 80% -20%); }
 .experience-container .experience-card .experience-img {
     width: 100%; height: 220px; position: absolute; top: 50%;
     transform: translateY(-50%); transition: 0.35s; z-index: 10000;      
@@ -541,15 +548,18 @@ header {
 .time>span:nth-child(3) { font-size: 5px !important; padding: 0 !important; margin: 0 2px 0 -3px !important; } 
 .experience-card .charge { padding: 5px; } /* Experience Card Charge Div*/
 .experience-container .experience-card .experience-body .charge span { 
-    font-size: 10px; text-align: center; text-decoration: underline 2px dotted; color: var(--jellyBeanBlue); 
+    font-size: 9px; text-align: center; text-transform: uppercase; text-decoration: underline; 
+    color: var(--jellyBeanBlue); 
 }
-/* Links Hover Effect (Certification - Experience Cards) */
-.exp-title::after, .certification-content>a:nth-child(2)::after {
+/* Links Hover Effect (Certification - Experience Cards - Certification File) */
+.exp-title::after, .certification-content>a:nth-child(2)::after, .certification-content .certification-file::after {
     content: ''; display: block;  z-index: -1;
     position: absolute; top: 50%; width: 0; height: 6px;
     background: #FFEA00; transition: width .4s;
 }
-.exp-title:hover::after, .certification-content>a:nth-child(2):hover::after  { width: 100%; }
+.exp-title:hover::after, .certification-content>a:nth-child(2):hover::after, .certification-content .certification-file:hover::after { 
+    width: 100%; 
+}
 
 /* ------------------------------------------------------------- SKILLS --------------------------------------------------------------- */
 .skills-cards { padding: 1em; }
@@ -633,10 +643,15 @@ header {
     position: relative; display: inline-block; transition: 0.2s; z-index: 9999;
     font-size: 8px; text-align: center; color: var(--darkSlateGray);
 }
-.certification-content .certification-file::before {
-    content: "\f1c1"; font-family: FontAwesome; font-size: 14px; color: var(--darkSlateGray); padding-right: 10px;
+.certification-content .certification-file::after {    
+    width: 0; height: 4px; top: 65%;
+    background: #FFEA00; transition: width .4s;
 }
-.certification-content .certification-file:hover { animation: var(--fa-bounce-animation); animation-iteration-count: 1; }
+.certification-content .certification-file::before {
+    content: "\f1c1"; font-family: FontAwesome; font-size: 14px; 
+    color: var(--darkSlateGray); padding-right: 10px; display: inline-block;
+}
+.certification-content .certification-file:hover::before { animation: var(--fa-bounce-animation); animation-iteration-count: 1; }
 
 /* ----------------------------------------------------------- CONTÁCTAME --------------------------------------------------------------- */  
 .contact-section-separator {

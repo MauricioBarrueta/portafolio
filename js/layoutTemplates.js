@@ -6,6 +6,13 @@ javaProjectsCards.forEach(card => {
     card.prepend(templateContent);   
 });
 
+const netbeansTemplate = document.getElementById('netbeans-projects');
+const netbeansProjectsCards = document.querySelectorAll('.netbeans-project-icon');
+netbeansProjectsCards.forEach(card => {
+    const templateContent = netbeansTemplate.content.cloneNode(true);
+    card.appendChild(templateContent);    
+});
+
 const mysqlTemplate = document.getElementById('mysql-icon');
 const mysqlProjectCard = document.querySelectorAll('.mysql-prj-icon');
 /* Ícono de MySQL para la mayoría de proyectos */
