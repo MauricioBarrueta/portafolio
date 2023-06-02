@@ -13,6 +13,13 @@ netbeansProjectsCards.forEach(card => {
     card.appendChild(templateContent);    
 });
 
+const angularTemplate = document.getElementById('angular-projects');
+const angularProjectsCards = document.querySelectorAll('.angular-project-icons');
+angularProjectsCards.forEach(card => {
+    const templateContent = angularTemplate.content.cloneNode(true);
+    card.prepend(templateContent);    
+});
+
 const mysqlTemplate = document.getElementById('mysql-icon');
 const mysqlProjectCard = document.querySelectorAll('.mysql-prj-icon');
 /* Ícono de MySQL para la mayoría de proyectos */
