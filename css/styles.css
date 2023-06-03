@@ -65,7 +65,7 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
 .ScrollToTop {
     position: fixed; bottom: 12px; right: 12px; width: 60px; height: 60px;
     border-radius: 50%; padding: 0.5rem; z-index: 9997; border: none; opacity: 0.8;
-    box-shadow: var(--boxShadowBottom); transition: opacity 0.25s, font-size 0.35, animation 0.45s;  
+    box-shadow: var(--boxShadowBottom); transition: opacity 0.25s, font-size 0.35, border 0.45s, animation 0.55s;  
 }
 .ScrollToTop::after {
     content: "\f102"; font-family: FontAwesome; font-size: 18px; display: inline-block; 
@@ -887,7 +887,7 @@ header {
     .portafolio .p-cards-container { margin-top: 18px; }  
     #imgPopUpModal .modal-body { max-height: 300px; overflow-y: auto; } /* Modal */   
     .experience-container .experience-card .experience-body .exp-title { font-size: 11px !important; } /* Experience Cards */  
-    .skills-cards .card-skills { width: calc(100% * (1/6) - 0px - 10px); } /* Skills */
+    .skills-cards .card-skills { width: calc(100% * (1/5) - 0px - 10px); } /* Skills */
     .card-skills { width: 75px; height: 75px; }
     .card-skills img { width: 70px; height: 70px; }     
     .card-skills .info-skills .progress-bar { font-size: 6.5px; }   
