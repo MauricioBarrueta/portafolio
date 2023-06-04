@@ -888,9 +888,9 @@ header {
     #titleInfo { right: 0; left: 0; width: 98%; } /* Projects */ 
     .portafolio .p-cards-container { margin-top: 18px; } 
 /* AQUI EMPIEZAN LOS CAMBIOS */
-    .modal-content { max-height: 85vh !important; }
+    .modal-content { max-height: 90% !important; }
     #imgPopUpModal .modal-body { /* Modal Image */  
-        display: flex; height: 90vh; overflow-y: auto;      
+        display: flex; height: 100vh; overflow-y: auto;      
     }  
     /* .img-modal { height: 100%; object-fit: contain; } */
 /* AQUI TERMINAN LOS CAMBIOS */
