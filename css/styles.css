@@ -63,19 +63,21 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
 
 /* ----------------------------------------------------------- Scroll To Top Button ------------------------------------------------------- */
 .ScrollToTop {
-    position: fixed; bottom: 12px; right: 12px; width: 60px; height: 60px;
-    border-radius: 50%; padding: 0.5rem; z-index: 9997; border: none; opacity: 0.8;
-    box-shadow: var(--boxShadowBottom); transition: opacity 0.25s, font-size 0.35, border 0.45s, animation 0.55s;  
+    display: none; position: fixed; bottom: 12px; right: 12px; width: 60px; height: 60px;
+    border-radius: 50%; padding: 0.5rem; z-index: 9997; 
+    border: none; opacity: 0.8; animation: none;
+    box-shadow: var(--boxShadowBottom); transition: opacity 0.25s, font-size 0.35, animation 0.45s; 
 }
 .ScrollToTop::after {
-    content: "\f102"; font-family: FontAwesome; font-size: 18px; display: inline-block; 
-    animation: var(--fa-bounce-animation);
+    content: "\f102"; font-family: FontAwesome; font-size: 18px; 
+    display: inline-block; animation: var(--fa-bounce-animation); 
+    transition: font-size 0.35s, animation 0.45s;
 }
 .ScrollToTop:hover {
     background-color: var(--jellyBeanBlue); color: white; opacity: 1; 
-    border: var(--border-white); animation: var(--fa-bounce-animation); animation-iteration-count: 1;        
+    animation: var(--fa-bounce-animation); animation-iteration-count: 1;        
 }
-.ScrollToTop:hover::after { font-size: 20px; }
+.ScrollToTop:hover::after { font-size: 20px; animation: none; }
 /* ----------------------------------------------------------- Loading GIF ---------------------------------------------------------------- */
 .modalSpinner .fa-spin, .modalSpinner #spinnerSpan { /* Modal Spinner */
     color: white; font-size: 32px; text-align: center; text-shadow: var(--textShadowCustom);
@@ -434,7 +436,7 @@ header {
     display: table; text-align: center; position: relative; 
     border-radius: 5px; margin: 0; padding: 0.75rem;
 }
-#imgPopUpModal .modal-footer { margin-top: 5px; } 
+/* #imgPopUpModal .modal-footer { margin-top: 5px; }  */
 #imgPopUpModal .modal-header h6, .modal-footer>p { /* Modal Title */
     display: table-cell; width: 100%; 
     font-size: 10px; line-height: 18px; cursor: default;
@@ -450,10 +452,10 @@ header {
     animation: var(--fa-bounce-animation); animation-iteration-count: 1; 
     opacity: 1; background-color: var(--customRed) !important; box-shadow: var(--boxShadowBottom);
 }
-#imgPopUpModal .modal-body { margin: 0; cursor: zoom-in; margin-top: -15px; } /* Modal Body */ 
+#imgPopUpModal .modal-body { margin: 0; cursor: zoom-in; } /* Modal Body */ 
 .modal-content .span-info { /* Modal Magnifying Glass Instructions */
     font-size: 11px; text-align: center; color: white; cursor: default;
-    padding: 0.2rem; margin-top: 5px; border: 0; z-index: 1; border-radius: 0;  
+    padding: 0.2rem; margin-top: 5px; margin-bottom: 0; border: 0; z-index: 1; border-radius: 0;  
     background-color: var(--darkSlateGray); box-shadow: var(--boxShadowBottom);   
 }
 .modal-content .zoomout { /* Modal Close Magnifying Glass */
@@ -851,7 +853,7 @@ header {
     #imgPopUpModal .modal-header>h6, .modal-content>.span-info, .modal-footer>p { font-size: 8px; line-height: 12px; } /* Projects Modal */
     #imgPopUpModal .modal-header, .modal-footer { font-size: 7px !important; padding: 0.5rem; }
     .modal-content .zoomout, .footer-bottom>p::after { font-size: 12px; }
-    .img-magnifier-glass { width: 190px; height: 190px; border-width: 8px; }    
+    .img-magnifier-glass { width: 180px; height: 180px; border-width: 8px; }    
     .footer-content>p, .footer-bottom>p { font-size: 10px; } /* Footer */  
     .skills-section-subtitle { margin-top: 10px; margin-bottom: 5px !important; font-size: 9.5px; }
     /* Cards-Touch Icon */
@@ -885,7 +887,10 @@ header {
     .scroll-down-l, .scroll-down-r { font-size: 10px; } /* Header */        
     #titleInfo { right: 0; left: 0; width: 98%; } /* Projects */ 
     .portafolio .p-cards-container { margin-top: 18px; }  
-    #imgPopUpModal .modal-body { max-height: 300px; overflow-y: auto; } /* Modal */   
+    #imgPopUpModal .modal-body { /* Modal Image */  
+        height: 100vh; overflow-y: auto;       
+    }  
+    .img-modal { height: 100%; object-fit: contain; }
     .experience-container .experience-card .experience-body .exp-title { font-size: 11px !important; } /* Experience Cards */  
     .skills-cards .card-skills { width: calc(100% * (1/5) - 0px - 10px); } /* Skills */
     .card-skills { width: 75px; height: 75px; }

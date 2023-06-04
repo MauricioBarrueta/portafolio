@@ -42,6 +42,7 @@ function startMagnifyingGlass(imgId, zoomValue) {
 
       /* Manda la posición de la lupa */
       magnifyingGlass.style.left = (x - width) + "px";
+      // magnifyingGlass.style.left = (x - width + window.innerWidth / 2 - selectedImage.width / 2) + "px";
       magnifyingGlass.style.top = (y - height) + "px";
       /* Muestra lo que la lupa esta observando */
       magnifyingGlass.style.backgroundPosition = "-" + ((x * zoomValue) - width + bw) + "px -" + ((y * zoomValue) - height + bw) + "px";
@@ -67,18 +68,18 @@ function startMagnifyingGlass(imgId, zoomValue) {
   const ZoomOut = document.querySelector('.zoomout')
   ZoomOut.addEventListener('click', zoomOut)
   function zoomOut() {
-    var zooms = document.querySelectorAll(".img-magnifier-glass");
-    for (var x = 0; x < zooms.length; x++) {
-      zooms[x].parentNode.removeChild(zooms[x]);
+    var zoom = document.querySelectorAll(".img-magnifier-glass");
+    for (var x = 0; x < zoom.length; x++) {
+      zoom[x].parentNode.removeChild(zoom[x]);
     }
   }
 
   /* Función que desactiva el zoom al cerrar el modal */
   const myModal = document.getElementById('imgPopUpModal')
   myModal.addEventListener('hidden.bs.modal', event => {
-    var zooms = document.querySelectorAll(".img-magnifier-glass");
-    for (var x = 0; x < zooms.length; x++) {
-      zooms[x].parentNode.removeChild(zooms[x]);
+    var zoom = document.querySelectorAll(".img-magnifier-glass");
+    for (var x = 0; x < zoom.length; x++) {
+      zoom[x].parentNode.removeChild(zoom[x]);
     }
   })
 }

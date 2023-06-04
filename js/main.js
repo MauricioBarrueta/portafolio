@@ -38,7 +38,7 @@ window.addEventListener("scroll", function () {
 
 /* Hace visible el bóton al iniciar el scroll hacia abajo y se crea la función que permite volver al inicio */
 window.addEventListener('scroll', () => {
-    btnScrollToTop.style.display = window.scrollY > 150 ? 'block' : 'none';
+    btnScrollToTop.style.display = window.scrollY > 200 ? 'block' : 'none';
 });
 const btnScrollToTop = document.querySelector('.ScrollToTop');
 btnScrollToTop.addEventListener('click', () => {
