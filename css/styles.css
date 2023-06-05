@@ -493,7 +493,7 @@ header {
     background-color: transparent !important; border: none !important; 
     padding: 0.2rem; transition: 0.25s; 
 }
-.goog-te-gadget-simple:hover { scale: 1.05; }
+.goog-te-gadget-simple:hover { scale: 1.025; }
 .goog-te-gadget-icon { border-radius: 50% !important; } /* Google Icon */
 .goog-te-gadget-simple a.goog-te-menu-value span{ color: var(--jellyBeanBlue) !important; font-size: 10px; } /* GooTr-Box text*/
 .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span { color: var(--jellyBeanBlue); font-size: 11px; }
@@ -850,7 +850,9 @@ header {
     .navbar-brand, .stuck .navbar.sticky-top .navbar-brand { font-size: 9px; text-decoration: none; } /* Navbar */    
     .portafolio .p-cards-container #show-more-btn { width: 90%; margin: 20px 0 5px 0; } /* Projects */
     .portafolio .p-cards-container #show-more-btn[data-title]:hover::after { font-size: 9px; top: -60%;}    
-    #imgPopUpModal .modal-header>h6, .modal-content>.span-info, .modal-footer>p { font-size: 8px; line-height: 12px; } /* Projects Modal */
+    #imgPopUpModal .modal-header>h6, .modal-content>.span-info, .modal-footer>p { /* Projects Modal */ 
+        font-size: 7px; line-height: 12px; letter-spacing: -.5px;
+    } 
     #imgPopUpModal .modal-header, .modal-footer { font-size: 7px !important; padding: 0.5rem; }
     .modal-content .zoomout, .footer-bottom>p::after { font-size: 12px; }
     .img-magnifier-glass { width: 180px; height: 180px; border-width: 8px; }    
@@ -889,8 +891,9 @@ header {
     .portafolio .p-cards-container { margin-top: 18px; } 
     .modal-content { max-height: 90% !important; height: 90% !important; } /* Modal - Modal Body (img) */
     #imgPopUpModal .modal-body {
-        display: flex; align-self: center;  overflow-y: auto;      
+        display: flex; align-items: center; align-self: center;  overflow-y: auto;      
     }    
+    .img-modal { width: 100%; height: 85%; }
     .experience-container .experience-card .experience-body .exp-title { font-size: 11px !important; } /* Experience Cards */  
     .skills-cards .card-skills { width: calc(100% * (1/5) - 0px - 10px); } /* Skills */
     .card-skills { width: 75px; height: 75px; }
