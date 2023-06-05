@@ -25,20 +25,21 @@ const parallaxMain = document.querySelectorAll('.main'),  parallaxContact = docu
     parallaxFooter = document.querySelectorAll('.footer');
 window.addEventListener("scroll", function () {
     let offset = window.pageYOffset;
-    parallaxMain.forEach(function (parallaxEffect, i) {
+    parallaxMain.forEach(function (parallaxEffect) {
         parallaxEffect.style.backgroundPositionY = (offset - parallaxEffect.offsetTop) * 0.6 + "px";
     }) 
-    parallaxContact.forEach(function (parallaxEffect, i) {
+    parallaxContact.forEach(function (parallaxEffect) {
         parallaxEffect.style.backgroundPositionY = (offset - parallaxEffect.offsetTop) * 0.6 + "px";
     }) 
-    parallaxFooter.forEach(function (parallaxEffect, i) {
+    parallaxFooter.forEach(function (parallaxEffect) {
         parallaxEffect.style.backgroundPositionY = (offset - parallaxEffect.offsetTop) * 0.6 + "px";
     })   
 })
 
 /* Hace visible el bóton al iniciar el scroll hacia abajo y se crea la función que permite volver al inicio */
-window.addEventListener('scroll', () => {
+window.addEventListener('scroll', () => {    
     btnScrollToTop.style.display = window.scrollY > 200 ? 'block' : 'none';
+    btnScrollToTop.style.opacity = window.scrollY > 200 ? '1' : '0';
 });
 const btnScrollToTop = document.querySelector('.ScrollToTop');
 btnScrollToTop.addEventListener('click', () => {
@@ -135,10 +136,12 @@ btnCopyEmail.addEventListener('click', () => {
     copyText.setSelectionRange(0, 99999); /* Para dispositivos móviles */
     navigator.clipboard.writeText(copyText.value)
         .then(() => {
-            showAlertSpan(); alertText.innerHTML = `Copiado al portapapeles - Copied to clipboard '<i class="fa-solid fa-clipboard"></i>'`
+            showAlertSpan(); 
+            alertText.innerHTML = `Copiado al portapapeles - Copied to clipboard '<i class="fa-solid fa-clipboard"></i>'`
         })
         .catch(() => {
-            showAlertSpan(); alertText.innerHTML = `'<i class="fa-solid fa-triangle-exclamation"></i>' Error inesperado!! Copia el correo electrónico manualmente`
+            showAlertSpan(); 
+            alertText.innerHTML = `'<i class="fa-solid fa-triangle-exclamation"></i>' Error inesperado!! Copia el correo electrónico manualmente`
         });
 });
 
