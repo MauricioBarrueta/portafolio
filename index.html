@@ -13,7 +13,7 @@
   <!-- CSS Styles -->
   <link rel="stylesheet" href="css/styles.css"> 
 
-  <title>Mauricio Barrueta</title> 
+  <title>Mauricio Barrueta: Portafolio</title> 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">   
 </head> 
@@ -29,10 +29,11 @@
       <section class="main-introduction rad-pad-101">       
         <div class="h-title">
           <h1 class="h1-h rad-pad-505 jellyBeanBlue"><span data-es="'Hola Mundo!!'_" data-en="'Hello World!!'_"></span></h1>
-        </div>
-        <div class="h-subtitle">          
-          <h5 class="rad-pad-505 moonstoneBlue" data-es="if(explorarPortafolio) { " data-en="if(explorePortfolio) {"></h5>        
-        </div>  
+        </div>     
+        <div class="subtitle rad-pad-505 moonstoneBlue">
+          <span class="purple-font">if(</span><span class="yellow-font" data-es="explorarPortafolio" data-en="explorePortfolio"></span>
+          <span class="purple-font">) {</span>&nbsp;<span class="comment-font">//true</span>
+        </div>          
         <div class="content">          
           <div class="header-card">
             <img class="card-img-container" src="img/backendHorizontal.png" alt="">
@@ -44,7 +45,7 @@
             </div>
           </div>          
           <div class="h-image-container">
-            <img class="h-image-img" src="img/gif.gif">
+            <img class="h-image-img" src="img/back-front.gif">
           </div> 
           <div class="header-card">
             <img class="card-img-container" src="img/frontendHorizontal.png" alt="">
@@ -55,7 +56,10 @@
             </div>
           </div>  
         </div>          
-        <h5 class="rad-pad-505 moonstoneBlue" id="h5-final" data-es="} else { contactarProgramador(); }" data-en="} else { contactDeveloper(); }"></h5>        
+        <div class="subtitle rad-pad-505 moonstoneBlue">
+          <span class="purple-font">} else {</span><span class="yellow-font" data-es="contactarProgramador" data-en="contactDeveloper"></span>
+          <span style="color: #C5C900;">() </span><span class="purple-font">}</span>&nbsp;<span class="comment-font">//false</span>
+        </div>        
         <a href="#Contact" class="btn-h-contact btn rad-pad-505" data-es="Contáctame" data-en="Contact me"></a>
        
         <div class="scrolldown-wrapper"> <!-- Scroll Down Icon -->
@@ -110,20 +114,21 @@
           <h3 class="abtm-name" data-label="Edgar Mauricio Barrueta Aguirre" data-label-hover="Web Developer"></h3>
           <pre 
             data-es="Me considero un desarrollador web dado que la mayoría de prácticas y proyectos que he realizado desde mis inicios en la programación son páginas web, pero claro, sin dejar de lado el desarrollo de software y de aplicaciones móviles.
-              
+            
             Además del buen manejo de HTML y CSS, los lenguajes con los que más me familiarizo son: Java, JavaScript y TypeScript, un poco con PHP y C#, este último usado para un par de proyectos hechos en Unity, al igual que algunos de los frameworks más demandados, como Spring Framework, Angular y un poco de React Native, herramientas y librerías indispensables para el desarrollo web, como Node.js, npm, Bootstrap, etc. El uso de varios IDE y por supuesto el manejo de Git.
             
             Como plus agregaría que una de mis principales cualidades es que me gusta ser autodidacta, aprender y adquirir nuevos conocimientos por mi propia cuenta me ha ayudado en mi preparación y en ampliar mis habilidades, que, si bien no son avanzadas, tengo las bases para poder implementarlas."
             data-en="I consider myself a web developer, since most of the practices and projects that I've done since my beginnings as developer are Webpages, but of course, without neglecting software and mobile application development.
+            
             In addition to my knowledge of HTML and CSS, the languages ​​that I've worked the most are: Java, JavaScript and TypeScript, a little with PHP and C#, the latter used for a couple of projects done in Unity, as well as some of the most demanded frameworks, like Spring Framework, Angular and a little of React Native, essential tools and libraries for web development, such as Node.js, npm, Bootstrap, etc. The use of multiple IDE's and of course, knowledge of Git.
                               
             As a plus, I would add that one of my main qualities is that I like to be self-taught, learning and acquiring new knowledge on my own has helped me in my preparation and in expanding my skills, which, although they're not advanced, I've the bases to be able to implement them.">
           </pre>
           <div class="abtm-footer rad-pad-505 moonstoneBlue">
             <h6>Hobbies:</h6>           
-            <i class="fa-solid fa-laptop-code"></i>
-            <i class="fa-solid fa-guitar"></i>
+            <i class="fa-solid fa-laptop-code"></i>            
             <i class="fa-solid fa-headphones"></i>
+            <i class="fa-solid fa-guitar"></i>
             <i class="fa-solid fa-film"></i>
             <i class="fa-solid fa-gamepad"></i>
             <i class="fa-solid fa-mug-hot"></i>
@@ -136,7 +141,8 @@
     
     <section class="portafolio" id="Projects" data-aos="fade-up">
       <h3 class="sectionTitles" data-es="Mis proyectos" data-en="My projects" aria-labelledby="titleInfo"></h3>      
-      <div id="titleInfo" class="form-text" data-es="Los proyectos no estan ordenados por fecha de creación" data-en="Projects aren't ordered by creation date"></div>
+      <div id="titleInfo" class="form-text" data-es="Los proyectos no estan ordenados por fecha de creación ni relevancia" 
+        data-en="Projects aren't ordered by creation date or relevance"></div>
       <div class="p-cards-container">         
         <div class="project-card">
           <div class="img-container">
@@ -188,11 +194,58 @@
               </li>
               <li>
                 <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
-              </li>
+              </li>              
               <li>
                 <a href="https://github.com/MauricioBarrueta/pokemonPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                  data-bs-custom-class="web-icons-a" title="GitHub (JS)" target="_blank"></a>                  
+                <a href="https://github.com/MauricioBarrueta/angularPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top"
+                  data-bs-custom-class="web-icons-a" title="GitHub (Angular)" target="_blank"></a>                  
+              </li>                          
+            </ul>
+          </div>
+        </div> 
+        <div class="project-card">
+          <div class="img-container">
+            <img src="img/Portafolio/omdbAPI.png" class="img-item" alt="Hecho con el framework Angular y el lenguaje TypeScript, HTML para la 
+              estructuración, SCSS y la librería Bootstrap para los estilos - Servidor: API pública 'OMDb API' (http://www.omdbapi.com/)." 
+              data-title="Página que permite consultar información detallada sobre una amplia variedad de películas y series de televisión,
+               además de que, en el caso de las series, es posible consultar cada temporada y cada capítulo correspondiente a esta, así como 
+               los datos de cada capítulo.">
+          </div>
+          <button class="showInfo"></button>
+          <div class="details">
+            <h2 data-es="Web API 'OMDb API'" data-en="'OMDb API' Web API"></h2>
+            <div class="tec-icons">
+              <ul class="p-tecnologies angular-project-icons">  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
+                  <i><img class="HTML-Icon p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="SCSS (SASS)">
+                  <i><img src="svg/SASS.svg" class="p-tec-svg-icons"></i>
+                </li>
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
+                  <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JSON (Server)">
+                  <i><img class="Node-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                </li>              
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="npm">
+                  <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="OMDb API">
+                  <i><img src="svg/imdb.svg" class=" p-tec-svg-icons"></i>
+                </li>              
+              </ul>
+            </div>
+            <ul class="web-icons">              
+              <li><a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Web" style="visibility: hidden;"></a></li>
+              <li>
+                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
+              </li>
+              <li>
+                <a href="https://github.com/MauricioBarrueta/omdbAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
                   data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-              </li>             
+              </li>        
             </ul>
           </div>
         </div> 
@@ -242,11 +295,11 @@
               </li>         
             </ul>
           </div>
-        </div>
+        </div>        
         <div class="project-card">
           <div class="img-container">
             <img src="img/Portafolio/APIClima.png" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
-              CSS y Bootstrap para los estilos y el módulo gh-pages de NPM para la publicación de la página en GitHub Pages - Servidor: API 
+              CSS y Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages - Servidor: API 
               'OpenWeatherMap'(https://openweathermap.org/)." data-title="Página que muestra el pronóstico del clima de manera detallada, 
               ya sea que se ingrese el nombre de la ciudad o las coordenadas de esta, además de que obtiene la hora actual, la hora en la que amanece 
               y anochece de acuerdo a la zona horaria de la ciudad.">
@@ -306,7 +359,7 @@
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
                   <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
                 </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NPM">
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="npm">
                   <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
                 </li>
               </ul>
@@ -322,56 +375,12 @@
               </li>         
             </ul>
           </div>
-        </div> 
-        <div class="project-card">
-          <div class="img-container">
-            <img src="img/Portafolio/wikiAPI.png" class="img-item" alt="Hecho con el framework Angular y el lenguaje TypeScript, HTML para la 
-              estructuración, CSS y la librería Bootstrap para los estilos - Servidor: API pública 'MediaWiki', software utilizado por Wikipedia 
-              (www.mediawiki.org/wiki/API:Tutorial)." data-title="Página que permite filtrar y consultar una amplia variedad de información disponible 
-              en el sitio web Wikipedia, el usuario ingresa lo que desea buscar y dependiendo la palabra se filtran los resultados que coincidan.">
-          </div>
-          <button class="showInfo"></button>
-          <div class="details">
-            <h2 data-es="Web API 'WikiAPI'" data-en="'WikiAPI' Web API"></h2>
-            <div class="tec-icons">
-              <ul class="p-tecnologies angular-project-icons">  
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
-                  <i><img class="HTML-Icon p-tec-svg-icons"></i>
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
-                  <i><img class="CSS-Icon p-tec-svg-icons"></i>
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
-                  <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
-                </li>  
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JSON (Server)">
-                  <i><img class="Node-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
-                </li>              
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NPM">
-                  <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
-                </li>  
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="MediaWiki API">
-                  <i><img src="svg/wikipedia.svg" class=" p-tec-svg-icons"></i>
-                </li>              
-              </ul>
-            </div>
-            <ul class="web-icons">              
-              <li><a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Web" style="visibility: hidden;"></a></li>
-              <li>
-                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
-              </li>
-              <li>
-                <a href="https://github.com/MauricioBarrueta/wikiAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-              </li>        
-            </ul>
-          </div>
-        </div>   
+        </div>           
         <div class="project-card">
           <div class="img-container">
             <img src="img/Portafolio/RickAndMortyAPI.webp" class="img-item"
               alt="HTML para la estructuración y JavaScript para la funcionalidad, CSS y la librería Bootstrap para los estilos y el módulo 
-              gh-pages de NPM para la publicación de la página en GitHub Pages - Servidor: API pública de la serie Rick and Morty (https://rickandmortyapi.com/)"
+              gh-pages de npm para la publicación de la página en GitHub Pages - Servidor: API pública de la serie Rick and Morty (https://rickandmortyapi.com/)"
               data-title="Página que consume la API la cual permite consultar todos y cada uno de los personajes de la serie 'Rick and Morty', 
               así como los datos correspondientes de cada uno de ellos.">
           </div>
@@ -399,22 +408,19 @@
               </li>
             </ul>
           </div>
-        </div>   
+        </div>  
         <div class="project-card">
           <div class="img-container">
-            <img src="img/Portafolio/AngularEcommerce.png" class="img-item" alt="Hecho únicamente con el framework Angular y el lenguaje
-              TypeScript, HTML para la estructuración, Angular Material, CSS y la librería Bootstrap para los estilos - Servidor: JSON Server (npm) local."
-              data-title="Práctica de un sistema 'e-commerce' el cual simula la compra de uno o varios productos por medio de un carrito de compras, 
-              además de escoger si se recoge en paquetería o se entrega al domicilio especificado.">
+            <img src="img/Portafolio/wikiAPI.png" class="img-item" alt="Hecho con el framework Angular y el lenguaje TypeScript, HTML para la 
+              estructuración, CSS y la librería Bootstrap para los estilos - Servidor: API pública 'MediaWiki', software utilizado por Wikipedia 
+              (www.mediawiki.org/wiki/API:Tutorial)." data-title="Página que permite filtrar y consultar una amplia variedad de información disponible 
+              en el sitio web Wikipedia, el usuario ingresa lo que desea buscar y dependiendo la palabra se filtran los resultados que coincidan.">
           </div>
           <button class="showInfo"></button>
           <div class="details">
-            <h2 data-es="Práctica: Sistema Angular 'E-Commerce'" data-en="Practice: 'E-Commerce' Angular system"></h2>
+            <h2 data-es="Web API 'WikiAPI'" data-en="'WikiAPI' Web API"></h2>
             <div class="tec-icons">
-              <ul class="p-tecnologies angular-project-icons">                              
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular Material">
-                  <i><img src="svg/AngularMaterial.svg" class="p-tec-svg-icons"></i>
-                </li>
+              <ul class="p-tecnologies angular-project-icons">  
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
                   <i><img class="HTML-Icon p-tec-svg-icons"></i>
                 </li>
@@ -423,15 +429,15 @@
                 </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
                   <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
-                </li>                
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JSON (Server)">
-                  <i><img class="Node-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
-                </li> 
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NPM">
-                  <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
                 </li>  
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JSON (Server)">
-                  <i><img class="JSON-Icon p-tec-svg-icons"></i>
+                  <i><img class="Node-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                </li>              
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="npm">
+                  <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                </li>  
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="MediaWiki API">
+                  <i><img src="svg/wikipedia.svg" class=" p-tec-svg-icons"></i>
                 </li>              
               </ul>
             </div>
@@ -441,15 +447,62 @@
                 <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
               </li>
               <li>
-                <a href="https://github.com/MauricioBarrueta/Sistema-E-Commerce.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                <a href="https://github.com/MauricioBarrueta/wikiAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
                   data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
               </li>        
             </ul>
           </div>
-        </div>             
+        </div>                               
         <span id="cardsLimit"></span> <!-- Límite de proyectos visibles -->
 
         <div id="hiddenCards" style="display: none;"> <!-- Proyectos ocultos -->     
+          <div class="project-card">
+            <div class="img-container">
+              <img src="img/Portafolio/AngularEcommerce.png" class="img-item" alt="Hecho únicamente con el framework Angular y el lenguaje
+                TypeScript, HTML para la estructuración, Angular Material, CSS y la librería Bootstrap para los estilos - Servidor: JSON Server (npm) local."
+                data-title="Práctica de un sistema 'e-commerce' el cual simula la compra de uno o varios productos por medio de un carrito de compras, 
+                además de escoger si se recoge en paquetería o se entrega al domicilio especificado.">
+            </div>
+            <button class="showInfo"></button>
+            <div class="details">
+              <h2 data-es="Práctica: Sistema Angular 'E-Commerce'" data-en="Practice: 'E-Commerce' Angular system"></h2>
+              <div class="tec-icons">
+                <ul class="p-tecnologies angular-project-icons">                              
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular Material">
+                    <i><img src="svg/AngularMaterial.svg" class="p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="HTML">
+                    <i><img class="HTML-Icon p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="CSS">
+                    <i><img class="CSS-Icon p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Bootstrap">
+                    <i><img class="Bootstrap-Icon p-tec-svg-icons"></i>
+                  </li>                
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Node.js">
+                    <i><img class="Node-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                  </li> 
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="npm">
+                    <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
+                  </li>  
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="json-server (npm)">
+                    <i><img class="JSON-Icon p-tec-svg-icons"></i>
+                  </li>              
+                </ul>
+              </div>
+              <ul class="web-icons">              
+                <li><a href="" data-bs-toggle="tooltip" data-bs-placement="left" title="Web" style="visibility: hidden;"></a></li>
+                <li>
+                  <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
+                </li>
+                <li>
+                  <a href="https://github.com/MauricioBarrueta/Sistema-E-Commerce.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                    data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                </li>        
+              </ul>
+            </div>
+          </div> 
           <div class="project-card">
             <div class="img-container">
               <img src="img/Portafolio/APIRestJWT.png" class="img-item" alt="Back end: Java y Spring Framework (Spring Data JPA, Spring Security e 
@@ -619,6 +672,34 @@
           </div>
           <div class="project-card">
             <div class="img-container">
+              <img src="img/Portafolio/AppVR.png" class="img-item" alt="Hecho con C# y el motor de videojuegos multiplataforma Unity - 
+                el programa de diseño gráfico Sketchup para el modelado 3D, Adobe Photoshop para el diseño de algunas texturas y los servicios 
+                de Realidad Virtual (VR) de Google Cardboard." data-title="Aplicación de Realidad Virtual la cual permite hacer un 'recorrido 
+                virtual' por algunas de las zonas arqueológicas y lugares de importancia histórica de México, además de que el usuario puede
+                interactuar con la app para poder escuchar y/o leer información importante sobre el lugar que haya elegido.">
+            </div>
+            <button class="showInfo"></button>
+            <div class="details">
+              <h2 data-es="App de Realidad Virtual 'Recorriendo México'" data-en="Virtual Reality App 'Touring Mexico'"></h2>
+              <div class="tec-icons">
+                <ul class="unity-projects-icons p-tecnologies">
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Sketchup">
+                    <i><img src="svg/Sketchup.svg" class="p-tec-svg-icons"></i>
+                  </li>
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Google Cardboard VR ">
+                    <i><img src="svg/VRCardboard.svg" class="p-tec-svg-icons"></i>
+                  </li>                  
+                </ul>
+              </div>
+              <ul class="web-icons">  
+                <li>
+                  <span class="app" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="App"></span>
+                </li>       
+              </ul>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="img-container">
               <img src="img/Portafolio/ControlUniversidad.png" class="img-item" alt="Hecho con PHP, JavaScript, jQuery y AJAX, HTML para la estructuración, 
                 CSS y Bootstrap para los estilos, la librería TCPDF de PHP para la creación de ficheros PDF - Servidor: Base de Datos MySQL."
                 data-title="Sistema para el control de los horarios de entrada y salida, permisos y días de descanso de todo el personal docente 
@@ -632,6 +713,24 @@
                 <li>
                   <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
                 </li>       
+              </ul>
+            </div>
+          </div>
+          <div class="project-card">
+            <div class="img-container">
+              <img src="img/Portafolio/Juego2D.jpg" class="img-item" alt="Hecho con C#, el motor de videojuegos multiplataforma Unity y 
+                Adobe Photoshop para el diseño de algunos sprites y texturas." data-title="Juego en formato 2D del género RPG y Plataformas 
+                inspirado en los juegos retro más populares, desarrollado para dispositivos móviles enfocado a que los niños/as aprendan y/o 
+                practiquen las tablas de multiplicar mientras se divierten jugando.">
+            </div>
+            <button class="showInfo"></button>
+            <div class="details">
+              <h2 data-es="Juego para móvil 'Tablas de multiplicar'" data-en="2D Mobile Game 'Multiplication Tables'"></h2>
+              <div class="tec-icons">
+                <ul class="unity-projects-icons p-tecnologies"></ul>
+              </div>
+              <ul class="web-icons">              
+                <li><span class="app" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="App"></span></li>       
               </ul>
             </div>
           </div>
@@ -671,52 +770,6 @@
                 <li>
                   <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
                 </li>       
-              </ul>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="img-container">
-              <img src="img/Portafolio/AppVR.png" class="img-item" alt="Hecho con C# y el motor de videojuegos multiplataforma Unity - 
-                el programa de diseño gráfico Sketchup para el modelado 3D, Adobe Photoshop para el diseño de algunas texturas y los servicios 
-                de Realidad Virtual (VR) de Google Cardboard." data-title="Aplicación de Realidad Virtual la cual permite hacer un 'recorrido 
-                virtual' por algunas de las zonas arqueológicas y lugares de importancia histórica de México, además de que el usuario puede
-                interactuar con la app para poder escuchar y/o leer información importante sobre el lugar que haya elegido.">
-            </div>
-            <button class="showInfo"></button>
-            <div class="details">
-              <h2 data-es="App de Realidad Virtual 'Recorriendo México'" data-en="Virtual Reality App 'Touring Mexico'"></h2>
-              <div class="tec-icons">
-                <ul class="unity-projects-icons p-tecnologies">
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Sketchup">
-                    <i><img src="svg/Sketchup.svg" class="p-tec-svg-icons"></i>
-                  </li>
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Google Cardboard VR ">
-                    <i><img src="svg/VRCardboard.svg" class="p-tec-svg-icons"></i>
-                  </li>                  
-                </ul>
-              </div>
-              <ul class="web-icons">  
-                <li>
-                  <span class="app" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="App"></span>
-                </li>       
-              </ul>
-            </div>
-          </div>
-          <div class="project-card">
-            <div class="img-container">
-              <img src="img/Portafolio/Juego2D.jpg" class="img-item" alt="Hecho con C#, el motor de videojuegos multiplataforma Unity y 
-                Adobe Photoshop para el diseño de algunos sprites y texturas." data-title="Juego en formato 2D del género RPG y Plataformas 
-                inspirado en los juegos retro más populares, desarrollado para dispositivos móviles enfocado a que los niños/as aprendan y/o 
-                practiquen las tablas de multiplicar mientras se divierten jugando.">
-            </div>
-            <button class="showInfo"></button>
-            <div class="details">
-              <h2 data-es="Juego para móvil 'Tablas de multiplicar'" data-en="2D Mobile Game 'Multiplication Tables'"></h2>
-              <div class="tec-icons">
-                <ul class="unity-projects-icons p-tecnologies"></ul>
-              </div>
-              <ul class="web-icons">              
-                <li><span class="app" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="App"></span></li>       
               </ul>
             </div>
           </div>
@@ -812,8 +865,8 @@
           <div class="experience-body">
             <a class="exp-title" href="https://medicoshoy.com/" target="_blank">Médicos Hoy S.A de C.V</a>
             <div class="time">
-              <h3 data-es="Periodo:" data-en="Time:"></h3>
-              <span data-es="Ene." data-en="Jan."></span><span>-</span><span data-es="Abr." data-en="Apr."></span><span>2020</span>
+              <h3 data-es="Periodo:" data-en="From:"></h3>
+              <span data-es="Ene." data-en="Jan."></span><span data-es="-" data-en="to"></span><span data-es="Abr." data-en="Apr."></span><span>2020</span>
             </div>
             <div class="charge">
               <span data-es="Desarrollador Web" data-en="Web Developer"></span>
@@ -825,8 +878,8 @@
           <div class="experience-body">
             <a class="exp-title" href="https://www.gfr.com.mx/" target="_blank">GFR Telecomm</a>
             <div class="time">
-              <h3 data-es="Periodo:" data-en="Time: "></h3>
-              <span data-es="May." data-en="May."></span><span>-</span><span data-es="Ago." data-en="Aug."></span><span>2018</span>
+              <h3 data-es="Periodo:" data-en="From:"></h3>
+              <span data-es="May." data-en="May."></span><span data-es="-" data-en="to"></span><span data-es="Ago." data-en="Aug."></span><span>2018</span>
             </div>
             <div class="charge">
               <span data-es="Desarrollador de software" data-en="Software Developer"></span>
@@ -877,29 +930,29 @@
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="HTML5">
           <img class="HTML-Icon position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 85%" 
-              aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 80%" 
+              aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="CSS3">
           <img class="CSS-Icon position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 80%" 
-              aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" 
+              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="SASS">
           <img src="svg/SASS.svg" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" 
+              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>        
+        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Angular">
+          <img class="Angular-Icon position-absolute top-50 start-50 translate-middle">
+          <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" 
               aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Bootstrap">
-          <img class="Bootstrap-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 80%" 
-              aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">80%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Spring Framework">
@@ -908,26 +961,19 @@
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" 
               aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
           </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Thymeleaf">
-          <img class=" Thymeleaf-Icon position-absolute top-50 start-50 translate-middle">
+        </div>               
+        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="React Native">
+          <img src="svg/React.svg" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" 
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
-          </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Angular">
-          <img class="Angular-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" 
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 35%" 
+              aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger"title="Firebase">
           <img class="Firebase-Icon position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 35%" 
-              aria-valuenow="35" aria-valuemin="0" aria-valuemax="100">35%</div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 30%" 
+              aria-valuenow="30" aria-valuemin="0" aria-valuemax="100">30%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="jQuery">
@@ -943,9 +989,16 @@
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 65%" 
               aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
           </div>
-        </div>
+        </div>        
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="XML">
           <img class="XML-Icon position-absolute top-50 start-50 translate-middle">
+          <div class="info-skills progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" 
+              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
+        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Bootstrap">
+          <img class="Bootstrap-Icon position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" 
               aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
@@ -968,8 +1021,8 @@
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="JSON">
           <img class="JSON-Icon position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" 
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" 
+              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-danger" title="JWT (JSON Web Token)">
@@ -1035,11 +1088,11 @@
               aria-valuenow="60" aria-valuemin="0" aria-valuemax="100">60%</div>
           </div>
         </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Unity">
+        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Unity">
           <img alt="" class=" Unity-Icon position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 70%" 
-              aria-valuenow="70" aria-valuemin="0" aria-valuemax="100">70%</div>
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning" role="progressbar" style="width: 65%" 
+              aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
           </div>
         </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="MySQL">
@@ -1092,15 +1145,7 @@
               aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
             <small class="justify-content-center d-flex position-absolute w-100 pb-small-txt" data-es="En curso.." data-en="In process.."></small>
           </div>
-        </div>
-        <div class="card-skills wng" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="React Native">
-          <img src="svg/React.svg" class="position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger" role="progressbar" style="width: 0%" 
-              aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
-            <small class="justify-content-center d-flex position-absolute w-100 pb-small-txt" data-es="En curso.." data-en="In process.."></small>
-          </div>
-        </div>
+        </div>        
         <div class="card-skills wng" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Laravel">
           <img src="svg/Laravel.svg" class="position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
@@ -1192,6 +1237,7 @@
       <div class="content">        
         <div class="contact-form rad-pad-101" data-aos="zoom-out"> <!-- Contact Form -->
           <h1 class="jellyBeanBlue rad-pad-505" data-es="Envíame un mensaje" data-en="Send me a message"></h1>
+
           <form id="c-form" action="">
             <label for="name" class="form-label" data-es="Nombre/Empresa:" data-en="Full name/Company:"></label><span>*</span>
             <div class="input-group mb-3">
@@ -1202,7 +1248,7 @@
             <label for="email" class="form-label">E-mail:</label><span>*</span>
             <div class="input-group mb-3" style="margin-bottom: 5px !important;">
               <span class="input-group-text" id="icon-email"></span>
-              <input name="email" id="email" type="email" class="form-control" placeholder="Ej. - E.g.: miCorreo@email.com" 
+              <input name="email" id="email" type="email" class="form-control" placeholder="Ej. - E.g.: tuCorreo@email.com" 
                 aria-describedby="icon-email" required>
             </div>
             <div id="emailHelp" for="email" class="form-text" data-es="No compartiremos tu correo con nadie más" data-en="We'll never share 
@@ -1213,6 +1259,7 @@
             </div>
             <button id="btnSendEmail" class="btn"><span data-es="Enviar" data-en="Send"></span></button>
           </form>
+
           <a href="mailto:mauba22@outlook.com" id="myEmail" style="opacity: 0;">mail</a> <!-- mailto -->
         </div>   
         <div class="icons rad-pad-101" id="iconscon" data-aos="zoom-out"> <!-- Social Media Links -->
@@ -1224,7 +1271,7 @@
           </p>
           <h4 data-es="Mis redes sociales:" data-en="Social media"></h4>
           <div class="i-socialMedia rad-pad-505"> 
-            <a class="button" href="https://wa.me/527227982747?text=Te%20contacto%20desde%20tu%20portafolio" target="_blank">
+            <a class="button" href="https://wa.me/527227982747?text=Contacto%20desde%20portafolio" target="_blank">
               <div class="icon"></div><span>WhatsApp</span>
             </a>
             <a class="button" href="https://t.me/MauricioBarrueta" target="_blank">
@@ -1249,7 +1296,7 @@
     <div class="footer-content">      
       <div class="social rad-pad-505">
         <a href="https://stackoverflow.com/users/20207506/mauricio-barrueta" title="Stack-Overflow" target="_blank"></a>
-        <a title="CodePen"></a>
+        <a href="https://codepen.io/MauricioBarrueta" title="CodePen" target="_blank"></a>
         <a title="Linktr.ee"><img src="svg/linktree.svg"></a>
         <a title="YouTube"></a>
         <a title="Spotify"></a>
@@ -1298,14 +1345,13 @@
   <div class="modalSpinner modal fade" tabindex="-1" role="dialog" id="spinnerModal">
     <div class="modal-dialog modal-dialog-centered justify-content-center" role="document" style="box-shadow: none;">
       <span id="spinnerSpan" data-es=" Traduciendo, por favor espere..." data-en=" Translating, please wait..."></span>&nbsp;
-      <i class="fa-solid fa-compact-disc fa-spin"></i>
+      <i class="fa-solid fa-language fa-spin"></i>
     </div>
   </div>  
   <!-- Alert Span -->
   <div class="alertSpan hide" id="alertSpan">
-    <span class="fas fa-exclamation-circle"></span>
-    <span class="alert-text" id="alert-text"></span>
-    <span class="close-alert" data-bs-toggle="tooltip" data-bs-custom-class="alertDialogTooltip" data-bs-placement="top" data-bs-title="Cerrar">
+    <span class="fas fa-exclamation-circle"></span><span class="alert-text" id="alert-text"></span>
+    <span class="close-alert" data-bs-toggle="tooltip" data-bs-custom-class="p-tec-tooltip" data-bs-placement="top" data-bs-title="Cerrar">
         <span class="fas fa-times fa-shake"></span>
     </span>
   </div>
@@ -1381,7 +1427,7 @@
       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Node.js">
         <i><img class="Node-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
       </li>
-      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NPM">
+      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="npm">
         <i><img class="NPM-Icon p-tec-svg-icons" style="padding-top: 0.5rem;"></i>
       </li>
       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Git y GitHub Pages">

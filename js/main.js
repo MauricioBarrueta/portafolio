@@ -1,10 +1,10 @@
 $(window).on('load', function () { 
     setTimeout(function () {
-        $('#loading').hide(322);        
-        /* Se activa la animación del texto de la introducción y la barra del navegador */
-        $('.h1-h').css("animation-delay", "3.22s");
+        $('#loading').hide(222);        
+        /* Se activa la animación del texto de la introducción y el scroll */
+        $('.h1-h').css("animation-delay", "2.22s");
         $('html').css("overflow", "auto");        
-    }, 3000);
+    }, 2000);
 })
 
 $(document).ready(function () {
@@ -39,7 +39,7 @@ window.addEventListener("scroll", function () {
 /* Hace visible el bóton al iniciar el scroll hacia abajo y se crea la función que permite volver al inicio */
 window.addEventListener('scroll', () => {    
     btnScrollToTop.style.display = window.scrollY > 200 ? 'block' : 'none';
-    btnScrollToTop.style.opacity = window.scrollY > 200 ? '1' : '0';
+    btnScrollToTop.style.opacity = window.scrollY > 200 ? '.8' : '0';
 });
 const btnScrollToTop = document.querySelector('.ScrollToTop');
 btnScrollToTop.addEventListener('click', () => {
@@ -47,8 +47,8 @@ btnScrollToTop.addEventListener('click', () => {
 });
 
 /* Para dar el efecto 'sticky' a la navbar al pasar por el elemento oculto <span> con clase 'trigger' */
-(new IntersectionObserver(function (e, o) {
-    e[0].intersectionRatio > 0 ? document.documentElement.removeAttribute('class') : document.documentElement.setAttribute('class', 'stuck');
+(new IntersectionObserver(function (trigger) {
+    trigger[0].intersectionRatio > 0 ? document.documentElement.removeAttribute('class') : document.documentElement.setAttribute('class', 'stuck');
 })).observe(document.querySelector('.trigger'));
 
 /* Oculta la lista desplegable de la navbar después de seleccionar un link (pantallas pequeñas) */

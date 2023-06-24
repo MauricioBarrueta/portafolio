@@ -22,8 +22,8 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
 .rad-pad-505, .p-icons-a .tooltip-inner, .icons>h4 { border-radius: 5px; padding: 0.5rem; }
 .jellyBeanBlue, .sectionTitles, .p-icons, .icons>h4 { background-color: var(--jellyBeanBlue); color: white; }
 .moonstoneBlue, .t-icons { background-color: var(--moonstoneBlue); color: white; }
-.h-title>h1, .h-subtitle>h5, #h5-final, .main-introduction.content>span, #nb-brand-span, .abtm-text>h1, .abtm-text>h5, .abtm-text>pre, 
-.abtm-footer, .icons>p, #titleInfo { cursor: default; } 
+.h-title>h1, .subtitle, .main-introduction.content>span, #nb-brand-span, .abtm-text>h1, .abtm-text>h5, .abtm-text>pre, 
+.abtm-footer, .icons>p, #titleInfo, .footer-content>p, .footer-bottom { cursor: default; } 
 .rad-pad-101, .card-skills { border-radius: 10px; padding: 1em; }
 .card-skills { background-color: var(--customWhite); }
 .abtm-footer>i:hover, .t-icons, .t-icons>span, .p-tecnologies>li, .p-icons, .p-icons>li, .card-skills, .info-skills { transition: 0.4s; }
@@ -32,9 +32,9 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
     flex-wrap: wrap;  padding: 0.5rem; border-radius: 0 0 5px 5px; 
 }  
 .sectionTitles { /* Sections Titles */
-    width: 100%; position: relative; 
-    border-radius: 5px 5px 0 0; padding: 0.5rem; margin-bottom: 0; text-align: center; font-size: 18px;        
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); 
+    width: 100%; position: relative; cursor: default;
+    border-radius: 5px 5px 0 0; padding: 0.5rem; margin-bottom: 0; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); 
+    text-align: center; font-size: 18px; letter-spacing: 1px;    
 }
 .exp-section-title, .cert-section-title, .skills-section-subtitle { /* Experience Section Title */
     font-size: 14px; font-weight: 500; text-align: center; letter-spacing: 2px; text-decoration: underline 2px dotted;
@@ -55,7 +55,7 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
 /* ------------------------------------------------------------ GENERAL DISPLAY ------------------------------------------------------------------ */
 .loading-page-gif, header, .scroll-down-l, .scroll-down-r, .header-card-content, .btn-h-contact, .aboutme, .abtm-text>h1, .btnCV, .p-cards-container, 
 .p-tecnologies, #show-more-btn[data-title]:hover::after, #google_translate_element, .cards-container, .contactme, #btnSendEmail, 
-.footer-content, .menu, .experience-container, .certification-container, .project-card>.showInfo, .content { 
+.footer-content, .menu, .experience-container, .certification-container, .project-card>.showInfo, .content, .subtitle { 
     display: flex; justify-content: center; align-items: center; align-content: center; 
 }
 .content { width: 100%; margin: 0 auto; flex-wrap: wrap; justify-content: space-around !important; }
@@ -64,9 +64,8 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
 /* ----------------------------------------------------------- Scroll To Top Button ------------------------------------------------------- */
 .ScrollToTop {
     display: none; position: fixed; bottom: 12px; right: 12px; width: 60px; height: 60px;
-    border-radius: 50%; padding: 0.5rem; z-index: 9997; transition: all 0.4s;
-    border: none; opacity: 0.75; animation: none; box-shadow: var(--boxShadowBottom); 
-    transition: all 500ms linear;    
+    border-radius: 50%; padding: 0.5rem; z-index: 9997; transition: all 0.4s linear;
+    border: none; opacity: 0.8; animation: none; box-shadow: var(--boxShadowBottom);         
 }
 .ScrollToTop::after {
     content: "\f102"; font-family: FontAwesome; font-size: 18px; 
@@ -74,7 +73,7 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
     transition: font-size 0.35s, animation 0.45s;
 }
 .ScrollToTop:hover {
-    background-color: var(--jellyBeanBlue); color: white; opacity: 1; 
+    background-color: var(--jellyBeanBlue); color: white; opacity: 1 !important; 
     animation: var(--fa-bounce-animation); animation-iteration-count: 1; 
     box-shadow: -5px -5px 10px 0 rgba(0,0,0,0.5) inset, var(--boxShadowBottom);       
 }
@@ -129,11 +128,11 @@ header {
 @keyframes typing { from { width: 0; } } 
 @keyframes blink { 50% { border-color: transparent; } } 
 
-.main-introduction .h-subtitle h5, #h5-final { margin: 10px 0 10px 0; text-align: left; font-size: 22px; } /* Intr-Subtitle and Footer */ 
-#h5-final>span::after {
-    content: "\f3be"; font-family: FontAwesome; font-weight: 900;
-    display: inline-block; animation: var(--fa-bounce-animation); --fa-bounce-height: 1; margin-left: 10px;
+.main-introduction .subtitle {  /* Intr Header - Footer */
+    margin: 10px 0 10px 0; justify-content: left; 
+    text-align: left; font-size: 22px; text-shadow: 0 0 2.5px #000;
 }
+.purple-font { color: #DA70D6; }.yellow-font { color: #D0CD8B; }.comment-font { color: #6A9955; font-size: 20px; }
 .header-card { /* Header Backend - Fronted Cards */
     position: relative; width: 350px; height: 200px;
     background-color: black; box-shadow: var(--borderBoxShadow);
@@ -152,7 +151,7 @@ header {
 .header-card .header-card-content::before { opacity: 1; scale: 1; }
 .header-card-title {    
     width: 100%; margin: 0; padding: 0 0 0.5rem 0;
-    font-size: 12px; transition: border-bottom 0.35s;
+    font-size: 12px; letter-spacing: 1px; transition: border-bottom 0.35s;
 }
 .header-card:hover .header-card-title { 
     border-bottom: 2px dotted white; animation: var(--fa-bounce-animation); animation-iteration-count: 1; 
@@ -283,7 +282,7 @@ header {
 .abtme-img-container:hover>span { opacity: 1; }
 .abtme-img-container:hover span::after { animation: var(--fa-shake-animation); animation-iteration-count: 1; animation-delay: 0.26s;  }
 .abtm-text { /* Abtme-Content Div */
-    width: 700px; text-align: center;   
+    max-width: 850px; text-align: center;   
     background-color: var(--customWhite); box-shadow: var(--borderBoxShadow);  
 }
 .abtm-text h1 { font-size: 20px; text-align: center; width: 100%;} /* Abtme-Content Title */
@@ -307,8 +306,8 @@ header {
 .abtm-name::after { content: attr(data-label); }
 .abtm-name:hover::after { content: attr(data-label-hover); }
 .abtm-text pre { /* Abtme-Content text */
-    font-size: 12px; font-family: 'Press Start 2P', cursive; text-align: justify; letter-spacing: -0.5px;
-    white-space: pre-line; line-height: 175%; margin: 10px 0 5px 0;  color: var(--jellyBeanBlue);    
+    font-size: 12px; font-family: 'Press Start 2P', cursive; text-align: justify;
+    white-space: pre-line; line-height: 175%; margin: 10px 0;  color: var(--jellyBeanBlue);    
 }
 .aboutme .content .abtm-text .abtm-footer { /* Abtme-Content Hobbies Div */ 
     width: 100%; text-align: center; font-size: 24px; margin-bottom: 10px; 
@@ -446,7 +445,7 @@ header {
 .modal-header .btn-close { /* Modal Close Button */
     position: absolute; top: 0; right: 0; font-size: 9px;
     background-color: transparent; opacity: 0.5; margin: 2px 2px 0 0; padding: 5px; 
-    border-radius: 50%; transition: opacity 0.2s, animation 0.3s; 
+    border-radius: 50%; transition: opacity 0.35s, animation 0.45s; 
     animation: var(--fa-shake-animation);
 }
 .modal-header .btn-close:hover { 
@@ -527,7 +526,7 @@ header {
 }  
 .experience-container .experience-card .experience-body {
     width: 100%; height: 40px; position: absolute; bottom: 0;
-    text-align: center; transition: 0.75s; cursor: default;
+    text-align: center; transition: 0.65s; cursor: default;
 }  
 .experience-container .experience-card:hover .experience-body { height: 115px; }  
 .experience-container .experience-card .experience-body .exp-title {
@@ -823,7 +822,8 @@ header {
     .main-introduction .content .h-image-container { flex-grow: 0; flex-basis: 50%; }
     .main-introduction, .aboutme { width: 100%; }    
     .main-introduction .h-title h1 { font-size: 20px; margin-bottom: 5px; }    
-    .main-introduction #h5-final, .main-introduction .h-subtitle h5, .contactme .content .icons h4 { font-size: 12px; }    
+    .main-introduction .subtitle span { font-size: 18px; }
+    .contactme .content .icons h4 { font-size: 12px; }    
     .aboutme .content .abtme-img-container { margin-bottom: 10px; } /* About me*/
     .aboutme .content img { max-width: 385px; max-height: 400px; }    
     .skills-cards .card-skills { width: calc(100% * (1/8) - 30px - 5px); } /* Skills */     
@@ -839,6 +839,7 @@ header {
     .i-socialMedia .button span { font-size: 10px; }
 }
 @media screen and (max-width: 1050px) {    
+    .main-introduction .subtitle span { font-size: 14px; }
     .goog-te-gadget-simple .VIpgJd-ZVi9od-xl07Ob-lTBxed span { font-size: 10px !important; } /* Google Translate Plugin */
     .skills-cards .card-skills { width: calc(100% * (1/6) - 25px - 10px); } /* Skills */
     .card-skills { width: 80px; height: 80px; }    
@@ -852,7 +853,7 @@ header {
     .portafolio .p-cards-container #show-more-btn { width: 90%; margin: 20px 0 5px 0; } /* Projects */
     .portafolio .p-cards-container #show-more-btn[data-title]:hover::after { font-size: 9px; top: -60%;}    
     #imgPopUpModal .modal-header>h6, .modal-content>.span-info, .modal-footer>p { /* Projects Modal */ 
-        font-size: 7px; line-height: 12px; letter-spacing: -.5px;
+        font-size: 7px; line-height: 12.5px;
     } 
     #imgPopUpModal .modal-header, .modal-footer { font-size: 7px !important; padding: 0.5rem; }
     .modal-content .zoomout, .footer-bottom>p::after { font-size: 12px; }
@@ -887,14 +888,15 @@ header {
 @media screen and (max-width: 800px) { 
     .ScrollToTop { width: 55px; height: 55px;  } /* STT button */      
     .sectionTitles { font-size: 15px; border-radius: 5px !important; } /* Titles */    
-    .scroll-down-l, .scroll-down-r { font-size: 10px; } /* Header */        
+    .scroll-down-l, .scroll-down-r { font-size: 10px; } /* Header */
+    .main-introduction .subtitle { padding: 2.5px; }        
     #titleInfo { right: 0; left: 0; width: 98%; } /* Projects */ 
     .portafolio .p-cards-container { margin-top: 18px; } 
-    .modal-content { max-height: 90% !important; height: 90% !important; } /* Modal - Modal Body (img) */
+    .modal-content { max-height: 92% !important; height: 90% !important; } /* Modal - Modal Body (img) */
     #imgPopUpModal .modal-body {
         display: flex; align-items: center; align-self: center;  overflow-y: auto;      
     }    
-    .img-modal { width: 100%; height: 85%; }
+    .img-modal { height: 85%; }
     .experience-container .experience-card .experience-body .exp-title { font-size: 11px !important; } /* Experience Cards */  
     .skills-cards .card-skills { width: calc(100% * (1/5) - 0px - 10px); } /* Skills */
     .card-skills { width: 75px; height: 75px; }
@@ -909,12 +911,12 @@ header {
         height: 35px !important; width: 25px !important; margin: 0 auto 8px; text-align: center; border-radius: 30px;
         border: 2px solid var(--jellyBeanBlue) !important;	        	
     }
-    .main-introduction #h5-final, .main-introduction .h-subtitle h5, #google_translate_element  { font-size: 9px; }         
+    .main-introduction .subtitle span, #google_translate_element  { font-size: 8.5px; }         
     .modalSpinner .fa-spin, .modalSpinner #spinnerSpan, .abtm-name { font-size: 11px; }
     .abtm-text, .contact-form { width: 100%; }        
     .abtm-text h1 { font-size: 16px; } /* About me */ 
     .abtm-name { text-align: center; }
-    .abtm-text pre { font-size: 9.5px; margin: 5px 0; letter-spacing: -1px; }  
+    .abtm-text pre { font-size: 9.5px; margin: 5px 0; line-height: 165%; }  
     .aboutme .content .abtm-text .abtm-footer h6 { font-size: 12px; margin: 0; }
     .abtm-text .abtm-footer>i { font-size: 20px !important; margin-right: -5px;}   
     #google_translate_element span>i { font-size: 24px; } /* Google Translate Plugin */
@@ -931,15 +933,20 @@ header {
     .footer-content .menu a:hover { font-size: 7.2px; }
     .footer-content>p { font-size: 9px; }
     .goog-te-gadget-simple a.goog-te-menu-value span, .footer-bottom p { font-size: 8px; }
-    .abtm-text h1, .abtm-name, .contact-form h1 { margin-bottom: 5px; }}
+    .abtm-text h1, .abtm-name, .contact-form h1 { margin-bottom: 5px; }
+    .alertSpan { /* Alert Span */
+        right: -5px !important; bottom: 0px !important;
+    }
+    .alertSpan .fa-exclamation-circle { top: 55% !important; left: 30px !important; font-size: 14px !important; }
+}    
 
 /* ---------------------------------------------------------------- BROWSER SCROLLBAR -------------------------------------------------------*/
 ::-webkit-scrollbar { width: 12px; } /* Scrollbar Width */  
 ::-webkit-scrollbar-track { box-shadow: var(--scrollbarShadow); } /* Scrollbar-Rail */      
 ::-webkit-scrollbar-thumb { /* Scrollbar-Bar */
-    background: var(--moonstoneBlue); border-radius: 5px; box-shadow: var(--scrollbarShadow);
+    background: var(--jellyBeanBlue); border-radius: 5px; box-shadow: var(--scrollbarShadow);
 }
-::-webkit-scrollbar-thumb:hover { background-color: var(--jellyBeanBlue); }
+::-webkit-scrollbar-thumb:hover { background-color: var(--darkSlateGray); }
 
 /* --------------------------------------------------------------- ALERT SPAN ----------------------------------------------------------- */
 .alertSpan {
