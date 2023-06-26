@@ -130,9 +130,9 @@ header {
 
 .main-introduction .subtitle {  /* Intr Header - Footer */
     margin: 10px 0 10px 0; justify-content: left; 
-    text-align: left; font-size: 22px; text-shadow: 0 0 2.5px #000;
+    text-align: left; font-size: 22px; text-shadow: 0 0 3px #000;
 }
-.purple-font { color: #DA70D6; }.yellow-font { color: #D0CD8B; }.comment-font { color: #6A9955; font-size: 20px; }
+.purple-font { color: #A586B6; }.yellow-font { color: #DCCD79; }.comment-font { color: #6A9955; font-size: 20px; }
 .header-card { /* Header Backend - Fronted Cards */
     position: relative; width: 350px; height: 200px;
     background-color: black; box-shadow: var(--borderBoxShadow);
