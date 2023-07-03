@@ -143,7 +143,7 @@
       <h3 class="sectionTitles" data-es="Mis proyectos" data-en="My projects" aria-labelledby="titleInfo"></h3>      
       <div id="titleInfo" class="form-text" data-es="Los proyectos no estan ordenados por fecha de creación ni relevancia" 
         data-en="Projects aren't ordered by creation date or relevance"></div>
-      <div class="p-cards-container">         
+      <div class="p-cards-container"> 
         <div class="project-card">
           <div class="img-container">
             <img src="img/Portafolio/PortafolioWeb.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
@@ -170,43 +170,59 @@
             </ul>
           </div>
         </div>
+        <div class="project-card carousel slide" id="multipleProjects">
+          <div class="carousel-inner">
+            <div class="img-container carousel-item active">
+              <span class="img-carousel-title">Con JavaScript:</span>
+              <img src="img/Portafolio/Pokedex.png" class="img-item d-block w-100" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
+                CSS y Bootstrap para los estilos y el módulo gh-pages de 'npm' para la publicación de la página en GitHub Pages - Servidor: API 
+                gratuita de Pokémon 'PokéApi' (https://pokeapi.co)." data-title="Proyecto JavaScript: Página que simula un Pokédex, permite 
+                consultar los datos de cualquier Pokémon existente, además de listar todos y cada uno de ellos con su respectiva carta y datos correspondientes.">
+            </div>
+            <div class="img-container carousel-item">
+              <span class="img-carousel-title">Con Angular:</span>
+              <img src="img/Portafolio/AngularPokedex.png" class="img-item d-block w-100" alt="TypeScript y el Framework Angular, SCSS y 
+              Bootstrap para los estilos - Servidor: API gratuita de Pokémon 'PokéApi' (https://pokeapi.co)." data-title="Proyecto Angular: 
+              Página que permite listar todos los Pokémones existentes junto con sus estadísticas, además de que permite consultar cualquiera 
+              de estos por su nombre, simulando el Pokédex">              
+            </div>
+            <button class="showInfo"></button>
+            <div class="details">
+              <h2 data-es="Web API 'Pokédex'" data-en="'Pokédex' Web API"></h2>
+              <div class="tec-icons"> 
+                <ul class="static-projects-icons p-tecnologies"> 
+                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PokéApi">
+                    <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons"></i>
+                  </li> 
+                </ul>  
+              </div> 
+              <ul class="web-icons">              
+                <li>
+                  <a href="https://mauriciobarrueta.github.io/pokemonPokedex/" data-bs-toggle="tooltip" data-bs-placement="top" 
+                    data-bs-custom-class="web-icons-a" title="Web (JS)" target="_blank"></a>
+                </li>
+                <li>
+                  <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
+                </li>              
+                <li>
+                  <a href="https://github.com/MauricioBarrueta/pokemonPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                    data-bs-custom-class="web-icons-a" title="GitHub (JS)" target="_blank"></a>                  
+                  <a href="https://github.com/MauricioBarrueta/angularPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top"
+                    data-bs-custom-class="web-icons-a" title="GitHub (Angular)" target="_blank"></a>                  
+                </li>                          
+              </ul>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#multipleProjects" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#multipleProjects" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>        
+        </div>
         <div class="project-card">
           <div class="img-container">
-            <img src="img/Portafolio/Pokedex.png" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
-              CSS y Bootstrap para los estilos y el módulo gh-pages de 'npm' para la publicación de la página en GitHub Pages - Servidor: API 
-              gratuita de Pokémon 'PokéApi' (https://pokeapi.co)." data-title="Página que simula un Pokédex, permite consultar los datos de cualquier 
-              Pokémon existente, además de que permite listar todos y cada uno de ellos con su respectiva carta y datos correspondientes.">
-          </div>
-          <button class="showInfo"></button>
-          <div class="details">
-            <h2 data-es="Web API 'Pokédex'" data-en="'Pokédex' Web API"></h2>
-            <div class="tec-icons"> 
-              <ul class="static-projects-icons p-tecnologies"> 
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PokéApi">
-                  <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons"></i>
-                </li> 
-              </ul>  
-            </div> 
-            <ul class="web-icons">              
-              <li>
-                <a href="https://mauriciobarrueta.github.io/pokemonPokedex/" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
-              </li>
-              <li>
-                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
-              </li>              
-              <li>
-                <a href="https://github.com/MauricioBarrueta/pokemonPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  data-bs-custom-class="web-icons-a" title="GitHub (JS)" target="_blank"></a>                  
-                <a href="https://github.com/MauricioBarrueta/angularPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top"
-                  data-bs-custom-class="web-icons-a" title="GitHub (Angular)" target="_blank"></a>                  
-              </li>                          
-            </ul>
-          </div>
-        </div> 
-        <div class="project-card">
-          <div class="img-container">
-            <img src="img/Portafolio/omdbAPI.png" class="img-item" alt="Hecho con el framework Angular y el lenguaje TypeScript, HTML para la 
+            <img src="img/Portafolio/omdbAPI.png" class="img-item" alt="Hecho con el Framework Angular y el lenguaje TypeScript, HTML para la 
               estructuración, SCSS y la librería Bootstrap para los estilos - Servidor: API pública 'OMDb API' (http://www.omdbapi.com/)." 
               data-title="Página que permite consultar información detallada sobre una amplia variedad de películas y series de televisión,
                además de que, en el caso de las series, es posible consultar cada temporada y cada capítulo correspondiente a esta, así como 
@@ -375,40 +391,7 @@
               </li>         
             </ul>
           </div>
-        </div>           
-        <div class="project-card">
-          <div class="img-container">
-            <img src="img/Portafolio/RickAndMortyAPI.webp" class="img-item"
-              alt="HTML para la estructuración y JavaScript para la funcionalidad, CSS y la librería Bootstrap para los estilos y el módulo 
-              gh-pages de npm para la publicación de la página en GitHub Pages - Servidor: API pública de la serie Rick and Morty (https://rickandmortyapi.com/)"
-              data-title="Página que consume la API la cual permite consultar todos y cada uno de los personajes de la serie 'Rick and Morty', 
-              así como los datos correspondientes de cada uno de ellos.">
-          </div>
-          <button class="showInfo"></button>
-          <div class="details">
-            <h2 data-es="Web API de 'Rick and Morty'" data-en="'Rick and Morty' Web API"></h2>
-            <div class="tec-icons"> 
-              <ul class="static-projects-icons p-tecnologies"> 
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Rick & Morty API">
-                  <i><img src="svg/RickAndMorty.svg" class="p-tec-svg-icons"></i>
-                </li> 
-              </ul>  
-            </div>
-            <ul class="web-icons">
-              <li>
-                <a href="https://mauriciobarrueta.github.io/RickAndMortyAPI/" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
-              </li>
-              <li>
-                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
-              </li>
-              <li>
-                <a href="https://github.com/MauricioBarrueta/RickAndMortyAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-              </li>
-            </ul>
-          </div>
-        </div>  
+        </div>      
         <div class="project-card">
           <div class="img-container">
             <img src="img/Portafolio/wikiAPI.png" class="img-item" alt="Hecho con el framework Angular y el lenguaje TypeScript, HTML para la 
@@ -452,7 +435,40 @@
               </li>        
             </ul>
           </div>
-        </div>                               
+        </div>       
+        <div class="project-card">
+          <div class="img-container">
+            <img src="img/Portafolio/RickAndMortyAPI.webp" class="img-item"
+              alt="HTML para la estructuración y JavaScript para la funcionalidad, CSS y la librería Bootstrap para los estilos y el módulo 
+              gh-pages de npm para la publicación de la página en GitHub Pages - Servidor: API pública de la serie Rick and Morty (https://rickandmortyapi.com/)"
+              data-title="Página que consume la API la cual permite consultar todos y cada uno de los personajes de la serie 'Rick and Morty', 
+              así como los datos correspondientes de cada uno de ellos.">
+          </div>
+          <button class="showInfo"></button>
+          <div class="details">
+            <h2 data-es="Web API de 'Rick and Morty'" data-en="'Rick and Morty' Web API"></h2>
+            <div class="tec-icons"> 
+              <ul class="static-projects-icons p-tecnologies"> 
+                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Rick & Morty API">
+                  <i><img src="svg/RickAndMorty.svg" class="p-tec-svg-icons"></i>
+                </li> 
+              </ul>  
+            </div>
+            <ul class="web-icons">
+              <li>
+                <a href="https://mauriciobarrueta.github.io/RickAndMortyAPI/" data-bs-toggle="tooltip" data-bs-placement="top" 
+                  data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+              </li>
+              <li>
+                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
+              </li>
+              <li>
+                <a href="https://github.com/MauricioBarrueta/RickAndMortyAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                  data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+              </li>
+            </ul>
+          </div>
+        </div>                                       
         <span id="cardsLimit"></span> <!-- Límite de proyectos visibles -->
 
         <div id="hiddenCards" style="display: none;"> <!-- Proyectos ocultos -->     
@@ -948,6 +964,13 @@
               aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
           </div>
         </div>        
+        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Bootstrap">
+          <img class="Bootstrap-Icon position-absolute top-50 start-50 translate-middle">
+          <div class="info-skills progress">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" 
+              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+          </div>
+        </div>
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Angular">
           <img class="Angular-Icon position-absolute top-50 start-50 translate-middle">
           <div class="info-skills progress">
@@ -996,14 +1019,7 @@
             <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" 
               aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
           </div>
-        </div>
-        <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-success" title="Bootstrap">
-          <img class="Bootstrap-Icon position-absolute top-50 start-50 translate-middle">
-          <div class="info-skills progress">
-            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" style="width: 75%" 
-              aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-          </div>
-        </div>
+        </div>        
         <div class="card-skills" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="tooltip-warning" title="Node.js">
           <img class="Node-Icon position-absolute top-50 start-50 translate-middle img-pdng">
           <div class="info-skills progress">
