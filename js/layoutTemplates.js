@@ -20,6 +20,13 @@ angularProjectsCards.forEach(card => {
     card.prepend(templateContent);    
 });
 
+const scssTemplate = document.getElementById('scss-projects')
+const scssProjectsCards = document.querySelectorAll('.scss-project-icons')
+scssProjectsCards.forEach(card => {
+    const templateContent = scssTemplate.content.cloneNode(true);
+    card.prepend(templateContent)
+});
+
 const mysqlTemplate = document.getElementById('mysql-icon');
 const mysqlProjectCard = document.querySelectorAll('.mysql-prj-icon');
 /* Ícono de MySQL para la mayoría de proyectos */

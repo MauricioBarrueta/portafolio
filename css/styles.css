@@ -383,18 +383,19 @@ header {
 .project-card .img-container>.img-item {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
     object-fit: cover; cursor: zoom-in;
-    border: 2px solid var(--jellyBeanBlue); border-radius: 5px;
+    border: 2px solid var(--jellyBeanBlue); border-radius: 5px; background-color: var(--customWhite);
 }
 .project-card .details { /* Project Card Details */
       position: absolute; left: 10px; right: 10px; bottom: 16px; height: 80px;
       text-align: center;      
 }
-.project-card .details>h2 { /* Project Card Name */
+.project-card .details>h2, .c-title { /* Project Card Name */
     font-size: 11px; font-weight: 200; text-transform: uppercase; line-height: 15px;
-    margin: 0; padding: 5px; border-radius: 5px; cursor: default;
+    margin: 0; padding: 5px !important; border-radius: 5px; cursor: default;
     color: white; background-color: var(--jellyBeanBlue);    
 } 
-.project-card .details .tec-icons { width: 100%; cursor: pointer; margin: 0 0 3px 0; } /* Project Card Tech Icons */  
+.c-title { top: 280px !important; display: inline-block; width: 100%; } /* Carousel Java Games Titles */
+.tec-icons { width: 100%; cursor: pointer; margin: 0 0 3px 0; } /* Project Card Tech Icons */ 
 .tec-icons .p-tecnologies { padding: 0.1rem; margin: 0; }
 .tec-icons .p-tecnologies li { list-style: none; margin: 0 5px; cursor: pointer; }
 .tec-icons .p-tecnologies li .p-tec-svg-icons { width: 22px; height: 22px; padding: 0; border: 0; margin: 0; }
@@ -1010,3 +1011,8 @@ img.AJAX-Icon { content: url(../svg/AJAX.svg); } img.JSON-Icon { content: url(..
 img.Thymeleaf-Icon { content: url(../svg/Thymeleaf.svg); } img.Hibernate-Icon { content: url(../svg/Hibernate.svg); }
 img.Photoshop-Icon { content: url(../svg/Photoshop.svg); } img.Postman-Icon { content: url(../svg/Postman.svg); } img.Firebase-Icon { content: url(../svg/Firebase.svg); } 
 img.JUnit-Icon { content: url(../svg/JUnit.svg); } img.XML-Icon { content: url(../svg/XML.svg); } img.Node-Icon { content: url(../svg/NodeJS.svg); }
+
+.carousel-caption {
+    position: relative; left: 0; top: 252px; bottom: 0; right: 0;
+    padding: 0; z-index: -1; border-top: 1px solid var(--jellyBeanBlue);
+}
