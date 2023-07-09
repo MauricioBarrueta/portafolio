@@ -372,7 +372,7 @@ header {
 } 
 .carousel-item { width: auto; margin-right: 0; }
 .carousel-control-prev, .carousel-control-next {
-    background-color: #171515; color: white; opacity: .35;
+    background-color: var(--darkSlateGray); color: white;
     height: 15%; top: auto; bottom: 40%; width: auto;   
 }
 .img-carousel-title {
