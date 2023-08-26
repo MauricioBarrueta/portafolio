@@ -1,17 +1,23 @@
-$(window).on('load', function () { 
+$(window).on('load', function () {
     setTimeout(function () {
-        $('#loading').hide(222);        
-        /* Se activa la animación del texto de la introducción y el scroll */
-        $('.h1-h').css("animation-delay", "2.22s");
-        $('html').css("overflow", "auto");        
-    }, 2000);
+        $('#loading').hide(152);        
+        $('html').css("overflow", "auto");
+    }, 1500);    
 })
 
+window.onload = () => {    
+    var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+    switchLang('es')
+    /* Se activa la animación del texto de la introducción y el scroll */
+    $('.h1-h').css("animation-delay", "1.53s");
+}
+
 $(document).ready(function () {
-    AOS.init({ once: true, duration: 850, delay: 0, easing: 'ease-in-out' }); /* Se inicializa AOS Library */      
+    AOS.init({ once: true, duration: 850, delay: 0, easing: 'ease-in-out' }); /* Se inicializa AOS Library */
     $('.navbar').on('click', 'a', function () { /* Resalta el texto en la navbar de acuerdo a la sección en la que se encuentra */
         $('.navbar a.active').removeClass('active');
-        $(this).addClass('active');  
+        $(this).addClass('active');
     });
     $('body').scrollspy({ target: '.navbar' });
 
@@ -50,13 +56,19 @@ btnScrollToTop.addEventListener('click', () => {
 (new IntersectionObserver(function (trigger) {
     trigger[0].intersectionRatio > 0 ? document.documentElement.removeAttribute('class') : document.documentElement.setAttribute('class', 'stuck');
 })).observe(document.querySelector('.trigger'));
-
 /* Oculta la lista desplegable de la navbar después de seleccionar un link (pantallas pequeñas) */
 $('.navbar-nav>li>a').on('click', function() { $('.navbar-collapse').collapse('hide'); });
 
+/* Abre la página del CV de acuerdo al idioma actual */
+const openCvButton = document.getElementById('btn-cv')
+openCvButton.addEventListener('click', () => {
+    var docHref = actualLang == 'es' ? '../files/CV-Edgar Mauricio Barrueta Aguirre.pdf#page=1' : '../files/CV-Edgar Mauricio Barrueta Aguirre.pdf#page=2'
+    openCvButton.href = docHref   
+})
+
 /* Obtiene el atributo src, alt y title de la imagen del proyecto seleccionado y se pasan al Modal */
 document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('img-item')) {         
+    if (e.target.classList.contains('img-item')) {    
         $('html').css("overflow", "hidden") /* Se deshabilita el scroll de la página mientras la ventana esté abierta */  
         const projectImage = e.target.getAttribute('src');
         document.querySelector('.img-modal').src = projectImage;
@@ -91,26 +103,26 @@ ImageModal.addEventListener('hidden.bs.modal', function () {
 });
 
 /* Función del botón para mostrar y ocultar los proyectos que no aparecen en la lista inicial */
-const showMoreProjectsBtn = document.querySelector('.show-more-btn');
-const showAndHideProjects = () => {
-    var cardsVisible = document.getElementById("cardsLimit"), cardsHidden = document.getElementById("hiddenCards"),
-        btnShowHiddenCards = document.getElementById("show-more-btn");
-    if (cardsVisible.style.display === "none") {
-        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-chevron-down fa-bounce'></i>", 
-            btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more");
-        cardsVisible.style.display = "flex", cardsHidden.style.display = "none";
-    } else {
-        cardsVisible.style.display = "none";
-        btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-chevron-up fa-bounce'></i>", 
-            btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less");
-        cardsHidden.style.display = "flex", cardsHidden.style.flexWrap = "wrap", cardsHidden.style.alignContent = "center",
-        cardsHidden.style.justifyContent = "space-around", cardsHidden.style.gap = "15px";
-    }
-    if (btnShowHiddenCards.getAttribute("data-title", "Mostrar más - Show more") && cardsHidden.style.display === "none") {
-        document.querySelector('#Projects').scrollIntoView({ behavior: 'smooth' });
-    }
-}
-showMoreProjectsBtn.addEventListener('click', showAndHideProjects);
+// const showMoreProjectsBtn = document.querySelector('.show-more-btn');
+// const showAndHideProjects = () => {
+//     var cardsVisible = document.getElementById("cardsLimit"), cardsHidden = document.getElementById("hiddenCards"),
+//         btnShowHiddenCards = document.getElementById("show-more-btn");
+//     if (cardsVisible.style.display === "none") {
+//         btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-chevron-down fa-bounce'></i>", 
+//             btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more");
+//         cardsVisible.style.display = "flex", cardsHidden.style.display = "none";
+//     } else {
+//         cardsVisible.style.display = "none";
+//         btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-chevron-up fa-bounce'></i>", 
+//             btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less");
+//         cardsHidden.style.display = "flex", cardsHidden.style.flexWrap = "wrap", cardsHidden.style.alignContent = "center",
+//         cardsHidden.style.justifyContent = "space-around", cardsHidden.style.gap = "15px";
+//     }
+//     if (btnShowHiddenCards.getAttribute("data-title", "Mostrar más - Show more") && cardsHidden.style.display === "none") {
+//         document.querySelector('#Projects').scrollIntoView({ behavior: 'smooth' });
+//     }
+// }
+// showMoreProjectsBtn.addEventListener('click', showAndHideProjects);
 
 /* Función que obtiene los datos del formulario para enviar el correo electrónico mediante el esquema 'mailto' */
 const emailForm = document.querySelector('#c-form'), btnEmailTo = document.querySelector('#myEmail');
@@ -137,22 +149,24 @@ btnCopyEmail.addEventListener('click', () => {
     navigator.clipboard.writeText(copyText.value)
         .then(() => {
             showAlertSpan(); 
-            alertText.innerHTML = `Copiado al portapapeles - Copied to clipboard '<i class="fa-solid fa-clipboard"></i>'`
+            alertText.innerHTML = `&#xf328; Copiado al portapapeles - Copied to clipboard`
         })
         .catch(() => {
             showAlertSpan(); 
-            alertText.innerHTML = `'<i class="fa-solid fa-triangle-exclamation"></i>' Error inesperado!! Copia el correo electrónico manualmente`
+            alertText.innerHTML = `&#xf071; Error inesperado. Copia el e-mail manualmente`
         });
 });
 
 /* Función para traducir la página entre Inglés y Español */
+var actualLang
 function switchLang(lang) {
     $("[data-" + lang + "]").text(function (i, e) { return $(this).data(lang);  });
+    actualLang = lang
 }
-switchLang("es"); /* Se manda el idioma Español como predeterminado */
 $(".switchlang").click(function () {
     modalSpinner();
     switchLang($(this).data("lang"))
+    
 });
 function modalSpinner() {
     $('.modalSpinner').modal('show');
@@ -172,7 +186,3 @@ const closeAlertSpan = () => {
     alertDialog.classList.add('hide');     
 }
 closeAlert.addEventListener('click', closeAlertSpan)
-
-/* Bootstrap Tooltip */
-var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
