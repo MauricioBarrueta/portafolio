@@ -381,6 +381,11 @@ img.AJAX-Icon { content: url(../svg/AJAX.svg); } img.JSON-Icon { content: url(..
 img.Thymeleaf-Icon { content: url(../svg/Thymeleaf.svg); } img.Hibernate-Icon { content: url(../svg/Hibernate.svg); } img.SASS-Icon { content: url(../svg/SASS.svg); }
 img.Photoshop-Icon { content: url(../svg/Photoshop.svg); } img.Postman-Icon { content: url(../svg/Postman.svg); } img.Firebase-Icon { content: url(../svg/Firebase.svg); } 
 img.JUnit-Icon { content: url(../svg/JUnit.svg); } img.XML-Icon { content: url(../svg/XML.svg); } img.Node-Icon { content: url(../svg/NodeJS.svg); }
+img.AngMaterial-Icon { content: url(../svg/AngularMaterial.svg); } img.Git-Icon { content: url(../svg/Git.svg); } img.VSC-Icon { content: url(../svg/VSCode.svg); }
+img.Eclipse-Icon { content: url(../svg/Eclipse.svg); } img.SQLite-Icon { content: url(../svg/SQLite.svg); } img.WT-Icon { content: url(../svg/WTerminal.svg) }
+img.Linux-Icon { content: url(../svg/Linux.svg); } img.Office-Icon { content: url(../svg/Office.svg); } img.Nitro-Icon { content: url(../svg/Nitro.png); }
+img.React-Icon { content: url(../svg/React.svg); } img.Laravel-Icon { content: url(../svg/Laravel.svg); } img.Mockito-Icon { content: url(../svg/Mockito.png); }
+img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content: url(../svg/AdobeXD.svg); }
 
 /* ------------------------------------------------------------------ PORTAFOLIO ---------------------------------------------------------- */
 .portafolio .p-cards-container {
