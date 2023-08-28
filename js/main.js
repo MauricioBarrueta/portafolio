@@ -4,8 +4,12 @@ $(window).on('load', function () {
         $('html').css("overflow", "auto");
     }, 1500);    
 })
-
+var time
 window.onload = () => {    
+    time = setTimeout(() => {
+        document.readyState === 'complete' ? clearTimeout(time) : document.location.reload()        
+    }, 1500);
+
     var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     switchLang('es')
