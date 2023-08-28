@@ -62,7 +62,8 @@ $('.navbar-nav>li>a').on('click', function() { $('.navbar-collapse').collapse('h
 /* Abre la página del CV de acuerdo al idioma actual */
 const openCvButton = document.getElementById('btn-cv')
 openCvButton.addEventListener('click', () => {
-    var docHref = actualLang == 'es' ? '../files/CV-Edgar Mauricio Barrueta Aguirre.pdf#page=1' : '../files/CV-Edgar Mauricio Barrueta Aguirre.pdf#page=2'
+    var docHref = actualLang == 'es' ? 'mauriciobarrueta.github.io/portafolio/files/CV-Edgar Mauricio Barrueta Aguirre.pdf#page=1' 
+        : 'mauriciobarrueta.github.io/portafolio/files/CV-Edgar Mauricio Barrueta Aguirre.pdf#page=2'
     openCvButton.href = docHref   
 })
 
