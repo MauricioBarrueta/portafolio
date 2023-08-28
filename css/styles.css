@@ -536,7 +536,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     display: table-cell; width: 100%; 
     font-size: 10px; line-height: 18px; cursor: default;
 }
-.modal-footer>p { text-shadow: var(--basicTextShadow) }
+.modal-footer>p { text-shadow: 0.5px 0.5px 2px #000 }
 .modal-header .btn-close { /* Modal Close Button */
     position: absolute; top: 0; right: 0; font-size: 9px;
     background-color: transparent; opacity: 0.5; margin: 2px 2px 0 0; padding: 5px; 
@@ -870,7 +870,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 } 
 .button:nth-child(5) span {
     background: #FF6968;  background: linear-gradient(to right, #FF6968 0%, #A334FA 50%, #0695ff 100%);
-    background-clip: text; -webkit-text-fill-color: transparent;
+    background-clip: text; -webkit-background-clip: text; -webkit-text-fill-color: transparent;
 }
 
 /* ---------------------------------------------------------------- FOOTER ----------------------------------------------------------------- */
