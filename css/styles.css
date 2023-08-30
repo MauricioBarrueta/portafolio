@@ -1003,7 +1003,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 }
 @media screen and (max-width: 800px) { 
     .ScrollToTop { width: 55px; height: 55px;  } /* STT button */    
-    .modalSpinner #spinnerSpan { font-size: 18px; }  
+    .modalSpinner #spinnerSpan { font-size: 16px; }  
     .sectionTitles { font-size: 15px; border-radius: 5px !important; } /* Titles */    
     .scroll-down-l, .scroll-down-r { font-size: 11px; } /* Header */
     .main-introduction .subtitle { padding: 2.5px; }        
