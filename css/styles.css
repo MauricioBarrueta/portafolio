@@ -445,9 +445,8 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 .carousel-control-next-icon { background: url(../svg/angles-right.svg); }
 .img-carousel-title {
     width: 100%; position: relative; display: inline-block; 
-    z-index: 2; opacity: 0.85; cursor: default;
-    text-align: center; font-size: 9px; 
-    color: white; text-shadow: var(--textShadowCustom);    
+    z-index: 2; cursor: default; color: white; text-shadow: var(--textShadowCustom);    
+    text-align: center; font-size: 9.5px;     
 }
 .carousel-caption { /* Carousel Data By Project */
     position: relative !important; left: 0 !important; top: 200px; right: 0 !important;
@@ -863,7 +862,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
   /* Social Media-Icons & Text Colors*/
 .i-socialMedia .button:nth-child(1):hover .icon { background: #0088CC; } .button:nth-child(1) span { color: #0088CC; }
 .i-socialMedia .button:nth-child(2):hover .icon { background: #25D366; } .button:nth-child(2) span { color: #25D366; }
-.i-socialMedia .button:nth-child(3):hover .icon { background: #0e76a8; } .button:nth-child(3) span { color: #0e76a8; }
+.i-socialMedia .button:nth-child(3):hover .icon { background: #0a66c2; } .button:nth-child(3) span { color: #0a66c2; }
 .i-socialMedia .button:nth-child(4):hover .icon { background: #171515; } .button:nth-child(4) span { color: #171515; }
 .i-socialMedia .button:nth-child(5):hover .icon { 
     background: linear-gradient(270deg, rgba(255,105,104,1) 0%, rgba(163,52,250,1) 50%, rgba(6,149,255,1) 100%); 
