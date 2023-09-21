@@ -1,16 +1,13 @@
-$(window).on('load', function () {
-    setTimeout(function () {
-        $('#loading').hide(152);        
-        $('html').css("overflow", "auto");
-    }, 1500);    
-})
-
 window.onload = () => {
-    var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-    var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
-    switchLang('es')
+    setTimeout(function () {
+        $('#loading').hide(152);
+        $('html').css("overflow", "auto");
+    }, 1500);
     /* Se activa la animación del texto de la introducción y el scroll */
-    $('.h1-h').css("animation-delay", "1.53s");
+    $('.h1-h').css("animation-delay", "1.54s");
+    switchLang('es') 
+    var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))           
 }
 
 $(document).ready(function () {

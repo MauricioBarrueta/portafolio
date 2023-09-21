@@ -66,17 +66,17 @@ header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;
 .ScrollToTop {
     display: none; position: fixed; bottom: 12px; right: 12px; width: 60px; height: 60px;
     border-radius: 50%; padding: 0.5rem; z-index: 9997; transition: all 0.3s linear;
-    border: none; opacity: 0.8; animation: none; box-shadow: var(--boxShadowBottom);         
+    border: none; opacity: 0.85; animation: none; box-shadow: var(--boxShadowBottom);         
 }
 .ScrollToTop::after {
     content: "\f102"; font-size: 18px; 
     display: inline-block; animation: var(--fa-bounce-animation); 
     transition: font-size 0.25s, animation 0.35s;
 }
-.ScrollToTop:hover {
-    background-color: var(--darkSlateGray); color: white; opacity: 1 !important; 
+.ScrollToTop:hover {    
+    background-color: var(--darkSlateGray); color: white; opacity: 1 !important; scale: 1.05;
     animation: var(--fa-bounce-animation); animation-iteration-count: 1; 
-    box-shadow: -5px -5px 10px 0 rgba(0,0,0,0.5) inset, var(--boxShadowBottom); border: var(--border-white); border-style: dotted;    
+    box-shadow: -5px -5px 10px 0 rgba(0,0,0,0.75) inset, var(--boxShadowBottom);  
 }
 .ScrollToTop:hover::after { font-size: 20px; animation: none; }
 /* ----------------------------------------------------------- Loading GIF ---------------------------------------------------------------- */
@@ -189,7 +189,7 @@ header {
     font-size: 12px; letter-spacing: 1px; transition: border-bottom 0.35s;
 }
 .header-card:hover .header-card-title::before, .header-card:hover .header-card-title::after {
-    content: "\f024";
+    content: "\f11e";
     margin-inline: 10px; font-size: 8px;
     padding: 0 5px 0 0; vertical-align: 35%;
 }
@@ -375,7 +375,7 @@ img.NetBeans-Icon { content: url(../svg/NetBeans.svg); } img.AStudio-Icon { cont
 img.GitLab-Icon { content: url(../svg/GitLab.svg); } img.TypeScript-Icon { content: url(../svg/TypeScript.svg); } img.JavaScript-Icon { content: url(../svg/JavaScript.svg); }
 img.Spring-Icon { content: url(../svg/Spring.svg); } img.Angular-Icon { content: url(../svg/Angular.svg); } img.SQL-Icon { content: url(../svg/MySQL.svg); }
 img.HTML-Icon { content: url(../svg/HTML.svg); } img.CSS-Icon { content: url(../svg/CSS.svg); } img.JWT-Icon { content: url(../svg/JWT.svg); } 
-img.Bootstrap-Icon { content: url(../svg/Bootstrap.svg); } img.Python-Icon { content: url(../svg/Python.svg); } img.Unity-Icon { content: url(../svg/Unity2.svg); }
+img.Bootstrap-Icon { content: url(../svg/Bootstrap.svg); } img.Python-Icon { content: url(../svg/Python.svg); } img.Unity-Icon { content: url(../svg/Unity.svg); }
 img.PostgreSQL-Icon { content: url(../svg/PostgreSQL.svg); } img.jQuery-Icon { content: url(../svg/jQuery.svg); } img.GitHub-Icon { content: url(../svg/GitHub.svg); }
 img.AJAX-Icon { content: url(../svg/AJAX.svg); } img.JSON-Icon { content: url(../svg/json.svg); } img.NPM-Icon { content: url(../svg/NPM.svg); }
 img.Thymeleaf-Icon { content: url(../svg/Thymeleaf.svg); } img.Hibernate-Icon { content: url(../svg/Hibernate.svg); } img.SASS-Icon { content: url(../svg/SASS.svg); }
@@ -860,10 +860,10 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     transition: all 0.3s ease-out; margin-left: 6.5px;
 }
   /* Social Media-Icons & Text Colors*/
-.i-socialMedia .button:nth-child(1):hover .icon { background: #0088CC; } .button:nth-child(1) span { color: #0088CC; }
+.i-socialMedia .button:nth-child(1):hover .icon { background: #28a8e9; } .button:nth-child(1) span { color: #28a8e9; }
 .i-socialMedia .button:nth-child(2):hover .icon { background: #25D366; } .button:nth-child(2) span { color: #25D366; }
 .i-socialMedia .button:nth-child(3):hover .icon { background: #0a66c2; } .button:nth-child(3) span { color: #0a66c2; }
-.i-socialMedia .button:nth-child(4):hover .icon { background: #171515; } .button:nth-child(4) span { color: #171515; }
+.i-socialMedia .button:nth-child(4):hover .icon { background: #1f2328; } .button:nth-child(4) span { color: #1f2328; }
 .i-socialMedia .button:nth-child(5):hover .icon { 
     background: linear-gradient(270deg, rgba(255,105,104,1) 0%, rgba(163,52,250,1) 50%, rgba(6,149,255,1) 100%); 
 } 
@@ -883,7 +883,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     background-color: var(--moonstoneBlue); padding: 1em 0;
 } 
 .footer-content .social > a {  
-    font-size: 25px; line-height: 35px; text-align: center;
+    font-size: 25px; line-height: 35px; text-align: center; text-decoration: none !important;
     margin: 0 8px; height: 40px; width: 40px; display: inline-block;      
     border-radius: 40px; box-sizing: border-box; transition: 0.3s; cursor: pointer;
     box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5); background-color: white; color: black;
@@ -898,10 +898,10 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     filter: brightness(5) invert(5) sepia(.5) hue-rotate(100deg) saturate(200%) !important;
 }
 .footer-content .social>a:nth-child(1):hover { background-color: #000000; scale: 1.1; } 
-.footer-content .social>a:nth-child(2):hover { background-color: #F47F24; scale: 1.1; }
-.footer-content .social>a:nth-child(3):hover { background-color: #1877f2; scale: 1.1; }
-.footer-content .social>a:nth-child(4):hover { background-color: #b2071d; scale: 1.1; }
-.footer-content .social>a:nth-child(5):hover { background-color: #43e660; scale: 1.1; } 
+.footer-content .social>a:nth-child(2):hover { background-color: #f48225; scale: 1.1; }
+.footer-content .social>a:nth-child(3):hover { background-color: #0866ff; scale: 1.1; }
+.footer-content .social>a:nth-child(4):hover { background-color: #ff0000; scale: 1.1; }
+.footer-content .social>a:nth-child(5):hover { background-color: #3fdc5c; scale: 1.1; } 
 .footer-content .social>a:nth-child(5):hover>img { filter:  brightness(0) invert(1) !important; }
 
 .footer-content .menu { list-style: none; width: 100%; margin: 5px auto; } /* Footer-Content div Menu */
@@ -945,7 +945,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     .contact-form h1 { font-size: 15px; margin-bottom: 5px; }
     .contact-form>h1::after, .contact-form>h1::before { font-size: 14px; margin-inline: 10px; }
     #c-form label, #c-form input, #c-form textarea,  .contactme .icons p { font-size: 11px; } 
-    .contact-form #emailHelp { font-size: 8px; padding-bottom: 1.2rem; }
+    .contact-form #emailHelp { font-size: 6px; padding-bottom: 1.2rem; }
     .contactme .content .icons { margin-top: 15px; min-width: 400px; max-width: 450px; }       
     .contactme, footer { background-size: 200%;} /* Footer */   
     .footer-content .menu li { margin: 0 7px; }
@@ -1065,7 +1065,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 
 /* --------------------------------------------------------------- ALERT SPAN ----------------------------------------------------------- */
 .alertSpan {
-    position: fixed; right: 0; bottom: 0; 
+    position: fixed; right: -2px; bottom: 0; 
     background-color: var(--jellyBeanBlue); border-left: 8px solid var(--darkSlateGray);
     padding: 20px 40px; min-width: 450px; z-index: 1; margin-bottom: 0; border-radius: 5px; overflow: hidden;    
     box-shadow: -5px -5px 10px 0 rgba(0, 0, 0, 0.8);
