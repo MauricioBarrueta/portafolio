@@ -375,7 +375,7 @@ img.NetBeans-Icon { content: url(../svg/NetBeans.svg); } img.AStudio-Icon { cont
 img.GitLab-Icon { content: url(../svg/GitLab.svg); } img.TypeScript-Icon { content: url(../svg/TypeScript.svg); } img.JavaScript-Icon { content: url(../svg/JavaScript.svg); }
 img.Spring-Icon { content: url(../svg/Spring.svg); } img.Angular-Icon { content: url(../svg/Angular.svg); } img.SQL-Icon { content: url(../svg/MySQL.svg); }
 img.HTML-Icon { content: url(../svg/HTML.svg); } img.CSS-Icon { content: url(../svg/CSS.svg); } img.JWT-Icon { content: url(../svg/JWT.svg); } 
-img.Bootstrap-Icon { content: url(../svg/Bootstrap.svg); } img.Python-Icon { content: url(../svg/Python.svg); } img.Unity-Icon { content: url(../svg/Unity.svg); }
+img.Python-Icon { content: url(../svg/Python.svg); } img.Unity-Icon { content: url(../svg/Unity.svg); } img.Bootstrap-Icon { content: url(../svg/Bootstrap.png); height: auto !important; }
 img.PostgreSQL-Icon { content: url(../svg/PostgreSQL.svg); } img.jQuery-Icon { content: url(../svg/jQuery.svg); } img.GitHub-Icon { content: url(../svg/GitHub.svg); }
 img.AJAX-Icon { content: url(../svg/AJAX.svg); } img.JSON-Icon { content: url(../svg/json.svg); } img.NPM-Icon { content: url(../svg/NPM.svg); }
 img.Thymeleaf-Icon { content: url(../svg/Thymeleaf.svg); } img.Hibernate-Icon { content: url(../svg/Hibernate.svg); } img.SASS-Icon { content: url(../svg/SASS.svg); }
@@ -535,7 +535,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     display: table-cell; width: 100%; 
     font-size: 10px; line-height: 18px; cursor: default;
 }
-.modal-footer>p { text-shadow: 0.5px 0.5px 2px #000 }
+.modal-footer>p { text-shadow: 0.5px 0.5px 3px #000 }
 .modal-header .btn-close { /* Modal Close Button */
     position: absolute; top: 0; right: 0; font-size: 9px;
     background-color: transparent; opacity: 0.5; margin: 2px 2px 0 0; padding: 5px; 
@@ -565,8 +565,8 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 .img-magnifier-container { position: relative; } /* Modal Magnifying Glass */ 
 .img-magnifier-glass {
     width: 225px; height: 225px; position: absolute;
-    border: 10px double var(--darkSlateGray); border-radius: 50%; cursor: move;   
-    background-color: var(--customWhite); box-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
+    border: 10px double black; border-radius: 50%; cursor: move;   
+    background-color: var(--customWhite); box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 }
 .modal-tooltip .tooltip-inner {
     font-size: 8px; text-align: center; color: white;
@@ -939,7 +939,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     .main-introduction .subtitle span { font-size: 18px; }
     .contactme .content .icons h4 { font-size: 12px; }    
     .aboutme .content .abtme-img-container { margin-bottom: 10px; } /* About me*/
-    .aboutme .content img { max-width: 385px; max-height: 400px; }    
+    .aboutme .content img { max-width: 370px; max-height: 380px; }    
     .skills-cards .card-skills { width: calc(100% * (1/8) - 30px - 5px); } /* Skills */     
     .contact-form { width: 80%; } /* Contact */         
     .contact-form h1 { font-size: 15px; margin-bottom: 5px; }
@@ -1031,7 +1031,10 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     .abtm-text, .contact-form { width: 100%; }        
     .abtm-text h1 { font-size: 16px; } /* About me */ 
     .abtm-name { text-align: center; }
-    .abtm-text pre { font-size: 9.5px; margin: 5px 0; line-height: 165%; }  
+    .abtm-text pre { 
+        font-size: 9px; margin: 5px 0; 
+        line-height: 170%; text-align: center;
+    }  
     .aboutme .content .abtm-text .abtm-footer h6 { font-size: 12px; margin: 0; }
     .abtm-text .abtm-footer>i { font-size: 20px !important; margin-inline: 10px !important;}   
     #google_translate_element span>i { font-size: 24px; } /* Google Translate Plugin */

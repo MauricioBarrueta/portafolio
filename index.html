@@ -5,9 +5,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no">    
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">    
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <!-- Font Awesome Library -->    
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <!-- Animate On Scroll (AOS) Library -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
   <!-- Main styles -->
@@ -17,14 +17,13 @@
   <script type="text/javascript" src="js/layoutTemplates.js" async></script>
 
   <title>Mauricio Barrueta: Portafolio</title> 
-  <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">   
 </head> 
 
 <body class="body" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">  
   <!-- Templates File -->
   <iframe src="templates/templates.html" id="iframeTemplate" name="iframeTemplate" style="display: none;"></iframe> 
-
+  
   <div class="main">     
     <div id="loading" class="loading-page-gif">
       <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
@@ -143,234 +142,38 @@
     
     <section class="portafolio" id="Projects" data-aos="fade-up">
       <h3 class="sectionTitles" data-es="Mis proyectos" data-en="My projects" aria-labelledby="titleInfo"></h3>  
-      <small class="carousel-instructions" data-es="Usa los botones '&#xf100; &#xf101;' para navegar entre proyectos" 
-        data-en="Use the buttons '&#xf100; &#xf101;' to navigate between projects"></small>
+      <small class="carousel-instructions" data-es="Usa los botones '&#xf100; y &#xf101;' para navegar entre proyectos" data-en="Use the buttons 
+        '&#xf100; and &#xf101;' to navigate between projects"></small>
       <div class="p-cards-container"> 
-        <div class="project-card">
-          <div class="img-container">
-            <img src="img/proyectos/Portafolio.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
-              CSS y la librería Bootstrap para los estilos y el módulo gh-pages de 'npm' para la publicación de la página en GitHub Pages." 
-              data-title="Portafolio web en el cuál muestro mi experiencia como desarrollador, permite descargar mi CV en formato PDF y además, 
-              envíar un e-mail directamente a mi bandeja de entrada, entre otras funciones.">
-          </div>
-          <button class="showInfo"></button>
-          <div class="details">
-            <h2 data-es="Portafolio web" data-en="Portfolio website"></h2>
-            <div class="tec-icons"><ul class="static-projects-icons p-tecnologies"></ul></div>
-            <ul class="web-icons">              
-              <li>
-                <a href="https://mauriciobarrueta.github.io/portafolio/" data-bs-toggle="tooltip" data-bs-placement="top" title="Web" 
-                  data-bs-custom-class="web-icons-a" target="_blank"></a>
-              </li>
-              <li>
-                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
-              </li>
-              <li>
-                <a href="https://github.com/MauricioBarrueta/portafolio.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-              </li>            
-            </ul>
-          </div>
-        </div>        
-        <div class="project-card carousel slide" id="angularAPIProjects" data-bs-ride="carousel">         
-          <div class="carousel-inner">
-            <div class="img-container carousel-item active" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="Angular: API REST" data-en="Angular: REST API"></span>
-              <img src="img/proyectos/PlantsAPI.webp" class="img-item" alt="Hecho con el Framework Angular y el lenguaje TypeScript, HTML para la 
-                estructuración, SCSS y la librería Bootstrap para los estilos - Servidor: API pública de la página Perenual (https://perenual.com/docs/api)." 
-                data-title="Página que permite consultar datos botánicos detallados sobre una amplia variedad de especies de plantas, además de que es posible 
-                ver a detalle tanto las características, sus plagas más comunes, sus cuidados para prevenir dichas plagas e incluso los lugares en el mundo 
-                en donde las condiciones son ideales para su crecimiento y mantenimiento.">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="API Web 'Datos Botánicos de Plantas'" data-en="'Plants Botanical Data' Web API"></h2>
-                <div class="tec-icons">
-                  <ul class="scss-project-icons p-tecnologies">
-                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Perenual Plants API">
-                      <i><img src="svg/Plants.svg" class=" p-tec-svg-icons"></i>
-                    </li> 
-                  </ul>
-                </div>  
-                <ul class="web-icons">
-                  <li></li><li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/plantsAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>  
-                </ul>
-              </div>
-            </div>
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="Angular: API REST" data-en="Angular: REST API"></span>
-              <img src="img/proyectos/OMDbAPI.webp" class="img-item" alt="Hecho con el Framework Angular y el lenguaje TypeScript, HTML para la 
-                estructuración, SCSS y la librería Bootstrap para los estilos - Servidor: API pública 'OMDb API' (http://www.omdbapi.com/)." 
-                data-title="Página que permite consultar información detallada sobre una amplia variedad de películas y series de televisión,
-                además de que, en el caso de las series, es posible consultar cada temporada y cada capítulo correspondiente a esta, así como 
-                los datos de cada capítulo.">     
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="API Web 'IMDb API'" data-en="'IMDb API' Web API"></h2>            
-                <div class="tec-icons">
-                  <ul class="scss-project-icons p-tecnologies">
-                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="OMDb API">
-                      <i><img src="svg/imdb.svg" class=" p-tec-svg-icons"></i>
-                    </li>  
-                  </ul>
-                </div>
-                <ul class="web-icons">
-                  <li></li><li></li>             
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/omdbAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="Angular: API REST" data-en="Angular: REST API"></span>
-              <img src="img/proyectos/wikiAPI.png" class="img-item" alt="Hecho con el framework Angular y el lenguaje TypeScript, HTML para la 
-                estructuración, CSS y la librería Bootstrap para los estilos - Servidor: API pública 'MediaWiki', software utilizado por Wikipedia 
-                (www.mediawiki.org/wiki/API:Tutorial)." data-title="Página que permite filtrar y consultar una amplia variedad de información disponible 
-                en el sitio web Wikipedia, el usuario ingresa lo que desea buscar y dependiendo la palabra se filtran los resultados que coincidan.">   
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="API Web 'WikiAPI'" data-en="'WikiAPI' Web API"></h2>            
-                <div class="tec-icons">
-                  <ul class="angular-project-icons p-tecnologies">                    
-                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="MediaWiki API">
-                      <i><img src="svg/wikipedia.svg" class=" p-tec-svg-icons"></i>
-                    </li>
-                  </ul>                
-                </div>
-                <ul class="web-icons">
-                  <li></li><li></li>             
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/wikiAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>  
-                </ul>
-              </div>
-            </div>
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="Angular: API REST" data-en="Angular: REST API"></span>
-              <img src="img/proyectos/AngularPokedex.webp" class="img-item d-block w-100" alt="TypeScript y el Framework Angular, SCSS y 
-                Bootstrap para los estilos - Servidor: API gratuita de Pokémon 'PokéApi' (https://pokeapi.co)." data-title="Proyecto Angular: 
-                Página que permite listar todos los Pokémones existentes junto con sus estadísticas, además de que permite consultar cualquiera 
-                de estos por su nombre, simulando el Pokédex">   
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="API Web 'Pokédex'" data-en="'Pokédex' Web API"></h2>            
-                <div class="tec-icons">
-                  <ul class="scss-project-icons p-tecnologies">                    
-                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PokéApi">
-                      <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons"></i>
-                    </li>
-                  </ul>                
-                </div>
-                <ul class="web-icons">
-                  <li></li><li></li>             
-                  <li>                   
-                    <a href="https://github.com/MauricioBarrueta/angularPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top"
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li> 
-                </ul>
-              </div>
-            </div> 
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="Angular: API REST" data-en="Angular: REST API"></span>
-              <img src="img/proyectos/AngularRM.webp" class="img-item d-block w-100" alt="TypeScript y el Framework Angular, SCSS y 
-                Bootstrap para los estilos - Servidor: API de la serie Rick and Morty (https://rickandmortyapi.com/)" data-title="Proyecto Angular: 
-                Página que consume la API la cual permite consultar todos y cada uno de los personajes de la serie 'Rick and Morty', así como 
-                los datos correspondientes de cada uno de ellos.">   
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="API Web 'Rick and Morty'" data-en="'Rick and Morty' Web API"></h2>            
-                <div class="tec-icons">
-                  <ul class="scss-project-icons p-tecnologies">                    
-                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Rick & Morty API">
-                      <i><img src="svg/RickAndMorty.svg" class="p-tec-svg-icons"></i>
-                    </li>
-                  </ul>                
-                </div>
-                <ul class="web-icons">
-                  <li></li><li></li>             
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/angularRickAndMorty.git" data-bs-toggle="tooltip"
-                      data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li> 
-                </ul>
-              </div>
-            </div>               
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="Angular: API REST" data-en="Angular: REST API"></span>
-              <img src="img/proyectos/Ecomm.png" class="img-item" alt="Hecho únicamente con el framework Angular y el lenguaje
-                TypeScript, HTML para la estructuración, Angular Material, CSS y la librería Bootstrap para los estilos - Servidor: JSON Server (npm) local."
-                data-title="Práctica de un sistema 'e-commerce' el cual simula la compra de uno o varios productos por medio de un carrito de compras, 
-                además de escoger si se recoge en paquetería o se entrega al domicilio especificado.">   
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Práctica: Sistema 'E-Commerce' Angular" data-en="Practice: 'E-Commerce' Angular system"></h2>            
-                <div class="tec-icons">
-                  <ul class="p-tecnologies angular-project-icons">                              
-                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular Material">
-                      <i><img src="svg/AngularMaterial.svg" class="p-tec-svg-icons"></i>
-                    </li>                   
-                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="json-server (npm)">
-                      <i><img class="JSON-Icon p-tec-svg-icons"></i>
-                    </li>              
-                  </ul>               
-                </div>
-                <ul class="web-icons">
-                  <li></li><li></li>             
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/Sistema-E-Commerce.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li> 
-                </ul>
-              </div>
-            </div> 
-          </div>
-          <button class="showInfo"></button>  
-          <div class="details carousel-details">
-            <ul class="web-icons" style="border: 0;">
-              <li>
-                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
-              </li>
-            </ul>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#angularAPIProjects" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#angularAPIProjects" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>        
-        </div>      
         <div class="project-card carousel slide" id="JavaScriptAPIProjects" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="JavaScript: API REST" data-en="JavaScript: REST API"></span>
-              <img src="img/proyectos/Pokedex.webp" class="img-item d-block w-100" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
-                CSS y Bootstrap para los estilos y el módulo gh-pages de 'npm' para la publicación de la página en GitHub Pages - Servidor: API 
-                gratuita de Pokémon 'PokéApi' (https://pokeapi.co)." data-title="Proyecto JavaScript: Página que simula un Pokédex, permite consultar los datos 
-                de cualquier Pokémon existente, además de listar todos y cada uno de ellos con su respectiva carta y datos correspondientes.">
+            <div class="img-container carousel-item active" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript</span>
+              <img src="img/proyectos/PixelArt.webp" class="img-item" alt="HTML para la estructuración, JavaScript y algo de jQuery para la funcionalidad, 
+                CSS y Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Página que 
+                permite crear/dibujar al estilo arte de pixel, permite crear una cuadrícula de hasta 50x25 píxeles, cuenta con una paleta de colores y los
+                botones que permiten borrar en caso de error y el de dibujar para continuar con el trazo, compatible con dispositivos móviles, girando
+                la pantalla con el fin de que el sitio se adapte mejor a las dimensiones de ésta.">
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="API Web 'Pokédex'" data-en="'Pokédex' Web API"></h2>
+                <h2 class="carousel-project-title" data-es="Creador de Pixel Art" data-en="Pixel Art Maker"></h2>
                 <div class="tec-icons">
-                  <ul class="static-projects-icons p-tecnologies">
-                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PokéApi">
-                      <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons"></i>
-                    </li> 
-                  </ul>
+                  <ul class="static-projects-icons p-tecnologies"></ul>
                 </div>  
-                <ul class="web-icons">
+                <ul class="web-icons">              
                   <li>
-                    <a href="https://mauriciobarrueta.github.io/pokemonPokedex/" data-bs-toggle="tooltip" data-bs-placement="top"
+                    <a href="https://mauriciobarrueta.github.io/PixelArtGenerator/" data-bs-toggle="tooltip" data-bs-placement="top" 
                       data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
                   </li>
                   <li></li>
                   <li>
-                    <a href="https://github.com/MauricioBarrueta/pokemonPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top"
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>                    
-                  </li>
+                    <a href="https://github.com/MauricioBarrueta/PixelArtGenerator.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>             
                 </ul>
               </div>
             </div>
-            <div class="img-container carousel-item active" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="JavaScript: API REST" data-en="JavaScript: REST API"></span>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript</span>
               <img src="img/proyectos/WeatherAPI.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
                 CSS y Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages - Servidor: API 
                 'OpenWeatherMap'(https://openweathermap.org/)." data-title="Página que muestra el pronóstico del clima de manera detallada, 
@@ -399,7 +202,35 @@
               </div>
             </div>
             <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="JavaScript: API REST" data-en="JavaScript: REST API"></span>
+              <span class="img-carousel-title">JavaScript</span>
+              <img src="img/proyectos/Pokedex.webp" class="img-item d-block w-100" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
+                CSS y Bootstrap para los estilos y el módulo gh-pages de 'npm' para la publicación de la página en GitHub Pages - Servidor: API 
+                gratuita de Pokémon 'PokéApi' (https://pokeapi.co)." data-title="Proyecto JavaScript: Página que simula un Pokédex, permite consultar los datos 
+                de cualquier Pokémon existente, además de listar todos y cada uno de ellos con su respectiva carta y datos correspondientes.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="API Web 'Pokédex'" data-en="'Pokédex' Web API"></h2>
+                <div class="tec-icons">
+                  <ul class="static-projects-icons p-tecnologies">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PokéApi">
+                      <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons"></i>
+                    </li> 
+                  </ul>
+                </div>  
+                <ul class="web-icons">
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/pokemonPokedex/" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/pokemonPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>                    
+                  </li>
+                </ul>
+              </div>
+            </div>            
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript</span>
               <img src="img/proyectos/RMAPI.webp" class="img-item"
                 alt="HTML para la estructuración y JavaScript para la funcionalidad, CSS y la librería Bootstrap para los estilos y el módulo 
                 gh-pages de npm para la publicación de la página en GitHub Pages - Servidor: API de la serie Rick and Morty (https://rickandmortyapi.com/)"
@@ -442,13 +273,179 @@
           <button class="carousel-control-next" type="button" data-bs-target="#JavaScriptAPIProjects" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>        
-        </div>   
+        </div>        
+        <div class="project-card carousel slide" id="angularAPIProjects" data-bs-ride="carousel">         
+          <div class="carousel-inner">
+            <div class="img-container carousel-item active" data-bs-interval="30000">
+              <span class="img-carousel-title">Angular Framework</span>
+              <img src="img/proyectos/PlantsAPI.webp" class="img-item" alt="Hecho con el Framework Angular y el lenguaje TypeScript, HTML para la 
+                estructuración, SCSS y la librería Bootstrap para los estilos - Servidor: API pública de la página Perenual (https://perenual.com/docs/api)." 
+                data-title="Página que permite consultar datos botánicos detallados sobre una amplia variedad de especies de plantas, además de que es posible 
+                ver a detalle tanto las características, sus plagas más comunes, sus cuidados para prevenir dichas plagas e incluso los lugares en el mundo 
+                en donde las condiciones son ideales para su crecimiento y mantenimiento.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="API Web 'Datos Botánicos de Plantas'" data-en="'Plants Botanical Data' Web API"></h2>
+                <div class="tec-icons">
+                  <ul class="scss-project-icons p-tecnologies">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Perenual Plants API">
+                      <i><img src="svg/Plants.svg" class=" p-tec-svg-icons"></i>
+                    </li> 
+                  </ul>
+                </div>  
+                <ul class="web-icons">
+                  <li></li><li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/plantsAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>  
+                </ul>
+              </div>
+            </div>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">Angular Framework</span>
+              <img src="img/proyectos/OMDbAPI.webp" class="img-item" alt="Hecho con el Framework Angular y el lenguaje TypeScript, HTML para la 
+                estructuración, SCSS y la librería Bootstrap para los estilos - Servidor: API pública 'OMDb API' (http://www.omdbapi.com/)." 
+                data-title="Página que permite consultar información detallada sobre una amplia variedad de películas y series de televisión,
+                además de que, en el caso de las series, es posible consultar cada temporada y cada capítulo correspondiente a esta, así como 
+                los datos de cada capítulo.">     
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="API Web 'IMDb API'" data-en="'IMDb API' Web API"></h2>            
+                <div class="tec-icons">
+                  <ul class="scss-project-icons p-tecnologies">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="OMDb API">
+                      <i><img src="svg/imdb.svg" class=" p-tec-svg-icons"></i>
+                    </li>  
+                  </ul>
+                </div>
+                <ul class="web-icons">
+                  <li></li><li></li>             
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/omdbAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">Angular Framework</span>
+              <img src="img/proyectos/wikiAPI.png" class="img-item" alt="Hecho con el framework Angular y el lenguaje TypeScript, HTML para la 
+                estructuración, CSS y la librería Bootstrap para los estilos - Servidor: API pública 'MediaWiki', software utilizado por Wikipedia 
+                (www.mediawiki.org/wiki/API:Tutorial)." data-title="Página que permite filtrar y consultar una amplia variedad de información disponible 
+                en el sitio web Wikipedia, el usuario ingresa lo que desea buscar y dependiendo la palabra se filtran los resultados que coincidan.">   
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="API Web 'WikiAPI'" data-en="'WikiAPI' Web API"></h2>            
+                <div class="tec-icons">
+                  <ul class="angular-project-icons p-tecnologies">                    
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="MediaWiki API">
+                      <i><img src="svg/wikipedia.svg" class=" p-tec-svg-icons"></i>
+                    </li>
+                  </ul>                
+                </div>
+                <ul class="web-icons">
+                  <li></li><li></li>             
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/wikiAPI.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>  
+                </ul>
+              </div>
+            </div>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">Angular Framework</span>
+              <img src="img/proyectos/AngularPokedex.webp" class="img-item d-block w-100" alt="TypeScript y el Framework Angular, SCSS y 
+                Bootstrap para los estilos - Servidor: API gratuita de Pokémon 'PokéApi' (https://pokeapi.co)." data-title="Página que permite 
+                listar todos los Pokémones existentes junto con sus estadísticas, además de que permite consultar cualquiera de estos por su nombre, simulando el Pokédex">   
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="API Web 'Pokédex'" data-en="'Pokédex' Web API"></h2>            
+                <div class="tec-icons">
+                  <ul class="scss-project-icons p-tecnologies">                    
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PokéApi">
+                      <i><img src="svg/pokeapi.svg" class="p-tec-svg-icons"></i>
+                    </li>
+                  </ul>                
+                </div>
+                <ul class="web-icons">
+                  <li></li><li></li>             
+                  <li>                   
+                    <a href="https://github.com/MauricioBarrueta/angularPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li> 
+                </ul>
+              </div>
+            </div> 
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">Angular Framework</span>
+              <img src="img/proyectos/AngularRM.webp" class="img-item d-block w-100" alt="TypeScript y el Framework Angular, SCSS y Bootstrap para 
+                los estilos - Servidor: API de la serie Rick and Morty (https://rickandmortyapi.com/)" data-title="Página que consume la API la cual
+                permite consultar todos y cada uno de los personajes de la serie 'Rick and Morty', así como los datos correspondientes de cada uno de ellos.">   
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="API Web 'Rick and Morty'" data-en="'Rick and Morty' Web API"></h2>            
+                <div class="tec-icons">
+                  <ul class="scss-project-icons p-tecnologies">                    
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Rick & Morty API">
+                      <i><img src="svg/RickAndMorty.svg" class="p-tec-svg-icons"></i>
+                    </li>
+                  </ul>                
+                </div>
+                <ul class="web-icons">
+                  <li></li><li></li>             
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/angularRickAndMorty.git" data-bs-toggle="tooltip"
+                      data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li> 
+                </ul>
+              </div>
+            </div>               
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">Angular Framework</span>
+              <img src="img/proyectos/Ecomm.png" class="img-item" alt="Hecho únicamente con el framework Angular y el lenguaje
+                TypeScript, HTML para la estructuración, Angular Material, CSS y la librería Bootstrap para los estilos - Servidor: JSON Server (npm) local."
+                data-title="Práctica de un sistema 'e-commerce' el cual simula la compra de uno o varios productos por medio de un carrito de compras, 
+                además de escoger si se recoge en paquetería o se entrega al domicilio especificado.">   
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Práctica: Sistema 'E-Commerce' Angular" data-en="Practice: 'E-Commerce' Angular system"></h2>            
+                <div class="tec-icons">
+                  <ul class="p-tecnologies angular-project-icons">                              
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular Material">
+                      <i><img class="AngMaterial-Icon p-tec-svg-icons"></i>
+                    </li>                   
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="json-server (npm)">
+                      <i><img class="JSON-Icon p-tec-svg-icons"></i>
+                    </li>              
+                  </ul>               
+                </div>
+                <ul class="web-icons">
+                  <li></li><li></li>             
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/Sistema-E-Commerce.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li> 
+                </ul>
+              </div>
+            </div> 
+          </div>
+          <button class="showInfo"></button>  
+          <div class="details carousel-details">
+            <ul class="web-icons" style="border: 0;">
+              <li>
+                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
+              </li>
+            </ul>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#angularAPIProjects" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#angularAPIProjects" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>        
+        </div>               
         <div class="project-card">
           <div class="img-container">
-            <img src="img/proyectos/FullStackCRUD.png" class="img-item" alt="Back end: Java, TypeScript, Maven para la gestión del proyecto y Spring 
-              Framework (Spring Web, Spring Data JPA) - Front end: HTML para la estructuración y el Framework Angular, CSS y Bootstrap para los estilos - 
-              Servidor: Base de Datos MySQL." data-title="Práctica de una API RESTful la cual permite realizar las operaciones CRUD, simulando un 
-              proyecto en donde el lado Backend y el lado Frontend son desarrollados de manera independiente, pero que al mismo tiempo son dependientes uno de otro.">
+            <span class="img-carousel-title">Angular/Spring</span>
+            <img src="img/proyectos/FullStackCRUD.png" class="img-item" alt="Backend: Java, TypeScript y Spring Framework (Spring Web, Spring Data JPA) 
+              - Frontend: El Framework Angular, HTML para la estructuración, CSS, la librería Bootstrap para los estilos - Servidor: Base de Datos MySQL." 
+              data-title="Práctica de una API RESTful la cual permite realizar las operaciones CRUD, simulando un proyecto en donde el lado Backend y el lado 
+              Frontend son desarrollados de manera independiente, pero que al mismo tiempo son dependientes uno de otro.">
           </div>
           <button class="showInfo"></button>
           <div class="details">
@@ -510,7 +507,7 @@
             </div>            
             <div class="img-container carousel-item" data-bs-interval="30000">
               <span class="img-carousel-title">Spring Framework</span>
-              <img src="img/proyectos/SpringCRUD-JWT.png" class="img-item" alt="Back end: Java y Spring Framework (Spring Data JPA, Spring Security e 
+              <img src="img/proyectos/SpringCRUD-JWT.webp" class="img-item" alt="Back end: Java y Spring Framework (Spring Data JPA, Spring Security e 
                 Hibernate) - Estandar de autenticación JSON Web Token (JWT) - Servidor: Base de Datos MySQL - Postman para las pruebas a la API." 
                 data-title="Práctica que simula un inicio de sesión, realización de publicaciones y comentarios y las operaciones CRUD a partir de 
                 una autenticación por medio de un token exclusivo de cada usuario.">              
@@ -556,11 +553,38 @@
           <button class="carousel-control-next" type="button" data-bs-target="#springCrudProjects" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>        
-        </div>                             
+        </div>   
+        <div class="project-card">
+          <div class="img-container">
+            <span class="img-carousel-title" data-es="Sitio web" data-en="Website"></span>
+            <img src="img/proyectos/Portafolio.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
+              CSS y la librería Bootstrap para los estilos y el módulo gh-pages de 'npm' para la publicación de la página en GitHub Pages." 
+              data-title="Portafolio web en el cuál muestro mi experiencia como desarrollador, permite descargar mi CV en formato PDF y además, 
+              envíar un e-mail directamente a mi bandeja de entrada, entre otras funciones.">
+          </div>
+          <button class="showInfo"></button>
+          <div class="details">
+            <h2 data-es="Portafolio web" data-en="Portfolio website"></h2>
+            <div class="tec-icons"><ul class="static-projects-icons p-tecnologies"></ul></div>
+            <ul class="web-icons">              
+              <li>
+                <a href="https://mauriciobarrueta.github.io/portafolio/" data-bs-toggle="tooltip" data-bs-placement="top" title="Web" 
+                  data-bs-custom-class="web-icons-a" target="_blank"></a>
+              </li>
+              <li>
+                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
+              </li>
+              <li>
+                <a href="https://github.com/MauricioBarrueta/portafolio.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                  data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+              </li>            
+            </ul>
+          </div>
+        </div>   
         <div class="project-card carousel slide" id="serviceProjects" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="img-container carousel-item active" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="Proyecto de estadía" data-en="Internship project"></span>
+              <span class="img-carousel-title" data-es="Prácticas laborales" data-en="Internship project"></span>
               <img src="img/proyectos/AdminUsuarios.png" class="img-item" alt="Back end: Java y Spring Framework (Spring Data JPA, 
                 Thymeleaf e Hibernate) - Front end: HTML para la estructuración, JavaScript, jQuery y AJAX para la funcionalidad, CSS y Bootstrap 
                 para los estilos - Servidor: Base de Datos remota PostgreSQL - Control de  versiones con GitLab y GitHub." data-title="Sistema que 
@@ -592,7 +616,7 @@
               </div>
             </div>
             <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title" data-es="Proyecto de estadía" data-en="Internship project"></span>
+              <span class="img-carousel-title" data-es="Prácticas laborales" data-en="Internship project"></span>
               <img src="img/proyectos/ControlAlm.webp" class="img-item" alt=" Hecho con Java, su librería gráfica Java Swing, entre otras, 
                 la librería JasperReports para la creación de reportes y NetBeans IDE  -  Servidor: Base de Datos en Microsoft SQL Server (MSSQL)." 
                 data-title="Sistema que le permite a la empresa llevar el control del almacén de herramientas, además del control de los préstamos
@@ -602,7 +626,7 @@
                 <div class="tec-icons">
                   <ul class="java-project-icon p-tecnologies">
                     <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
-                      <i><img src="svg/JasperReports.svg" style="scale: 2; margin: 0 15px 0 15px;" class="p-tec-svg-icons"></i>
+                      <i><img src="svg/JasperReports.webp" style="width: 50px; height: 10px;" class="p-tec-svg-icons"></i>
                     </li>
                     <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
                       <i><img class="NetBeans-Icon p-tec-svg-icons"></i>
@@ -634,6 +658,7 @@
         </div>  
         <div class="project-card">
           <div class="img-container">
+            <span class="img-carousel-title">Java: Software</span>
             <img src="img/proyectos/ControlArchivo.webp" class="img-item" alt=" Hecho con Java y su librería gráfica Java Swing, el framework 
               de gestión de proyectos de software Maven, la librería JasperReports para la creación de reportes y NetBeans IDE - Servidor: Base 
               de Datos MySQL." data-title="Sistema que le permite a la empresa llevar el control del archivo manejado por año, el inventario de 
@@ -645,7 +670,7 @@
             <div class="tec-icons">
               <ul class="java-project-icon mysql-prj-icon p-tecnologies">
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
-                  <i><img src="svg/JasperReports.svg" class="p-tec-svg-icons" style="scale: 2; margin-left: 5px;"></i>
+                  <i><img src="svg/JasperReports.webp" class="p-tec-svg-icons" style="width: 50px; height: 10px;"></i>
                 </li>
                 <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Apache Maven">
                   <i><img src="svg/maven.svg" class="p-tec-svg-icons" style="margin-left: 10px;"></i>
@@ -676,7 +701,7 @@
             </div>
             <div class="img-container carousel-item" data-bs-interval="30000">
               <span class="img-carousel-title">PHP</span>
-              <img src="img/proyectos/RedSocial.png" class="img-item" alt="Hecho con PHP, JavaScript, jQuery y AJAX, HTML para la 
+              <img src="img/proyectos/RedSocial.webp" class="img-item" alt="Hecho con PHP, JavaScript, jQuery y AJAX, HTML para la 
                 estructuración, CSS y la librería Bootstrap para los estilos - Servidor: Base de Datos MySQL." data-title="Proyecto que simula 
                 una red social enfocada a recién egresados y empresas en busca de nuevos talentos, permite realizar publicaciones, enviar solicitudes 
                 de amistad, postulaciones y además, cuenta con un chat en donde ambas partes se pueden comunicar entre sí.">  
@@ -703,7 +728,7 @@
         </div>  
         <div class="project-card carousel slide" id="unityProjects" data-bs-ride="carousel">
           <div class="carousel-inner">
-            <div class="img-container carousel-item" data-bs-interval="30000">
+            <div class="img-container carousel-item active" data-bs-interval="30000">
               <span class="img-carousel-title">Unity</span>
               <img src="img/proyectos/Juego2D.webp" class="img-item" alt="Hecho con C#, el motor de videojuegos multiplataforma Unity y 
                 Adobe Photoshop para el diseño de algunos sprites y texturas." data-title="Juego en formato 2D del género RPG y Plataformas 
@@ -714,7 +739,7 @@
                 <div class="tec-icons"><ul class="unity-projects-icons p-tecnologies"></ul></div>                  
               </div>
             </div>
-            <div class="img-container carousel-item active" data-bs-interval="30000">
+            <div class="img-container carousel-item" data-bs-interval="30000">
               <span class="img-carousel-title">Unity</span>
               <img src="img/proyectos/AppVR.webp" class="img-item" alt="Hecho con C# y el motor de videojuegos multiplataforma Unity - 
                 el programa de diseño gráfico Sketchup para el modelado 3D, Adobe Photoshop para el diseño de algunas texturas y los servicios 
@@ -797,6 +822,7 @@
         </div>         
         <div class="project-card">
           <div class="img-container">
+            <span class="img-carousel-title" data-es="App Móvil" data-en="Mobile App"></span>
             <img src="img/proyectos/AppGranja.webp" class="img-item" alt="Hecho con Java, el metalenguaje XML para el diseño de la 
               interfaz, el Entorno de Desarrollado Integrado Android Studio y el sistema de compilación Gradle  -  Servidor: Google Firebase." 
               data-title="Aplicación desarrollada con el propósito de llevar un control del número de huevos recogidos y del total de alimento 
@@ -828,10 +854,11 @@
         </div>  
         <div class="project-card">
           <div class="img-container">
+            <span class="img-carousel-title">Java: Servlet</span>
             <img src="img/proyectos/Servlet.png" class="img-item" alt="Hecho con Java y la Tecnología JavaServer Pages (JSP), JavaScript y 
-              jQuery, HTML para la estructuración, CSS y la librería Bootstrap para los estilos - Servidor: Base de Datos MySQL." data-title=
-              "Práctica de un sistema hecho con la tecnología JSP el cual simula una web de una empresa enfocada a la venta y renta de automóviles, 
-              todo mediante las operaciones CRUD y de acuerdo a los privilegios que tenga cada usuario (administrador o empleado).">
+              jQuery, HTML para la estructuración, CSS y la librería Bootstrap para los estilos - Servidor: Base de Datos MySQL." data-title="
+              Práctica muy sencilla de un sistema hecho con la tecnología JSP el cual simula una web de una empresa enfocada a la venta y renta
+              de automóviles, todo mediante las operaciones CRUD y de acuerdo a los privilegios que tenga cada usuario (administrador o empleado).">
           </div>
           <button class="showInfo"></button>
           <div class="details">
@@ -852,8 +879,8 @@
           </div>
         </div>
       </div>
-      <span id="titleInfo" class="form-text" data-es="No están ordenados por fecha de creación ni relevancia" 
-        data-en="Aren't sorted by creation date or relevance"></span>
+      <span id="titleInfo" class="form-text" data-es="Los proyectos no están ordenados por fecha de creación ni relevancia" data-en="Projects aren't 
+        ordered by creation date or relevance"></span>
     </section> 
     <section class="experience" id="experience">
       <h1 class="exp-section-title" data-es="Experiencia" data-en="Experience"></h1>
@@ -1049,7 +1076,7 @@
     <!-- Main Script -->
     <script type="text/javascript" src="js/main.js" defer></script>
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <!-- AOS Library Script -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script>
     <!-- Magnifying Glass Script -->

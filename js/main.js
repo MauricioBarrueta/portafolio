@@ -4,20 +4,27 @@ window.onload = () => {
         $('html').css("overflow", "auto");
     }, 1500);
     /* Se activa la animación del texto de la introducción y el scroll */
-    $('.h1-h').css("animation-delay", "1.54s");
+    $('.h1-h').css("animation-delay", "1.525s");
     switchLang('es') 
     var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))           
 }
 
 $(document).ready(function () {
-    AOS.init({ once: true, duration: 850, delay: 0, easing: 'ease-in-out' }); /* Se inicializa AOS Library */
-    $('.navbar').on('click', 'a', function () { /* Resalta el texto en la navbar de acuerdo a la sección en la que se encuentra */
+    /* Se inicializa AOS Library */
+    AOS.init({ 
+        startEvent: 'DOMContentLoaded',
+        once: false, 
+        delay: 200,
+        duration: 900, 
+        easing: 'ease-out' 
+    });    
+    /* Resalta el texto en la navbar de acuerdo a la sección en la que se encuentra */
+    $('.navbar').on('click', 'a', function () { 
         $('.navbar a.active').removeClass('active');
         $(this).addClass('active');
     });
     $('body').scrollspy({ target: '.navbar' });
-
     /* Oculta el gadget de Google Translate para mostrarlo únicamente cuando se muestre el Modal */
     $(".goog-logo-link").empty();
     $('.goog-te-gadget').html($('.goog-te-gadget').children());
@@ -46,7 +53,11 @@ window.addEventListener('scroll', () => {
 });
 const btnScrollToTop = document.querySelector('.ScrollToTop');
 btnScrollToTop.addEventListener('click', () => {
-    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    window.scrollTo({ 
+        top: 0, 
+        left: 0, 
+        behavior: "smooth" 
+    });
 });
 
 /* Para dar el efecto 'sticky' a la navbar al pasar por el elemento oculto <span> con clase 'trigger' */
@@ -151,7 +162,7 @@ btnCopyEmail.addEventListener('click', () => {
         })
         .catch(() => {
             showAlertSpan(); 
-            alertText.innerHTML = `&#xf071; Error inesperado. Copia el e-mail manualmente`
+            alertText.innerHTML = `&#xf071; Error inesperado - Unexpected error`
         });
 });
 
