@@ -24,7 +24,7 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
 .moonstoneBlue, .t-icons { background-color: var(--moonstoneBlue); color: white; }
 .h-title>h1, .subtitle, .main-introduction.content>span, #nb-brand-span, .abtm-text>h1, .abtm-text>h5, .abtm-text>pre, 
     .abtm-footer, .icons>p, #titleInfo, .carousel-instructions, .footer-content>p, .footer-bottom, .skills-section-subtitle,
-    .exp-section-title, .cert-section-title { cursor: default; } 
+    .exp-section-title, .cert-section-title, #emailHelp { cursor: default; } 
 .rad-pad-101, .card-skills { border-radius: 10px; padding: 1em; }
 .card-skills { background-color: var(--customWhite); }
 .abtm-footer>i:hover, .t-icons, .t-icons>span, .p-tecnologies>li, .p-icons, .p-icons>li, .card-skills, .info-skills { transition: 0.4s; }
@@ -375,7 +375,7 @@ img.NetBeans-Icon { content: url(../svg/NetBeans.svg); } img.AStudio-Icon { cont
 img.GitLab-Icon { content: url(../svg/GitLab.svg); } img.TypeScript-Icon { content: url(../svg/TypeScript.svg); } img.JavaScript-Icon { content: url(../svg/JavaScript.svg); }
 img.Spring-Icon { content: url(../svg/Spring.svg); } img.Angular-Icon { content: url(../svg/Angular.svg); } img.SQL-Icon { content: url(../svg/MySQL.svg); }
 img.HTML-Icon { content: url(../svg/HTML.svg); } img.CSS-Icon { content: url(../svg/CSS.svg); } img.JWT-Icon { content: url(../svg/JWT.svg); } 
-img.Python-Icon { content: url(../svg/Python.svg); } img.Unity-Icon { content: url(../svg/Unity.svg); } img.Bootstrap-Icon { content: url(../svg/Bootstrap.png); height: auto !important; }
+img.Python-Icon { content: url(../svg/Python.svg); } img.Unity-Icon { content: url(../svg/Unity.svg); } img.Bootstrap-Icon { content: url(../svg/Bootstrap.png); }
 img.PostgreSQL-Icon { content: url(../svg/PostgreSQL.svg); } img.jQuery-Icon { content: url(../svg/jQuery.svg); } img.GitHub-Icon { content: url(../svg/GitHub.svg); }
 img.AJAX-Icon { content: url(../svg/AJAX.svg); } img.JSON-Icon { content: url(../svg/json.svg); } img.NPM-Icon { content: url(../svg/NPM.svg); }
 img.Thymeleaf-Icon { content: url(../svg/Thymeleaf.svg); } img.Hibernate-Icon { content: url(../svg/Hibernate.svg); } img.SASS-Icon { content: url(../svg/SASS.svg); }
@@ -780,7 +780,15 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 /* '*' Label Icon */
 #c-form>span, .form-floating>label::after { font-size: 10px; color: var(--customRed); position: absolute; }
 .form-floating>label::after { content: "*"; }
-.contact-form #message { height: 150px; margin-top: 5px; color: var(--jellyBeanBlue); }
+/* Textarea Label-Placeholder */
+.form-floating > .form-control:focus ~ label { font-size: 13px !important; color: var(--jellyBeanBlue); opacity: 0.65; }
+.form-floating > .form-control:not(:placeholder-shown) {
+    padding-top: 2.75em;
+}
+.contact-form #message { 
+    height: 150px; margin-top: 5px; 
+    color: var(--jellyBeanBlue); line-height: 170%; font-size: 12px;
+}
 .contact-form #emailHelp { font-size: 10px; padding-bottom: 1em; color: var(--jellyBeanBlue); }
 #name::placeholder, #email::placeholder { font-size: 10px; } /* name-email Input Placeholder */
 .input-group>input { color: var(--jellyBeanBlue) !important; } /* Contact-Form Input/TextArea text color */
@@ -789,7 +797,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 } 
 .form-control::placeholder { opacity: 0.75; }
 .form-control:focus { /* Contact-Form Input Focus Border-Color */
-    border-color: var(--moonstoneBlue); box-shadow: 0 0 0 0.2rem rgba(108, 198, 201, 0.5); 
+    border-color: var(--moonstoneBlue); box-shadow: 0 0 0 0.2rem rgba(108, 198, 201, 0.5);   
 } 
 .form-control:focus:required:invalid { /* Contact-Form Input Focus Invalid-Border-Color */
     border-color: var(--customRed); box-shadow: 0 0 0 0.2rem rgba(178, 7, 29, 0.5);

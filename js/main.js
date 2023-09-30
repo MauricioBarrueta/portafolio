@@ -4,7 +4,7 @@ window.onload = () => {
         $('html').css("overflow", "auto");
     }, 1500);
     /* Se activa la animación del texto de la introducción y el scroll */
-    $('.h1-h').css("animation-delay", "1.525s");
+    $('.h1-h').css("animation-delay", "1.52s");
     switchLang('es') 
     var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))           
@@ -14,8 +14,8 @@ $(document).ready(function () {
     /* Se inicializa AOS Library */
     AOS.init({ 
         startEvent: 'DOMContentLoaded',
-        once: false, 
-        delay: 200,
+        once: true, 
+        delay: 150,
         duration: 900, 
         easing: 'ease-out' 
     });    
