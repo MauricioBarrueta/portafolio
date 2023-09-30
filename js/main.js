@@ -11,6 +11,9 @@ window.onload = () => {
 }
 
 $(document).ready(function () {
+    /* Verifica si el iframe se ha cargado */
+    var iframe = document.getElementById('iframeTemplate');
+    if(iframe === null) window.location.reload()    
     /* Se inicializa AOS Library */
     AOS.init({ 
         startEvent: 'DOMContentLoaded',
