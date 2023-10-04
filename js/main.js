@@ -6,14 +6,16 @@ window.onload = () => {
     /* Se activa la animación del texto de la introducción y el scroll */
     $('.h1-h').css("animation-delay", "1.52s");
     switchLang('es') 
+
+    /* Verifica si el iframe se ha cargado */
+    var iframe = document.getElementById('iframeTemplate');
+    if(iframe === null) window.location.reload()   
+
     var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))           
 }
 
-$(document).ready(function () {
-    /* Verifica si el iframe se ha cargado */
-    var iframe = document.getElementById('iframeTemplate');
-    if(iframe === null) window.location.reload()    
+$(document).ready(function () {     
     /* Se inicializa AOS Library */
     AOS.init({ 
         startEvent: 'DOMContentLoaded',
