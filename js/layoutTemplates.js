@@ -51,6 +51,13 @@ if (iframe != null) {
             const templateContent = staticIconsTemplate.content.cloneNode(true);
             card.prepend(templateContent);
         });
+        
+        const staticScssIconsTemplate = iframeContent.getElementById('static-projects-scss');
+        const staticScssCardClasses = document.querySelectorAll('.static-scss-projects-icons');
+        staticScssCardClasses.forEach(card => {
+            const templateContent = staticScssIconsTemplate.content.cloneNode(true);
+            card.prepend(templateContent);
+        });
 
         const unityProjectsTemplate = iframeContent.getElementById('unity-projects');
         const unityCards = document.querySelectorAll('.unity-projects-icons');
@@ -84,5 +91,5 @@ if (iframe != null) {
         });
     }
 } else {
-    window.parent.location = document.referrer;
+    window.location.reload()
 }

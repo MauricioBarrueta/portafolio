@@ -12,9 +12,9 @@ window.onload = () => {
 }
 
 $(document).ready(function () {     
-     /* Verifica si el iframe se ha cargado */
-     var iframe = document.getElementById('iframeTemplate');
-     if(iframe === null) window.location.reload()        
+    /* Verifica si el iframe se ha cargado */
+    var iframe = document.getElementById('iframeTemplate');
+    if(iframe === null) window.location.reload()        
     /* Se inicializa AOS Library */
     AOS.init({ 
         startEvent: 'DOMContentLoaded',
@@ -71,11 +71,11 @@ btnScrollToTop.addEventListener('click', () => {
 /* Oculta la lista desplegable de la navbar después de seleccionar un link (pantallas pequeñas) */
 $('.navbar-nav>li>a').on('click', function() { $('.navbar-collapse').collapse('hide'); });
 
-/* Abre la página del CV de acuerdo al idioma actual */
+/* Abre la página del CV de acuerdo al idioma actual del sitio */
 const openCvButton = document.getElementById('btn-cv')
+const cvFileUrl = 'https://mauriciobarrueta.github.io/portafolio/files/CV-Edgar Mauricio Barrueta Aguirre.pdf'
 openCvButton.addEventListener('click', () => {
-    var docHref = actualLang == 'es' ? 'https://mauriciobarrueta.github.io/portafolio/files/CV-Edgar Mauricio Barrueta Aguirre.pdf#page=1' 
-        : 'https://mauriciobarrueta.github.io/portafolio/files/CV-Edgar Mauricio Barrueta Aguirre.pdf#page=2'
+    var docHref = actualLang == 'es' ? cvFileUrl + '#page=1' : cvFileUrl + '#page=2'
     openCvButton.href = docHref   
 })
 
@@ -114,28 +114,6 @@ ImageModal.addEventListener('hidden.bs.modal', function () {
         }
     }
 });
-
-/* Función del botón para mostrar y ocultar los proyectos que no aparecen en la lista inicial */
-// const showMoreProjectsBtn = document.querySelector('.show-more-btn');
-// const showAndHideProjects = () => {
-//     var cardsVisible = document.getElementById("cardsLimit"), cardsHidden = document.getElementById("hiddenCards"),
-//         btnShowHiddenCards = document.getElementById("show-more-btn");
-//     if (cardsVisible.style.display === "none") {
-//         btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-chevron-down fa-bounce'></i>", 
-//             btnShowHiddenCards.setAttribute("data-title", "Mostrar más - Show more");
-//         cardsVisible.style.display = "flex", cardsHidden.style.display = "none";
-//     } else {
-//         cardsVisible.style.display = "none";
-//         btnShowHiddenCards.innerHTML = "<i class='fa-solid fa-chevron-up fa-bounce'></i>", 
-//             btnShowHiddenCards.setAttribute("data-title", "Mostrar menos - Show less");
-//         cardsHidden.style.display = "flex", cardsHidden.style.flexWrap = "wrap", cardsHidden.style.alignContent = "center",
-//         cardsHidden.style.justifyContent = "space-around", cardsHidden.style.gap = "15px";
-//     }
-//     if (btnShowHiddenCards.getAttribute("data-title", "Mostrar más - Show more") && cardsHidden.style.display === "none") {
-//         document.querySelector('#Projects').scrollIntoView({ behavior: 'smooth' });
-//     }
-// }
-// showMoreProjectsBtn.addEventListener('click', showAndHideProjects);
 
 /* Función que obtiene los datos del formulario para enviar el correo electrónico mediante el esquema 'mailto' */
 const emailForm = document.querySelector('#c-form'), btnEmailTo = document.querySelector('#myEmail');
