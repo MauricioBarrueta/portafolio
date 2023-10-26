@@ -59,6 +59,13 @@ if (iframe != null) {
             card.prepend(templateContent);
         });
 
+        const staticNojQueryTemplate = iframeContent.getElementById('static-scss-nojQuery')
+        const staticNojQueryClasses = document.querySelectorAll('.static-scss-jquery-icons')
+        staticNojQueryClasses.forEach(card => {
+            const templateContent = staticNojQueryTemplate.content.cloneNode(true)
+            card.prepend(templateContent)
+        });
+
         const unityProjectsTemplate = iframeContent.getElementById('unity-projects');
         const unityCards = document.querySelectorAll('.unity-projects-icons');
         unityCards.forEach(card => {

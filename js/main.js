@@ -140,11 +140,11 @@ btnCopyEmail.addEventListener('click', () => {
     navigator.clipboard.writeText(copyText.value)
         .then(() => {
             showAlertSpan(); 
-            alertText.innerHTML = `&#xf328; Copiado al portapapeles - Copied to clipboard`
+            alertText.innerHTML = `Copiado al portapapeles - Copied to clipboard &#xf328;`
         })
         .catch(() => {
             showAlertSpan(); 
-            alertText.innerHTML = `&#xf071; Error inesperado - Unexpected error`
+            alertText.innerHTML = `Error inesperado - Unexpected error &#xf071;`
         });
 });
 
