@@ -434,8 +434,8 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     height: 15%; top: auto; width: auto; bottom: 40%; /* bottom: 85%; */      
 }
 .carousel-control-prev:hover, .carousel-control-next:hover { opacity: 1; }
-.carousel-control-prev { border-radius: 0 5px 5px 0; left: 0; border-left: 0; }
-.carousel-control-next { border-radius: 5px 0 0 5px;  right: 0; border-right: 0; }
+.carousel-control-prev { border-radius: 0 5px 5px 0; left: 12px; border-left: 0; }
+.carousel-control-next { border-radius: 5px 0 0 5px;  right: 12px; border-right: 0; }
 .carousel-control-prev-icon, .carousel-control-next-icon {  /* Carousel Buttons Icons */
     scale: 0.55; filter: invert(100%); 
     transition: 0.25s;  
@@ -542,7 +542,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     background-color: transparent; opacity: 0.5; margin: 2px 2px 0 0; padding: 5px; 
     border-radius: 50%; transition: opacity 0.35s, animation 0.45s; 
     animation: var(--fa-shake-animation);
-}
+}    
 .modal-header .btn-close:hover { 
     animation: var(--fa-bounce-animation); animation-iteration-count: 1; 
     opacity: 1; background-color: var(--customRed) !important; box-shadow: var(--boxShadowBottom);
