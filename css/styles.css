@@ -54,10 +54,10 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
 }
 
 /* ------------------------------------------------------------ GENERAL DISPLAY ------------------------------------------------------------------ */
-.loading-page-gif, header, .scroll-down-l, .scroll-down-r, .header-card-content, .btn-h-contact, .aboutme, .abtm-text>h1, .btnCV, .p-cards-container, 
-.p-tecnologies, #google_translate_element, .cards-container, .contactme, #btnSendEmail, 
-.footer-content, .menu, .experience-container, .certification-container, .project-card>.showInfo, .content, .subtitle { 
-    display: flex; justify-content: center; align-items: center; align-content: center; 
+.loading-page-gif, header, .scroll-down-l, .scroll-down-r, .header-card-content, .btn-h-contact, .aboutme, .abtm-text>h1, .btnCV, 
+    .p-cards-container, .p-tecnologies, #google_translate_element, .cards-container, .contactme, #btnSendEmail, .footer-content, .menu, 
+    .experience-container, .certification-container, .project-card>.showInfo, .content, .subtitle { 
+        display: flex; justify-content: center; align-items: center; align-content: center; 
 }
 .content { width: 100%; margin: 0 auto; flex-wrap: wrap; justify-content: space-around !important; }
 header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;  padding: 1em; }
@@ -165,9 +165,10 @@ header {
 
 .main-introduction .subtitle {  /* Intr Header - Footer */
     margin: 10px 0 10px 0; justify-content: left; 
-    text-align: left; font-size: 22px; text-shadow: .25px .25px 2.5px #000;
+    text-align: left; font-size: 22px; text-shadow: 0 0 3px #000;
 }
 .purple-font { color: #A586B6; }.yellow-font { color: #DCCD79; }.comment-font { color: #6A9955; font-size: 20px; }
+.purple-font, .yellow-font, .comment-font { filter: saturate(3); }
 .header-card { /* Header Backend - Fronted Cards */
     position: relative; width: 350px; height: 200px;
     background-color: black; box-shadow: var(--borderBoxShadow);
@@ -186,7 +187,9 @@ header {
 .header-card .header-card-content::before { opacity: 1; scale: 1; }
 .header-card-title {    
     width: 100%; margin: 0; padding: 0 0 0.5rem 0;
-    font-size: 12px; letter-spacing: 1px; transition: border-bottom 0.35s;
+    font-size: 12px; opacity: 0;
+    /* letter-spacing: 1px;  */
+    transition: border-bottom 0.35s;
 }
 .header-card:hover .header-card-title::before, .header-card:hover .header-card-title::after {
     content: "\f11e";
@@ -200,7 +203,7 @@ header {
     font-size: 10px; line-height: 170%;
     opacity: 0; translate: -25px; transition: opacity 0.25s, translate 0.35s;
 }
-.header-card:hover .header-card-description { opacity: 1; translate: 0; }
+.header-card:hover .header-card-description, .header-card:hover .header-card-title { opacity: 1; translate: 0; }
 .h-image-container { /* Header Img GIF */
     border-radius: 5px;
     background-color: var(--customWhite); box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); 
@@ -219,6 +222,7 @@ header {
     margin: 0 auto; width: fit-content;   
 }
 .btn-h-contact:hover {
+    background-color: var(--darkSlateGray);
     border: var(--border-white);
 }
 .main-introduction .btn-h-contact:after {
@@ -316,7 +320,7 @@ header {
 .abtme-img-container>span {
     opacity: 0; position: absolute; top: 0; left: 0; right: 0;    
     text-align: center; font-size: 8px; color: var(--jellyBeanBlue); 
-    margin-top: 2.5px; transition: opacity 0.25s; cursor: default; 
+    margin: 0; transition: opacity 0.25s; cursor: default; 
     text-shadow: -0.01em -0.01em 0.01em var(--darkSlateGray);
 }
 .abtme-img-container>span::after { content: "\f25b"; font-size: 12px; display: inline-block; margin-left: 5px; } 
@@ -360,6 +364,7 @@ header {
     animation: var(--fa-bounce-animation); animation-iteration-count: 1; cursor: pointer; text-shadow: var(--textShadowCustom);
 }
 .aboutme .content .abtm-text .btnCV { width: 100%; background-color: var(--jellyBeanBlue); color: white; } /* Abtme-Content CV Button with effect */
+.aboutme .content .abtm-text .btnCV:hover { background-color: var(--darkSlateGray); }
 .aboutme .content .abtm-text .btnCV::after {
     content: "\f56d"; display: block; width: 0px; height: 24px;
     overflow: hidden; transition: width 200ms, margin-left 200ms;    
@@ -388,25 +393,21 @@ img.React-Icon { content: url(../svg/React.svg); } img.Laravel-Icon { content: u
 img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content: url(../svg/AdobeXD.svg); }
 
 /* ------------------------------------------------------------------ PORTAFOLIO ---------------------------------------------------------- */
+.portafolio { text-align: center; }
 .portafolio .p-cards-container {
     justify-content: space-around;     	    
     z-index: 1; padding-top: 1em; gap: 15px; margin-top: -10px; 
 }
 #titleInfo, .carousel-instructions {
     width: 100%; display: inline-block; 
-    color: var(--darkSlateGray); margin-top: 5px;
-    text-decoration: underline dotted 2px; text-align: center;
-}
-#titleInfo { /* Projects Alert Info */    
-    font-size: 8px;    
+    color: var(--darkSlateGray);
+    text-decoration: underline dotted 2px; text-align: center; font-size: 8px;
 }
 #titleInfo::before, #titleInfo::after, .carousel-instructions::before, .carousel-instructions::after { 
     content: "\f05a"; margin-inline: 8px; font-size: 10px; text-decoration: none !important; 
 }
 .carousel-instructions::after { content: "\f302"; }
-.carousel-instructions {   
-    font-size: 7px; letter-spacing: 1px;    
-}
+.carousel-instructions { letter-spacing: 1px; }
 .portafolio .p-cards-container #cardsLimit { position: absolute; }
 .portafolio .p-cards-container .project-card { /* Project Cards */
     position: relative; width: 300px; height: 325px;
@@ -430,7 +431,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 } 
 .carousel-item { width: auto; margin-right: 0; }
 .carousel-control-prev, .carousel-control-next { /* Carousel Buttons */
-    background-color: var(--darkSlateGray); border: 1px solid white; color: white;
+    background-color: var(--darkSlateGray); border: 1px solid white; color: white; opacity: .7;
     height: 15%; top: auto; width: auto; bottom: 40%; /* bottom: 85%; */      
 }
 .carousel-control-prev:hover, .carousel-control-next:hover { opacity: 1; }
@@ -457,7 +458,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     text-decoration: underline #4B7F83 !important;
 }
 .carousel-details {
-    position: relative !important; bottom: 25px !important; left: 0 !important; right: 0 !important;
+    position: relative !important; z-index: 0; bottom: 24px !important; left: 0 !important; right: 0 !important;
     height: fit-content !important;
 }
 .project-card .img-container>.img-item {
@@ -520,6 +521,19 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 .web-icons li:first-child a::after { content: "\f0ac"; font: var(--fa-font-solid); }
 .web-icons li:last-child a::after { content: "\f09b"; font: var(--fa-font-brands); }
 .coProject li:last-child a::after { content: "\f08d"; font: var(--fa-font-solid); } /* Practices Projects */
+
+.hidden-projects { display: none; }
+#show-hide-title {
+    display: inline-block; width: 100%; margin-top: 10px;
+    font-size: 10px; color: var(--darkSlateGray);
+}
+#show-more-projects {
+    width: 70%; height: 38px;
+    font-size: 14px; font-weight: bolder; font-family: FontAwesome !important; 
+    margin: 10px 0; margin-top: 0; padding: 0.5rem;
+    background-color: var(--jellyBeanBlue); border-color: white;
+}
+#show-more-projects:hover { background-color: var(--darkSlateGray); }
 
 /* --------------------------------------------------------------- Modal ---------------------------------------------------------------- */
 .modal-content { 
@@ -807,6 +821,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     background-color: var(--jellyBeanBlue); color: white; 
     margin-top: 10px; width: 100%;
 }
+.contact-form #btnSendEmail:hover { background-color: var(--darkSlateGray); }
 .contact-form #btnSendEmail:after {
     content: "\f1d8";
     transition: width 200ms, margin-left 200ms;
@@ -822,7 +837,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     margin: 0; text-align: center; 
     padding: 5px; margin: -5px 0 5px 0;
 }  
-.icons>p>input { cursor: copy; width: 85%; font-size: 13px; }
+.icons>p>input { cursor: copy; width: 85%; font-size: 14px; }
 .icons>p>input::selection {
     background-color: var(--darkSlateGray); color: white;    
 }
@@ -970,7 +985,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     .certification-container { gap: 25px !important; } /* Certifications */
     .contact-section-separator::after { border-width: 25px 25px 0 25px; } /* Separator */
     .i-socialMedia .button span { font-size: 9px !important; } /* Footer */   
-    .icons>p>input { font-size: 11px; } 
+    .icons>p>input { font-size: 12px; } 
 }
 @media screen and (max-width: 980px) {    
     .navbar-brand, .stuck .navbar.sticky-top .navbar-brand { font-size: 9px; text-decoration: none; } /* Navbar */    
@@ -1046,6 +1061,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     }  
     .aboutme .content .abtm-text .abtm-footer h6 { font-size: 12px; margin: 0; }
     .abtm-text .abtm-footer>i { font-size: 20px !important; margin-inline: 10px !important;}   
+    #show-hide-title { font-size: 8px; } /* Show-Hide Projects Title */
     #google_translate_element span>i { font-size: 24px; } /* Google Translate Plugin */
     .goog-te-gadget-simple {  font-size: 5pt !important; padding: 1px 0 !important; }    
     .modal-content .span-info { margin-top: 5px; } /* Project Modal */       

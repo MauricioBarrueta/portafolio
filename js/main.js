@@ -115,6 +115,19 @@ ImageModal.addEventListener('hidden.bs.modal', function () {
     }
 });
 
+/* Muestra u oculta los proyectos correspondientes */
+const showHideBtn = document.getElementById("show-more-projects");
+showHideBtn.addEventListener('click', () => {
+    const visibleLimit = document.querySelector('.projects-limit')
+    const hideProjects = document.querySelector(".hidden-projects");
+    if(visibleLimit.style.display === 'none') {
+        visibleLimit.style.display = "inline", hideProjects.style.display = "none", showHideBtn.innerHTML = `&#x2b;`, showHideBtn.href = '#Projects'
+    } else {            
+        visibleLimit.style.display = "none", hideProjects.style.display = "flex", hideProjects.style.flexWrap = 'wrap',        
+        hideProjects.style.gap = '15px', showHideBtn.innerHTML = `&#xf068;`, showHideBtn.href = 'javascript:;'
+    } 
+})
+
 /* Función que obtiene los datos del formulario para enviar el correo electrónico mediante el esquema 'mailto' */
 const emailForm = document.querySelector('#c-form'), btnEmailTo = document.querySelector('#myEmail');
 emailForm.addEventListener('submit', (event) => {
