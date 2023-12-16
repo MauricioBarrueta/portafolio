@@ -530,7 +530,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 #show-more-projects {
     width: 100%; height: 38px;
     font-size: 14px; font-weight: bolder; font-family: FontAwesome !important; 
-    margin: 10px 0; margin-top: 0; padding: 0.5rem;
+    margin: 0; padding: 0.5rem;
     background-color: var(--jellyBeanBlue); border-color: white;
 }
 #show-more-projects:hover { background-color: var(--darkSlateGray); }
@@ -550,11 +550,11 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     display: table-cell; width: 100%; 
     font-size: 10px; line-height: 18px; cursor: default;
 }
-.modal-footer>p { text-shadow: 2px 2px 3px rgb(0, 0, 0);}
+.modal-footer>p { text-shadow: 1px 1px 2px rgba(0, 0, 0, 1); }
 .modal-header .btn-close { /* Modal Close Button */    
     width: 18px; height: 18px;
     position: fixed; top: 22px; right: 15px; 
-    opacity: .8; z-index: 10; padding: 5px; border-radius: 50%;
+    opacity: .85; z-index: 10; padding: 5px; border-radius: 50%;
     font-size: 18px; background-color: var(--customRed); 
     transition: opacity 0.35s, animation 0.45s; animation: var(--fa-shake-animation);
     --bs-btn-close-bg: url("https://upload.wikimedia.org/wikipedia/commons/thumb/7/72/VisualEditor_-_Icon_-_Close_-_white.svg/24px-VisualEditor_-_Icon_-_Close_-_white.svg.png")

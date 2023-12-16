@@ -121,10 +121,10 @@ showHideBtn.addEventListener('click', () => {
     const visibleLimit = document.querySelector('.projects-limit')
     const hideProjects = document.querySelector(".hidden-projects");
     if(visibleLimit.style.display === 'none') {
-        visibleLimit.style.display = "inline", hideProjects.style.display = "none", showHideBtn.innerHTML = `&#x2b;`, showHideBtn.href = '#Projects'
+        visibleLimit.style.display = "inline", hideProjects.style.display = "none", showHideBtn.innerHTML = `&#xf078;`, showHideBtn.href = '#Projects'
     } else {            
         visibleLimit.style.display = "none", hideProjects.style.display = "flex", hideProjects.style.flexWrap = 'wrap',        
-        hideProjects.style.gap = '15px', showHideBtn.innerHTML = `&#xf068;`, showHideBtn.href = 'javascript:;'
+        hideProjects.style.gap = '15px', showHideBtn.innerHTML = `&#xf077;`, showHideBtn.href = 'javascript:;'
     } 
 })
 
