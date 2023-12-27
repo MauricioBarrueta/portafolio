@@ -3,6 +3,7 @@ window.onload = () => {
         $('#loading').hide(152);
         $('html').css("overflow", "auto");
     }, 1500);
+
     /* Se activa la animación del texto de la introducción y el scroll */
     $('.h1-h').css("animation-delay", "1.52s");
     switchLang('es') 
@@ -14,7 +15,8 @@ window.onload = () => {
 $(document).ready(function () {     
     /* Verifica si el iframe se ha cargado */
     var iframe = document.getElementById('iframeTemplate');
-    if(iframe === null) window.location.reload()        
+    if(iframe === null) window.location.reload()      
+
     /* Se inicializa AOS Library */
     AOS.init({ 
         startEvent: 'DOMContentLoaded',
@@ -23,12 +25,14 @@ $(document).ready(function () {
         duration: 900, 
         easing: 'ease-out' 
     });    
+
     /* Resalta el texto en la navbar de acuerdo a la sección en la que se encuentra */
     $('.navbar').on('click', 'a', function () { 
         $('.navbar a.active').removeClass('active');
         $(this).addClass('active');
     });
     $('body').scrollspy({ target: '.navbar' });
+
     /* Oculta el gadget de Google Translate para mostrarlo únicamente cuando se muestre el Modal */
     $(".goog-logo-link").empty();
     $('.goog-te-gadget').html($('.goog-te-gadget').children());
@@ -53,7 +57,7 @@ window.addEventListener("scroll", function () {
 /* Hace visible el bóton al iniciar el scroll hacia abajo y se crea la función que permite volver al inicio */
 window.addEventListener('scroll', () => {    
     btnScrollToTop.style.display = window.scrollY > 200 ? 'block' : 'none';
-    btnScrollToTop.style.opacity = window.scrollY > 200 ? '.8' : '0';
+    btnScrollToTop.style.opacity = window.scrollY > 200 ? '.85' : '0';
 });
 const btnScrollToTop = document.querySelector('.ScrollToTop');
 btnScrollToTop.addEventListener('click', () => {
@@ -121,10 +125,11 @@ showHideBtn.addEventListener('click', () => {
     const visibleLimit = document.querySelector('.projects-limit')
     const hideProjects = document.querySelector(".hidden-projects");
     if(visibleLimit.style.display === 'none') {
-        visibleLimit.style.display = "inline", hideProjects.style.display = "none", showHideBtn.innerHTML = `&#xf078;`, showHideBtn.href = '#Projects'
+        visibleLimit.style.display = "inline", hideProjects.style.display = "none", showHideBtn.href = '#Projects',
+        showHideBtn.innerHTML = `Ver más &nbsp; \u{f078} &nbsp; See more`        
     } else {            
-        visibleLimit.style.display = "none", hideProjects.style.display = "flex", hideProjects.style.flexWrap = 'wrap',        
-        hideProjects.style.gap = '15px', showHideBtn.innerHTML = `&#xf077;`, showHideBtn.href = 'javascript:;'
+        visibleLimit.style.display = "none", hideProjects.style.display = "flex", hideProjects.style.flexWrap = 'wrap', hideProjects.style.justifyContent = 'center',       
+        hideProjects.style.gap = '15px', showHideBtn.innerHTML = `Ver menos &nbsp; \u{f077} &nbsp; See less`, showHideBtn.href = 'javascript:;'
     } 
 })
 

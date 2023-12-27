@@ -21,7 +21,7 @@
   
   <div class="main">     
     <div id="loading" class="loading-page-gif">
-      <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+      <div class="lds-facebook"><div></div><div></div><div></div></div>
     </div>
     <button class="ScrollToTop btn jellyBeanBlue trsn"></button> 
 
@@ -34,7 +34,7 @@
         </div>     
         <div class="subtitle rad-pad-505 moonstoneBlue">
           <span class="purple-font">if(</span><span class="yellow-font" data-es="explorarPortafolio" data-en="explorePortfolio"></span>
-          <span class="purple-font">) {</span>&nbsp;<span class="comment-font">//true</span>
+          <span class="purple-font">) {</span>&nbsp;<span class="comment-font" data-es="//deslizar" data-en="//scroll"></span>
         </div>          
         <div class="content">          
           <div class="header-card">
@@ -59,8 +59,9 @@
           </div>  
         </div>          
         <div class="subtitle rad-pad-505 moonstoneBlue">
-          <span class="purple-font">} else {</span><span class="yellow-font" data-es="contactarProgramador" data-en="contactDeveloper"></span>
-          <span style="color: #C5C900;">() </span><span class="purple-font">}</span>&nbsp;<span class="comment-font">//false</span>
+          <span class="purple-font">} else {</span><span class="yellow-font" data-es="contactar" data-en="contact"></span>
+          <span class="brackets-font">() </span><span class="purple-font">}</span>&nbsp;
+          <span class="comment-font" data-es="//no deslizar" data-en="//don't scroll"></span>
         </div>        
         <a href="#Contact" class="btn-h-contact btn rad-pad-505" data-es="Contáctame" data-en="Contact me"></a>
        
@@ -137,9 +138,246 @@
     
     <section class="portafolio" id="Projects" data-aos="fade-up">
       <h3 class="sectionTitles" data-es="Mis proyectos" data-en="My projects" aria-labelledby="titleInfo"></h3>  
-      <small class="carousel-instructions" data-es="Usa los botones '&#xf100; y &#xf101;' para navegar entre proyectos" data-en="Use the buttons 
-        '&#xf100; & &#xf101;' to navigate between projects"></small>
+      <small class="carousel-instructions" data-es="Usa los botones '&#xf100;' y '&#xf101;' para navegar entre proyectos" data-en="Use the buttons 
+        '&#xf100;' and '&#xf101;' to navigate between projects"></small>
       <div class="p-cards-container"> 
+        <div class="project-card carousel slide" id="JavaScriptAPIProjects" data-bs-ride="carousel">
+          <div class="carousel-inner">  
+            <div class="img-container carousel-item active" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript</span>
+              <img src="img/proyectos/passwordGenerator.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
+                SCSS, el framework Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Sitio web 
+                para generar contraseñas aleatorias personalizadas, permite elegir cuáles caracteres puede incluir y cuáles no, si puede tener espacios o caracteres
+                repetidos y la longitud de la contraseña, que a mayor longitud mayor seguridad y viceversa.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Generador de contraseñas" data-en="Password generator"></h2>
+                <div class="tec-icons">
+                  <ul class="static-scss-projects-icons p-tecnologies"></ul>
+                </div>  
+                <ul class="web-icons">              
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/PasswordGenerator/" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/PasswordGenerator.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>             
+                </ul>
+              </div>
+            </div>            
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript: API</span>
+              <img src="img/proyectos/tinyUrl.png" class="img-item" alt="HTML para la estructuración, JavaScript para la funcionalidad, 
+                SCSS, el framework Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Sitio web 
+                el cual permite acortar cualquier enlace que se ingrese, ya sea que inicie con los protocolos 'http://',  'https://' o simplemente con www,
+                una vez validado el URL ingresado se muestra el resultado ya acortado y listo para copiarlo con un solo clic.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Acortador de URL" data-en="URL Shortener"></h2>
+                <div class="tec-icons">
+                  <ul class="static-scss-jquery-icons p-tecnologies"></ul>
+                </div>  
+                <ul class="web-icons">              
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/tinyUrl/" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/tinyUrl.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>             
+                </ul>
+              </div>
+            </div>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript</span>
+              <img src="img/proyectos/PixelArt.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
+                CSS, el framework Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Página que 
+                permite dibujar al estilo arte de pixel, con la posibilidad de crear una cuadrícula de hasta 50x25 píxeles, cuenta con una paleta de colores y los
+                botones de borrar en caso de error y el de dibujar para continuar con el trazo.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Creador de Pixel Art" data-en="Pixel Art Maker"></h2>
+                <div class="tec-icons">
+                  <ul class="static-projects-icons p-tecnologies"></ul>
+                </div>  
+                <ul class="web-icons">              
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/PixelArtGenerator/" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/PixelArtGenerator.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>             
+                </ul>
+              </div>
+            </div>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript: API</span>
+              <img src="img/proyectos/qrCreatorScanner.webp" class="img-item" alt="HTML para la estructuración, JavaScript para la funcionalidad, 
+                SCSS y el framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Sitio web 
+                que permite generar y escanear códigos QR. Al crear uno permite elegir el tamaño en pixeles, así como tambíen los colores de éste, en cuanto al 
+                lector, permite copiar el contenido del código con un solo clic.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Generador y Lector de Códigos QR" data-en="QR Code Generator and Scanner"></h2>
+                <div class="tec-icons">
+                  <ul class="static-scss-jquery-icons p-tecnologies"></ul>
+                </div>  
+                <ul class="web-icons">              
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/QR-CreatorScanner/" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/QR-CreatorScanner.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>             
+                </ul>
+              </div>
+            </div>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript: API</span>
+              <img src="img/proyectos/imgColorPicker.webp" class="img-item" alt="HTML para la estructuración, JavaScript para la funcionalidad, 
+                SCSS y el framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages - EyeDropper API 
+                para obtener cualquier color en la pantalla." data-title="Este sitio web permite cargar una imagen y obtener el código del color que se seleccione,
+                la herramienta se inicia con un solo clic y se cierra presionando la tecla 'Esc', una vez seleccionado el color se obtiene su código y se muestra
+                usando los modelos rgb-rgba y hexadecimal.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Selector de color de imágenes" data-en="Image Color Picker"></h2>
+                <div class="tec-icons">
+                  <ul class="static-scss-jquery-icons p-tecnologies"></ul>
+                </div>  
+                <ul class="web-icons">              
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/imgColorPicker/" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/imgColorPicker.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>             
+                </ul>
+              </div>
+            </div>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript</span>
+              <img src="img/proyectos/Portafolio.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
+              CSS y el framework Bootstrap para los estilos, además del módulo gh-pages de 'npm' para la publicación de la página en GitHub Pages." 
+              data-title="Portafolio web desarrollado por un servidor, acá muestro mi experiencia como desarrollador y algunas de mis habilidades técnicas, 
+              permite descargar mi Currículum en formato PDF, también cuenta con un formulario en donde es posible enviar un e-mail directamente 
+              a mi bandeja de entrada.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Portafolio web" data-en="Portfolio website"></h2>
+                <div class="tec-icons">
+                  <ul class="static-projects-icons p-tecnologies"></ul>
+                </div>  
+                <ul class="web-icons">              
+              <li>
+                <a href="https://mauriciobarrueta.github.io/portafolio/" data-bs-toggle="tooltip" data-bs-placement="top" title="Web" 
+                  data-bs-custom-class="web-icons-a" target="_blank"></a>
+              </li>
+              <li></li>
+              <li>
+                <a href="https://github.com/MauricioBarrueta/portafolio.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                  data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+              </li>            
+            </ul>
+              </div>
+            </div>            
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript: API</span>
+              <img src="img/proyectos/WeatherAPI.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
+                CSS y el framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages - API gratuita 
+                de 'OpenWeatherMap'(https://openweathermap.org/)." data-title="Página que muestra el pronóstico del clima de manera detallada, 
+                ya sea que se ingrese el nombre de la ciudad o las coordenadas de esta, además de que obtiene la hora actual, la hora en la que amanece 
+                y anochece de acuerdo a la zona horaria de la ciudad.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Pronóstico del Clima" data-en="Weather Forecast"></h2>
+                <div class="tec-icons">
+                  <ul class="static-projects-icons p-tecnologies"></ul>
+                </div>  
+                <ul class="web-icons">              
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/currentWeatherAPI/" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/currentWeatherAPI" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>             
+                </ul>
+              </div>
+            </div>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript: API</span>
+              <img src="img/proyectos/Pokedex.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
+                CSS y el framework Bootstrap para los estilos, el módulo gh-pages de 'npm' para la publicación de la página en GitHub Pages - API pública 
+                de la serie Pokémon (https://pokeapi.co)." data-title="Página web que simula el Pokédex de la famosa serie Pokémon, permite consultar los 
+                datos de cualquier Pokémon mediante su nombre, además de listar todos y cada uno de ellos con su respectiva carta y datos correspondientes.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Pokédex de la serie 'Pokémon'" data-en="Pokédex of the 'Pokémon' series"></h2>
+                <div class="tec-icons">
+                  <ul class="static-projects-icons p-tecnologies"></ul>
+                </div>  
+                <ul class="web-icons">
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/pokemonPokedex/" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/pokemonPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>                    
+                  </li>
+                </ul>
+              </div>
+            </div>            
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">JavaScript: API</span>
+              <img src="img/proyectos/RMAPI.webp" class="img-item" alt="HTML para la estructuración y JavaScript para la funcionalidad, CSS, el 
+                framework Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages - API gratuita 
+                de la serie Rick and Morty (https://rickandmortyapi.com/)" data-title="Sitio web que consume la API la cual permite consultar todos 
+                y cada uno de los personajes de la serie 'Rick and Morty', así como los datos correspondientes de cada uno de ellos.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Base de datos de Rick and Morty" data-en="Rick and Morty Database"></h2>
+                <div class="tec-icons">
+                  <ul class="static-projects-icons p-tecnologies"></ul>
+                </div>  
+                <ul class="web-icons">
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/RickAndMortyAPI/" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/RickAndMortyAPI.git" data-bs-toggle="tooltip" data-bs-placement="top"
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>
+                </ul>
+              </div>
+            </div>            
+          </div>
+          <button class="showInfo"></button>  
+          <div class="details carousel-details">
+            <ul class="web-icons" style="border: 0;">
+              <li>
+                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
+              </li>
+            </ul>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#JavaScriptAPIProjects" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#JavaScriptAPIProjects" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>        
+        </div> 
         <div class="project-card carousel slide" id="cssGenerators" data-bs-ride="carousel">
           <div class="carousel-inner">                        
             <div class="img-container carousel-item active" data-bs-interval="30000">
@@ -376,195 +614,7 @@
           <button class="carousel-control-next" type="button" data-bs-target="#cssGenerators" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>        
-        </div>  
-        <div class="project-card carousel slide" id="JavaScriptAPIProjects" data-bs-ride="carousel">
-          <div class="carousel-inner">  
-            <div class="img-container carousel-item active" data-bs-interval="30000">
-              <span class="img-carousel-title">JavaScript</span>
-              <img src="img/proyectos/passwordGenerator.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
-                SCSS, el framework Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Sitio web 
-                para generar contraseñas aleatorias personalizadas, permite elegir cuáles caracteres puede incluir y cuáles no, si puede tener espacios o caracteres
-                repetidos y la longitud de la contraseña, que a mayor longitud mayor seguridad y viceversa.">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Generador de contraseñas" data-en="Password generator"></h2>
-                <div class="tec-icons">
-                  <ul class="static-scss-projects-icons p-tecnologies"></ul>
-                </div>  
-                <ul class="web-icons">              
-                  <li>
-                    <a href="https://mauriciobarrueta.github.io/PasswordGenerator/" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
-                  </li>
-                  <li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/PasswordGenerator.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>             
-                </ul>
-              </div>
-            </div>
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title">JavaScript</span>
-              <img src="img/proyectos/qrCreatorScanner.webp" class="img-item" alt="HTML para la estructuración, JavaScript para la funcionalidad, 
-                SCSS y el framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Sitio web 
-                que permite generar y escanear códigos QR. Al crear uno permite elegir el tamaño en pixeles, así como tambíen los colores de éste, en cuanto al 
-                lector, permite copiar el contenido del código con un solo clic.">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Generador y Lector de Códigos QR" data-en="QR Code Generator and Scanner"></h2>
-                <div class="tec-icons">
-                  <ul class="static-scss-jquery-icons p-tecnologies"></ul>
-                </div>  
-                <ul class="web-icons">              
-                  <li>
-                    <a href="https://mauriciobarrueta.github.io/QR-CreatorScanner/" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
-                  </li>
-                  <li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/QR-CreatorScanner.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>             
-                </ul>
-              </div>
-            </div>
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title">JavaScript</span>
-              <img src="img/proyectos/PixelArt.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
-                CSS, el framework Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Página que 
-                permite dibujar al estilo arte de pixel, con la posibilidad de crear una cuadrícula de hasta 50x25 píxeles, cuenta con una paleta de colores y los
-                botones de borrar en caso de error y el de dibujar para continuar con el trazo.">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Creador de Pixel Art" data-en="Pixel Art Maker"></h2>
-                <div class="tec-icons">
-                  <ul class="static-projects-icons p-tecnologies"></ul>
-                </div>  
-                <ul class="web-icons">              
-                  <li>
-                    <a href="https://mauriciobarrueta.github.io/PixelArtGenerator/" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
-                  </li>
-                  <li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/PixelArtGenerator.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>             
-                </ul>
-              </div>
-            </div>
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title">JavaScript</span>
-              <img src="img/proyectos/imgColorPicker.webp" class="img-item" alt="HTML para la estructuración, JavaScript para la funcionalidad, 
-                SCSS y el framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages - EyeDropper API 
-                para obtener cualquier color en la pantalla." data-title="Este sitio web permite cargar una imagen y obtener el código del color que se seleccione,
-                la herramienta se inicia con un solo clic y se cierra presionando la tecla 'Esc', una vez seleccionado el color se obtiene su código y se muestra
-                usando los modelos rgb-rgba y hexadecimal.">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Selector de color de imágenes" data-en="Image Color Picker"></h2>
-                <div class="tec-icons">
-                  <ul class="static-scss-jquery-icons p-tecnologies"></ul>
-                </div>  
-                <ul class="web-icons">              
-                  <li>
-                    <a href="https://mauriciobarrueta.github.io/imgColorPicker/" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
-                  </li>
-                  <li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/imgColorPicker.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>             
-                </ul>
-              </div>
-            </div>
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title">JavaScript</span>
-              <img src="img/proyectos/WeatherAPI.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
-                CSS y el framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages - API gratuita 
-                de 'OpenWeatherMap'(https://openweathermap.org/)." data-title="Página que muestra el pronóstico del clima de manera detallada, 
-                ya sea que se ingrese el nombre de la ciudad o las coordenadas de esta, además de que obtiene la hora actual, la hora en la que amanece 
-                y anochece de acuerdo a la zona horaria de la ciudad.">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Sitio web 'Pronóstico del Clima'" data-en="'Weather Forecast' Website"></h2>
-                <div class="tec-icons">
-                  <ul class="static-projects-icons p-tecnologies"></ul>
-                </div>  
-                <ul class="web-icons">              
-                  <li>
-                    <a href="https://mauriciobarrueta.github.io/currentWeatherAPI/" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
-                  </li>
-                  <li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/currentWeatherAPI" data-bs-toggle="tooltip" data-bs-placement="top" 
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>             
-                </ul>
-              </div>
-            </div>
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title">JavaScript</span>
-              <img src="img/proyectos/Pokedex.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
-                CSS y el framework Bootstrap para los estilos, el módulo gh-pages de 'npm' para la publicación de la página en GitHub Pages - API pública 
-                de la serie Pokémon (https://pokeapi.co)." data-title="Página web que simula el Pokédex de la famosa serie Pokémon, permite consultar los 
-                datos de cualquier Pokémon mediante su nombre, además de listar todos y cada uno de ellos con su respectiva carta y datos correspondientes.">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Sitio Web 'Pokédex'" data-en="'Pokédex' Website"></h2>
-                <div class="tec-icons">
-                  <ul class="static-projects-icons p-tecnologies"></ul>
-                </div>  
-                <ul class="web-icons">
-                  <li>
-                    <a href="https://mauriciobarrueta.github.io/pokemonPokedex/" data-bs-toggle="tooltip" data-bs-placement="top"
-                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
-                  </li>
-                  <li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/pokemonPokedex.git" data-bs-toggle="tooltip" data-bs-placement="top"
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>                    
-                  </li>
-                </ul>
-              </div>
-            </div>            
-            <div class="img-container carousel-item" data-bs-interval="30000">
-              <span class="img-carousel-title">JavaScript</span>
-              <img src="img/proyectos/RMAPI.webp" class="img-item" alt="HTML para la estructuración y JavaScript para la funcionalidad, CSS, el 
-                framework Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages - API gratuita 
-                de la serie Rick and Morty (https://rickandmortyapi.com/)" data-title="Sitio web que consume la API la cual permite consultar todos 
-                y cada uno de los personajes de la serie 'Rick and Morty', así como los datos correspondientes de cada uno de ellos.">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Sitio Web 'Rick and Morty'" data-en="'Rick and Morty' Website"></h2>
-                <div class="tec-icons">
-                  <ul class="static-projects-icons p-tecnologies"></ul>
-                </div>  
-                <ul class="web-icons">
-                  <li>
-                    <a href="https://mauriciobarrueta.github.io/RickAndMortyAPI/" data-bs-toggle="tooltip" data-bs-placement="top"
-                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
-                  </li>
-                  <li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/RickAndMortyAPI.git" data-bs-toggle="tooltip" data-bs-placement="top"
-                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>
-                </ul>
-              </div>
-            </div>            
-          </div>
-          <button class="showInfo"></button>  
-          <div class="details carousel-details">
-            <ul class="web-icons" style="border: 0;">
-              <li>
-                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
-              </li>
-            </ul>
-          </div>
-          <button class="carousel-control-prev" type="button" data-bs-target="#JavaScriptAPIProjects" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#JavaScriptAPIProjects" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          </button>        
-        </div>        
+        </div>                 
         <div class="project-card carousel slide" id="angularAPIProjects" data-bs-ride="carousel">         
           <div class="carousel-inner">
             <div class="img-container carousel-item active" data-bs-interval="30000">
@@ -575,7 +625,7 @@
                 ver a detalle tanto las características, sus plagas más comunes, sus cuidados para prevenir dichas plagas e incluso los lugares en el mundo 
                 en donde las condiciones son ideales para su crecimiento y mantenimiento.">
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Sitio Web 'Datos Botánicos de Plantas'" data-en="'Plants Botanical Data' Website"></h2>
+                <h2 class="carousel-project-title" data-es="Datos botánicos de las plantas" data-en="Botanical data of plants"></h2>
                 <div class="tec-icons">
                   <ul class="scss-project-icons p-tecnologies"></ul>
                 </div>  
@@ -596,7 +646,7 @@
                 además de que, en el caso de las series, es posible consultar cada temporada y cada capítulo correspondiente a esta, así como 
                 los datos de cada capítulo.">     
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Sitio Web 'IMDb API'" data-en="'IMDb API' Website"></h2>            
+                <h2 class="carousel-project-title" data-es="Base de datos de películas (IMDb)" data-en="Internet Movie Database (IMDb)"></h2>            
                 <div class="tec-icons">
                   <ul class="scss-project-icons p-tecnologies"></ul>
                 </div>
@@ -616,7 +666,7 @@
                 data-title="Sitio web que permite filtrar y consultar una amplia variedad de información disponible en el sitio web Wikipedia, el 
                 usuario ingresa lo que desea buscar y dependiendo la palabra se filtran todos los resultados que coincidan.">   
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Sitio Web 'WikiAPI'" data-en="'WikiAPI' Website"></h2>            
+                <h2 class="carousel-project-title" data-es="Clon de Wikipedia" data-en="Wikipedia Clone"></h2>            
                 <div class="tec-icons">
                   <ul class="angular-project-icons p-tecnologies"></ul>                
                 </div>
@@ -635,7 +685,7 @@
                 Bootstrap para los estilos - API pública de la serie Pokémon (https://pokeapi.co)." data-title="Página que permite listar todos los 
                 Pokémones existentes de la famosa serie 'Pokémon', además de que es posible filtrar los resultados por el nombre, simulando el Pokédex.">   
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Sitio Web 'Pokédex'" data-en="'Pokédex' Website"></h2>            
+                <h2 class="carousel-project-title" data-es="Pokédex de la serie 'Pokémon'" data-en="Pokédex of the 'Pokémon' series"></h2>            
                 <div class="tec-icons">
                   <ul class="scss-project-icons p-tecnologies"></ul>                
                 </div>
@@ -654,7 +704,7 @@
                 Bootstrap para los estilos - API gratuita de la serie Rick and Morty (https://rickandmortyapi.com/)" data-title="Sitio web el cual
                 permite consultar todos y cada uno de los personajes existentes de la serie 'Rick and Morty', así como los datos correspondientes de cada uno de ellos.">   
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title" data-es="Sitio Web 'Rick and Morty'" data-en="'Rick and Morty' Website"></h2>            
+                <h2 class="carousel-project-title" data-es="Base de datos de Rick and Morty" data-en="Rick and Morty Database"></h2>            
                 <div class="tec-icons">
                   <ul class="scss-project-icons p-tecnologies"></ul>                
                 </div>
@@ -706,7 +756,7 @@
           <button class="carousel-control-next" type="button" data-bs-target="#angularAPIProjects" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>        
-        </div>
+        </div>          
         <div class="project-card carousel slide" id="springCrudProjects" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="img-container carousel-item active" data-bs-interval="30000">
@@ -784,7 +834,7 @@
           <button class="carousel-control-next" type="button" data-bs-target="#springCrudProjects" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>        
-        </div>                
+        </div>             
         <div class="project-card">
           <div class="img-container">
             <span class="img-carousel-title">Angular/Spring</span>
@@ -821,35 +871,7 @@
               </li>
             </ul>
           </div>
-        </div>             
-        <div class="project-card">
-          <div class="img-container">
-            <span class="img-carousel-title" data-es="Sitio web" data-en="Website"></span>
-            <img src="img/proyectos/Portafolio.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
-              CSS y el framework Bootstrap para los estilos, además del módulo gh-pages de 'npm' para la publicación de la página en GitHub Pages." 
-              data-title="Portafolio web desarrollado por un servidor, acá muestro mi experiencia como desarrollador y algunas de mis habilidades técnicas, 
-              permite descargar mi Currículum en formato PDF, también cuenta con un formulario en donde es posible enviar un e-mail directamente 
-              a mi bandeja de entrada.">
-          </div>
-          <button class="showInfo"></button>
-          <div class="details">
-            <h2 data-es="Portafolio web" data-en="Portfolio website"></h2>
-            <div class="tec-icons"><ul class="static-projects-icons p-tecnologies"></ul></div>
-            <ul class="web-icons">              
-              <li>
-                <a href="https://mauriciobarrueta.github.io/portafolio/" data-bs-toggle="tooltip" data-bs-placement="top" title="Web" 
-                  data-bs-custom-class="web-icons-a" target="_blank"></a>
-              </li>
-              <li>
-                <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
-              </li>
-              <li>
-                <a href="https://github.com/MauricioBarrueta/portafolio.git" data-bs-toggle="tooltip" data-bs-placement="top" 
-                  data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-              </li>            
-            </ul>
-          </div>
-        </div>   
+        </div>  
         <div class="project-card carousel slide" id="serviceProjects" data-bs-ride="carousel">
           <div class="carousel-inner">
             <div class="img-container carousel-item active" data-bs-interval="30000">
@@ -923,42 +945,140 @@
           <button class="carousel-control-next" type="button" data-bs-target="#serviceProjects" data-bs-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
           </button>        
-        </div>  
-        <div class="project-card">
-          <div class="img-container">
-            <span class="img-carousel-title">Java: Software</span>
-            <img src="img/proyectos/ControlArchivo.webp" class="img-item" alt=" Hecho con el lenguaje Java y su librería gráfica Java Swing, el 
-              framework de gestión de proyectos de software Maven, la biblioteca JasperReports para la creación de reportes y NetBeans IDE - Base 
-              de Datos local MySQL." data-title="Sistema que permite llevar el control de los documentos existentes en el archivo, dónde es manejado 
-              por año, el inventario de documentos dados de baja y también, llevar un registro de las entradas y salidas de documentos, así como también, 
-              los datos del empleado que lo solicitó.">
-          </div>
-          <button class="showInfo"></button>
-          <div class="details">
-            <h2 data-es="Sistema para el control de documentos" data-en="Document control system"></h2>
-            <div class="tec-icons">
-              <ul class="java-project-icon mysql-prj-icon p-tecnologies">
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
-                  <i><img src="svg/JasperReports.webp" class="p-tec-svg-icons" style="width: 50px; height: 10px;"></i>
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Apache Maven">
-                  <i><img src="svg/maven.svg" class="p-tec-svg-icons" style="margin-left: 10px;"></i>
-                </li>
-                <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
-                  <i><img class="NetBeans-Icon p-tec-svg-icons"></i>
-                </li>
-              </ul>
+        </div> 
+        <div class="project-card carousel slide" id="javaProjects" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="img-container carousel-item active" data-bs-interval="30000">
+              <span class="img-carousel-title">Java: Software</span>
+              <img src="img/proyectos/ControlArchivo.webp" class="img-item" alt=" Hecho con el lenguaje Java y su librería gráfica Java Swing, el 
+                framework de gestión de proyectos de software Maven, la biblioteca JasperReports para la creación de reportes y NetBeans IDE - Base 
+                de Datos local MySQL." data-title="Sistema que permite llevar el control de los documentos existentes en el archivo, dónde es manejado 
+                por año, el inventario de documentos dados de baja y también, llevar un registro de las entradas y salidas de documentos, así como también, 
+                los datos del empleado que lo solicitó.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Sistema para el control de documentos" data-en="Document control system"></h2>
+                <div class="tec-icons">
+                  <ul class="java-project-icon mysql-prj-icon p-tecnologies">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
+                      <i><img src="svg/JasperReports.webp" class="p-tec-svg-icons" style="width: 50px; height: 10px;"></i>
+                    </li>
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Apache Maven">
+                      <i><img src="svg/maven.svg" class="p-tec-svg-icons" style="margin-left: 10px;"></i>
+                    </li>
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
+                      <i><img class="NetBeans-Icon p-tec-svg-icons"></i>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="web-icons">
+                  <li>
+                    <span class="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Desktop App"></span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <ul class="web-icons">
-              <li>
-                <span class="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Desktop App"></span>
-              </li>
-            </ul>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title" data-es="Java: Videojuego" data-en="Java: Video Game"></span>
+              <img src="img/proyectos/JuegoGato.png" class="img-item" alt="Hecho únicamente con Java y el Entorno de Desarrollado Integrado 
+                Netbeans IDE." data-title="Juego del Gato desarrollado para PC, la puntuación se va sumando automáticamente de acuerdo al 
+                jugador que gane en cada partida jugada.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="'Juego del Gato'" data-en="'Tic-Tac-Toe'"></h2>                  
+                <div class="tec-icons"><ul class="java-project-icon netbeans-project-icon p-tecnologies"></ul></div> 
+                <ul class="web-icons">              
+                  <li><span class="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Desktop App"></span></li>       
+                </ul>
+              </div>
+            </div>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title" data-es="Java: Videojuego" data-en="Java: Video Game"></span>
+              <img src="img/proyectos/Memorama.webp" class="img-item" alt="Hecho únicamente con Java y el Entorno de Desarrollado Integrado 
+                Netbeans IDE." data-title="Juego de memoria, comúnmente conocido como Memorama, el jugador gana al encontrar todos los pares de cartas.">  
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="'Memorama'" data-en="'Memory Game'"></h2>  
+                <div class="tec-icons"><ul class="java-project-icon netbeans-project-icon p-tecnologies"></ul></div> 
+                <ul class="web-icons">              
+                  <li><span class="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Desktop App"></span></li>       
+                </ul>
+              </div>
+            </div> 
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title" data-es="Java: Videojuego" data-en="Java: Video Game"></span>
+              <img src="img/proyectos/Buscaminas.png" class="img-item" alt="Hecho únicamente con Java y el Entorno de Desarrollado Integrado 
+                Netbeans IDE." data-title="Juego clásico de 'Buscaminas' desarrollado para PC, el jugador decide cuál será la cantidad de celdas y 
+                columnas para jugar, las minas se cambian aleatoriamente en cada partida y el juego termina cuando se da click sobre una.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="'Buscaminas'" data-en="'Minesweeper Game'"></h2>
+                <div class="tec-icons"><ul class="java-project-icon netbeans-project-icon p-tecnologies"></ul></div> 
+                <ul class="web-icons">              
+                  <li><span class="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Desktop App"></span></li>       
+                </ul>
+              </div>
+            </div>
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title" data-es="Java: App Móvil" data-en="Java: Mobile App"></span>
+              <img src="img/proyectos/AppGranja.webp" class="img-item" alt="Hecho con el lenguaje Java, el metalenguaje XML para el diseño de la 
+                interfaz, el Entorno de Desarrollado Integrado Android Studio y el sistema de compilación Gradle - Se usó Google Firebase como servidor." 
+                data-title="Aplicación móvil desarrollada con el propósito de llevar un control del número de huevos recogidos y del total de alimento 
+                y dinero gastado en una pequeña 'granja' de gallinas ponedoras de huevos.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="App para granja de gallinas ponedoras" data-en="App for Laying Hens Farm"></h2>
+                <div class="tec-icons">
+                  <ul class="java-project-icon p-tecnologies">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="XML">
+                      <i><img class="XML-Icon p-tec-svg-icons"></i>
+                    </li>
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Android Studio">
+                      <i><img class="AStudio-Icon p-tec-svg-icons"></i>
+                    </li>  
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Gradle">
+                      <i><img src="svg/Gradle.svg" class="p-tec-svg-icons"></i>
+                    </li>                                
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Firebase">
+                      <i><img class="Firebase-Icon p-tec-svg-icons"></i>
+                    </li>
+                  </ul>
+                </div>
+                <ul class="web-icons">
+                  <li><span class="app" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="App"></span></li>       
+                </ul>
+              </div>
+            </div>     
+            <div class="img-container carousel-item" data-bs-interval="30000">
+              <span class="img-carousel-title">Java: Servlet</span>
+              <img src="img/proyectos/Servlet.png" class="img-item" alt="Hecho con el lenguaje Java, JavaScript, jQuery y la Tecnología JavaServer Pages (JSP),
+                HTML para la estructuración, CSS y el framework Bootstrap para los estilos - Base de Datos local MySQL." data-title="Práctica muy sencilla de 
+                un sistema hecho con la tecnología JSP el cual simula una web de una empresa enfocada a la venta y renta de automóviles, todo mediante las 
+                funciones CRUD y de acuerdo a los privilegios que tenga cada usuario (administrador o empleado).">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Práctica: Servlet 'Renta y Venta de autos'" data-en="Practice: 'Rental and Sale of cars' Servlet"></h2>
+                <div class="tec-icons">
+                  <ul class="java-project-icon mysql-prj-icon  p-tecnologies">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaServer Pages (JSP)">
+                      <i><img src="svg/JSP.png" class="p-tec-svg-icons" style="width: 14px; scale: 1.05;"></i>
+                    </li>                
+                    <span id="jspProjectIconsBefore" style="display: none;"></span>
+                  </ul>
+                </div>
+                <ul class="web-icons">
+                  <li>
+                    <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
+                  </li>  
+                </ul>
+              </div>
+            </div>        
           </div>
-        </div>
+          <button class="showInfo"></button>            
+          <button class="carousel-control-prev" type="button" data-bs-target="#javaProjects" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#javaProjects" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          </button>        
+        </div>         
         <span class="projects-limit"></span>
 
-        <div class="hidden-projects">
+        <div class="hidden-projects">                   
           <div class="project-card carousel slide" id="phpProjects" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="img-container carousel-item active" data-bs-interval="30000">
@@ -1048,113 +1168,11 @@
             <button class="carousel-control-next" type="button" data-bs-target="#unityProjects" data-bs-slide="next">
               <span class="carousel-control-next-icon" aria-hidden="true"></span>
             </button>        
-          </div>
-          <div class="project-card carousel slide" id="javaProjects" data-bs-ride="carousel">
-            <div class="carousel-inner">
-              <div class="img-container carousel-item active" data-bs-interval="30000">
-                <span class="img-carousel-title" data-es="Java: Videojuego" data-en="Java: Video Game"></span>
-                <img src="img/proyectos/JuegoGato.png" class="img-item" alt="Hecho únicamente con Java y el Entorno de Desarrollado Integrado 
-                  Netbeans IDE." data-title="Juego del Gato desarrollado para PC, la puntuación se va sumando automáticamente de acuerdo al 
-                  jugador que gane en cada partida jugada.">
-                <div class="details carousel-caption">
-                  <h2 class="carousel-project-title" data-es="'Juego del Gato'" data-en="'Tic-Tac-Toe'"></h2>                  
-                </div>
-              </div>
-              <div class="img-container carousel-item" data-bs-interval="30000">
-                <span class="img-carousel-title" data-es="Java: Videojuego" data-en="Java: Video Game"></span>
-                <img src="img/proyectos/Memorama.webp" class="img-item" alt="Hecho únicamente con Java y el Entorno de Desarrollado Integrado 
-                  Netbeans IDE." data-title="Juego de memoria, comúnmente conocido como Memorama, el jugador gana al encontrar todos los pares
-                  de cartas.">  
-                <div class="details carousel-caption">
-                  <h2 class="carousel-project-title" data-es="'Memorama'" data-en="'Memory Game'"></h2>  
-                </div>
-              </div>
-              <div class="img-container carousel-item" data-bs-interval="30000">
-                <span class="img-carousel-title" data-es="Java: Videojuego" data-en="Java: Video Game"></span>
-                <img src="img/proyectos/Buscaminas.png" class="img-item" alt="Hecho únicamente con Java y el Entorno de Desarrollado Integrado 
-                  Netbeans IDE." data-title="Juego clásico de 'Buscaminas' desarrollado para PC, el jugador decide cuál será la cantidad de celdas y 
-                  columnas para jugar, las minas se cambian aleatoriamente en cada partida y el juego termina cuando se da click sobre una.">
-                <div class="details carousel-caption">
-                  <h2 class="carousel-project-title" data-es="'Buscaminas'" data-en="'Minesweeper Game'"></h2>
-                </div>
-              </div>
-            </div>
-            <button class="showInfo"></button>  
-            <div class="details carousel-details" style="bottom: 65px !important;">
-              <div class="tec-icons"><ul class="java-project-icon netbeans-project-icon p-tecnologies"></ul></div>
-                <ul class="web-icons">              
-                  <li><span class="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Desktop App"></span></li>       
-                </ul>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#javaProjects" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#javaProjects" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            </button>        
-          </div>         
-          <div class="project-card">
-            <div class="img-container">
-              <span class="img-carousel-title" data-es="App Móvil" data-en="Mobile App"></span>
-              <img src="img/proyectos/AppGranja.webp" class="img-item" alt="Hecho con el lenguaje Java, el metalenguaje XML para el diseño de la 
-                interfaz, el Entorno de Desarrollado Integrado Android Studio y el sistema de compilación Gradle - Se usó Google Firebase como servidor." 
-                data-title="Aplicación móvil desarrollada con el propósito de llevar un control del número de huevos recogidos y del total de alimento 
-                y dinero gastado en una pequeña 'granja' de gallinas ponedoras de huevos.">
-            </div>
-            <button class="showInfo"></button>
-            <div class="details">
-              <h2 data-es="App para granja de gallinas ponedoras" data-en="App for Laying Hens Farm"></h2>
-              <div class="tec-icons">
-                <ul class="java-project-icon p-tecnologies">
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="XML">
-                    <i><img class="XML-Icon p-tec-svg-icons"></i>
-                  </li>
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Android Studio">
-                    <i><img class="AStudio-Icon p-tec-svg-icons"></i>
-                  </li>  
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Gradle">
-                    <i><img src="svg/Gradle.svg" class="p-tec-svg-icons"></i>
-                  </li>                                
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Firebase">
-                    <i><img class="Firebase-Icon p-tec-svg-icons"></i>
-                  </li>
-                </ul>
-              </div>
-              <ul class="web-icons">              
-                <li><span class="app" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="App"></span></li>       
-              </ul>
-            </div>
-          </div>  
-          <div class="project-card">
-            <div class="img-container">
-              <span class="img-carousel-title">Java: Servlet</span>
-              <img src="img/proyectos/Servlet.png" class="img-item" alt="Hecho con el lenguaje Java, JavaScript, jQuery y la Tecnología JavaServer Pages (JSP),
-                HTML para la estructuración, CSS y el framework Bootstrap para los estilos - Base de Datos local MySQL." data-title="Práctica muy sencilla de 
-                un sistema hecho con la tecnología JSP el cual simula una web de una empresa enfocada a la venta y renta de automóviles, todo mediante las 
-                funciones CRUD y de acuerdo a los privilegios que tenga cada usuario (administrador o empleado).">
-            </div>
-            <button class="showInfo"></button>
-            <div class="details">
-              <h2 data-es="Práctica: Servlet 'Renta y Venta de autos'" data-en="Practice: 'Rental and Sale of cars' Servlet"></h2>
-              <div class="tec-icons">
-                <ul class="java-project-icon mysql-prj-icon  p-tecnologies">
-                  <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaServer Pages (JSP)">
-                    <i><img src="svg/JSP.png" class="p-tec-svg-icons" style="width: 14px; scale: 1.05;"></i>
-                  </li>                
-                  <span id="jspProjectIconsBefore" style="display: none;"></span>
-                </ul>
-              </div>
-              <ul class="web-icons">              
-                <li>
-                  <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web App"></span>
-                </li>       
-              </ul>
-            </div>
-          </div>
+          </div>     
         </div>
       </div>
-      <span id="show-hide-title" data-es="Da clic acá para mostrar u ocultar los demás proyectos:" data-en="Click here to show more or hide the other projects:"></span>
-      <a class="btn btn-dark" id="show-more-projects">&#xf078;</a>
+      <span id="show-hide-title" data-es="Da clic para mostrar u ocultar los demás proyectos:" data-en="Click to show or hide the other projects:"></span>
+      <a class="btn btn-dark" id="show-more-projects">Ver más &nbsp; &#xf078; &nbsp; See more</a>
 
       <span id="titleInfo" class="form-text" data-es="Los proyectos no están ordenados por fecha de creación ni relevancia" 
         data-en="Projects aren't ordered by creation date or relevance"></span>
@@ -1225,7 +1243,7 @@
     </div>   
     </section>
      
-    <section class="contact-section-separator"></section> <!-- Separator -->
+    <section class="contact-section-separator"></section>
     <section class="contactme" id="Contact"> 
       <div class="content">        
         <div class="contact-form rad-pad-101" data-aos="zoom-out"> <!-- Contact Form -->
@@ -1261,12 +1279,12 @@
           </p>
           <h4 data-es="Medios de contacto:" data-en="Contact means:"></h4>
           <div class="i-socialMedia rad-pad-505"> 
-            <a class="button" href="https://t.me/MauricioBarrueta" target="_blank">
-              <div class="icon"></div><span>Telegram</span>
-            </a>
             <a class="button" href="https://wa.me/527227982747?text=Contacto%20desde%20portafolio" target="_blank">
               <div class="icon"></div><span>WhatsApp</span>
-            </a>            
+            </a>  
+            <a class="button" href="https://t.me/MauricioBarrueta" target="_blank">
+              <div class="icon"></div><span>Telegram</span>
+            </a>                      
             <a class="button" href="http://www.linkedin.com/in/mauricio-barrueta" target="_blank">
               <div class="icon"></div><span>Linkedin</span>
             </a>
