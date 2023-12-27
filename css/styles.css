@@ -514,7 +514,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 .web-icons li:last-child a::after { content: "\f09b"; font: var(--fa-font-brands); }
 .coProject li:last-child a::after { content: "\f08d"; font: var(--fa-font-solid); } /* Practices Projects */
 
-.hidden-projects { display: none; }
+.hidden-projects, .projects-limit { display: none; }
 #show-hide-title {
     display: inline-block; width: 100%; margin-top: 10px;
     font-size: 11px; color: var(--darkSlateGray); cursor: default;
