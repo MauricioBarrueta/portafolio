@@ -393,7 +393,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 #titleInfo, .carousel-instructions {
     width: 100%; display: inline-block; 
     color: var(--darkSlateGray);
-    text-decoration: underline dotted 2px; text-align: center; font-size: 8px;
+    text-decoration: underline dotted 2px; text-align: center; font-size: 9px;
 }
 #titleInfo::before, #titleInfo::after, .carousel-instructions::before, .carousel-instructions::after { 
     content: "\f05a"; margin-inline: 8px; font-size: 10px; text-decoration: none !important; 
@@ -423,17 +423,20 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 } 
 .carousel-item { width: auto; margin-right: 0; }
 .carousel-control-prev, .carousel-control-next { /* Carousel Buttons */
-    background-color: var(--darkSlateGray); border: 1px solid white; color: white; opacity: .7;
-    height: 15%; top: auto; width: auto; bottom: 40%; /* bottom: 85%; */      
+    background-color: var(--jellyBeanBlue); border: 1px solid white; color: white; 
+    height: 15%; top: auto; width: auto; bottom: 40%;
+    transition: 0.25s; opacity: .7;
 }
-.carousel-control-prev:hover, .carousel-control-next:hover { opacity: 1; }
+.project-card:hover .carousel-control-prev, .project-card:hover .carousel-control-next { bottom: 55%; }
+.carousel-control-prev:hover, .carousel-control-next:hover { opacity: 1; background-color: var(--darkSlateGray); }
 .carousel-control-prev { border-radius: 0 5px 5px 0; left: 12px; border-left: 0; }
 .carousel-control-next { border-radius: 5px 0 0 5px;  right: 12px; border-right: 0; }
 .carousel-control-prev-icon, .carousel-control-next-icon {  /* Carousel Buttons Icons */
-    scale: 0.55; filter: invert(100%); 
-    transition: 0.25s;  
+    scale: 0.6; filter: invert(100%); 
+    transition: 0.35s;  
 }
 .carousel-control-prev-icon { background: url(../svg/angles-left.svg); }
+.carousel-control-prev:hover .carousel-control-prev-icon, .carousel-control-next:hover .carousel-control-next-icon { scale: 0.65; }
 .carousel-control-prev:hover .carousel-control-prev-icon { transform: translateX(-3px); }
 .carousel-control-next:hover .carousel-control-next-icon { transform: translateX(3px); }
 .carousel-control-next-icon { background: url(../svg/angles-right.svg); }
@@ -477,7 +480,7 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 }
 .project-card .details .web-icons { /* Project Cards Links Icons */
     width: 100%; font-size: 11px; text-align: center;
-	display: table; border-top: 1px solid var(--jellyBeanBlue); margin: 0; padding: 2px 0 0 0;
+	display: table; border-top: 1px dashed var(--jellyBeanBlue); margin: 0; padding: 2px 0 0 0;
 }
 .project-card .details .web-icons li { width: 50px; display: table-cell; list-style: none; }
 .project-card .details .web-icons li>span {    
@@ -489,7 +492,8 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
     font-size: 12px; display: inline-block; transition: scale 0.35s, animation 0.5s;
 }
 .project-card .details .web-icons li>span.web { /* Project Web App Type icon */
-    content: url('../svg/webApp.svg'); width: 13.5px; 
+    content: url('../svg/webApp.svg'); width: 14px; 
+    filter: invert(25%) sepia(24%) saturate(655%) hue-rotate(135deg) brightness(93%) contrast(90%);
     display: inline-block; transition: all 0.25s;
 }
 .project-card .details .web-icons li>span.desktop::after { content: "\e4e5"; }
