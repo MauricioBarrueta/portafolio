@@ -22,7 +22,7 @@ $(document).ready(function () {
         startEvent: 'DOMContentLoaded',
         once: true, 
         delay: 150,
-        duration: 900, 
+        duration: 950, 
         easing: 'ease-out' 
     });    
 
