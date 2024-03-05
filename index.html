@@ -25,12 +25,13 @@
     </div>
     <button class="ScrollToTop btn jellyBeanBlue trsn"></button> 
 
-    <header id="Main">     
+    <header id="Main">  
+      <div class="waves-down-img"></div>
       <div class="scroll-down-l"><span class="sd-span bounce" data-es="Desliza hacia abajo " data-en="Scroll down "></span></div>           
-      <div class="scroll-down-r"><span class="sd-span bounce" data-es="Desliza hacia abajo " data-en="Scroll down "></span></div>     
+      <div class="scroll-down-r"><span class="sd-span bounce" data-es="Desliza hacia abajo " data-en="Scroll down "></span></div> 
       <section class="main-introduction rad-pad-101">       
         <div class="h-title">
-          <h1 class="h1-h rad-pad-505 jellyBeanBlue"><span data-es="'Hola Mundo!!'_" data-en="'Hello World!!'_"></span></h1>
+          <h1 class="h1-h rad-pad-505"><span data-es="'Hola Mundo!!'_" data-en="'Hello World!!'_"></span></h1>
         </div>     
         <div class="subtitle rad-pad-505 moonstoneBlue">
           <span class="purple-font">if(</span><span class="yellow-font" data-es="explorarPortafolio" data-en="explorePortfolio"></span>
@@ -41,8 +42,8 @@
             <img class="card-img-container" src="img/BackendHor.webp" alt="">
             <div class="header-card-content">
               <h2 class="header-card-title" data-es="Mi objetivo" data-en="My goal"></h2>
-              <p class="header-card-description" data-es="Escribir código lo más optimizado posible con el fin de que sea entendible, limpio 
-                y sobre todo eficiente." data-en="Write the most optimized code possible, with the purpose of making it an understandable, 
+              <p class="header-card-description" data-es="Es escribir código lo más optimizado posible con el fin de que sea entendible, limpio 
+                y sobre todo eficiente." data-en="It's to write the most optimized code possible, with the purpose of making it an understandable, 
                 clean and especially, efficient."></p>
             </div>
           </div>          
@@ -53,8 +54,8 @@
             <img class="card-img-container" src="img/FrontendHor.webp" alt="">
             <div class="header-card-content">
               <h2 class="header-card-title" data-es="Mi objetivo" data-en="My goal"></h2>
-              <p class="header-card-description" data-es="Crear una interfaz funcional, creativa, adaptable y fácil de usar para el usuario final." 
-                data-en="Create a functional, creative, adaptable interface and easy to use for the user."></p>
+              <p class="header-card-description" data-es="Es crear una interfaz funcional, creativa, adaptable y fácil de usar para el usuario final." 
+                data-en="It's to create a functional, creative, adaptable interface and easy to use for the user."></p>
             </div>
           </div>  
         </div>          
@@ -64,13 +65,8 @@
           <span class="comment-font">//false</span>
         </div>        
         <a href="#Contact" class="btn-h-contact btn rad-pad-505" data-es="Contáctame" data-en="Contact me"></a>
-       
-        <div class="scrolldown-wrapper"> <!-- Scroll Down Icon -->
-          <div class="scrolldown">
-            <svg height="30" width="10"><circle class="scrolldown-p1" cx="5" cy="15" r="2"/><circle class="scrolldown-p2" cx="5" cy="15" r="2"/></svg>
-          </div>
-        </div>       
       </section>
+      <div class="waves-up-img"></div>
     </header>   
 
     <span class="position-absolute trigger"></span> <!-- Navbar Trigger -->
@@ -142,8 +138,32 @@
         '&#xf100;' and '&#xf101;' to navigate between projects"></small>
       <div class="p-cards-container"> 
         <div class="project-card carousel slide" id="JavaScriptAPIProjects">
-          <div class="carousel-inner">              
+          <div class="carousel-inner">      
             <div class="img-container carousel-item active">
+              <span class="img-carousel-title">JavaScript</span>
+              <img src="img/proyectos/toDoList.webp" class="img-item" alt="HTML para la estructuración, JavaScript para la funcionalidad, SCSS y el 
+                framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Sitio web 
+                que permite agregar un número ilimitado de notas/tareas, las cuales pueden ser editadas o borradas, además de poder filtrar la lista de 
+                acuerdo al estado de las mismas (completadas o pendientes).">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title" data-es="Lista de tareas" data-en="To-Do List"></h2>
+                <div class="tec-icons">
+                  <ul class="static-scss-jquery-icons p-tecnologies"></ul>
+                </div>  
+                <ul class="web-icons">              
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/ToDoList/" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/ToDoList.git" data-bs-toggle="tooltip" data-bs-placement="top" 
+                      data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>             
+                </ul>
+              </div>
+            </div>        
+            <div class="img-container carousel-item">
               <span class="img-carousel-title">JavaScript</span>
               <img src="img/proyectos/passwordGenerator.webp" class="img-item" alt="HTML para la estructuración, JavaScript y jQuery para la funcionalidad, 
                 SCSS, el framework Bootstrap para los estilos y el módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Sitio web 
@@ -1279,14 +1299,13 @@
             <label for="name" class="form-label" data-es="Nombre/Empresa:" data-en="Full name/Company:"></label><span>*</span>
             <div class="input-group mb-3">
               <span class="input-group-text" id="name-icon"></span>
-              <input name="name" id="name" type="text" class="form-control" placeholder="Ingresa aquí tu nombre - Enter your name here:" 
+              <input name="name" id="name" type="text" class="form-control" placeholder="Ingresa tu nombre acá - Enter your name here:" 
                 aria-describedby="name-icon" required>
             </div>
             <label for="email" class="form-label">E-mail:</label><span>*</span>
             <div class="input-group mb-3" style="margin-bottom: 5px !important;">
               <span class="input-group-text" id="icon-email"></span>
-              <input name="email" id="email" type="email" class="form-control" placeholder="Ej. - E.g.: name@email.com" 
-                aria-describedby="icon-email" required>
+              <input name="email" id="email" type="email" class="form-control" placeholder="Ej. - E.g.: correo@email.com" aria-describedby="icon-email" required>
             </div>
             <div id="emailHelp" for="email" class="form-text" data-es="Tu correo electrónico no se comparte con nadie más" data-en="Your email isn't shared with anyone else"></div>
             <div class="form-floating">
@@ -1297,14 +1316,13 @@
           </form>
           <a href="mailto:mauba22@outlook.com" id="myEmail" style="opacity: 0;">mail</a> <!-- mailto -->
         </div>  
-
         <div class="icons rad-pad-101" id="iconscon" data-aos="zoom-out"> <!-- Social Media Links -->
-          <h4 data-es="Correo electrónico:" data-en="E-mail:"></h4>
+          <h4 data-es="Mi correo electrónico:" data-en="My e-mail:"></h4>
           <p>
             <input type="text" value="mauba22@outlook.com" id="email-copy" style="text-decoration: underline;" readonly>
-            <button class="copy-btn" id="copy-btn" title="Copiar - Copy"></button>
+            <button class="copy-btn" id="copy-btn" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="modal-tooltip" title="Copiar - Copy"></button>
           </p>
-          <h4 data-es="Medios de contacto:" data-en="Contact means:"></h4>
+          <h4 data-es="Otros medios de contacto:" data-en="Other means of contact:"></h4>
           <div class="i-socialMedia rad-pad-505"> 
             <a class="button" href="https://wa.me/527227982747?text=Contacto%20desde%20portafolio" target="_blank">
               <div class="icon"></div><span>WhatsApp</span>
@@ -1329,24 +1347,24 @@
 
   <footer class="footer" id="footer">
     <div class="footer-content">      
+      <ul class="menu rad-pad-505">
+        <li><a href="#Main"><span data-es="Inicio" data-en="Home"></span></a></li>
+        <li><a href="#About"><span data-es="Sobre mí" data-en="About me"></span></a></li>
+        <li><a href="#Projects"><span data-es="Proyectos" data-en="Projects"></span></a></li>
+        <li><a href="#Skills"><span data-es="Habilidades" data-en="Skills"></span></a></li>
+        <li><a href="#Contact"><span data-es="Contacto" data-en="Contact"></span></a></li>
+      </ul>  
       <div class="social rad-pad-505">
         <a href="https://codepen.io/MauricioBarrueta" title="CodePen" target="_blank"></a>
         <a href="https://stackoverflow.com/users/20207506/mauricio-barrueta" title="Stack Overflow" target="_blank"></a>
         <a title="Facebook"></a>
         <a title="YouTube"></a>
         <a title="Linktr.ee"><img src="svg/linktree.svg"></a>        
-      </div>      
-      <ul class="menu rad-pad-505 jellyBeanBlue">
-        <li><a href="#Main"><span data-es="Inicio" data-en="Home"></span></a></li>
-        <li><a href="#About"><span data-es="Sobre mí" data-en="About me"></span></a></li>
-        <li><a href="#Projects"><span data-es="Proyectos" data-en="Projects"></span></a></li>
-        <li><a href="#Skills"><span data-es="Habilidades" data-en="Skills"></span></a></li>
-        <li><a href="#Contact"><span data-es="Contacto" data-en="Contact"></span></a></li>
-      </ul>       
+      </div> 
       <p data-es="Sitio web desarrollado por:" data-en="Website developed by:"></p>
     </div>
     <div class="footer-bottom">
-      <p><span>&copy; 2023</span> Edgar Mauricio Barrueta Aguirre</p>
+      <p><span>&copy; 2023 |</span> Edgar Mauricio Barrueta Aguirre</p>
     </div>
   </footer> 
   
