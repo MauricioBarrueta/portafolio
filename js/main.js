@@ -19,11 +19,7 @@ $(document).ready(function () {
 
     /* Se inicializa AOS Library */
     AOS.init({ 
-        startEvent: 'DOMContentLoaded',
-        once: true, 
-        delay: 150,
-        duration: 950, 
-        easing: 'ease-out' 
+        startEvent: 'DOMContentLoaded', once: true, delay: 150, duration: 950, easing: 'ease-out' 
     });    
 
     /* Resalta el texto en la navbar de acuerdo a la sección en la que se encuentra */
@@ -42,7 +38,7 @@ $(document).ready(function () {
 const parallaxMain = document.querySelectorAll('.main'),  parallaxContact = document.querySelectorAll(".contactme"), 
     parallaxFooter = document.querySelectorAll('.footer');
 window.addEventListener("scroll", function () {
-    let offset = window.pageYOffset;
+    let offset = window.scrollY;
     parallaxMain.forEach(function (parallaxEffect) {
         parallaxEffect.style.backgroundPositionY = (offset - parallaxEffect.offsetTop) * 0.6 + "px";
     }) 
@@ -62,9 +58,7 @@ window.addEventListener('scroll', () => {
 const btnScrollToTop = document.querySelector('.ScrollToTop');
 btnScrollToTop.addEventListener('click', () => {
     window.scrollTo({ 
-        top: 0, 
-        left: 0, 
-        behavior: "smooth" 
+        top: 0, left: 0, behavior: "smooth" 
     });
 });
 
@@ -79,8 +73,7 @@ $('.navbar-nav>li>a').on('click', function() { $('.navbar-collapse').collapse('h
 const openCvButton = document.getElementById('btn-cv')
 const cvFileUrl = 'https://mauriciobarrueta.github.io/portafolio/files/CV-Edgar Mauricio Barrueta Aguirre.pdf'
 openCvButton.addEventListener('click', () => {
-    var docHref = actualLang == 'es' ? cvFileUrl + '#page=1' : cvFileUrl + '#page=2'
-    openCvButton.href = docHref   
+    openCvButton.href = actualLang == 'es' ? `${cvFileUrl}#page=1` : `${cvFileUrl}#page=2`
 })
 
 /* Obtiene el atributo src, alt y title de la imagen del proyecto seleccionado y se pasan al Modal */
@@ -157,11 +150,11 @@ btnCopyEmail.addEventListener('click', () => {
     copyText.setSelectionRange(0, 99999); /* Para dispositivos móviles */
     navigator.clipboard.writeText(copyText.value)
         .then(() => {
-            showAlertSpan(); 
+            showAlertSpan()
             alertText.innerHTML = `Copiado al portapapeles - Copied to clipboard &#xf328;`
         })
         .catch(() => {
-            showAlertSpan(); 
+            showAlertSpan()
             alertText.innerHTML = `Error inesperado - Unexpected error &#xf071;`
         });
 });
@@ -173,18 +166,17 @@ function switchLang(lang) {
     actualLang = lang
 }
 $(".switchlang").click(function () {
-    modalSpinner();
-    switchLang($(this).data("lang"))
-    
+    modalSpinner()
+    switchLang($(this).data("lang"))    
 });
-function modalSpinner() {
+const modalSpinner = () => {
     $('.modalSpinner').modal('show');
-    setTimeout(function () { $('.modalSpinner').modal('hide'); }, 3000);
+    setTimeout(function () { $('.modalSpinner').modal('hide'); }, 3000)
 }
 
-/* Función que muestra un Alert dependiendo la acción que lo requiera */
 const alertDialog = document.getElementById('alertSpan'), alertText = document.getElementById('alert-text'),
     closeAlert = document.querySelector('.close-alert');
+/* Función que muestra un Alert dependiendo la acción que lo requiera */
 const showAlertSpan = () => {   
     alertDialog.classList.remove('hide');
     alertDialog.classList.add('show');   
