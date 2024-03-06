@@ -136,7 +136,7 @@ header {
 }
 /* Span Page-Sides Bounce-Animation */
 .scroll-down-l, .scroll-down-r { 
-    position: absolute; flex-direction: column; 
+    position: absolute; flex-direction: column; pointer-events: none;
     font-size: 14px; color: var(--jellyBeanBlue);    
 } 
 .scroll-down-l { left: 1%; }
@@ -576,7 +576,8 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 .img-magnifier-container { position: relative; } /* Modal Magnifying Glass */ 
 .img-magnifier-glass {
     width: 225px; height: 225px; position: absolute;
-    border: 10px double #111; border-radius: 50%; cursor: move;   
+    border: 3px solid #111111; outline: 3px solid #393939; outline-offset: -8px;    
+    border-radius: 50%; cursor: move;   
     background-color: var(--customWhite); box-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
 }
 .modal-tooltip .tooltip-inner {
@@ -996,7 +997,7 @@ footer {
     } 
     #imgPopUpModal .modal-header, .modal-footer { font-size: 7px !important; padding: 0.5rem; }
     .modal-content .zoomout, .footer-bottom>p::after { font-size: 12px; }
-    .img-magnifier-glass { width: 200px; height: 200px; border-width: 8px; }    
+    .img-magnifier-glass { width: 200px; height: 200px; /*border-width: 8px;*/ }    
     .footer-content>p, .footer-bottom>p { font-size: 10px; } /* Footer */  
     .skills-section-subtitle { margin-top: 10px; margin-bottom: 5px !important; font-size: 9px; }
     /* Cards-Touch Icon */
@@ -1081,6 +1082,19 @@ footer {
     }
     .alertSpan .fa-exclamation-circle { top: 55% !important; left: 30px !important; font-size: 14px !important; }
 }    
+
+@media screen and (max-width: 480px) {
+    header { box-shadow: inset 0 20px 10px 0 rgba(0, 0, 0, .5), inset 0 -20px 10px 0 rgba(0, 0, 0, .5);  }
+    .scroll-down-l, .scroll-down-r { z-index: 1; }
+    .abtm-text .abtm-footer > i { margin-inline: 7px !important; }
+    #titleInfo, .carousel-instructions { font-size: 7px !important; }
+    .card-skills img { width: 45px !important; height: 45px !important; }
+    .contact-form > h1::after, .contact-form > h1::before { margin-inline: 7px !important; }
+    #name::placeholder, #email::placeholder { font-size: 6.5px !important; }
+    .footer-content .menu a { font-size: 6px !important; }
+    .footer-bottom > p, .footer-bottom > p::after { font-size: 7px !important; }
+    .footer-content .menu li { margin-left: 2px; }
+}
 
 /* ---------------------------------------------------------------- BROWSER SCROLLBAR -------------------------------------------------------*/
 ::-webkit-scrollbar { width: 12px; } /* Scrollbar Width */  
