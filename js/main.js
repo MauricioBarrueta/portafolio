@@ -15,7 +15,7 @@ window.onload = () => {
 $(document).ready(function () {     
     /* Verifica si el iframe se ha cargado */
     var iframe = document.getElementById('iframeTemplate');
-    if(iframe === null) window.location.reload()      
+    if(iframe === null) window.location.reload()
 
     /* Se inicializa AOS Library */
     AOS.init({ 
@@ -78,7 +78,7 @@ openCvButton.addEventListener('click', () => {
 
 /* Obtiene el atributo src, alt y title de la imagen del proyecto seleccionado y se pasan al Modal */
 document.addEventListener('click', function (e) {
-    if (e.target.classList.contains('img-item')) {    
+    if (e.target.classList.contains('img-item')) {  
         $('html').css("overflow", "hidden") /* Se deshabilita el scroll de la página mientras la ventana esté abierta */  
         const projectImage = e.target.getAttribute('src');
         document.querySelector('.img-modal').src = projectImage;
@@ -90,9 +90,23 @@ document.addEventListener('click', function (e) {
         new google.translate.TranslateElement({ pageLanguage: 'es', includedLanguages: 'en,es', 
         layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element'); 
         $('.VIpgJd-ZVi9od-xl07Ob-lTBxed').removeAttr('href') /* Se le quita el atributo 'href' a la barra de Google Translate */
-        myModal.show();                    
+        myModal.show();
     }     
 });
+
+/* Muestra un alert (SweetAlert2) al dar clic en un proyecto que usa Firebase Hosting */
+const alertFirebaseHost = (url) => {    
+    Swal.fire({
+        titleText: 'En caso de que el navegador por defecto bloqueé el sitio, da clic en un ícono similar a "\u{f023}" para permitir de manera manual el acceso a la página',
+        text: '** Esta acción NO afecta absolutamente en nada la seguridad del navegador ni mucho menos la de tu dispositivo **',        
+        confirmButtonText: 'OK',
+        confirmButtonColor: '#4B7F83'
+    }).then((result) => {
+        if (result.value) {
+            window.open(url, '_blank')
+        }
+    });    
+}
 
 /* Función que restaura el idioma original de la página al cerrar el Modal */
 const ImageModal = document.getElementById('imgPopUpModal')

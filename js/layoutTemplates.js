@@ -80,6 +80,13 @@ if (iframe != null) {
             skills.append(templateContent)
         });
 
+        const firebaseHostTemplate = iframeContent.getElementById('firebase-host-projects')
+        const firebaseHostProjects = document.querySelectorAll('.firebase-hosting')
+        firebaseHostProjects.forEach(element => {
+            const templateContent = firebaseHostTemplate.content.cloneNode(true)
+            element.appendChild(templateContent)
+        });
+
         const jsTemplate = iframeContent.getElementById('js-jquery-projects');
         const spanAfterJspIcons = document.getElementById('jspProjectIconsBefore');
         const jspTemplateContent = jsTemplate.content.cloneNode(true)

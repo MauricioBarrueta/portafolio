@@ -1042,7 +1042,7 @@ footer {
     .card-skills { width: 75px; height: 75px; }
     .card-skills img { width: 70px; height: 70px; }     
     .card-skills .info-skills .progress-bar { font-size: 6.5px; }   
-    .alertSpan .alert-text { font-size: 7.2px !important; white-space: nowrap; } /* Alert Span */   
+    .alertSpan .alert-text { font-size: 7.2px !important; white-space: nowrap; } /* Alert Span */ 
 }
 
 @media screen and (max-width: 650px) {
@@ -1142,3 +1142,25 @@ footer {
 .close-alert:hover { background: var(--jellyBeanBlue); }
 .close-alert .fa-times { color: var(--customWhite); font-size: 20px; line-height: 40px; } /* Alert Span Button Icon */
 .alertDialogTooltip>.tooltip-inner { font-size: 12px; border: 2px dotted whitesmoke; }
+
+/* ----------------------------------------------------------- SweetAlert2 ---------------------------------------------------------------- */
+div:where(.swal2-container) div:where(.swal2-popup) {
+    width: 75% !important; 
+    padding: 0.5rem !important; user-select: none;
+}
+/* Alert Text */
+div:where(.swal2-container) h2:where(.swal2-title) {
+    font-size: 11px !important; font-weight: normal !important; line-height: 1.5 !important;
+    color: var(--darkSlateGray) !important;
+}
+div:where(.swal2-container) h2:where(.swal2-title)::before, div:where(.swal2-container) h2:where(.swal2-title)::after {
+    content: "\f071"; color: #ffc107; margin-inline: 8px;
+}
+div:where(.swal2-container) .swal2-html-container { 
+    font-size: 8.25px !important; color: var(--customRed) !important;
+    padding-bottom: 10px !important; border-bottom: 2px dashed var(--jellyBeanBlue);
+}
+/* OK Button Container */
+div:where(.swal2-container) div:where(.swal2-actions) { margin: 5px 0 auto !important; }
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm { font-size: 12px !important; transition: 0.25s; }
+div:where(.swal2-container) button:where(.swal2-styled).swal2-confirm:hover { background-color: var(--darkSlateGray) !important; }
