@@ -366,7 +366,7 @@ header {
 img.Java-Icon { content: url(../svg/Java.svg); } img.C-Icon { content: url(../svg/C.svg); } img.PHP-Icon { content: url(../svg/PHP.svg); }
 img.NetBeans-Icon { content: url(../svg/NetBeans.svg); } img.AStudio-Icon { content: url(../svg/AndroidStudio.webp); } 
 img.GitLab-Icon { content: url(../svg/GitLab.svg); } img.TypeScript-Icon { content: url(../svg/TypeScript.svg); } img.JavaScript-Icon { content: url(../svg/JavaScript.svg); }
-img.Spring-Icon { content: url(../svg/Spring.svg); } img.Angular-Icon { content: url(../svg/Angular.webp); } img.SQL-Icon { content: url(../svg/MySQL.svg); }
+img.Spring-Icon { content: url(../svg/Spring.svg); } img.Angular-Icon { content: url(../svg/Angular.svg); } img.SQL-Icon { content: url(../svg/MySQL.svg); }
 img.HTML-Icon { content: url(../svg/HTML.svg); } img.CSS-Icon { content: url(../svg/CSS.svg); } img.JWT-Icon { content: url(../svg/JWT.svg); } 
 img.Python-Icon { content: url(../svg/Python.svg); } img.Unity-Icon { content: url(../svg/Unity.svg); } img.Bootstrap-Icon { content: url(../svg/Bootstrap.webp); }
 img.PostgreSQL-Icon { content: url(../svg/PostgreSQL.svg); } img.jQuery-Icon { content: url(../svg/jQuery.svg); } img.GitHub-Icon { content: url(../svg/GitHub.svg); }
