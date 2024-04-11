@@ -97,7 +97,7 @@ document.addEventListener('click', function (e) {
 /* Muestra un alert (SweetAlert2) al dar clic en un proyecto que usa Firebase Hosting */
 const alertFirebaseHost = (url) => {    
     Swal.fire({
-        titleText: 'En caso de que el navegador por defecto bloqueé el sitio, da clic en un ícono similar a "\u{f023}" para permitir de manera manual el acceso a la página',
+        titleText: 'En caso de que el navegador bloqueé el sitio, da clic en un ícono similar a "\u{f023}" para permitir de manera manual el acceso a la página',
         text: '** Esta acción NO afecta absolutamente en nada la seguridad del navegador ni mucho menos la de tu dispositivo **',        
         confirmButtonText: 'OK',
         confirmButtonColor: '#4B7F83'
