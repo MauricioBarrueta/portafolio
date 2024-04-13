@@ -1157,7 +1157,7 @@ div:where(.swal2-container) h2:where(.swal2-title)::before, div:where(.swal2-con
     content: "\f071"; color: #ffc107; margin-inline: 8px;
 }
 div:where(.swal2-container) .swal2-html-container { 
-    font-size: 8.25px !important; color: var(--customRed) !important;
+    font-size: 8px !important; color: var(--customRed) !important;
     padding-bottom: 10px !important; border-bottom: 2px dashed var(--jellyBeanBlue);
 }
 /* OK Button Container */
