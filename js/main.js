@@ -15,7 +15,7 @@ window.onload = () => {
 $(document).ready(function () {     
     /* Verifica si el iframe se ha cargado */
     var iframe = document.getElementById('iframeTemplate');
-    if(iframe === null) window.location.reload()
+    if(iframe === null) location.reload()
 
     /* Se inicializa AOS Library */
     AOS.init({ 
@@ -40,13 +40,13 @@ const parallaxMain = document.querySelectorAll('.main'),  parallaxContact = docu
 window.addEventListener("scroll", function () {
     let offset = window.scrollY;
     parallaxMain.forEach(function (parallaxEffect) {
-        parallaxEffect.style.backgroundPositionY = (offset - parallaxEffect.offsetTop) * 0.6 + "px";
+        parallaxEffect.style.backgroundPositionY = (offset - parallaxEffect.offsetTop) * 0.5 + "px";
     }) 
     parallaxContact.forEach(function (parallaxEffect) {
-        parallaxEffect.style.backgroundPositionY = (offset - parallaxEffect.offsetTop) * 0.6 + "px";
+        parallaxEffect.style.backgroundPositionY = (offset - parallaxEffect.offsetTop) * 0.5 + "px";
     }) 
     parallaxFooter.forEach(function (parallaxEffect) {
-        parallaxEffect.style.backgroundPositionY = (offset - parallaxEffect.offsetTop) * 0.6 + "px";
+        parallaxEffect.style.backgroundPositionY = (offset - parallaxEffect.offsetTop) * 0.5 + "px";
     })   
 })
 
@@ -56,7 +56,7 @@ window.addEventListener('scroll', () => {
     btnScrollToTop.style.opacity = window.scrollY > 200 ? '.85' : '0';
 });
 const btnScrollToTop = document.querySelector('.ScrollToTop');
-btnScrollToTop.addEventListener('click', () => {
+btnScrollToTop.addEventListener('click', () => {    
     window.scrollTo({ 
         top: 0, left: 0, behavior: "smooth" 
     });
@@ -79,7 +79,7 @@ openCvButton.addEventListener('click', () => {
 /* Obtiene el atributo src, alt y title de la imagen del proyecto seleccionado y se pasan al Modal */
 document.addEventListener('click', function (e) {
     if (e.target.classList.contains('img-item')) {  
-        $('html').css("overflow", "hidden") /* Se deshabilita el scroll de la página mientras la ventana esté abierta */  
+        $('html').css("overflow", "hidden") //* Se deshabilita el scroll de la página mientras la ventana esté abierta
         const projectImage = e.target.getAttribute('src');
         document.querySelector('.img-modal').src = projectImage;
         const myModal = new bootstrap.Modal(document.getElementById('imgPopUpModal'));
@@ -93,20 +93,6 @@ document.addEventListener('click', function (e) {
         myModal.show();
     }     
 });
-
-/* Muestra un alert (SweetAlert2) al dar clic en un proyecto que usa Firebase Hosting */
-const alertFirebaseHost = (url) => {    
-    Swal.fire({
-        titleText: 'En caso de que el navegador bloqueé el sitio, da clic en un ícono similar a "\u{f023}" para permitir de manera manual el acceso a la página',
-        text: '** Esta acción NO afecta absolutamente en nada la seguridad del navegador ni mucho menos la de tu dispositivo **',        
-        confirmButtonText: 'OK',
-        confirmButtonColor: '#4B7F83'
-    }).then((result) => {
-        if (result.value) {
-            window.open(url, '_blank')
-        }
-    });    
-}
 
 /* Función que restaura el idioma original de la página al cerrar el Modal */
 const ImageModal = document.getElementById('imgPopUpModal')
@@ -135,8 +121,9 @@ showHideBtn.addEventListener('click', () => {
         visibleLimit.style.display = "inline", hideProjects.style.display = "none", showHideBtn.href = '#Projects',
         showHideBtn.innerHTML = `Ver más &nbsp; \u{f078} &nbsp; See more`        
     } else {            
-        visibleLimit.style.display = "none", hideProjects.style.display = "flex", hideProjects.style.flexWrap = 'wrap', hideProjects.style.justifyContent = 'center',       
-        hideProjects.style.gap = '15px', showHideBtn.innerHTML = `Ver menos &nbsp; \u{f077} &nbsp; See less`, showHideBtn.href = 'javascript:;'
+        visibleLimit.style.display = "none", hideProjects.style.gap = '15px', showHideBtn.href = 'javascript:;'
+        hideProjects.style.display = "flex", hideProjects.style.flexWrap = 'wrap', hideProjects.style.justifyContent = 'center',       
+        showHideBtn.innerHTML = `Ver menos &nbsp; \u{f077} &nbsp; See less`
     } 
 })
 
@@ -151,7 +138,7 @@ emailForm.addEventListener('submit', (event) => {
     $(btnSendEmail).html('Procesando...&nbsp;<span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>').prop('disabled', true)
     setTimeout(function () {
         $(btnSendEmail).html(btnHtmlElements).prop('disabled', false) /* Restaura el botón a su valor inicial */
-        btnEmailTo.setAttribute('href', `mailto:mauba22@outlook.com?subject=Te contacto desde tu portafolio: ${formData.get('name')} - ${formData.get('email')}&body=${formData.get('message')}`)
+        btnEmailTo.setAttribute('href', `mailto:mauba22@outlook.com?subject=Te contacto desde tu portafolio, soy ${formData.get('name')} y mi correo es ${formData.get('email')}&body=${formData.get('message')}`)
         btnEmailTo.click();
     }, 4000)
 });

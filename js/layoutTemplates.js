@@ -1,5 +1,5 @@
 var iframe = document.getElementById('iframeTemplate');
-if (iframe != null) {
+if (iframe !== null) {
     iframe.onload = function () {
         var iframeContent = iframe.contentDocument || iframe.contentWindow.document;
 
@@ -85,6 +85,13 @@ if (iframe != null) {
         firebaseHostProjects.forEach(element => {
             const templateContent = firebaseHostTemplate.content.cloneNode(true)
             element.appendChild(templateContent)
+        });
+
+        const multiCssTemplate = iframeContent.getElementById('multi-css-frameworks-projects')
+        const multiCssProjects = document.querySelectorAll('.multi-css')
+        multiCssProjects.forEach(element => {
+            const templateContent = multiCssTemplate.content.cloneNode(true)
+            element.prepend(templateContent)
         });
 
         const jsTemplate = iframeContent.getElementById('js-jquery-projects');
