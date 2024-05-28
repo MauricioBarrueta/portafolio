@@ -196,7 +196,7 @@ header {
     width: 100%; height: 100%;
     object-fit: cover; scale: 1; transition: opacity 0.25s, scale 0.35s;
 }
-.header-card:hover .card-img-container { opacity: 0.5; scale: 1.2; }
+.header-card:hover .card-img-container { opacity: 0.5; scale: 1.25; }
 .header-card-content {
     flex-direction: column; justify-content: center; row-gap: 10px; 
     position: absolute; inset: 0; padding: 1em 0.5rem; 
@@ -1020,7 +1020,10 @@ footer {
     .card-skills img { width: 75px; height: 75px; } 
     .certification-container { gap: 25px !important; } /* Certifications */
     .contact-section-separator::after { border-width: 25px 25px 0 25px; } /* Separator */
-    .i-socialMedia .button span { font-size: 6px !important; } /* Footer */   
+    .i-socialMedia .button span { 
+        font-size: 6px !important; margin-left: 3px;
+    } 
+    .button .icon::before { font-size: 20px !important; }
     .icons>p>input { font-size: 12px; } 
 }
 @media screen and (max-width: 980px) {    
@@ -1060,11 +1063,10 @@ footer {
 }
 @media screen and (max-width: 800px) { 
     .ScrollToTop { width: 55px; height: 55px;  } /* STT button */    
-    .comment-font { font-size: 7px !important; }
+    .comment-font { font-size: 6px !important; }
     .modalSpinner #spinnerSpan { font-size: 16px; }  
     .sectionTitles { font-size: 15px; border-radius: 5px !important; } /* Titles */    
     .scroll-down-l, .scroll-down-r, .exp-section-title, .cert-section-title { font-size: 10px; } /* Header - Section Titles */
-    .main-introduction .subtitle { padding: 2.5px; }        
     .tec-icons .p-tecnologies li { margin: 0 3px !important; } /* Project Tech Icons */
     .tec-icons .p-tecnologies li .p-tec-svg-icons { width: 19px !important; height: 19px !important; }
     .modal-content { max-height: 92% !important; height: 90% !important; } /* Modal - Modal Body (img) */
@@ -1078,7 +1080,12 @@ footer {
     .card-skills img { width: 65px; height: 65px; }     
     .card-skills .info-skills .progress-bar { font-size: 6.5px; }   
     .contactme .content .icons { min-width: 100%; max-width: 100%; }
-    .alertSpan .alert-text { font-size: 7.2px !important; white-space: nowrap; } /* Alert Span */ 
+    .alertSpan .alert-text { font-size: 7.2px !important; white-space: nowrap; } /* Alert Span */
+    .i-socialMedia .button { margin: 0 2px; } /* Footer Social Media Icons */
+    .i-socialMedia .button:hover {
+        width: 145px !important;
+    } 
+    .footer-content .social > a { margin: 0 2px; } /* Footer */
 }
 
 @media screen and (max-width: 650px) {
