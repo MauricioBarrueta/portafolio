@@ -73,6 +73,7 @@ body { position: static !important; top: 0px !important; padding-right: 0 !impor
 }
 .content { width: 100%; margin: 0 auto; flex-wrap: wrap; justify-content: space-around !important; }
 header, .aboutme, .portafolio, .cards-container, .contactme { min-height: 100vh;  padding: 1em; }
+.portafolio, .skills-cards { padding: 1em 0; text-align: center; }
 
 /* ----------------------------------------------------------- Scroll To Top Button ------------------------------------------------------- */
 .ScrollToTop {
@@ -379,7 +380,7 @@ header {
 
 /* -------------------------------------------------------------- SVG ICONS -------------------------------------------------------------- */
 img.Java-Icon { content: url(../svg/Java.svg); } img.C-Icon { content: url(../svg/C.svg); } img.PHP-Icon { content: url(../svg/PHP.svg); }
-img.NetBeans-Icon { content: url(../svg/NetBeans.svg); } img.AStudio-Icon { content: url(../svg/AndroidStudio.svg); } 
+img.NetBeans-Icon { content: url(../svg/NetBeans.svg); } img.AStudio-Icon { content: url(../svg/AndroidStudio.svg); } img.Rxjs-Icon { content: url(../svg/rxjs.svg); }
 img.GitLab-Icon { content: url(../svg/GitLab.svg); } img.TypeScript-Icon { content: url(../svg/TypeScript.svg); } img.JavaScript-Icon { content: url(../svg/JavaScript.svg); }
 img.Spring-Icon { content: url(../svg/Spring.svg); } img.Angular-Icon { content: url(../svg/Angular.svg); } img.SQL-Icon { content: url(../svg/MySQL.svg); }
 img.HTML-Icon { content: url(../svg/HTML.svg); } img.CSS-Icon { content: url(../svg/CSS.svg); } img.JWT-Icon { content: url(../svg/JWT.svg); } 
@@ -397,10 +398,8 @@ img.Docker-Icon { content: url(../svg/Docker.svg); } img.AdobeXD-Icon { content:
 img.SQLServer-Icon { content: url(../svg/SQLServer.svg); }
 
 /* ------------------------------------------------------------------ PORTAFOLIO ---------------------------------------------------------- */
-.portafolio { text-align: center; }
 .portafolio .p-cards-container {      	    
-    gap: 15px;
-    z-index: 1; padding-top: 1em;  
+    gap: 10px; padding-top: 1em;  
 }
 #titleInfo, .carousel-instructions {
     width: 100%; display: inline-block; 
@@ -539,9 +538,11 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.svg); }
 .hidden-projects, .projects-limit { display: none; }
 #show-hide-title {
     display: inline-block; width: 100%; 
-    margin-top: 10px; padding-top: 10px; border-top: 2px dashed var(--jellyBeanBlue);
+    margin-top: 10px; padding: 10px 0; border-top: 2px dashed var(--jellyBeanBlue);
     font-size: 11px; color: var(--darkSlateGray); 
-    cursor: default; transition: 0.25s;
+    cursor: default; transition: 0.25s;    
+    backdrop-filter:  blur(2px); -webkit-backdrop-filter:  blur(2px);
+    background-color: rgba(244, 246, 247, 0.4);
 }
 #show-more-projects {
     width: 100%; height: 38px;
@@ -550,6 +551,28 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.svg); }
 }
 .show-hide-container:hover > span { color: var(--mediumJungleGreen) !important; }
 .show-hide-container:hover > #show-more-projects { background-color: var(--darkSlateGray); color: white; }
+
+/** Se ocultan varios íconos en los proyectos con más de 2 librerías/frameworks de CSS */
+.hide-ang-mat li:nth-child(6), .hide-ang-mat li:nth-child(7), .hide-ang-mat li:nth-child(8), .hide-ang-mat li:nth-child(9) { display: none; }
+.hide-multi-css li:nth-child(6), .hide-multi-css li:nth-child(7), .hide-multi-css li:nth-child(8) { display: none; }
+
+/** Se reemplaza el ícono de CSS por el de SASS */
+.css-to-scss li:nth-child(4) .p-tec-svg-icons { content: url(../svg/SASS.svg); }
+/** Se reemplaza el ícono de SCSS por el de CSS */
+.scss-to-css li:nth-child(4) .p-tec-svg-icons { content: url(../svg/CSS.svg); }
+
+/** Remueve el ícono de jQuery de 'static projects' */
+.remove-jquery li:nth-child(2) { display: none; }
+
+/** Remueve los íconos inecesarios en el proyecto Servlet */
+.remove-node-git li:nth-child(9), .remove-node-git li:nth-child(10), .remove-node-git li:nth-child(11) { display: none; }
+
+/** Remueve los íconos insecesarios del proyecto Full Stack */
+.remove-icons li:nth-child(8), .remove-icons li:nth-child(12), .remove-icons li:nth-child(13), .remove-icons li:nth-child(14) { display: none; }
+.remove-icons li:nth-child(10) .p-tec-svg-icons { content: url(../svg/CSS.svg); }
+
+/** Remueve últimos 2 íconos en un proyecto Unity */
+.remove-unity-icons li:nth-child(4), .remove-unity-icons li:nth-child(5) { display: none; }
 
 /* --------------------------------------------------------------- Modal ---------------------------------------------------------------- */
 .modal-content { 
@@ -696,10 +719,9 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.svg); }
 .exp-title:hover::after, .certification-content>a:nth-child(2):hover::after { width: 100%; }
 
 /* ------------------------------------------------------------- SKILLS --------------------------------------------------------------- */
-.skills-cards { padding: 1em; }
 .skills-cards .cards-container { 
     min-height: 100%; 
-    gap: 12px; row-gap: 20px;       
+    gap: 15px; row-gap: 20px;       
 }
 .card-skills { /* Skills Cards */
     display: grid; align-items: center; 
@@ -838,7 +860,7 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.svg); }
     color: var(--jellyBeanBlue);
 }
 .contact-form #emailHelp { font-size: 10px; padding-bottom: 1em; color: var(--jellyBeanBlue); }
-#name, #email { font-size: 12px; }
+#name, #email { font-size: 11px; }
 #name::placeholder, #email::placeholder { font-size: 10px; } /* name-email Input Placeholder */
 #name, #email, #message { opacity: 1; color: var(--darkSlateGray) !important; }
 .input-group>input { color: var(--jellyBeanBlue) !important; } /* Contact-Form Input/TextArea text color */
@@ -984,7 +1006,7 @@ footer {
 }
 .footer-bottom p { font-size: 12px; word-spacing: 2px;  text-transform: capitalize;  margin: 0; }  /* Footer-Bottom div text */
 .footer-bottom>p::after {
-    content: "😏"; font: var(--fa-font-regular); font-size: 16px;
+    content: "😌🤌"; font: var(--fa-font-regular); font-size: 16px;
     margin-left: 10px; display: inline-block; animation: var(--fa-bounce-animation); --fa-bounce-height: 1
 }
 .footer-bottom span { text-transform: uppercase; opacity: .5; font-weight: 200; }
@@ -1109,6 +1131,7 @@ footer {
         width: 14px; height: 14px;
         top: 35px; right: 8px; 
     }    
+    .skills-cards { padding: 1em 0 !important; }
     .skills-cards .cards-container { gap: 5px; }
     .card-skills img { width: 50px; height: 50px; } /* Skills */
     .card-skills>.img-pdng { padding-top: 15px !important; }    

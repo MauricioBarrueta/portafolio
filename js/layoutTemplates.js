@@ -10,6 +10,13 @@ if (iframe !== null) {
             card.prepend(templateContent);
         });
 
+        const mysqlTemplate = iframeContent.getElementById('mysql-icon');
+        const mysqlProjectCard = document.querySelectorAll('.mysql-prj-icon');
+        mysqlProjectCard.forEach(card => {
+            const templateContent = mysqlTemplate.content.cloneNode(true);
+            card.append(templateContent);
+        });
+
         const netbeansTemplate = iframeContent.getElementById('netbeans-projects');
         const netbeansProjectsCards = document.querySelectorAll('.netbeans-project-icon');
         netbeansProjectsCards.forEach(card => {
@@ -17,26 +24,19 @@ if (iframe !== null) {
             card.appendChild(templateContent);
         });
 
+        const firebaseHostTemplate = iframeContent.getElementById('firebase-host-projects')
+        const firebaseHostProjects = document.querySelectorAll('.firebase-hosting')
+        firebaseHostProjects.forEach(element => {
+            const templateContent = firebaseHostTemplate.content.cloneNode(true)
+            element.appendChild(templateContent)
+        });
+
         const angularTemplate = iframeContent.getElementById('angular-projects');
         const angularProjectsCards = document.querySelectorAll('.angular-project-icons');
         angularProjectsCards.forEach(card => {
             const templateContent = angularTemplate.content.cloneNode(true);
             card.prepend(templateContent);
-        });
-
-        const scssTemplate = iframeContent.getElementById('scss-projects')
-        const scssProjectsCards = document.querySelectorAll('.scss-project-icons')
-        scssProjectsCards.forEach(card => {
-            const templateContent = scssTemplate.content.cloneNode(true);
-            card.prepend(templateContent)
-        });
-
-        const mysqlTemplate = iframeContent.getElementById('mysql-icon');
-        const mysqlProjectCard = document.querySelectorAll('.mysql-prj-icon');
-        mysqlProjectCard.forEach(card => {
-            const templateContent = mysqlTemplate.content.cloneNode(true);
-            card.appendChild(templateContent);
-        });
+        });            
 
         const template = iframeContent.getElementById("php-projects");
         const phpCardsClasses = document.querySelectorAll('.php-projects-icons');
@@ -49,23 +49,9 @@ if (iframe !== null) {
         const staticCardClasses = document.querySelectorAll('.static-projects-icons');
         staticCardClasses.forEach(card => {
             const templateContent = staticIconsTemplate.content.cloneNode(true);
-            card.prepend(templateContent);
-        });
+            card.appendChild(templateContent);
+        });       
         
-        const staticScssIconsTemplate = iframeContent.getElementById('static-projects-scss');
-        const staticScssCardClasses = document.querySelectorAll('.static-scss-projects-icons');
-        staticScssCardClasses.forEach(card => {
-            const templateContent = staticScssIconsTemplate.content.cloneNode(true);
-            card.prepend(templateContent);
-        });
-
-        const staticNojQueryTemplate = iframeContent.getElementById('static-scss-nojQuery')
-        const staticNojQueryClasses = document.querySelectorAll('.static-scss-jquery-icons')
-        staticNojQueryClasses.forEach(card => {
-            const templateContent = staticNojQueryTemplate.content.cloneNode(true)
-            card.prepend(templateContent)
-        });
-
         const unityProjectsTemplate = iframeContent.getElementById('unity-projects');
         const unityCards = document.querySelectorAll('.unity-projects-icons');
         unityCards.forEach(card => {
@@ -73,42 +59,25 @@ if (iframe !== null) {
             card.prepend(templateContent);
         });
 
+        const multiCssTemplate = iframeContent.getElementById('multi-css-frameworks-projects')
+        const multiCssProjects = document.querySelectorAll('.multi-css')
+        multiCssProjects.forEach(element => {
+            const templateContent = multiCssTemplate.content.cloneNode(true)
+            element.append(templateContent)
+        });    
+
+        const springThymeleafTemplate = iframeContent.getElementById('spring-thymeleaf-projects')
+        const iconAfter = document.querySelectorAll('#after-temp-icons')
+        iconAfter.forEach(template => {
+            const springThymTempContent = springThymeleafTemplate.content.cloneNode(true)
+            template.parentNode.insertBefore(springThymTempContent, template)
+        });
+
         const skillsTemplate = iframeContent.getElementById('skills-template')
         const skillsCardContainer = document.querySelectorAll('.cards-container')
         skillsCardContainer.forEach(skills => {
             const templateContent = skillsTemplate.content.cloneNode(true);
             skills.append(templateContent)
-        });
-
-        const firebaseHostTemplate = iframeContent.getElementById('firebase-host-projects')
-        const firebaseHostProjects = document.querySelectorAll('.firebase-hosting')
-        firebaseHostProjects.forEach(element => {
-            const templateContent = firebaseHostTemplate.content.cloneNode(true)
-            element.appendChild(templateContent)
-        });
-
-        const multiCssTemplate = iframeContent.getElementById('multi-css-frameworks-projects')
-        const multiCssProjects = document.querySelectorAll('.multi-css')
-        multiCssProjects.forEach(element => {
-            const templateContent = multiCssTemplate.content.cloneNode(true)
-            element.prepend(templateContent)
-        });
-
-        const jsTemplate = iframeContent.getElementById('js-jquery-projects');
-        const spanAfterJspIcons = document.getElementById('jspProjectIconsBefore');
-        const jspTemplateContent = jsTemplate.content.cloneNode(true)
-        spanAfterJspIcons.parentNode.insertBefore(jspTemplateContent, spanAfterJspIcons)
-
-        const fullStackTemplate = iframeContent.getElementById('fullstack-project')
-        const spanAfterFullIcons = document.getElementById('fullstackIconsBefore')
-        const fullTemplateContent = fullStackTemplate.content.cloneNode(true)
-        spanAfterFullIcons.parentNode.insertBefore(fullTemplateContent, spanAfterFullIcons)
-
-        const springThymeleafTemplate = iframeContent.getElementById('spring-thymeleaf-projects')
-        const iconAfter = document.querySelectorAll('#icon-after-sprThy')
-        iconAfter.forEach(template => {
-            const springThymTempContent = springThymeleafTemplate.content.cloneNode(true)
-            template.parentNode.insertBefore(springThymTempContent, template)
         });
     }
 } else {
