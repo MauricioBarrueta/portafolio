@@ -4,4 +4,4 @@
 🇺🇸 Web portfolio developed by myself, here I show my experience as a developer and some of my technical skills, among the functions that stand out are, it allows you to 
    download my Resume in PDF format, as well as the possibility to send an e-mail directly to my inbox.
 
-![Portafolio](https://github.com/MauricioBarrueta/portafolio/assets/60496232/8f422c80-0dab-4d94-a1a4-e8259bbca5e7)
+![Portafolio](https://github.com/user-attachments/assets/965e26b0-290f-4fef-bd4a-9e0be5d533d4)
