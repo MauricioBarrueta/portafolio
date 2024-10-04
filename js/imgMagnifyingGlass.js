@@ -1,85 +1,54 @@
-/* Evento que inicializa la función al dar clic sobre la imagen */
-const img = document.querySelector('.img-modal');
-img.addEventListener('click', startMagnifyingGlass("myimage", 2.5));
-
-/* Función que habilita la lupa (Magnifying Glass) */
-function startMagnifyingGlass(imgId, zoomValue) {  
-  const getImgClick = document.querySelector('.img-modal');
-  getImgClick.addEventListener("click", function () {
-    var selectedImage, magnifyingGlass, width, height, bw;
-    selectedImage = document.getElementById(imgId);
-    /* Se crea el div y su clase que conendrá la Magnifying Glass */
-    magnifyingGlass = document.createElement("div");
-    magnifyingGlass.setAttribute("class", "img-magnifier-glass");
-    selectedImage.parentElement.insertBefore(magnifyingGlass, selectedImage);
-    /* Se le asignan las propiedades */
-    magnifyingGlass.style.backgroundImage = "url('" + selectedImage.src + "')";
-    magnifyingGlass.style.backgroundRepeat = "no-repeat";
-    magnifyingGlass.style.backgroundSize = (selectedImage.width * zoomValue) + "px " + (selectedImage.height * zoomValue) + "px";
-    bw = 3;
-    width = magnifyingGlass.offsetWidth / 2;
-    height = magnifyingGlass.offsetHeight / 2;
-
-    /* Ejecuta la función al mover la lupa sobre la imagen */
-    magnifyingGlass.addEventListener("mousemove", moveMagnifier);
-    selectedImage.addEventListener("mousemove", moveMagnifier);
-    /* Para pantallas touch */
-    magnifyingGlass.addEventListener("touchmove", moveMagnifier, { passive: true });
-    selectedImage.addEventListener("touchmove", moveMagnifier, { passive: true });
-
-    /* Función en donde se asignan las coordenadas 'x' y 'y' del cursor */
-    function moveMagnifier(e) {
-      var cursorPosition, x, y;
-      e.preventDefault(); /* Previente cualquier otra acción que pueda ocurrir mientras este activa la lupa */
-      cursorPosition = getCursorPos(e); /* Se le asigna a la variable la posición del cursor obtenida en la función */
-      x = cursorPosition.x;
-      y = cursorPosition.y;
-      /* Para prevenir que la lupa se posicione fuera de la imagen */
-      if (x > selectedImage.width - (width / zoomValue)) { x = selectedImage.width - (width / zoomValue); }
-      if (x < width / zoomValue) { x = width / zoomValue; }
-      if (y > selectedImage.height - (height / zoomValue)) { y = selectedImage.height - (height / zoomValue); }
-      if (y < height / zoomValue) { y = height / zoomValue; }
-
-      /* Manda la posición de la lupa */
-      magnifyingGlass.style.left = (x - width) + "px";
-      // magnifyingGlass.style.left = (x - width + window.innerWidth / 2 - selectedImage.width / 2) + "px";
-      magnifyingGlass.style.top = (y - height) + "px";
-      /* Muestra lo que la lupa esta observando */
-      magnifyingGlass.style.backgroundPosition = "-" + ((x * zoomValue) - width + bw) + "px -" + ((y * zoomValue) - height + bw) + "px";
-    }
+/* Efecto 'Magnifying Glass' o lupa, mediante un elemento 'div' generado sobre la imagen del proyecto */
+const startMagnifyingGlass = (id, zoom) => {  
+  const image = document.querySelector('.img-modal')
+  image.addEventListener('click', () => {
+    var projectImg, magnifier, width, height, bw
+    projectImg = document.getElementById(id)
+    /* Se crea e inserta el elemento 'div' que dará el efecto */
+    magnifier = document.createElement('div')
+    magnifier.setAttribute('class', 'img-magnifier-glass')
+    magnifier.style.backgroundImage = `url('${projectImg.src}')`, magnifier.style.backgroundRepeat = 'no-repeat', 
+      magnifier.style.backgroundSize = `${projectImg.width * zoom}px ${projectImg.height * zoom}px`
+    projectImg.parentElement.insertBefore(magnifier, projectImg)
 
     /* Funcion que obtiene las posiciones 'x', 'y' del cursor */
-    function getCursorPos(e) {
-      var a, x = 0, y = 0;
-      e = e || window.event;
-      /* Obtiene las posiciones 'x', 'y' de la imagen */
-      a = selectedImage.getBoundingClientRect();
-      /* Calcula las coordenadas 'x', 'y' del cursor, relativas a la imagen */
-      x = e.pageX - a.left;
-      y = e.pageY - a.top;
-      /* Considera cualquier desplazamiento de la página (scroll) */
-      x = x - window.pageXOffset;
-      y = y - window.pageYOffset;
-      return { x: x, y: y };
+    const getCursorPos = (event) => {
+      var a, x = 0, y = 0
+      event = event || window.event
+      a = projectImg.getBoundingClientRect() /* Posiciones 'x', 'y' de la imagen */      
+      x = event.pageX - a.left, y = event.pageY - a.top /* Coordenadas 'x', 'y' del cursor, relativas a la imagen */
+      x = x - window.scrollX, y = y - window.scrollY /* Considera cualquier desplazamiento de la página (scroll) */
+      return { x: x, y: y }
     }
-  })
 
-  /* Función que desactiva el zoom al tocar el botón */
-  const ZoomOut = document.querySelector('.zoomout')
-  ZoomOut.addEventListener('click', zoomOut)
-  function zoomOut() {
-    var zoom = document.querySelectorAll(".img-magnifier-glass");
-    for (var x = 0; x < zoom.length; x++) {
-      zoom[x].parentNode.removeChild(zoom[x]);
+    /* Función en donde se asignan las coordenadas 'x' y 'y' del cursor */
+    width = magnifier.offsetWidth / 2, height = magnifier.offsetHeight / 2, bw = 3
+    const moveMagnifier = (event) => {
+      event.preventDefault()
+      var cursorPos, x, y
+      cursorPos = getCursorPos(event); /* Se asigna la posición del cursor obtenida en la función */
+      x = cursorPos.x, y = cursorPos.y
+      /* Previene que el efecto se posicione fuera de la imagen */
+      if (x > projectImg.width - (width / zoom)) x = projectImg.width - (width / zoom)
+      if (x < width / zoom) x = width / zoom
+      if (y > projectImg.height - (height / zoom)) y = projectImg.height - (height / zoom)
+      if (y < height / zoom) y = height / zoom
+      /* Manda la posición al efecto para mostrar la parte de la imagen que se está observando */      
+      magnifier.style.left = `${x - width}px`, magnifier.style.top = `${y - height}px`     
+      magnifier.style.backgroundPosition = '-' + ((x * zoom) - width + bw) + 'px -' + ((y * zoom) - height + bw) + 'px'
     }
-  }
-
-  /* Función que desactiva el zoom al cerrar el modal */
-  const myModal = document.getElementById('imgPopUpModal')
-  myModal.addEventListener('hidden.bs.modal', event => {
-    var zoom = document.querySelectorAll(".img-magnifier-glass");
-    for (var x = 0; x < zoom.length; x++) {
-      zoom[x].parentNode.removeChild(zoom[x]);
-    }
+    /* Se asignan los eventos 'mouse' y 'touch' a la imagen y al elemento del efecto */
+    magnifier.addEventListener('mousemove', moveMagnifier), projectImg.addEventListener('mousemove', moveMagnifier)
+    magnifier.addEventListener('touchmove', moveMagnifier, { passive: true }), projectImg.addEventListener('touchmove', moveMagnifier, { passive: true })
   })
 }
+document.querySelector('.img-modal').addEventListener('click', startMagnifyingGlass('project-image', 2.5))
+
+/* Función para desactivar el efecto al dar clic sobre el botón 'zoom out' o al cerrar la ventana 'modal' */
+const zoomout = () => {
+  var zoom = document.querySelectorAll(".img-magnifier-glass");
+  for (var i = 0; i < zoom.length; i++) {
+    zoom[i].parentNode.removeChild(zoom[i])
+  }
+}
+document.getElementById('projectModal').addEventListener('hidden.bs.modal', zoomout)
