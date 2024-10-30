@@ -1,8 +1,7 @@
 var iframe = document.getElementById('template'), iframeLoaded = false
 iframe.addEventListener('load', () =>  {
     var iframeContent = iframe.contentDocument || iframe.contentWindow.document
-    console.log(iframeContent)
-    iframeLoaded = iframeContent !== null || undefined || '' ? true : false
+    iframeLoaded = iframeContent !== null || iframeContent !== undefined || iframeContent !== '' ? true : false
     /* Se asignan los elementos del archivo 'template' */
     const javaTemp = iframeContent.getElementById('java-projects'), javaProjects = document.querySelectorAll('.java-project-icon')
         javaProjects.forEach(card => { card.prepend(javaTemp.content.cloneNode(true)) })
