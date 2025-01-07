@@ -94,7 +94,7 @@ header, .introduction, .about, .projects, .cards-container, .contactme { min-hei
 .changing-lang .fa-spin-pulse, #changing-lang-txt { color: #FFF; font-size: 32px; text-align: center; text-shadow: var(--textShadowCustom); }
 /* ------------------------------------------------------------- MAIN CONTENT -------------------------------------------------------------- */
 .main {
-    position: relative !important; z-index: 1; margin-bottom: 200px !important;
+    position: relative !important; z-index: 1; /*margin-bottom: 200px !important;*/
     background-image: url('https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/main.webp'); background-size: 50%; background-position: center;
 }
 /* ----------------------------------------------------------- SCROLL TO TOP BUTTON --------------------------------------------------------- */
@@ -657,7 +657,7 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.webp); } img.Sketchup-Icon { 
 .close-alert::after { content: '\f00d'; display: inline-block; font-size: 20px; line-height: 40px; animation: var(--fa-shake-animation); }
 /* ---------------------------------------------------------------- FOOTER -------------------------------------------------------------------- */
 footer {
-    width: 100%; min-height: 200px !important; position: fixed; left: 0; bottom: 0;
+    width: 100%; left: 0; bottom: 0; position: sticky; min-height: 200px !important; /*position: fixed; */
     z-index: 0; background-color: var(--mediumJungleGreen);
 }
 .footer-content { flex-direction: column; text-align: center; }
