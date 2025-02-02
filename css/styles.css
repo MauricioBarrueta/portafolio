@@ -104,13 +104,13 @@ header, .introduction, .about, .projects, .cards-container, .contactme { min-hei
     transition: 0.5s, display .75s; opacity: 0.85;    
 }
 .scroll-to-top::after {
-    content: "\f102"; font-size: 20px; line-height: 1;
-    display: inline-block; animation: var(--fa-bounce-animation); transition: font-size 0.25s, animation 0.35s;
+    display: inline-block; content: "\f102"; font-size: 18px; line-height: 0;
+    animation: var(--fa-bounce-animation); animation-duration: 1.5s; transition: font-size 0.25s, animation 0.35s;
 }
 .scroll-to-top:hover {       
     opacity: 1 !important; scale: 1.05; animation: var(--fa-bounce-animation); animation-iteration-count: 1; 
     box-shadow: var(--boxShadowBottom), 0 0 3px 4px var(--darkSlateGray);
-}.scroll-to-top:hover::after { font-size: 22px; animation: var(--fa-beat-animation); animation-iteration-count: 1; }
+}.scroll-to-top:hover::after { font-size: 20px; animation: var(--fa-beat-animation); animation-iteration-count: 1; }
 /* -------------------------------------------------------------- HEADER ------------------------------------------------------------------ */
 header { 
     position: relative; 
