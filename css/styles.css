@@ -333,7 +333,7 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.webp); } img.Sketchup-Icon { 
     position: absolute; top: 5px; left: 10px; bottom: 5px; right: 10px; z-index: 1; 
     border-radius: 5px; border: 2px dashed var(--darkSlateGray);
 }.project-card:hover .project-container { bottom: 125px; } 
-.carousel-item { width: auto; margin-right: 0; }
+.carousel-item { width: auto; margin-right: 0; transition: all .4s !important; }
 .img-carousel-title { 
     position: relative; z-index: 2; 
     font-size: 8px; text-transform: uppercase; color: #FFF; text-shadow: var(--textShadowCustom);    
@@ -400,7 +400,7 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.webp); } img.Sketchup-Icon { 
 .carousel-control-prev { border-radius: 0 5px 5px 0; left: 12px; border-left: 0; } .carousel-control-next { border-radius: 5px 0 0 5px; right: 12px; border-right: 0; }
 .carousel-control-prev-icon, .carousel-control-next-icon { scale: 0.5; filter: invert(100%); transition: 0.35s; }
 .carousel-control-prev-icon { background: url(../svg/angles-left.svg); } .carousel-control-next-icon { background: url(../svg/angles-right.svg); }
-.carousel-control-prev:hover .carousel-control-prev-icon, .carousel-control-next:hover .carousel-control-next-icon { scale: 0.6; }
+.carousel-control-prev:hover .carousel-control-prev-icon, .carousel-control-next:hover .carousel-control-next-icon { scale: 0.45; }
 .carousel-control-prev:hover .carousel-control-prev-icon { transform: translateX(-3px); } .carousel-control-next:hover .carousel-control-next-icon { transform: translateX(3px); }
 .touch-btn { visibility: hidden; } 
 /* --------------------------------------------------------------- PROJECT MODAL ---------------------------------------------------------------- */
