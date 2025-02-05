@@ -201,10 +201,10 @@ header {
     box-shadow: var(--sectionBoxShdw); 
 } 
 .sticky-top { top: -1px !important; transition: all 0.2s ease-in-out; }
-.navbar::after { /* 'Scissors' Icon */
+.navbar::after, .navbar-collapse::before { /* 'Scissors' Icon */
     content: '\f0c4'; position: absolute; left: 0; top: -17px;
     font-size: 18px; color: var(--mediumJungleGreen) !important; 
-} .stuck .navbar::after { display: none; }
+} .stuck .navbar::after, .navbar-collapse::before { display: none; }
 .nav-lang { position: absolute; right: 0; }
 .lang-btn { border: 0; background-color: transparent; text-decoration: none; }  
 .lang-btn img { 
@@ -213,7 +213,7 @@ header {
 }.lang-btn:hover img { animation: var(--fa-bounce-animation); animation-iteration-count: 1; filter: none; }
 /* Collapsed Navbar */
 .navbar-toggler { border-color: transparent; } 
-.navbar-toggler:focus { box-shadow: 0 0 0 0.1rem var(--darkSlateGray) !important; }
+.navbar-toggler:focus { box-shadow: none !important; }
 .navbar .navbar-collapse a { margin-left: 36px; } 
 .nav-item:nth-child(1) > a::before, .nav-item:nth-child(2) > a::before, .nav-item:nth-child(3) > a::before, .nav-item:nth-child(4) > a::before, .nav-item:nth-child(5) > a::before { 
     position: absolute; margin: -3.5px -28px; 
@@ -708,9 +708,16 @@ footer {
     .icons { min-width: 450px; margin: 10px 0 auto; }     
     .icons > h4 { font-size: 12px; }  
 }
-@media screen and (max-width: 1050px) {    
-    /* Navbar */
-    .nav-item:has(> .nav-link.active) { border-inline: 0; }
+@media screen and (max-width: 1200px) {
+    /* Collapsed Navbar */
+    .navbar-collapse { margin-top: 10px; border-top: 2px dashed var(--mediumJungleGreen); }
+    .navbar-collapse::before { display: initial; right: 0; top: 11%; rotate: 180deg; }
+    .nav-item { padding: 1rem 0; }
+    .nav-item:has(> .nav-link.active) { border-inline: 0; border-bottom: 2px dashed var(--mediumJungleGreen); }
+    .collapse:not(:not(.show)) ~ .nav-lang { top: 1.5% !important; }  
+    .collapsing { transition: none !important; }    
+}
+@media screen and (max-width: 1050px) {       
     /* Introduction Section */
     .intro-subtitles span { font-size: 15px; } 
     /* Skills Section */
