@@ -80,14 +80,14 @@ header, .introduction, .about, .projects, .cards-container, .contactme { min-hei
 .lds-facebook { display: inline-block; position: relative; width: 80px; height: 80px; }
 .lds-facebook div {
     display: inline-block; position: absolute; left: 8px; width: 16px;
-    background: var(--jellyBeanBlue);
+    background: var(--jellyBeanBlue); border-radius: 5px; box-shadow: 3px 5px 0 0 var(--mediumJungleGreen);
     animation: lds-facebook 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
 }
-.lds-facebook div:nth-child(1) { left: 8px; animation-delay: -0.24s; }.lds-facebook div:nth-child(2) { left: 32px; animation-delay: -0.12s; }
-.lds-facebook div:nth-child(3) { left: 56px; animation-delay: 0; }
+.lds-facebook div:nth-child(1) { left: 8px; animation-delay: -0.36s; }.lds-facebook div:nth-child(2) { left: 32px; animation-delay: -0.24s; }
+.lds-facebook div:nth-child(3) { left: 56px; animation-delay: -0.12s; } .lds-facebook div:nth-child(4) { left: 80px; animation-delay: 0; }
 /* Loading Page Animation */
 @keyframes lds-facebook {
-    0% { top: 8px; height: 64px; background-color: var(--mediumJungleGreen); }
+    0% { top: 8px; height: 64px; background-color: var(--mediumJungleGreen); border: 2px dashed #FFF; }
     50%, 100% { top: 24px; height: 32px; }
 }
 /* Content Translation Modal Text */
@@ -344,8 +344,8 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.webp); } img.Sketchup-Icon { 
 }
 .img-item {
     position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-    object-fit: cover; cursor: zoom-in; border-radius: 5px; 
-}
+    object-fit: cover; cursor: zoom-in; border-radius: 5px; background-color: #111111;
+} 
 /* Project Details (Name / Icons / Links) */
 .details { position: absolute; left: 12px; right: 12px; bottom: 5px; } 
 .carousel-details { position: relative !important; bottom: 25px !important; left: 0 !important; right: 0 !important; z-index: 0; }
@@ -404,14 +404,13 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.webp); } img.Sketchup-Icon { 
 .carousel-control-prev:hover .carousel-control-prev-icon { transform: translateX(-3px); } .carousel-control-next:hover .carousel-control-next-icon { transform: translateX(3px); }
 .touch-btn { visibility: hidden; } 
 /* --------------------------------------------------------------- PROJECT MODAL ---------------------------------------------------------------- */
-.modal-content { box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .65); border: 1px solid var(--darkSlateGray); }
+.modal-content { box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, .65); border: 5px solid var(--darkSlateGray); }
 .modal .modal-dialog { min-width: 97%; border-radius: 5px; overflow-y: initial !important }
 #projectModal { padding: 0 !important; }
 .modal-header, .modal-footer {    
     display: table; text-align: center; position: relative; 
-    margin: 0; border: 0; padding: 0.75rem;
+    margin: 0; border: 0; padding: 0.75rem; border-radius: 0;
 }
-.modal-footer { box-shadow: var(--blurShadowTop); }
 /* Text Content */
 .modal-header > h6, .modal-footer > p { 
     font-size: 10px; line-height: 1.85; 
@@ -435,7 +434,7 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.webp); } img.Sketchup-Icon { 
 }.zoomout:hover { animation: var(--fa-bounce-animation); animation-iteration-count: 1; scale: 1.1; }
 /* Google Translate Element */
 #google-plugin { 
-    z-index: 1; padding: 0.5rem; box-shadow: var(--blurShadowBottom); border-top: 2px dashed var(--moonstoneBlue); 
+    z-index: 1; padding: 0.5rem; border-top: 2px dashed var(--moonstoneBlue); 
 }
 #google-plugin > i { font-size: 30px; font-weight: normal; cursor: help; margin: -6px 10px 0 0; }
 #google-plugin > i:hover { animation: var(--fa-shake-animation); animation-iteration-count: 1; }
@@ -452,8 +451,12 @@ img.SQLServer-Icon { content: url(../svg/SQLServer.webp); } img.Sketchup-Icon { 
 .goog-logo-link, .goog-te-banner-frame.skiptranslate, .skiptranslate.VIpgJd-ZVi9od-ORHb-OEVmcd, iframe.goog-te-banner-frame { 
     display: none !important; visibility: hidden !important; margin: 0; padding: 0; z-index: -99;
 } 
-.modal-body { margin: 0; cursor: zoom-in; text-align: center;  }      
-.img-magnifier-container { position: relative; } 
+.modal-body { 
+    margin: 0; cursor: zoom-in; border-radius: 0 !important; 
+    background-color: #111111; border-top: 2px dashed var(--cultured); border-bottom: 2px dashed var(--jellyBeanBlue);
+}      
+.img-magnifier-container { position: relative; padding: 1em; }
+.img-magnifier-container img { width: 100%; } 
 .img-magnifier-glass {
     width: 225px; height: 225px; position: absolute;
     border: 3px solid #111111; outline: 3px solid #393939; outline-offset: -8px;    
@@ -680,7 +683,7 @@ footer {
 }
 .footer-bottom {  
     width: 100%; position: absolute; bottom: 0;
-    background-color: #000; color: #FFF;
+    background-color: #111; color: #FFF;
     text-align: center; padding: 0.5rem; border-top: 2px dashed var(--mediumJungleGreen);     
 }
 .footer-bottom span { opacity: .5; font-weight: bold; }
@@ -814,6 +817,7 @@ footer {
     .comment-font { font-size: 5px !important; } 
     /* Projects Section */
     .info-text-bottom, .carousel-instructions { font-size: 8px !important; }     
+    .btn-close { top: 1%; right: 1%; }
     /* Contact Section  */
     .icons { max-width: 100% !important; min-width: 100% !important; } 
     #name::placeholder, #email::placeholder, .menu a, .footer-bottom > p, .footer-bottom > p::after { font-size: 7px !important; } 
