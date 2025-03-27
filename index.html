@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es-MX">
+  
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,7 +8,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />  
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Animate On Scroll (AOS) Library -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Animate On Scroll Library -->
   <link rel="stylesheet" href="css/styles.css">
   <title>Portafolio • Mauricio Barrueta</title> 
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">   
@@ -18,7 +19,7 @@
 
   <div class="main cultured">  
     <div id="loading-popup" class="loading-page-gif cultured flex">   
-      <div class="lds-facebook"><div></div><div></div><div></div><div></div></div>
+      <div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
     </div>
     <button class="scroll-to-top btn trsn-030 jelly-bean" onclick="window.scrollTo({ top: 0, left: 0 })"></button>
 
@@ -26,49 +27,43 @@
       <div class="waves-down-img"></div> <!-- Top Wave -->      
       <div class="scroll-down-l flex"><span class="sd-span bounce dark-slate def-cursor" data-es="Desliza hacia abajo &#xf103;" data-en="Scroll down &#xf103;"></span></div>           
       <div class="scroll-down-r flex"><span class="sd-span bounce dark-slate def-cursor" data-es="Desliza hacia abajo &#xf103;" data-en="Scroll down &#xf103;"></span></div> 
-
-      <section class="introduction rad-pad-10-1 flex">       
-        <div class="intro-title dark-slate def-cursor rad-pad-5-05">
-          <h1 class="h1-h dark-slate"><span data-es="'Hola Mundo!!'_" data-en="'Hello World!!'_"></span></h1>
-        </div>     
+      <section class="introduction rad-pad-10-1 flex">               
         <div class="intro-subtitles flex rad-pad-5-05 moonstone def-cursor">
-          <span class="purple-font">if(</span><span class="yellow-font" data-es="explorarSitio" data-en="exploreWebsite"></span>
-          <span class="purple-font">) {</span><span class="comment-font" data-es=" /*desliza hacia abajo*/" data-en=" /*scroll down*/"></span>
+          <span class="purple-font">if(</span><span class="yellow-font" data-es="explorarSitio" data-en="exploreWebsite"></span><span class="purple-font">) {</span> 
+            <span class="comment-font comment-symbol-l">/*</span><span class="comment-font" data-es="desliza hacia abajo" data-en="scroll down"></span><span class="comment-font comment-symbol-r">*/</span>
         </div>          
         <div class="content flex">          
           <div class="intro-cards border-shadow">
             <img class="card-img-container" src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/backHorizontal.webp" loading="eager">
             <div class="intro-card-content flex">
               <h2 class="intro-card-title" data-es="Como desarrollador Back end:" data-en="As a Back end developer:"></h2>
-              <p class="intro-card-desc" data-es="Mi objetivo es escribir un código lo más limpio y optimizado posible con el fin 
-                de que sea entendible, eficiente y que, al mismo tiempo, garantice los resultados esperados." data-en="My goal is to write 
-                code as clean and optimized as possible in order to be understandable, efficient and, at the same time, guarantee the expected results.">
+              <p class="intro-card-desc" data-es="Mi objetivo es escribir un código lo más limpio y optimizado posible, de manera que sea entendible, 
+                eficiente y, al mismo tiempo, garantice los resultados esperados." data-en="My goal is to write code as clean and optimized as possible 
+                in order to be understandable, efficient and, at the same time, guarantee the expected results.">
               </p>
             </div>
           </div>          
           <div class="intro-middle-img border-shadow flex">
             <img class="h-image-img" src="" loading="eager">
-            <span class="def-cursor" data-es="Explicación gráfica de cada rol:" data-en="Graphic explanation of each role:"></span>
+            <span class="def-cursor" data-es="Explicación gráfica de cada rol" data-en="Graphic explanation of each role"></span>
           </div> 
           <div class="intro-cards border-shadow">
             <img class="card-img-container" src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/frontHorizontal.webp" loading="eager">
             <div class="intro-card-content flex">
               <h2 class="intro-card-title" data-es="Como desarrollador Front end:" data-en="As a Front end developer:"></h2>
-              <p class="intro-card-desc" data-es="Mi objetivo es crear una interfaz visualmente llamativa, pero a la vez funcional, 
-                optimizada y adaptable a cualquier dispositivo, procurando siempre de que esta sea fácil de usar." data-en="My goal is to 
-                create a visually attractive interface, but at the same time functional, optimized and adaptable to any device, always trying to make it easy to use.">
+              <p class="intro-card-desc" data-es="Mi objetivo es crear una interfaz visualmente llamativa, pero a la vez funcional, optimizada y adaptable a cualquier 
+                dispositivo, procurando siempre que sea fácil de usar." data-en="My goal is to create a visually appealing interface that is also functional, optimized, 
+                and adaptable to any device, always ensuring that it is easy to use.">
               </p>
             </div>
           </div>  
         </div>          
         <div class="intro-subtitles flex rad-pad-5-05 moonstone def-cursor">
-          <span class="purple-font">} else {</span><span class="yellow-font" data-es="contactarDev" data-en="contactDev"></span>
-          <span class="brackets-font">() </span><span class="purple-font">}</span>
-          <span class="comment-font" data-es=" /*solo contactar*/" data-en=" /*just contact*/"></span>
+          <span class="purple-font">} else {</span><span class="yellow-font" data-es="soloContactar" data-en="justContact"></span><span class="brackets-font">() </span><span class="purple-font">}</span>
+          <span class="comment-font comment-symbol-l">/*</span><span class="comment-font" data-es="clic en el botón" data-en="click on the button"></span><span class="comment-font comment-symbol-r">*/</span>
         </div>        
-        <a href="#Contact" class="intro-contact-btn flex dark-slate btn rad-pad-5-05 border-shadow" data-es="Contáctame" data-en="Contact me"></a>
+        <a href="#Contact" class="intro-contact-btn flex jelly-bean btn rad-pad-5-05 border-shadow" data-es="Contacto" data-en="Contact"></a>
       </section>
-
       <div class="waves-up-img"></div> <!-- Bottom Wave -->
     </header>   
 
@@ -87,7 +82,7 @@
               <a class="nav-link" aria-current="page" href="#About" data-es="Sobre mí" data-en="About me"></a>
             </li>            
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="#Projects" data-es="Portafolio" data-en="Portfolio"></a>
+              <a class="nav-link" aria-current="page" href="#Projects" data-es="Proyectos" data-en="Projects"></a>
             </li>
             <li class="nav-item">
               <a class="nav-link" aria-current="page" href="#Skills" data-es="Habilidades" data-en="Skills"></a>
@@ -120,27 +115,27 @@
           <pre class="def-cursor"
             data-es="Egresado como ingeniero en Tecnologías de la Información y Comunicación de la Universidad Tecnológica del Sur del Estado de México y enfocado en el área de la programación, específicamente en el desarrollo web.
 
-            Algunas de mis habilidades técnicas son los lenguajes de programación JavaScript, TypeScript, Java, el framework Angular, principalmente, y un poco el framework Spring. HTML5, CSS3/SCSS, desde luego, además de varias de las herramientas y librerías indispensables para el desarrollo web, como Node.js, NPM, jQuery, la librería RxJS de Angular, el framework Bootstrap, Angular Material, por mencionar algunas. Y por supuesto, conocimiento de Git, GitHub y GitLab.
+            Algunas de mis habilidades técnicas son los lenguajes de programación JavaScript, TypeScript, Java, frameworks tales como Angular, principalmente, un poco del framework Spring de Java, Bootstrap, Materialize, Tailwind CSS, entre otros. HTML, CSS/SCSS, desde luego, además de varias de las herramientas y librerías indispensables para el desarrollo web, como Node.js, npm, jQuery, las librerías RxJS y Angular Material, por mencionar algunas. Y por supuesto, conocimiento de Git, GitHub y GitLab.
             
-            En cuanto al tema de mis aptitudes, destacaría la responsabilidad, la resolución de problemas y la autonomía, gracias a esta última he adquirido una gran variedad de conocimientos por mi propia cuenta, esto incluye varias de las habilidades técnicas con las que cuento actualmente."
+            En cuanto a mis aptitudes, destacaría la responsabilidad, la resolución de problemas y la autonomía, gracias a esta última he adquirido una gran variedad de conocimientos por mi propia cuenta, esto incluye varias de las habilidades técnicas con las que cuento actualmente."
             data-en="Graduated as an engineer in Information and Communication Technologies (ICT) from Universidad Tecnológica del Sur del Estado de México and focused in the programming area, specifically in web development.
             
-            Some of my technical skills are the programming languages JavaScript, TypeScript, Java, Angular framework, mainly, and a little of Spring framework. HTML5, CSS3/SCSS, of course, as well as several of the indispensable tools and libraries for web development, like Node.js, NPM, jQuery, Angular's RxJS library, Bootstrap framework, Angular Material, to name a few. And of course, knowledge of Git, GitHub and GitLab.
+            Some of my technical skills are the programming languages JavaScript, TypeScript, Java, frameworks like Angular, mainly, and a little of the Spring Java framework, Bootstrap, Materialize, Tailwind CSS, among others. HTML, CSS/SCSS, of course, as well as several of the indispensable tools and libraries for web development, like Node.js, npm, jQuery, RxJS and Angular Material libraries, to name a few. And of course, knowledge of Git, GitHub and GitLab.
             
             In terms of my aptitudes, I'd highlight the responsibility, problem solving and autonomy, thanks to the last I've acquired a wide variety of knowledge on my own, including several of the technical skills that I already have.">
           </pre>
           <div class="abt-hobbies rad-pad-5-05 moonstone def-cursor">
             <h6>Hobbies</h6>           
-            <i>&#xf5fc;</i><i>&#xf025;</i><i>&#xf008;</i><i>&#xf7a6;</i><i>&#xf02d;</i><i>&#xf11b;</i><i>&#xf7b6;</i>         
+            <i>&#xf5fc;</i><i>&#xf025;</i><i>&#xf008;</i><i>&#xf7a6;</i><i>&#xf11b;</i><i>&#xf02d;</i><i>&#xf7b6;</i>         
           </div>
-          <a class="cv-btn flex btn jelly-bean" id="btn-cv" target="_blank" data-es="Descarga mi Currículum" data-en="Download my Resume"></a>
+          <a class="cv-btn flex btn jelly-bean" id="btn-cv" target="_blank" data-es="Descarga mi CV" data-en="Download my resume"></a>
         </div>
       </div>
     </section>   
    
     <section class="projects" id="Projects" name="Projects" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="125">
       <h3 class="section-title dark-slate projects-title def-cursor" data-es="Mis proyectos" data-en="My projects" aria-labelledby="titleInfo"></h3>
-      <small class="carousel-instructions def-cursor" data-es="Usa los botones '&#xf100;' y '&#xf101;' para navegar entre proyectos" data-en="Use the buttons '&#xf100;' and '&#xf101;' to navigate between projects"></small>
+      <small class="carousel-instructions def-cursor" data-es="Utiliza los botones para navegar entre los proyectos" data-en="Use the buttons to navigate between projects"></small>
       <div class="proj-cards-container flex">   
         <div class="project-card cultured border-shadow card-lg carousel slide carousel-fade" id="angularAPIProjects">         
           <div class="carousel-inner">
@@ -152,7 +147,7 @@
                 se encuentra la que permite consultar las imágenes tomadas durante las misiones de exploración a Marte, donde se pueden filtrar mediante una fecha o día marciano, siempre y 
                 cuando se encuentren dentro del rango de la misión, otra que permite rastrear la ubicación actual de la Estación Espacial Internacional en tiempo real, etc.">
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Base de datos de información aportada por la NASA" data-en="Database of information provided by NASA"></h2>
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Catálogo de datos obtenidos por la NASA" data-en="Catalog of data collected by NASA"></h2>
                 <div class="project-tech-icons">
                   <ul class="angular-project-icons multi-css css-to-scss hide-ang-mat tech-icons-list flex"></ul>
                 </div>  
@@ -175,7 +170,7 @@
                 de varios países del mundo, donde es posible filtrar los resultados ya sea por nombre, orden alfabético, por su categoría o por el país de origen, además de que cada una incluye 
                 a detalle el proceso y los ingredientes necesarios para la preparación.">
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Catálogo de recetas internacionales" data-en="International recipes catalog"></h2>
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Catálogo de recetas de comidas internacionales" data-en="Catalog of international food recipes"></h2>
                 <div class="project-tech-icons">
                   <ul class="angular-project-icons multi-css css-to-scss hide-multi-css tech-icons-lg tech-icons-list flex"></ul>
                 </div>  
@@ -219,7 +214,7 @@
                 'OMDb API' (http://www.omdbapi.com/)." data-title="Página que permite consultar información detallada sobre una amplia variedad de películas y series de televisión, además de que, en 
                 el caso de las series, es posible consultar cada temporada y cada capítulo correspondiente a esta, así como los datos de cada capítulo.">     
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Base de datos de películas y series" data-en="Movies and Series Database"></h2>            
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Base de datos de series y películas" data-en="Series and Movies Database"></h2>            
                 <div class="project-tech-icons">
                   <ul class="angular-project-icons tech-icons-list flex firebase-hosting css-to-scss"></ul>
                 </div>
@@ -236,34 +231,12 @@
             </div>
             <div class="project-container cultured trsn-025 carousel-item">
               <span class="img-carousel-title def-cursor">Angular Framework</span>
-              <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/dbWiki.webp" class="img-item cultured trsn-025" alt="Hecho con el framework Angular y el 
-                lenguaje TypeScript, HTML para la estructuración, SCSS y el framework Materialize para los estilos, el servicio Firebase Hosting para la publicación del sitio y la API gratuita 
-                Dragon Ball (https://web.dragonball-api.com/)." data-title="Sitio web el cual permite consultar la información detallada de varios de los personajes del universo de Dragon Ball, 
-                donde además de poder filtrarlos por nombre, es posible filtrarlos por género, afiliación y raza, además de obtener los datos del planeta de donde es originario cada uno de ellos.">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Base de datos del anime Dragon Ball" data-en="Dragon Ball anime Database"></h2>
-                <div class="project-tech-icons">
-                  <ul class="angular-project-icons hide-bootstrap multi-css css-to-scss hide-ang-mat tech-icons-list flex"></ul>
-                </div>  
-                <ul class="web-icons flex">
-                  <li>                    
-                    <a href="https://dragonballwiki-e14b1.web.app/main-page" data-bs-toggle="tooltip" data-bs-placement="top" target="_blank" title="Web" data-bs-custom-class="web-icons-a"></a>
-                  </li>
-                  <li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/dragonBallWiki.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>  
-                </ul>
-              </div>
-            </div>
-            <div class="project-container cultured trsn-025 carousel-item">
-              <span class="img-carousel-title def-cursor">Angular Framework</span>
               <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/wikiAPI.png" class="img-item cultured trsn-025 img-alert" alt="Hecho con el framework Angular y el 
                 lenguaje TypeScript, HTML para la estructuración, CSS y el framework Bootstrap para los estilos, el servicio Firebase Hosting para la publicación del sitio y la API pública de la página 
                 web 'MediaWiki' (www.mediawiki.org/wiki/API:Tutorial)." data-title="Sitio web que permite filtrar y consultar una amplia variedad de información disponible en el sitio web Wikipedia. 
                 El usuario ingresa lo que desea buscar y, dependiendo la palabra, se filtran todos los resultados que coincidan con esta.">   
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Clon del sitio web 'Wikipedia'" data-en="'Wikipedia' Website clone"></h2>            
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Filtro de información del sitio web 'Wikipedia'" data-en="'Wikipedia' website data filter"></h2>            
                 <div class="project-tech-icons">
                   <ul class="angular-project-icons tech-icons-list flex firebase-hosting"></ul>                
                 </div>
@@ -280,12 +253,34 @@
             </div>
             <div class="project-container cultured trsn-025 carousel-item">
               <span class="img-carousel-title def-cursor">Angular Framework</span>
+              <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/dbWiki.webp" class="img-item cultured trsn-025" alt="Hecho con el framework Angular y el 
+                lenguaje TypeScript, HTML para la estructuración, SCSS y el framework Materialize para los estilos, el servicio Firebase Hosting para la publicación del sitio y la API gratuita 
+                Dragon Ball (https://web.dragonball-api.com)." data-title="Sitio web el cual permite consultar la información detallada de varios de los personajes del universo de Dragon Ball, 
+                donde además de poder filtrarlos por nombre, es posible filtrarlos por género, afiliación y raza, además de obtener los datos del planeta de donde es originario cada uno de ellos.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Base de datos de Dragon Ball Z" data-en="Dragon Ball Z Database"></h2>
+                <div class="project-tech-icons">
+                  <ul class="angular-project-icons hide-bootstrap multi-css css-to-scss hide-ang-mat tech-icons-list flex"></ul>
+                </div>  
+                <ul class="web-icons flex">
+                  <li>                    
+                    <a href="https://dragonballwiki-e14b1.web.app/main-page" data-bs-toggle="tooltip" data-bs-placement="top" target="_blank" title="Web" data-bs-custom-class="web-icons-a"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/dragonBallWiki.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>  
+                </ul>
+              </div>
+            </div>           
+            <div class="project-container cultured trsn-025 carousel-item">
+              <span class="img-carousel-title def-cursor">Angular Framework</span>
               <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/AngularPokedex.webp" class="img-item cultured trsn-025" alt="Hecho con el framework Angular y el 
                 lenguaje TypeScript, HTML para la estructuración, SCSS, la librería Angular Material y el framework Bootstrap para los estilos, el servicio Firebase Hosting para la publicación de 
                 la página y la API pública de la serie Pokémon (https://pokeapi.co)." data-title="Página web la cual permite listar todos los Pokémones existentes de la famosa serie Pokémon, además 
                 de poder filtrarlos por su nombre, simulando el Pokédex.">   
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Base de datos de la serie Pokémon" data-en="Pokémon series Database"></h2>            
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Base de datos de Pokémon" data-en="Pokémon Database"></h2>            
                 <div class="project-tech-icons">
                   <ul class="angular-project-icons tech-icons-list flex firebase-hosting css-to-scss">
                     <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular Material">
@@ -325,29 +320,7 @@
                   </li> 
                 </ul>
               </div>
-            </div>               
-            <div class="project-container cultured trsn-025 carousel-item">
-              <span class="img-carousel-title def-cursor">Angular Framework</span>
-              <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Ecomm.png" class="img-item cultured trsn-025" alt="Hecho con el framework Angular y el lenguaje TypeScript, 
-                HTML para la estructuración, CSS, la librería Angular Material y el framework Bootstrap para los estilos, adempas de una API local de prueba creada con JSON Server de Node.js." data-title="Práctica 
-                de un sistema e-commerce el cual simula la compra de uno o varios productos por medio de un carrito de compras, además de escoger si se recoge en paquetería o se entrega al domicilio especificado.">   
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Práctica: Sistema 'E-Commerce'" data-en="Practice: 'E-Commerce' system"></h2>            
-                <div class="project-tech-icons">
-                  <ul class="tech-icons-list flex angular-project-icons">                              
-                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular Material">
-                      <i><img class="AngMaterial-Icon tech-svg"></i>
-                    </li>       
-                  </ul>               
-                </div>
-                <ul class="web-icons flex">
-                  <li></li><li></li>             
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/Sistema-E-Commerce.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li> 
-                </ul>
-              </div>
-            </div> 
+            </div>   
           </div>
           <button class="touch-btn flex dark-slate"></button>  
           <div class="details carousel-details">
@@ -367,7 +340,7 @@
         <div class="project-card cultured border-shadow carousel slide carousel-fade" id="angularFrontend">         
           <div class="carousel-inner">
             <div class="project-container cultured trsn-025 carousel-item active">
-              <span class="img-carousel-title def-cursor">Angular: Front end</span>
+              <span class="img-carousel-title def-cursor" data-es="Angular: Clones Front end" data-en="Angular: Front end clones"></span>
               <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Monstercat.webp" class="img-item cultured trsn-025" alt="Hecho con el framework Angular y el 
                 lenguaje TypeScript, HTML para la estructuración, SCSS y el framework Bootstrap para los estilos, el servicio Firebase Hosting para la publicación de la página y los sitios 
                 'Frontend Practice' (frontendpractice.com/projects/monstercat) para los detalles de la práctica y 'Monstercat' (monstercat.com/release/MCLP017) como referencia." data-title="Sitio 
@@ -390,7 +363,7 @@
               </div>
             </div>
             <div class="project-container cultured trsn-025 carousel-item">
-              <span class="img-carousel-title def-cursor">Angular: Front end</span>
+              <span class="img-carousel-title def-cursor" data-es="Angular: Clones Front end" data-en="Angular: Front end clones"></span>
               <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Starbucks.webp" class="img-item cultured trsn-025" alt="Hecho con el framework Angular y el 
                 lenguaje TypeScript, HTML para la estructuración, SCSS y el framework Bootstrap para los estilos, el servicio Firebase Hosting para la publicación de la página y los sitios 
                 'Frontend Practice' (frontendpractice.com/projects/starbucks) para los detalles de la práctica y 'Starbucks' (starbucks.com/rewards) como referencia." data-title="Sitio web en 
@@ -472,7 +445,29 @@
                   </li>             
                 </ul>
               </div>
-            </div>     
+            </div>          
+            <div class="project-container cultured trsn-025 carousel-item">
+              <span class="img-carousel-title def-cursor">JavaScript</span>
+              <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/aiImageGenerator.webp" class="img-item cultured trsn-025" alt="HTML para la estructuración, JavaScript para la 
+                funcionalidad, SCSS y el framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages y la API pública compartida en el sitio de la empresa 
+                'Hugging Face' (https://huggingface.co/)." data-title="Página web la cual permite generar hasta 6 imágenes utilizando la inteligencia artificial (IA), se ingresa la descripción detallada de 
+                lo que se busca obtener y se da clic para empezar a generar los resultados, pudiendo repetir esta acción un número ilimitado de veces.">
+              <div class="details carousel-caption">
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Generador de imágenes con IA" data-en="AI Image Generator"></h2>
+                <div class="project-tech-icons">
+                  <ul class="static-projects-icons tech-icons-list flex css-to-scss remove-jquery"></ul>
+                </div>  
+                <ul class="web-icons flex">              
+                  <li>
+                    <a href="https://mauriciobarrueta.github.io/ai-ImageGenerator/" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                  </li>
+                  <li></li>
+                  <li>
+                    <a href="https://github.com/MauricioBarrueta/ai-ImageGenerator.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                  </li>             
+                </ul>
+              </div>
+            </div>    
             <div class="project-container cultured trsn-025 carousel-item">
               <span class="img-carousel-title def-cursor">JavaScript</span>
               <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/toDoList.webp" class="img-item cultured trsn-025" alt="HTML para la estructuración, JavaScript para la funcionalidad, 
@@ -493,7 +488,7 @@
                   </li>             
                 </ul>
               </div>
-            </div> 
+            </div>     
             <div class="project-container cultured trsn-025 carousel-item">
               <span class="img-carousel-title def-cursor">JavaScript</span>
               <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/qrCreatorScanner.webp" class="img-item cultured trsn-025" alt="HTML para la estructuración, JavaScript para 
@@ -536,29 +531,29 @@
                   </li>             
                 </ul>
               </div>
-            </div>
+            </div>      
             <div class="project-container cultured trsn-025 carousel-item">
               <span class="img-carousel-title def-cursor">JavaScript</span>
-              <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/aiImageGenerator.webp" class="img-item cultured trsn-025" alt="HTML para la estructuración, JavaScript para la 
-                funcionalidad, SCSS y el framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages y la API pública compartida en el sitio de la empresa 
-                'Hugging Face' (https://huggingface.co/)." data-title="Página web la cual permite generar hasta 6 imágenes utilizando la inteligencia artificial (IA), se ingresa la descripción detallada de 
-                lo que se busca obtener y se da clic para empezar a generar los resultados, pudiendo repetir esta acción un número ilimitado de veces.">
+              <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/WeatherAPI.png" class="img-item cultured trsn-025" alt="HTML para la estructuración, JavaScript y su librería jQuery para 
+                la funcionalidad, CSS y el framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages y la API gratuita del sitio 'OpenWeatherMap'(https://openweathermap.org/)." 
+                data-title="Página que muestra el pronóstico del clima de manera detallada, ya sea que se ingrese el nombre de la ciudad o las coordenadas de esta, además de que obtiene la hora actual, la hora 
+                en la que amanece y anochece de acuerdo a la zona horaria de la ciudad.">
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Generador de imágenes con IA" data-en="AI Image Generator"></h2>
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Pronóstico del Clima" data-en="Weather Forecast"></h2>
                 <div class="project-tech-icons">
-                  <ul class="static-projects-icons tech-icons-list flex css-to-scss remove-jquery"></ul>
+                  <ul class="static-projects-icons tech-icons-list flex scss-to-css"></ul>
                 </div>  
                 <ul class="web-icons flex">              
                   <li>
-                    <a href="https://mauriciobarrueta.github.io/ai-ImageGenerator/" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
+                    <a href="https://mauriciobarrueta.github.io/currentWeatherAPI/" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
                   </li>
                   <li></li>
                   <li>
-                    <a href="https://github.com/MauricioBarrueta/ai-ImageGenerator.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
+                    <a href="https://github.com/MauricioBarrueta/currentWeatherAPI" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
                   </li>             
                 </ul>
               </div>
-            </div>
+            </div>          
             <div class="project-container cultured trsn-025 carousel-item">
               <span class="img-carousel-title def-cursor">JavaScript</span>
               <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/imgColorPicker.webp" class="img-item cultured trsn-025" alt="HTML para la estructuración, JavaScript para la 
@@ -601,29 +596,7 @@
                   </li>             
                 </ul>
               </div>
-            </div> 
-            <div class="project-container cultured trsn-025 carousel-item">
-              <span class="img-carousel-title def-cursor">JavaScript</span>
-              <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/WeatherAPI.png" class="img-item cultured trsn-025" alt="HTML para la estructuración, JavaScript y su librería jQuery para 
-                la funcionalidad, CSS y el framework Bootstrap para los estilos, el módulo gh-pages de npm para la publicación de la página en GitHub Pages y la API gratuita del sitio 'OpenWeatherMap'(https://openweathermap.org/)." 
-                data-title="Página que muestra el pronóstico del clima de manera detallada, ya sea que se ingrese el nombre de la ciudad o las coordenadas de esta, además de que obtiene la hora actual, la hora 
-                en la que amanece y anochece de acuerdo a la zona horaria de la ciudad.">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Pronóstico del Clima" data-en="Weather Forecast"></h2>
-                <div class="project-tech-icons">
-                  <ul class="static-projects-icons tech-icons-list flex scss-to-css"></ul>
-                </div>  
-                <ul class="web-icons flex">              
-                  <li>
-                    <a href="https://mauriciobarrueta.github.io/currentWeatherAPI/" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="Web" target="_blank"></a>
-                  </li>
-                  <li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/currentWeatherAPI" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>             
-                </ul>
-              </div>
-            </div>              
+            </div>                          
             <div class="project-container cultured trsn-025 carousel-item">
               <span class="img-carousel-title def-cursor">JavaScript</span>
               <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Pokedex.webp" class="img-item cultured trsn-025" alt="HTML para la estructuración, JavaScript y su librería jQuery 
@@ -631,7 +604,7 @@
                 (https://pokeapi.co)." data-title="Página web que simula el Pokédex de la famosa serie Pokémon, permite consultar los datos de cualquier Pokémon mediante su nombre, además de listar 
                 todos y cada uno de ellos con su respectiva carta y datos correspondientes.">
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Base de datos de la serie Pokémon" data-en="Pokémon series database"></h2>
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Base de datos de Pokémon" data-en="Pokémon database"></h2>
                 <div class="project-tech-icons">
                   <ul class="static-projects-icons tech-icons-list flex scss-to-css"></ul>
                 </div>  
@@ -666,29 +639,7 @@
                   </li>
                 </ul>
               </div>
-            </div>  
-            <div class="project-container cultured trsn-025 carousel-item">
-              <span class="img-carousel-title def-cursor">JavaScript</span>
-              <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Portafolio.webp" class="img-item cultured trsn-025" alt="HTML para la estructuración, JavaScript y su librería 
-                jQuery para la funcionalidad, CSS y el framework Bootstrap para los estilos, además del módulo gh-pages de npm para la publicación de la página en GitHub Pages." data-title="Portafolio web en donde muestro mi 
-                experiencia y conocimientos como desarrollador, entre sus funciones se encuentra la que permite descargar mi Currículum en formato PDF, también cuenta con un formulario en donde es posible enviar un e-mail 
-                directamente a mi bandeja de entrada, además de que es un sitio multilenguaje (español e inglés).">
-              <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Portafolio web" data-en="Portfolio website"></h2>
-                <div class="project-tech-icons">
-                  <ul class="static-projects-icons tech-icons-list flex scss-to-css"></ul>
-                </div>  
-                <ul class="web-icons flex">              
-                  <li>
-                    <a href="https://mauriciobarrueta.github.io/portafolio/" data-bs-toggle="tooltip" data-bs-placement="top" title="Web" data-bs-custom-class="web-icons-a" target="_blank"></a>
-                  </li>
-                  <li></li>
-                  <li>
-                    <a href="https://github.com/MauricioBarrueta/portafolio.git" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="web-icons-a" title="GitHub" target="_blank"></a>
-                  </li>            
-                </ul>
-              </div>
-            </div>                
+            </div>                             
           </div>
           <button class="touch-btn flex dark-slate"></button>  
           <div class="details carousel-details">
@@ -1029,7 +980,7 @@
                 data-title="Sistema que permite administrar toda la información de los usuarios registrados en las diferentes aplicaciónes pertenecientes a un banco. Fue hecho durante el periodo de enero-abril del año 2020 como 
                 parte de mis prácticas profesionales en la empresa Médicos Hoy, S.A. de C.V.">
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Sistema administrador de usuarios" data-en="Users Management System"></h2>
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Sistema para la administración de usuarios" data-en="Users Management System"></h2>
                 <div class="project-tech-icons">
                   <ul class="java-project-icon tech-icons-list tech-icons-lg flex">
                     <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
@@ -1065,7 +1016,7 @@
                 llevar el control de su almacén de herramientas, además del control de las entradas y salidas de las mismas por parte de los empleados. Fue hecho durante el periodo de mayo-agosto del año 2018 como parte de mis
                 prácticas profesionales en la empresa GFR Telecomunicaciones, S.A. de C.V.">
               <div class="details carousel-caption">
-                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Sistema de control del almacén de herramientas" data-en="Tools Warehouse Control System"></h2>
+                <h2 class="carousel-project-title dark-slate def-cursor" data-es="Sistema para control de almacén" data-en="Warehouse Management System"></h2>
                 <div class="project-tech-icons">
                   <ul class="java-project-icon tech-icons-list flex">
                     <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
@@ -1109,14 +1060,14 @@
                   data-title="Sistema que permite llevar el control de todos los documentos existentes en el archivo de una oficina, donde es manejado por año, el inventario de documentos dados de baja y también, llevar un 
                   registro de las entradas y salidas de documentos, así como también, los datos del empleado que lo solicitó.">
                 <div class="details carousel-caption">
-                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Sistema para el control de documentos" data-en="Documents control system"></h2>
+                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Sistema para control de documentos" data-en="Documents control system"></h2>
                   <div class="project-tech-icons">
                     <ul class="java-project-icon mysql-prj-icon tech-icons-list flex">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
                         <i><img class="Jasper-Icon tech-svg trsn-030" ></i>
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Apache Maven">
-                        <i><img src="svg/maven.webp" class="tech-svg trsn-030" style="object-fit: contain;"></i>
+                        <i><img class="Maven-Icon tech-svg trsn-030"></i>
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
                         <i><img class="NetBeans-Icon tech-svg trsn-030"></i>
@@ -1133,61 +1084,40 @@
               <div class="project-container cultured trsn-025 carousel-item">
                 <span class="img-carousel-title def-cursor" data-es="Java: Videojuego" data-en="Java: Video Game"></span>
                 <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/JuegoGato.png" class="img-item cultured trsn-025" alt="Hecho con el lenguaje Java y el entorno de desarrollado integrado 
-                  Netbeans." data-title="El clásico videojuego del gato, la puntuación se va sumando automáticamente de acuerdo al jugador que gane en cada partida jugada.">
+                  Netbeans." data-title="El clásico videojuego de 'tres en línea' o comúnmente conocido como 'el juego del gato' la puntuación se va sumando automáticamente de acuerdo al jugador que gane en cada partida jugada.">
                 <div class="details carousel-caption">
-                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Videojuego del Gato" data-en="Tic-Tac-Toe Video game"></h2>                  
+                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Juego del gato" data-en="Tic-Tac-Toe"></h2>                  
                   <div class="project-tech-icons"><ul class="java-project-icon netbeans-project-icon tech-icons-list flex"></ul></div> 
                   <ul class="web-icons flex">              
                     <li><span class="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Desktop"></span></li>       
                   </ul>
                 </div>
-              </div>
+              </div>              
+              <div class="project-container cultured trsn-025 carousel-item">
+                <span class="img-carousel-title def-cursor" data-es="Java: Videojuego" data-en="Java: Video Game"></span>
+                <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Buscaminas.png" class="img-item cultured trsn-025" alt="Hecho con el lenguaje Java y el entorno de desarrollado integrado 
+                  Netbeans." data-title="El clásico videojuego de 'buscaminas', el jugador decide cuál será la cantidad de celdas y columnas para jugar y las minas se cambian aleatoriamente en cada partida, el juego termina 
+                  cuando se da clic sobre una.">
+                <div class="details carousel-caption">
+                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Buscaminas" data-en="Minesweeper"></h2>
+                  <div class="project-tech-icons"><ul class="java-project-icon netbeans-project-icon tech-icons-list flex"></ul></div> 
+                  <ul class="web-icons flex">              
+                    <li><span class="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Desktop"></span></li>       
+                  </ul>
+                </div>
+              </div>     
               <div class="project-container cultured trsn-025 carousel-item">
                 <span class="img-carousel-title def-cursor" data-es="Java: Videojuego" data-en="Java: Video Game"></span>
                 <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Memorama.webp" class="img-item cultured trsn-025" alt="Hecho con el lenguaje Java y el entorno de desarrollado integrado 
-                  Netbeans." data-title="El clásico videojuego de memoria, comúnmente conocido como memorama, el jugador gana al encontrar todos los pares de cartas.">  
+                  Netbeans." data-title="El clásico 'juego de memoria' o comúnmente conocido como 'memorama', el jugador gana al encontrar todos los pares de cartas.">  
                 <div class="details carousel-caption">
-                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Videojuego de memoria" data-en="Memory Video game"></h2>  
+                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Memorama" data-en="Memory game"></h2>  
                   <div class="project-tech-icons"><ul class="java-project-icon netbeans-project-icon tech-icons-list flex"></ul></div> 
                   <ul class="web-icons flex">              
                     <li><span class="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Desktop"></span></li>       
                   </ul>
                 </div>
               </div> 
-              <div class="project-container cultured trsn-025 carousel-item">
-                <span class="img-carousel-title def-cursor" data-es="Java: Videojuego" data-en="Java: Video Game"></span>
-                <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Buscaminas.png" class="img-item cultured trsn-025" alt="Hecho con el lenguaje Java y el entorno de desarrollado integrado 
-                  Netbeans." data-title="El videojuego clásico de buscaminas, el jugador decide cuál será la cantidad de celdas y columnas para jugar y las minas se cambian aleatoriamente en cada partida, el juego termina 
-                  cuando se da clic sobre una.">
-                <div class="details carousel-caption">
-                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Videojuego de Buscaminas" data-en="Minesweeper Video game"></h2>
-                  <div class="project-tech-icons"><ul class="java-project-icon netbeans-project-icon tech-icons-list flex"></ul></div> 
-                  <ul class="web-icons flex">              
-                    <li><span class="desktop" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Desktop"></span></li>       
-                  </ul>
-                </div>
-              </div>                
-              <div class="project-container cultured trsn-025 carousel-item">
-                <span class="img-carousel-title def-cursor">Java: Servlet</span>
-                <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Servlet.png" class="img-item cultured trsn-025" alt="Hecho con los lenguajes Java, JavaScript y su librería jQuery, la tecnología Jakarta Server Pages, 
-                  anteriormente llamada Java Server Pages (JSP), HTML para la estructuración, CSS y el framework Bootstrap para los estilos, base de datos local MySQL." data-title="Práctica de un sistema web que simula a una empresa enfocada a la venta 
-                  y a la renta de automóviles en línea, utilizando las funciones CRUD y un sistema de privilegios, que sirve para limitar las acciones de acuerdo al tipo de usuario que haya iniciado sesión (administrador o empleado).">
-                <div class="details carousel-caption">
-                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Sistema de compra y renta de automóviles'" data-en="CarS rental and sales system"></h2>
-                  <div class="project-tech-icons">
-                    <ul class="java-project-icon static-projects-icons remove-node-git tech-icons-list flex mysql-prj-icon">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Jakarta Server Pages (JSP)">
-                        <i><img src="svg/JSP.png" class="tech-svg trsn-030"></i>
-                      </li>                
-                    </ul>
-                  </div>
-                  <ul class="web-icons flex">
-                    <li>
-                      <span class="web" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-custom-class="p-tec-tooltip" title="Web"></span>
-                    </li>  
-                  </ul>
-                </div>
-              </div>        
             </div>
             <button class="touch-btn flex dark-slate"></button>            
             <button class="carousel-control-prev dark-slate trsn-025" type="button" data-bs-target="#javaProjects" data-bs-slide="prev">
@@ -1202,9 +1132,9 @@
               <div class="project-container cultured trsn-025 carousel-item active">
                 <span class="img-carousel-title def-cursor">Unity</span>
                 <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/AppVR.webp" class="img-item cultured trsn-025" alt="Hecho con el lenguaje C# y el motor de videojuegos multiplataforma 
-                  Unity, el software de diseño gráfico Sketchup para el modelado 3D, Adobe Photoshop para el diseño de algunas texturas y los servicios de Realidad Virtual (VR) de Google Cardboard." data-title="Aplicación de Realidad 
-                  Virtual, la cual permite hacer un recorrido virtual por algunas de las zonas arqueológicas y lugares con una gran importancia histórica de México, siendo una app interactiva, ya que para escuchar y leer la información
-                  el usuario debe elegir cuál audio quiere escuchar o cuál texto desea leer sobre el lugar que eligió.">  
+                  Unity, el software de diseño gráfico Sketchup para el modelado 3D, Adobe Photoshop para el diseño de algunas texturas y los servicios de Realidad Virtual (VR) de Google Cardboard." data-title="Con esta 
+                  aplicación es posible hacer un recorrido virtual por algunas de las zonas arqueológicas y lugares de gran importancia histórica de México, siendo una app interactiva, ya que para escuchar y leer la 
+                  información el usuario debe elegir alguno de los múltiples puntos de interacción dentro de cada lugar.">  
                 <div class="details carousel-caption">
                   <h2 class="carousel-project-title dark-slate def-cursor" data-es="App de Realidad Virtual 'Recorriendo México'" data-en="Virtual Reality App 'Touring Mexico'"></h2>
                   <div class="project-tech-icons">
@@ -1214,11 +1144,11 @@
               </div>
               <div class="project-container cultured trsn-025 carousel-item">
                 <span class="img-carousel-title def-cursor">Unity</span>
-                <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Juego2D.webp" class="img-item cultured trsn-025" alt="Hecho con el lenguaje C#, el motor de videojuegos multiplataforma 
-                  Unity y Adobe Photoshop para el diseño de algunos sprites y texturas." data-title="Videojuego 2D del género RPG y plataformas inspirado en los videojuegos retro más populares, fue hecho con el objetivo de aprender y/o 
-                  repasar las tablas de multiplicar mientras el usuario avanza en la historia y se divierte jugando, enfocado al público infantil.">
+                <img src="https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/Juego2D.webp" class="img-item cultured trsn-025" alt="Hecho con el lenguaje C#, el motor de videojuegos multiplataforma Unity, 
+                  Adobe Photoshop para el diseño de algunos sprites y texturas, así como el uso de varios recursos gratuitos disponibles en la web." data-title="Videojuego 2D del género RPG/Plataformas inspirado en los videojuegos 
+                  retro más populares, creado con el objetivo de aprender y repasar las tablas de multiplicar mientras el usuario avanza en la historia y se divierte jugando, claramente enfocado a un público infantil.">
                 <div class="details carousel-caption">
-                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Juego para móvil 'Tablas de multiplicar'" data-en="2D Mobile Game 'Multiplication Tables'"></h2>
+                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Juego para móviles del género plataformas" data-en="Mobile game of the platforms genre"></h2>
                   <div class="project-tech-icons">
                     <ul class="unity-projects-icons remove-unity-icons tech-icons-list flex"></ul>
                   </div>                  
@@ -1248,7 +1178,7 @@
                   técnica AJAX, HTML para la estructuración, CSS y el framework Bootstrap para los estilos, la biblioteca TCPDF de PHP para la creación de ficheros PDF, base de datos MySQL." data-title="Sitio web que permite llevar el control 
                   de los horarios de entrada y salida, permisos y días de descanso de todo el personal docente y administrativo de una universidad, además de las funciones CRUD, permite la generación de reportes en formato PDF.">
                 <div class="details carousel-caption">
-                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Sistema de control de personal" data-en="School Staff Control System"></h2>
+                  <h2 class="carousel-project-title dark-slate def-cursor" data-es="Sistema para control de personal escolar" data-en="School Staff Control System"></h2>
                 </div>
               </div>
               <div class="project-container cultured trsn-025 carousel-item">
@@ -1279,11 +1209,11 @@
           </div> 
         </div>
       </div>      
-      <span class="info-text-bottom def-cursor" class="form-text" data-es="Los proyectos no están ordenados por fecha de creación ni relevancia" data-en="Projects aren't ordered by creation date or relevance"></span>
+      <span class="info-text-bottom def-cursor" class="form-text" data-es="El orden de estos no depende de su fecha de creación" data-en="The order of these doesn't depend on their date of creation"></span>
 
       <div class="show-hide-container">
-        <span class="show-hide-text def-cursor" data-es="Da clic acá &#xf245; para mostrar u ocultar los demás proyectos:" data-en="Click here &#xf245; to show or hide the other projects:"></span>
-        <a class="btn btn-dark jelly-bean" id="show-projects" data-es="Mostrar más" data-en="Show more"></a>
+        <span class="show-hide-text def-cursor" data-es="Haz clic aquí para mostrar u ocultar el resto de los proyectos:" data-en="Click here to show or hide the rest of the projects:"></span>
+        <a class="btn btn-dark jelly-bean" id="show-projects" data-es="Ver más" data-en="Show more"></a>
       </div>      
     </section> 
     <section class="experience" id="experience" data-aos="flip-up" data-aos-duration="850" data-aos-delay="115">
@@ -1341,9 +1271,9 @@
               <img src="img/Cert_Android.webp" alt="">
             </div>
             <div class="flip-card-back cultured border-shadow certification-content def-cursor">
-              <h3 class="certification-card-title dark-slate jelly-bean">Android Professional Qualified Developer</h3>
+              <h3 class="certification-card-title dark-slate jelly-bean" data-es="Desarrollador Calificado Profesional de Android" data-en="Android Professional Qualified Developer"></h3>
               <a class="txt-color-ds" href="https://www.develop.com.mx/" target="_blank">Develop Talent & Technology</a>
-              <img class="certification-company-img" src="img/Develop.webp" alt="">
+              <img class="certification-company-img" src="img/Develop.webp" alt="" style="mix-blend-mode:darken">
               <p class="txt-color-ds" data-es="Fecha de emisión: Noviembre 2019" data-en="Issue date: November 2021"></p>
               <a href="https://drive.google.com/file/d/1f4hThUcUSTDXCI3okSZ-Fx5H1C_Go7lr/view?usp=drive_link" target="_blank" class="certification-file txt-color-ds" data-es="Archivo" data-en="File"></a>
             </div>
@@ -1355,18 +1285,18 @@
     <section class="contact-section-separator dark-slate"></section>
     <section class="contactme flex" id="Contact"> 
       <div class="content flex" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">                
-        <div class="contact-form cultured rad-pad-10-1 border-shadow"> 
-          <h1 class="jelly-bean rad-pad-5-05 def-cursor" data-es="Envíame un mensaje" data-en="Send me a message"></h1>
+        <div class="contact-form cultured rad-pad-10-1 border-shadow"> <!-- Form -->
+          <h1 class="jelly-bean rad-pad-5-05 def-cursor" data-es="Escríbeme un correo" data-en="Send me an email"></h1>
           <form class="contact-form-container" id="contact-form" action="">
             <label for="name" class="form-label txt-color-ds" data-es="Nombre/Empresa:" data-en="Full name/Company:"></label><span>*</span>
             <div class="input-group mb-3">
               <span class="input-group-text dark-slate" id="name-icon">&#xf508;</span>
-              <input name="name" id="name" type="text" class="form-control" placeholder="Ingresa el nombre aquí - Enter name here:" aria-describedby="name-icon" required autocomplete="off">
+              <input name="name" id="name" type="text" class="form-control form-name" aria-describedby="name-icon" required autocomplete="off">
             </div>
             <label for="email" class="form-label txt-color-ds">E-mail:</label><span>*</span>
             <div class="input-group mb-2">
               <span class="input-group-text dark-slate" id="icon-email" style="font-family: FontAwesome !important;">&#x40;</span>
-              <input name="email" id="email" type="email" class="form-control" placeholder="Ej. - E.g.: correo@gmail.com" aria-describedby="icon-email" required autocomplete="off">
+              <input name="email" id="email" type="email" class="form-control form-email" aria-describedby="icon-email" required autocomplete="off">
             </div>
             <div id="emailHelp" for="email" class="form-text def-cursor" data-es="Tu correo electrónico no se comparte con nadie más" data-en="Your email isn't shared with anyone else"></div>
             <div class="form-floating">
@@ -1377,8 +1307,7 @@
           </form>
           <a href="mailto:mauba22@outlook.com" id="mailto" style="display: none;">mail</a> <!-- mailto -->
         </div>  
-
-        <div class="icons cultured rad-pad-10-1 border-shadow" id="iconscon"> 
+        <div class="icons cultured rad-pad-10-1 border-shadow" id="iconscon"> <!-- Buttons -->
           <h4 class="copy-email-title jelly-bean rad-pad-5-05" data-es="Mi correo electrónico:" data-en="My e-mail:"></h4>
           <p class="def-cursor txt-color-ds">
             <input class="email-text cultured txt-color-ds" type="text" value="mauba22@outlook.com" id="email-copy" readonly>
@@ -1386,19 +1315,19 @@
           </p>
           <h4 class="social-media-title jelly-bean rad-pad-5-05" data-es="Otros medios de contacto:" data-en="Other means of contact:"></h4>
           <div class="social-media-list flex"> 
-            <a class="button cultured" href="https://wa.me/527227982747?text=Contacto%20desde%20portafolio" target="_blank">
+            <a class="button" href="https://wa.me/527227982747?text=Contacto%20desde%20portafolio" target="_blank">
               <div class="icon txt-color-ds">&#xf232;</div><span>WhatsApp</span>
             </a>  
-            <a class="button cultured" href="https://t.me/MauricioBarrueta" target="_blank">
+            <a class="button" href="https://t.me/MauricioBarrueta" target="_blank">
               <div class="icon txt-color-ds">&#xf2c6;</div><span>Telegram</span>
             </a>                      
-            <a class="button cultured" href="http://www.linkedin.com/in/mauricio-barrueta" target="_blank">
+            <a class="button" href="http://www.linkedin.com/in/mauricio-barrueta" target="_blank">
               <div class="icon txt-color-ds">&#xf08c;</div><span>LinkedIn</span>
             </a>
-            <a class="button cultured" href="https://github.com/MauricioBarrueta" target="_blank">
+            <a class="button" href="https://github.com/MauricioBarrueta" target="_blank">
               <div class="icon txt-color-ds">&#xf09b;</div><span>GitHub</span>
             </a>
-            <a class="button cultured" target="_blank">
+            <a class="button" target="_blank">
               <div class="icon txt-color-ds">&#xf39f;</div><span>Messenger</span>
             </a>
           </div>
@@ -1425,7 +1354,7 @@
       </div> 
       <p class="def-cursor" data-es="Sitio web desarrollado por:" data-en="Website developed by:"></p>
     </div>
-    <div class="footer-bottom def-cursor"><p><span>&copy; 2023 |</span> Edgar Mauricio Barrueta Aguirre</p></div>
+    <div class="footer-bottom def-cursor"><p><span>&copy; 2023 |</span> Edgar Mauricio Barrueta Aguirre <i>😌</i></p></div>
   </footer> 
   
   <!-- Modals - Alert -->
@@ -1453,7 +1382,7 @@
   </div>
   <div class="changing-lang modal fade" tabindex="-1" role="dialog" id="spinnerModal"> 
     <div class="modal-dialog modal-dialog-centered justify-content-center" role="document" style="box-shadow: none;">
-      <span id="changing-lang-txt" data-es=" Traduciendo, por favor espere..." data-en=" Translating, please wait..."></span>&nbsp;<i class="fa-solid fa-hourglass-start fa-spin-pulse"></i>    
+      <span id="changing-lang-txt" data-es=" Traduciendo, por favor espere..." data-en=" Translating, please wait..."></span>&nbsp;<i class="fa-solid fa-gear fa-spin-pulse"></i>       
     </div>
   </div>  
   <div class="alert-popup dark-slate hide" id="alert-popup"> 
