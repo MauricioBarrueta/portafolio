@@ -5,4 +5,4 @@
 🔗 https://mauriciobarrueta.github.io/portafolio/
 
 
-![Portafolio](https://github.com/user-attachments/assets/10ad9ee0-8845-488e-b618-a847b8d74848)
+![Portafolio](https://github.com/user-attachments/assets/918c6f84-d517-4309-a69c-1708c1baefe4)

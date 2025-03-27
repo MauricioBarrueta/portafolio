@@ -42,8 +42,8 @@ window.onload = () => {
         $('.goog-logo-link').empty()
         $('.goog-te-gadget').html($('.goog-te-gadget').children())
 
-        var tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-        var tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
     } else { location.reload(true) }
 }
 
@@ -106,8 +106,8 @@ document.addEventListener('click', (event) => {
 /* Se muestran u ocultan los proyectos que se encuentran ocultos */
 const projBtn = document.getElementById('show-projects'), limit = document.querySelector('.projects-limit'), hidden = document.querySelector('.hidden-projects')
 projBtn.addEventListener('click', () => {
-    limit.style.display === 'none' ? (limit.style.display = "inline", hidden.style.display = 'none', projBtn.href = '#Projects', projBtn.innerHTML = currLang === 'es' ? 'Mostrar más' : 'Show more')
-        : (limit.style.display = 'none', hidden.style.display = 'contents', projBtn.href = 'javascript:;', projBtn.innerHTML = currLang === 'es' ? 'Mostrar menos' : 'Show less')
+    limit.style.display === 'none' ? (limit.style.display = "inline", hidden.style.display = 'none', projBtn.href = '#Projects', projBtn.innerHTML = currLang === 'es' ? 'Ver más' : 'Show more')
+        : (limit.style.display = 'none', hidden.style.display = 'contents', projBtn.href = 'javascript:;', projBtn.innerHTML = currLang === 'es' ? 'Ver menos' : 'Show less')
 });
 
 /* Se obtienen los datos del formulario para enviar un e-mail mediante el esquema 'mailto' */
@@ -132,6 +132,10 @@ const langChange = (lang) => {
     $(`[data-${lang}]`).text( function() { return $(this).data(lang) })
     var introImg = 'https://raw.githubusercontent.com/MauricioBarrueta/portfolioImagesAPI/main/'
     document.querySelector('.intro-middle-img img').src = currLang === 'es' ? `${introImg}back-front.jpg` : `${introImg}back-front-en.webp`
+    /* Idioma del atributo 'placeholder' del formulario de Contacto */
+    let namePlaceholder = document.querySelector('.form-name'), emailPlaceholder = document.querySelector('.form-email')
+    lang === 'es' ? (namePlaceholder.setAttribute('placeholder', 'Ingresa el nombre aquí:'), emailPlaceholder.setAttribute('placeholder', 'Ej.: correo@email.com'))
+        : (namePlaceholder.setAttribute('placeholder', 'Enter the name here:'), emailPlaceholder.setAttribute('placeholder', 'E.g.: myEmail@email.com'))
 }
 $('.lang-btn').click(function() {
     langChange($(this).data('lang'))    
