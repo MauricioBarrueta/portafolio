@@ -787,17 +787,16 @@ footer {
 @media screen and (max-width: 650px) {
     /* Introduction Section */
     .introduction { width: 100%; padding-inline: 0; }
-    .intro-card-title, .cv-btn, .icons > h4, .email-text, #show-projects, .intro-contact-btn, .contact-form > h1 { font-size: 10px !important; } 
+    .intro-card-title, .cv-btn, .icons > h4, .email-text, #show-projects, .intro-contact-btn, .contact-form > h1, .abt-text-content h1 { 
+        font-size: 10px !important; 
+    } 
     .cv-btn::after { margin-bottom: -13px; }
-    /* .intro-contact-btn, .contact-form > h1 { font-size: 13px; }  */
     /* About Section */
-    .abt-text-content h1 { font-size: 16px; }    
     .abt-hobbies > i { font-size: 20px !important; margin-inline: 5px !important; } 
     /* Projects Section */
     .carousel-instructions::before, .carousel-instructions::after, .info-text-bottom::before, .info-text-bottom::after { margin-inline: 8px; }
-    #show-projects { width: 90%; }
+    .show-hide-text { line-height: 2; }
     .intro-subtitles span, .modal-header > h6, .span-info, .goog-te-gadget-simple span, .modal-footer > p, #emailHelp { font-size: 7px; }
-    /* .modal-header, .modal-footer { text-align: justify; word-spacing: -5px; } */
     .modal-header > h6, .span-info, .goog-te-gadget-simple span, .modal-footer > p { line-height: 1.8 !important; }
     .btn-close { width: 14px; height: 14px; top: 1%; }   
     /* Skills Section */
@@ -817,7 +816,9 @@ footer {
     header { box-shadow: inset 0 20px 10px 0 rgba(0, 0, 0, .5), inset 0 -20px 10px 0 rgba(0, 0, 0, .5); } 
     .intro-cards { width: 335px; } 
     .comment-font { font-size: 5px !important; }.comment-symbol-l { padding-bottom: .1rem; }
-    .abt-text-content pre { word-spacing: -6px; }
+    /* About */
+    .abt-name-text, #changing-lang-txt, .fa-spin-pulse { font-size: 10px !important; }
+    .abt-text-content pre { word-spacing: -4px; }
     /* Projects Section */
     .info-text-bottom, .carousel-instructions { font-size: 7px !important; }     
     .modal .modal-content { width: 98%; }
