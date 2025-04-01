@@ -806,8 +806,9 @@ footer {
     /* Contact Section */
     .email-text { margin-bottom: 5px; }
     .button, .icon { width: 40px; height: 40px; font-size: 24px; }
+    .icons p { padding: .4rem; }
     /* Footer Content */
-    .menu a { font-size: 8px; }    
+    .menu a, #name::placeholder, #email::placeholder { font-size: 8px; }    
     .footer-content > p, .footer-bottom p, .intro-card-desc, .show-hide-text, .abt-text-content pre { font-size: 9px; }
     .fa-spin-pulse, #changing-lang-txt, .abt-name-text, .abt-text-content .abt-hobbies h6 { font-size: 12px !important; }
 }    
