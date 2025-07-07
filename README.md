@@ -1,8 +1,7 @@
-🇲🇽 Este sitio web muestra mi experiencia y conocimientos como desarrollador, entre sus funciones se encuentra la que permite descargar mi Currículum en formato PDF, también cuenta con un formulario en donde es posible enviar un e-mail directamente a mi bandeja de entrada, además de ser un sitio multilenguaje (español e inglés).
+🇲🇽 Sitio web desarrollado con JavaScript, la biblioteca jQuery, CSS y Bootstrap, publicado mediante GitHub Pages. Incluye una sección con traducción automática, que se activa únicamente si el idioma es inglés, mediante Google Translate.
 
-🇺🇸 This website shows my experience and knowledge as a developer, among its functions is the one that allows you to download my resume in PDF format, it also has a form where you can send an e-mail directly to my inbox, besides being a multilingual site (Spanish and English). 
+🇺🇸 Website developed with JavaScript, jQuery library, CSS and Bootstrap, published via GitHub Pages. Includes a section with automatic translation that is triggered only if the language is English, using Google Translate.
 
 🔗 https://mauriciobarrueta.github.io/portafolio/
 
-
-![portfolio](https://github.com/user-attachments/assets/eeaa44f2-60a3-451e-a853-7a4ab311bb48)
+![portfolio](https://github.com/user-attachments/assets/1e500c65-69e5-482a-8c6d-2d5ae998f6cf)
