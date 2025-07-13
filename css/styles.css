@@ -136,9 +136,8 @@ header {
 }.intro-subtitles span { filter: saturate(1.35); }
 .purple-font { color: #A586B6; } .yellow-font { color: #DCCD79; } .brackets-font { color: #C5C900; } .comment-font { color: #6A9955; font-size: 18px; }
 .comment-symbol { font-size: 14px; margin: 0 10px 0 5px; }
-.introduction .content { z-index: 0; } 
 .intro-cards { 
-    width: 380px; height: 303px;
+    width: 385px; height: 301px;
     background-color: #111; overflow: hidden; cursor: pointer; 
 }
 .card-img-container {    
@@ -149,7 +148,10 @@ header {
     color: #FFF; text-shadow: var(--textShadowCustom);
     border: 2px dashed var(--darkSlateGray); transition: border .25s;
 }.intro-card-content::before { opacity: 1; scale: 1; }
-.intro-card-title { opacity: 0; font-size: 11px; }
+.intro-card-title { 
+    opacity: 0; 
+    font-size: 12px; font-weight: bold; line-height: 2;
+}
 .intro-cards:hover .intro-card-content { border-color: #FFF; }
 .intro-card-title, .intro-card-desc { translate: -25px; transition: opacity 0.25s, translate 0.35s; }
 .intro-card-desc { font-size: 10px; line-height: 2; opacity: 0; }
@@ -456,10 +458,10 @@ img.WPS-Icon { content: url(../svg/WPSOffice.svg); }
 .flip-card-front, .flip-card-back { backface-visibility: hidden; }
 .flip-card-back { transform: rotateY(180deg); } 
 .certification-card-title, .certification-content a:nth-child(2) { font-size: 10px; }
-.certification-card-title { line-height: 1.5; border-bottom: 2px dashed var(--cultured); } 
+.certification-card-title { line-height: 1.75; border-bottom: 2px dashed var(--cultured); } 
 .certification-content a:nth-child(2), .certification-file, .certification-file::before { display: inline-block; transition: 0.2s; }
-.certification-content a:nth-child(2) { margin-top: 10px; } 
-.certification-company-img { width: auto; height: 60px; margin: 10px 0; }
+.certification-content a:nth-child(2) { margin-top: 5px; } 
+.certification-company-img { width: auto; height: 60px; margin: 5px 0 10px 0; }
 .certification-content p { border-bottom: 2px dashed var(--darkSlateGray); }
 .certification-content p, .certification-file { font-size: 9px;  }
 .certification-file::before { content: "\f1c1"; font: var(--fa-font-solid); font-size: 15px; padding-right: 10px; }
@@ -477,7 +479,6 @@ img.WPS-Icon { content: url(../svg/WPSOffice.svg); }
 .contact-form { width: 700px; } /* Form */
 .contact-form h1 { font-size: 18px; line-height: 1.5; margin-bottom: 15px; }
 .form-label, .form-floating label { font-size: 14px; }
-/* #name, #email, #message, #emailHelp { color: var(--mediumJungleGreen); } */
 #message { height: 150px; margin-top: 5px; line-height: 1.5; }
 #name, #email, #message { /* Inputs */
     opacity: 1; border: 2px dashed var(--darkSlateGray); 
