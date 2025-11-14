@@ -84,16 +84,13 @@ function startMagnifyingGlass(id, zoom = 2) {
 
   /* Para permitir que también funcione en pantallas táctiles */
   projectImg.addEventListener('touchstart', (e) => {
+    e.preventDefault() //* Previene que se abra el popup del navegador
+
     configureBackground()
     magnifier.style.display = 'block'
     //* Posiciona la lupa de acuerdo a la posición del primer toque
     if (e.touches && e.touches[0]) moveMagnifier(e.touches[0])
-  }, { passive: true });
-
-  /* Se dispara al mover el deslizar el dedo en la pantalla, actualizando la posición de la lupa */
-  projectImg.addEventListener('touchmove', (e) => {
-    if (e.touches && e.touches[0]) moveMagnifier(e.touches[0])
-  }, { passive: true })
+  }, { passive: false });
 
   /* Se dispara al levantar el dedo de la pantalla, ocultando la lupa */
   projectImg.addEventListener('touchend', () => {

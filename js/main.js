@@ -107,6 +107,20 @@ window.addEventListener('scroll', () => {
     trigger[0].intersectionRatio > 0 ? document.documentElement.removeAttribute('class') : document.documentElement.setAttribute('class', 'stuck')
 })).observe(document.querySelector('.trigger'))
 
+/* Oculta automáticamente la navbar cuando navbar-toggler está visible y se da clic en cualquier link */
+document.addEventListener("DOMContentLoaded", () => {
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link")
+    const navbarCollapse = document.getElementById("navbarNav")
+
+    /* Se obtiene la instancia del collapse activo y lo oculta al hacer clic en cualquiera de los links */
+    navLinks.forEach(link => {
+        link.addEventListener("click", () => {
+            const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse)
+            bsCollapse.hide()
+        });
+    });
+});
+
 /* Abre la página del archivo correspondiente al Currículum de acuerdo al idioma actual de la página */
 const cvBtn = document.getElementById('btn-cv'), cvPath = 'https://mauriciobarrueta.github.io/portafolio/files/CV-Edgar-Mauricio-Barrueta-Aguirre.pdf'
 cvBtn.addEventListener('click', () => {

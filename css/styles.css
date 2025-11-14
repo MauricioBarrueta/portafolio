@@ -667,6 +667,7 @@ footer { position: sticky; min-height: 205px; }
 @media screen and (max-width: 650px) {
     /* Introduction Section */
     .introduction { width: 100%; padding-inline: 0; }
+    .intro-card-content { padding: 0.5rem; }
     .intro-card-title, .cv-btn, .icons h4, .email-text, #show-projects, .intro-contact-btn, .contact-form h1, .abt-text-content h1 { 
         font-size: 10px; 
     }.cv-btn::after, .intro-contact-btn::after { margin-bottom: -13px; }
@@ -686,7 +687,7 @@ footer { position: sticky; min-height: 205px; }
     /* Footer Content */
     .intro-subtitles span, .menu a { font-size: 8px; }    
     .footer-content p, .footer-bottom p, .intro-card-desc, .show-hide-text, .abt-text-content pre, .time span { font-size: 9px; }
-    .changing-lang .fa-hammer, #changing-lang-txt, .abt-name-text, .abt-text-content .abt-hobbies h6 { font-size: 12px; }
+    .changing-lang .fa-hammer, #changing-lang-txt, .abt-name-text, .abt-text-content .abt-hobbies h6, .input-group-text { font-size: 12px; }
 }    
 @media screen and (max-width: 480px) {
     /* Introduction Section */
