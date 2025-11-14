@@ -179,11 +179,17 @@ const langChange = (lang) => {
         return $(this).data(lang) 
     })
 
+    //* Cambia la imagen central de la introducción dependiendo el idioma
     document.querySelector('.intro-middle-img img').src = currLang === 'es' ? `./img/back-front-es.webp` : `./img/back-front-en.webp`
-    /* Idioma del atributo 'placeholder' del formulario de Contacto */
+
+    //* Cambia el valor del atributo 'data-label-hover' de un elemento en la sección de 'Sobre mí'
+    const nameHeading = document.querySelector('.abt-name-text')
+    nameHeading.dataset.labelHover = currLang === 'es' ? 'Desarrollador Web' : 'Web Developer' 
+
+    //* Cambia los valores del atributo 'placeholder' del form en la sección de 'Contacto' */
     let namePlaceholder = document.querySelector('.form-name'), emailPlaceholder = document.querySelector('.form-email')
-    lang === 'es' ? (namePlaceholder.setAttribute('placeholder', 'Ingresa el nombre aquí:'), emailPlaceholder.setAttribute('placeholder', 'Ej.: correo@email.com'))
-        : (namePlaceholder.setAttribute('placeholder', 'Enter the name here:'), emailPlaceholder.setAttribute('placeholder', 'E.g.: myEmail@email.com'))
+    lang === 'es' ? (namePlaceholder.setAttribute('placeholder', 'Ingresa tu nombre'), emailPlaceholder.setAttribute('placeholder', 'Ejemplo: correo@email.com'))
+        : (namePlaceholder.setAttribute('placeholder', 'Enter your name'), emailPlaceholder.setAttribute('placeholder', 'Example: user@email.com'))
 }
 $('.lang-btn').click(function() {
     langChange($(this).data('lang'))    
@@ -263,5 +269,11 @@ destroyGoogleTranslate = () => {
     localStorage.setItem('googtrans', '/en/en')
     localStorage.removeItem('redirectAfterTranslate')
     localStorage.setItem('ignoreLoader', 'true') //* Evita que se active el setTimeout del Loader al recargar
+
+    /* Se muestra un overlay para evitar que el usuario realice cualquier acción mientras se recarga el sitio, se remueve automáticamente después */
+    const overlay = document.createElement('div')
+    overlay.id = 'disable-overlay'
+    document.body.appendChild(overlay)
+
     location.reload()
 }
