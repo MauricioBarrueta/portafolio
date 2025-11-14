@@ -2,18 +2,17 @@
 <html lang="es-MX">  
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=false, shrink-to-fit=no">   
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Animate On Scroll Library -->
   <link rel="stylesheet" href="css/styles.css">
   <title>Portafolio • Mauricio Barrueta</title> 
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">   
 </head> 
 
-<body class="body top-0 pe-0 user-select-none" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">  
+<body class="body top-0 pe-0" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">  
   <div id="google_translate_element" style="display: none;"></div> <!-- Google Translate -->
 
   <div class="main position-relative z-1 cultured">  
@@ -30,10 +29,10 @@
       <section class="introduction rad-pad-10-1 flex flex-column">               
         <div class="intro-subtitles w-100 flex justify-content-start rad-pad-5-05 moonstone def-cursor">
           <span class="purple-font">if(</span><span class="yellow-font" data-es="explorarSitio" data-en="exploreWebsite"></span><span class="purple-font">) {</span> 
-            <span class="comment-font comment-symbol">//</span><span class="comment-font" data-es=" Desliza hacia abajo" data-en=" Scroll down"></span>
+          <span class="comment-font comment-symbol">/*</span><span class="comment-font" data-es=" Desliza hacia abajo " data-en=" Scroll down "></span><span class="comment-font comment-symbol">*/</span>
         </div>          
         <div class="content w-100 flex justify-content-evenly mx-auto my-0 z-0">          
-          <div class="intro-cards position-relative border-shadow rounded">
+          <div class="intro-cards position-relative border-shadow rounded chineseBlack">
             <img class="w-100 h-100 card-img-container" src="./img/intro-left-h.webp" loading="eager">
             <div class="intro-card-content position-absolute flex flex-column text-center">
               <h2 class="w-100 intro-card-title m-0 fw-normal" data-es="Como desarrollador Back end:" data-en="As a Back end developer:"></h2>
@@ -42,11 +41,11 @@
               </p>
             </div>
           </div>          
-          <div class="intro-middle-img border-shadow rounded flex flex-column flex-wrap">
-            <img class="w-100 h-image-img border-bottom-0 rounded-top" src="" loading="eager">
+          <div class="intro-middle-img border-shadow rounded flex flex-column flex-wrap position-relative chineseBlack">
+            <img id="intro-middle-img" class="w-100 h-image-img border-bottom-0 rounded-top" src="" loading="eager">
             <span class="w-100 text-center rounded-bottom def-cursor p-1 mediumJungle" data-es="Explicación gráfica de roles" data-en="Visual explanation of roles"></span>
           </div> 
-          <div class="intro-cards position-relative border-shadow rounded">
+          <div class="intro-cards position-relative border-shadow rounded chineseBlack">
             <img class="w-100 h-100 card-img-container" src="./img/intro-right-h.webp" loading="eager">
             <div class="intro-card-content position-absolute flex flex-column text-center">
               <h2 class="w-100 intro-card-title m-0 fw-normal" data-es="Como desarrollador Front end:" data-en="As a Front end developer:"></h2>
@@ -58,7 +57,7 @@
         </div>          
         <div class="intro-subtitles w-100 flex justify-content-start rad-pad-5-05 moonstone def-cursor">
           <span class="purple-font">} else {</span><span class="yellow-font" data-es="contactar" data-en="contact"></span><span class="brackets-font">() </span><span class="purple-font">}</span>
-          <span class="comment-font comment-symbol">//</span><span class="comment-font" data-es=" O haz clic en el botón" data-en=" Or click the button"></span>
+          <span class="comment-font comment-symbol">/*</span><span class="comment-font" data-es=" O haz clic en el botón " data-en=" Or click the button "></span><span class="comment-font comment-symbol">*/</span>
         </div>        
         <a href="#Contact" class="intro-contact-btn flex jelly-bean btn rad-pad-5-05 border-shadow border-0" data-es="Contacto" data-en="Contact"></a>
       </section>
@@ -109,18 +108,18 @@
         </div>    
         <div class="abt-text-content cultured rad-pad-10-1 border-shadow text-center txt-jelly">
           <h1 class="rad-pad-5-05 jelly-bean def-cursor flex" data-es="¿Quién soy?" data-en="¿Who am I?"></h1>      
-          <h3 class="abt-name-text w-100 position-relative d-inline-block mb-0 py-2 text-center txt-color-ds" data-label="Edgar Mauricio Barrueta Aguirre" data-label-hover="Web Developer">&nbsp;</h3>
+          <h3 class="abt-name-text w-100 position-relative d-inline-block mb-0 py-2 text-center txt-color-ds" data-label="Edgar Mauricio Barrueta Aguirre" data-label-hover="">&nbsp;</h3>
           <pre class="def-cursor d-inline-block mt-0 pt-2"
             data-es="Soy egresado de la carrera de Ingeniería en Tecnologías de la Información y Comunicación por la Universidad Tecnológica del Sur del Estado de México, con enfoque en programación, principalmente en desarrollo web.
             
-            Entre mis habilidades técnicas están los lenguajes JavaScript, TypeScript y Java; el framework Angular (principalmente) y algo de Spring. También manejo herramientas como Bootstrap, Tailwind CSS, Materialize, HTML y CSS/SCSS. Tengo conocimientos en librerías y tecnologías clave como Node.js, npm, jQuery, RxJS y Angular Material. Por supuesto, también uso Git, GitHub y GitLab.
+            Entre mis habilidades técnicas se encuentran los lenguajes JavaScript, TypeScript y Java, principalmente el framework Angular y algo de Spring. También manejo herramientas como Tailwind CSS, Bootstrap y Materialize CSS, así como librerías y tecnologías clave como RxJS, Angular Material, Node.js, npm, jQuery, entre otras. Por supuesto, también utilizo Git, GitHub y GitLab.
             
             Me considero una persona responsable, con buena capacidad para resolver problemas y aprender por mi cuenta. Gracias a eso he podido adquirir muchas de las habilidades que tengo actualmente de forma autodidacta."
             data-en="I graduated with a degree in Information and Communication Technologies Engineering from the Universidad Tecnológica del Sur del Estado de México, with a focus on programming, particularly in web development.
             
-            Among my technical skills are the programming languages JavaScript, TypeScript, and Java; the Angular framework (primarily), and some experience with Spring. I also work with tools like Bootstrap, Tailwind CSS, Materialize, HTML, and CSS/SCSS. I have knowledge of key libraries and technologies such as Node.js, npm, jQuery, RxJS, and Angular Material. Of course, I also use Git, GitHub, and GitLab.
+            My technical skills include JavaScript, TypeScript, and Java, with a primary focus on the Angular framework and some experience with Spring. I also work with tools such as Tailwind CSS, Bootstrap, and Materialize CSS, as well as key libraries and technologies like RxJS, Angular Material, Node.js, npm, jQuery, among others. Of course, I also use Git, GitHub, and GitLab.
             
-            I consider myself a responsible person, with strong problem-solving skills and the ability to learn on my own. Thanks to that, I've been able to acquire many of the skills I have today through self-teaching.">
+            I consider myself a responsible person with strong problem-solving skills and a self-driven learning approach. Thanks to this, I've been able to acquire many of my current skills through self-teaching.">
           </pre>
           <div class="abt-hobbies text-center rad-pad-5-05 moonstone def-cursor">
             <h6 class="pb-2">Hobbies</h6>           
@@ -138,13 +137,34 @@
         <div class="project-card position-relative rounded cultured border-shadow card-lg carousel slide carousel-fade" id="angularAPIProjects">         
           <div class="carousel-inner position-relative h-100">
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item active">
+              <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Simulador de compras online" data-en="E-commerce Simulator"></span>
+              <img src="./img/proj/fake-comm.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting y conectado a la API DummyJSON (dummyjson.com)."       
+                data-title="Este sitio simula un e-commerce que permite iniciar sesión, explorar productos, filtrar resultados y gestionar favoritos y un carrito de compras ficticio, recreando la experiencia de una tienda en línea real e incorporando sus funciones típicas.">
+              <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              <div class="w-100 carousel-caption">
+                <div class="project-tech-icons d-flex justify-content-center align-items-center">
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons firebase-hosting css-to-scss bootstrap-to-tail p-0 m-0"></ul>
+                </div>  
+                <ul class="web-links-buttons flex justify-content-between m-0 p-0">
+                  <li class="w-50">
+                    <span data-es="Sitio web" data-en="Website"></span>
+                    <a class="d-inline-block w-100 dark-slate" href="https://fakecommerce-c69d8.web.app/products" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
+                  </li>
+                  <li class="w-50">
+                    <span data-es="Código" data-en="Code"></span>
+                    <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/FakeCommerce.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
+                  </li>  
+                </ul>
+              </div>
+            </div>
+            <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Desafío quiz" data-en="Quiz challenge"></span>
-              <img src="./img/proj/quiz.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Tailwind CSS, publicado con Firebase Hosting, conectado a la API Open Trivia DB y con traducción automática mediante Google Translate." 
+              <img src="./img/proj/quiz.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting, conectado a la API Open Trivia DB (opentdb.com) y con traducción automática mediante Google Translate." 
                 data-title="Este sitio ofrece un juego de trivia con opción de partida rápida o personalizada, donde puedes elegir dificultad, cantidad de preguntas, entre otras opciones, además de traducir automáticamente las preguntas al español o conservarlas en inglés.">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex angular-project-icons firebase-hosting css-to-scss bootstrap-to-tail p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons firebase-hosting css-to-scss bootstrap-to-tail p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -165,7 +185,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex angular-project-icons multi-css css-to-scss hide-ang-mat p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons multi-css css-to-scss hide-ang-mat p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -186,7 +206,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list tech-icons-lg w-100 flex angular-project-icons multi-css css-to-scss hide-multi-css p-0 m-0"></ul>
+                  <ul class="tech-icons-list tech-icons-lg w-100 flex justify-content-evenly angular-project-icons multi-css css-to-scss hide-multi-css p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -207,7 +227,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -228,7 +248,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -249,7 +269,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex angular-project-icons firebase-hosting p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons firebase-hosting p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -270,7 +290,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex angular-project-icons hide-bootstrap multi-css css-to-scss hide-ang-mat p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons hide-bootstrap multi-css css-to-scss hide-ang-mat p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -291,7 +311,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex angular-project-icons css-to-scss firebase-hosting p-0 m-0">                    
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons css-to-scss firebase-hosting p-0 m-0">                    
                     <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="TypeScript">
                       <img class="AngMaterial-Icon tech-svg trsn-030">
                     </li>
@@ -316,7 +336,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -348,7 +368,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex angular-project-icons firebase-hosting css-to-scss tech-icons-lg p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons firebase-hosting css-to-scss tech-icons-lg p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -369,7 +389,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex angular-project-icons firebase-hosting css-to-scss tech-icons-lg p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons firebase-hosting css-to-scss tech-icons-lg p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -401,7 +421,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -422,7 +442,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -443,7 +463,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -464,7 +484,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -485,7 +505,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons scss-to-css p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons scss-to-css p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -506,7 +526,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -527,7 +547,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -542,34 +562,13 @@
               </div>
             </div> 
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
-              <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Creación de imágenes por IA" data-en="AI image creation"></span>
-              <img src="./img/proj/img-generator.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages, conectado a una API disponible en el sitio Hugging Face (huggingface.co)." 
-                data-title="Este sitio permite generar hasta 6 imágenes por vez usando inteligencia artificial, a partir de descripciones detalladas, con generación ilimitada de resultados.">
-              <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
-              <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons css-to-scss remove-jquery p-0 m-0"></ul>
-                </div>  
-                <ul class="web-links-buttons flex justify-content-between m-0 p-0">
-                  <li class="w-50">
-                    <span data-es="Sitio web" data-en="Website"></span>
-                    <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/ai-ImageGenerator/" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
-                  </li>
-                  <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
-                    <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/ai-ImageGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
-                  </li>  
-                </ul>
-              </div>
-            </div>
-            <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Pronóstico del clima" data-en="Weather forecast"></span>
               <img src="./img/proj/weather.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, la biblioteca jQuery, CSS y Bootstrap, publicado mediante GitHub Pages, conectado a la API de OpenWeatherMap (openweathermap.org)." 
                 data-title="Este sitio consulta el pronóstico detallado del clima a partir del nombre o las coordenadas de una ciudad, además de incluir la hora actual, el amanecer y el anochecer según su zona horaria.">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons css-to-css p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons css-to-css p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -582,7 +581,28 @@
                   </li>  
                 </ul>
               </div>
-            </div>          
+            </div>   
+            <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
+              <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Creación de imágenes por IA" data-en="AI image creation"></span>
+              <img src="./img/proj/img-generator.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages, conectado a una API disponible en el sitio Hugging Face (huggingface.co)." 
+                data-title="Este sitio permite generar hasta 6 imágenes por vez usando inteligencia artificial, a partir de descripciones detalladas, con generación ilimitada de resultados.">
+              <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              <div class="w-100 carousel-caption">
+                <div class="project-tech-icons d-flex justify-content-center align-items-center">
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons css-to-scss remove-jquery p-0 m-0"></ul>
+                </div>  
+                <ul class="web-links-buttons flex justify-content-between m-0 p-0">
+                  <li class="w-50">
+                    <span data-es="Sitio web" data-en="Website"></span>
+                    <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/ai-ImageGenerator/" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
+                  </li>
+                  <li class="w-50">
+                    <span data-es="Código" data-en="Code"></span>
+                    <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/ai-ImageGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
+                  </li>  
+                </ul>
+              </div>
+            </div>                   
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Base de datos de Pokémon" data-en="Pokémon database"></span>
               <img src="./img/proj/pokeapi-js.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, la biblioteca jQuery, CSS y Bootstrap, publicado mediante GitHub Pages y conectado a PokeAPI (pokeapi.co)." 
@@ -590,7 +610,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons scss-to-css p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons scss-to-css p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -611,7 +631,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons scss-to-css remove-jquery p-0 m-0"></ul> 
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons scss-to-css remove-jquery p-0 m-0"></ul> 
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -643,7 +663,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -664,7 +684,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -685,7 +705,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -706,7 +726,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -727,7 +747,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -748,7 +768,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -769,7 +789,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -790,7 +810,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -811,7 +831,7 @@
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               <div class="w-100 carousel-caption">
                 <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex static-projects-icons remove-jquery p-0 m-0"></ul>
+                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -846,17 +866,14 @@
                   data-en="Preview image"></p>
                 <div class="w-100 carousel-caption">
                   <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex java-project-icon mysql-prj-icon p-0 m-0">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
-                        title="JasperReports">
+                    <ul class="tech-icons-list w-100 flex justify-content-evenly java-project-icon mysql-prj-icon p-0 m-0">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
                         <img class="Jasper-Icon tech-svg trsn-030">
                       </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
-                        title="Apache Maven">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Apache Maven">
                         <img class="Maven-Icon tech-svg trsn-030">
                       </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
-                        title="NetBeans IDE">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
                         <img class="NetBeans-Icon tech-svg trsn-030">
                       </li>
                     </ul>
@@ -883,9 +900,8 @@
                   data-en="Preview image"></p>
                 <div class="w-100 carousel-caption">
                   <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list tech-icons-lg w-100 flex java-project-icon p-0 m-0">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
-                        title="JavaScript">
+                    <ul class="tech-icons-list tech-icons-lg w-100 flex justify-content-evenly java-project-icon p-0 m-0">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
                         <img class="JavaScript-Icon tech-svg trsn-030">
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="jQuery">
@@ -894,12 +910,10 @@
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="AJAX">
                         <img class="AJAX-Icon tech-svg trsn-030">
                       </li>
-                      <li id="template-icons" data-bs-toggle="tooltip" data-bs-placement="top"
-                        data-bs-custom-class="p-tec-tooltip" title="GitLab">
+                      <li id="template-icons" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="GitLab">
                         <img class="GitLab-Icon tech-svg trsn-030">
                       </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
-                        title="PostgreSQL">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PostgreSQL">
                         <img class="PostgreSQL-Icon tech-svg trsn-030">
                       </li>
                     </ul>
@@ -926,13 +940,11 @@
                   data-en="Preview image"></p>
                 <div class="w-100 carousel-caption">
                   <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex java-project-icon p-0 m-0">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
-                        title="JasperReports">
+                    <ul class="tech-icons-list w-100 flex justify-content-evenly java-project-icon p-0 m-0">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
                         <img class="Jasper-Icon tech-svg trsn-030">
                       </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
-                        title="NetBeans IDE">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans IDE">
                         <img class="NetBeans-Icon tech-svg trsn-030">
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="MSSQL">
@@ -962,14 +974,11 @@
                   data-en="Preview image"></p>
                 <div class="w-100 carousel-caption">
                   <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul
-                      class="tech-icons-list tech-icons-lg w-100 flex java-project-icon mysql-prj-icon static-projects-icons remove-icons p-0 m-0">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
-                        title="TypeScript">
+                    <ul class="tech-icons-list tech-icons-lg w-100 flex justify-content-evenly java-project-icon mysql-prj-icon static-projects-icons remove-icons p-0 m-0">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="TypeScript">
                         <img class="TypeScript-Icon tech-svg trsn-030">
                       </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip"
-                        title="Spring Framework">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Spring Framework">
                         <img class="Spring-Icon tech-svg trsn-030">
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular">
@@ -1001,9 +1010,8 @@
                   data-en="Preview image"></p>
                 <div class="w-100 carousel-caption">
                   <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list tech-icons-lg w-100 flex java-project-icon mysql-prj-icon p-0 m-0">
-                      <li id="template-icons" data-bs-toggle="tooltip" data-bs-placement="top"
-                        data-bs-custom-class="p-tec-tooltip" title="JUnit 5">
+                    <ul class="tech-icons-list tech-icons-lg w-100 flex justify-content-evenly java-project-icon mysql-prj-icon p-0 m-0">
+                      <li id="template-icons" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JUnit 5">
                         <img class="JUnit-Icon tech-svg trsn-030">
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Mockito">
@@ -1043,11 +1051,10 @@
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="App de recorrido virtual" data-en="Virtual tour app"></span>
                 <img src="./img/proj/app-tour.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Aplicación desarrollada en C# utilizando el motor multiplataforma Unity, con modelado 3D en SketchUp, diseño de texturas en Adobe Photoshop, y servicios de realidad virtual mediante Google Cardboard, además de diversos recursos gratuitos disponibles en la web."
                   data-title="Esta aplicación ofrece un recorrido virtual interactivo por diversas zonas arqueológicas y lugares históricos de México. Los usuarios pueden seleccionar múltiples puntos de interacción para escuchar y leer información sobre cada sitio.">
-                <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa"
-                  data-en="Preview image"></p>
+                <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
                 <div class="w-100 carousel-caption">
                   <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex unity-projects-icons p-0 m-0"></ul>
+                    <ul class="tech-icons-list w-100 flex justify-content-evenly unity-projects-icons p-0 m-0"></ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                     <li class="w-50">
@@ -1065,22 +1072,19 @@
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Videojuego móvil 2D" data-en="2D Mobile Video Game"></span>
                 <img src="./img/proj/app-game.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Aplicación desarrollada con C# y el motor multiplataforma Unity, utilizando Adobe Photoshop para diseñar sprites y texturas, además de diversos recursos gratuitos disponibles en la web."
                   data-title="Aplicación tipo videojuego 2D RPG/plataformas, inspirada en clásicos retro y dirigida principalmente a un público infantil para ayudarles a aprender y repasar las tablas de multiplicar mientras avanzan en la historia y se divierten.">
-                <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa"
-                  data-en="Preview image"></p>
+                <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
                 <div class="w-100 carousel-caption">
                   <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex unity-projects-icons remove-unity-icons p-0 m-0"></ul>
+                    <ul class="tech-icons-list w-100 flex justify-content-evenly unity-projects-icons remove-unity-icons p-0 m-0"></ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                     <li class="w-50">
                       <span data-es="Sitio web" data-en="Website"></span>
-                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal"
-                          data-es="No disponible" data-en="Not available"></i></a>
+                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
                       <span data-es="Código" data-en="Code"></span>
-                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal"
-                          data-es="No disponible" data-en="Not available"></i></a>
+                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -1102,22 +1106,19 @@
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Sistema de control escolar" data-en="School Management System"></span>
                 <img src="./img/proj/school-sys.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con PHP y JavaScript, utilizando las bibliotecas jQuery y TCPDF, además de AJAX, CSS y Bootstrap. Está conectado a una base de datos MySQL."
                   data-title="Este sitio permite llevar el control de horarios de entrada y salida, permisos y días de descanso del personal docente y administrativo de una universidad. Además de las funciones CRUD, permite generar reportes en formato PDF.">
-                <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa"
-                  data-en="Preview image"></p>
+                <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
                 <div class="w-100 carousel-caption">
                   <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex php-projects-icons p-0 m-0"></ul>
+                    <ul class="tech-icons-list w-100 flex justify-content-evenly php-projects-icons p-0 m-0"></ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                     <li class="w-50">
                       <span data-es="Sitio web" data-en="Website"></span>
-                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal"
-                          data-es="No disponible" data-en="Not available"></i></a>
+                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
                       <span data-es="Código" data-en="Code"></span>
-                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal"
-                          data-es="No disponible" data-en="Not available"></i></a>
+                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                   </ul>
                 </div>
@@ -1126,34 +1127,29 @@
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Red social para egresados" data-en="Alumni Social Network"></span>
                 <img src="./img/proj/social-network.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con PHP y JavaScript, la biblioteca jQuery y el uso de AJAX, además de CSS y Bootstrap. Está conectado a una base de datos MySQL."
                   data-title="Este sitio simula una red social orientada a recién egresados y empresas que ofrecen vacantes. Permite publicar contenido, enviar solicitudes de amistad, postularse a ofertas y comunicarse mediante un chat entre ambas partes.">
-                <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa"
-                  data-en="Preview image"></p>
+                <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
                 <div class="w-100 carousel-caption">
                   <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex php-projects-icons p-0 m-0"></ul>
+                    <ul class="tech-icons-list w-100 flex justify-content-evenly php-projects-icons p-0 m-0"></ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                     <li class="w-50">
                       <span data-es="Sitio web" data-en="Website"></span>
-                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal"
-                          data-es="No disponible" data-en="Not available"></i></a>
+                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
                       <span data-es="Código" data-en="Code"></span>
-                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal"
-                          data-es="No disponible" data-en="Not available"></i></a>
+                      <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                   </ul>
                 </div>
               </div>
             </div>
             <button class="touch-btn flex dark-slate"></button>
-            <button class="carousel-control-prev jelly-bean trsn-025" type="button" data-bs-target="#phpProjects"
-              data-bs-slide="prev">
+            <button class="carousel-control-prev jelly-bean trsn-025" type="button" data-bs-target="#phpProjects" data-bs-slide="prev">
               <i class="fa-solid fa-angles-left fw-normal"></i>
             </button>
-            <button class="carousel-control-next jelly-bean trsn-025" type="button" data-bs-target="#phpProjects"
-              data-bs-slide="next">
+            <button class="carousel-control-next jelly-bean trsn-025" type="button" data-bs-target="#phpProjects" data-bs-slide="next">
               <i class="fa-solid fa-angles-right fw-normal"></i>
             </button>
           </div>        
@@ -1233,12 +1229,13 @@
     <section class="contact-section-separator position-relative dark-slate"></section>
     <section class="contactme position-relative flex" id="Contact"> 
       <div class="content w-100 flex justify-content-around mx-auto my-0 z-1" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">                        
-        <div class="contact-form cultured rad-pad-10-1 border-shadow"> <!-- Form -->
+        <!-- Form -->
+        <div class="contact-form cultured rad-pad-10-1 border-shadow"> 
           <h1 class="text-center jelly-bean rad-pad-5-05 def-cursor" data-es="Envíame un mensaje" data-en="Send me a message"></h1>
           <form class="contact-form-container" id="contact-form" action="">
-            <label for="name" class="form-label txt-color-ds" data-es="Nombre/Empresa:" data-en="Full name/Company:"></label><span>*</span>
+            <label for="name" class="form-label txt-color-ds" data-es="Nombre / Empresa:" data-en="Full name / Company:"></label><span>*</span>
             <div class="input-group mb-3">
-              <span class="input-group-text border-0 dark-slate" id="name-icon">&#xf508;</span>
+              <span class="input-group-text border-0 dark-slate" id="name-icon">&#xf2bd;</span>
               <input name="name" id="name" type="text" class="form-control form-name txt-jelly" aria-describedby="name-icon" required autocomplete="off">
             </div>
             <label for="email" class="form-label txt-color-ds">E-mail:</label><span>*</span>
@@ -1255,7 +1252,8 @@
           </form>
           <a href="mailto:mauba22@outlook.com" id="mailto" style="display: none;">mail</a> <!-- mailto -->
         </div>  
-        <div class="icons m-0 cultured rad-pad-10-1 border-shadow"> <!-- Buttons -->
+        <!-- Buttons -->
+        <div class="icons m-0 cultured rad-pad-10-1 border-shadow"> 
           <h4 class="copy-email-title text-center mb-0 rounded-top def-cursor jelly-bean rad-pad-5-05" data-es="Mi correo electrónico:" data-en="My e-mail:"></h4>
           <p class="flex justify-content-between rounded-0 mb-0 p-3 text-center def-cursor txt-color-ds">
             <input class="email-text mx-auto border-0 cultured txt-color-ds" type="text" value="mauba22@outlook.com" id="email-copy" readonly>
@@ -1299,7 +1297,7 @@
       <p class="mt-2 me-0 mb-auto ms-0 def-cursor" data-es="Sitio web desarrollado por:" data-en="Website developed by:"></p>
     </div>
     <div class="footer-bottom w-100 position-absolute bottom-0 p-2 text-center def-cursor">
-      <p class="m-0" ><span class="fw-bold">&copy; 2023 |</span> Edgar Mauricio Barrueta Aguirre <i class="fst-normal">😌</i></p>
+      <p class="m-0" ><span class="fw-bold">&copy; 2023 |</span> Edgar Mauricio Barrueta Aguirre <i class="fst-normal">😗</i></p>
     </div>
   </footer> 
   
@@ -1311,11 +1309,8 @@
         <div class="modal-header rounded-0 border-0 dark-slate">
           <h6 class="w-100 mb-0 text-center"></h6>
         </div>
-        <span class="span-info w-100 d-flex justify-content-center align-items-center text-center moonstone border-0 mb-0 rounded-0" role="alert">Haz clic en la imagen para activar la lupa, o en el siguiente ícono para desactivarla:
-          <button class="position-relative d-inline-block border-0 p-0 zoomout trsn-025" onclick="zoomOut()">&#xf010;</button>
-        </span>
-        <div class="modal-body img-magnifier-container position-relative p-3 m-0 rad-pad-5-05">
-          <img id="project-image" class="w-100 img-modal" src="" alt="">
+        <div class="modal-body img-magnifier-container position-relative p-2 m-0 rad-pad-5-05 cultured">
+          <img id="project-image" class="w-100 img-modal rounded-2" src="" alt="">
           <p class="w-100 position-absolute m-0 pt-1 pb-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
         </div>
         <div class="modal-footer rounded-0 rounded-bottom border-0 jelly-bean">
@@ -1338,6 +1333,6 @@
   <script type="text/javascript" src="js/main.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script> <!-- AOS Library Script -->
-  <script type="text/javascript" src="js/imgMagnifyingGlass.js" defer></script>       
+  <script type="text/javascript" src="js/magnifying-glass.js" defer></script>       
 </body>
 </html>
