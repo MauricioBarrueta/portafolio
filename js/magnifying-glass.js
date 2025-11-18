@@ -92,6 +92,13 @@ function startMagnifyingGlass(id, zoom = 2) {
     if (e.touches && e.touches[0]) moveMagnifier(e.touches[0])
   }, { passive: false });
 
+  /* Se dispara al mover el deslizar el dedo en la pantalla, actualizando la posición de la lupa */
+  projectImg.addEventListener('touchmove', (e) => {
+    e.preventDefault()
+
+    if (e.touches && e.touches[0]) moveMagnifier(e.touches[0])
+  }, { passive: false });
+
   /* Se dispara al levantar el dedo de la pantalla, ocultando la lupa */
   projectImg.addEventListener('touchend', () => {
     magnifier.style.display = 'none'

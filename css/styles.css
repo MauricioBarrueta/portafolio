@@ -566,7 +566,7 @@ footer { position: sticky; min-height: 205px; }
 }
 .footer-bottom span { opacity: .5; }
 .footer-bottom p { font-size: 12px; word-spacing: 2px; } .footer-bottom i, .footer-bottom p::after { font-size: 16px; opacity: .7; }
-.footer-bottom p::after {
+.footer-bottom i { color: #ffc83d; }.footer-bottom p::after {
     content: "🤙"; display: inline-block;
     animation: var(--fa-shake-animation); --fa-bounce-height: 1;
 }
@@ -585,18 +585,23 @@ footer { position: sticky; min-height: 205px; }
     .abt-img-container { margin-bottom: 10px; } .abt-img-container img { max-height: 380px; } 
     /* Contact Section */
     .contact-form h1 { font-size: 16px; } 
-    #emailHelp { font-size: 8px; } 
+    #emailHelp, .contact-form-container > span, .form-floating label::after { font-size: 8px; } 
     .icons { min-width: 450px; margin: 10px 0 auto !important; }     
     .icons > h4 { font-size: 12px; }  
 }
 @media screen and (max-width: 1200px) {
     /* Collapsed Navbar */
-    .navbar-collapse { margin-top: 10px; border-top: 2px dashed var(--mediumJungleGreen); }
+    .navbar-collapse { 
+        max-height: 0;
+        margin-top: 10px; border-top: 2px dashed var(--mediumJungleGreen); 
+        opacity: 0; overflow: hidden; transition: max-height 0.75s ease, opacity 0.75s ease;
+    }
+    .navbar-collapse.show { max-height: 500px; opacity: 1; }
     .navbar-collapse::before { display: initial; right: 0; top: 11%; rotate: 180deg; }
     .nav-item { padding: 1rem 0; }
     .nav-item:has(> .nav-link.active) { border-inline: 0; border-bottom: 2px dashed var(--mediumJungleGreen); }
     .collapse:not(:not(.show)) ~ .nav-lang { top: 1.5% !important; }  
-    .collapsing { transition: none !important; }    
+    .collapsing { transition: none !important; }  
 }
 @media screen and (max-width: 1050px) {       
     /* Introduction Section */
@@ -675,7 +680,7 @@ footer { position: sticky; min-height: 205px; }
     .abt-hobbies i, .btn-close { font-size: 16px; } 
     /* Projects Section */
     .show-hide-text { line-height: 2; }
-    .modal-header h6, .modal-footer p, #emailHelp { font-size: 7px; }
+    .modal-header h6, .modal-footer p, #emailHelp, .contact-form-container > span, .form-floating label::after { font-size: 7px; }
     .btn-close { width: 14px; height: 14px; } .btn-close:hover { font-size: 18px; }
     .time { height: 31px; }
     /* Skills Section */
@@ -710,3 +715,17 @@ footer { position: sticky; min-height: 205px; }
     /* Footer Section */
     .menu { flex-wrap: wrap; }.footer-bottom p { word-spacing: 0; }
 }
+
+/* Aplicamos transición al contenedor colapsable
+.navbar-collapse {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 2s ease, opacity 2s ease;
+}
+
+ Cuando está mostrado 
+.navbar-collapse.show {
+  max-height: 500px;  suficiente para tu menú 
+  opacity: 1;
+} */
