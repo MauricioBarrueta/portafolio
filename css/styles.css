@@ -617,7 +617,6 @@ footer { position: sticky; min-height: 150px; }
     }.cv-btn::after, .intro-contact-btn::after { margin-bottom: -10px; } #send-email-btn::after { margin-bottom: -2px; }
     /* Projects Section */ 
     .modal-header h6, .modal-footer p { font-size: 8px;} 
-    .img-magnifier-glass { width: 85px; height: 85px; } 
     /* Skills Section */
     .skills-section-subtitle { font-size: 9px; } 
     /* Cards 'Touch Screen' Icon */
