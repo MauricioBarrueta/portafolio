@@ -26,14 +26,23 @@ function startMagnifyingGlass(id, zoom = 2) {
     magnifier.style.backgroundImage = `url('${projectImg.src}')`
   };
 
+  /* Normaliza la posición del cursor para mouse y pantallas táctiles (MouseEvent o TouchEvent) y devuelve los valores de x / y */
+  function getEventPos(e) {
+    const src = e.touches && e.touches.length ? e.touches[0] : e
+    const pageX = src.pageX !== undefined ? src.pageX : (src.clientX + window.scrollX)
+    const pageY = src.pageY !== undefined ? src.pageY : (src.clientY + window.scrollY)
+    return { pageX, pageY }
+  }
+
   /* Función que agrega el movimiento a la lupa, actualizando la posición y el valor de la propiedad background-position */
-  const moveMagnifier = (event) => {
-    event.preventDefault()
+  const moveMagnifier = (e) => {
+    e.preventDefault()
     const rect = projectImg.getBoundingClientRect()
 
     /* Obtiene la posición del cursor relativa al de la imagen */
-    let x = event.pageX - rect.left - window.scrollX
-    let y = event.pageY - rect.top - window.scrollY
+    const pos = getEventPos(e)
+    let x = pos.pageX - rect.left - window.scrollX
+    let y = pos.pageY - rect.top - window.scrollY
 
     const imgW = rect.width
     const imgH = rect.height
@@ -45,9 +54,10 @@ function startMagnifyingGlass(id, zoom = 2) {
     if (x < w / zoom) x = w / zoom
     if (y > imgH - (h / zoom)) y = imgH - (h / zoom)
     if (y < h / zoom) y = h / zoom
-    
+
     /* Posiciona la lupa centrada en el cursor y ajusta la zona de la imagen que se esta mostrando con zoom */
-    magnifier.style.left = `${x - w}px`; magnifier.style.top = `${y - h}px`    
+    magnifier.style.left = `${x - w}px`
+    magnifier.style.top = `${y - h}px`
     magnifier.style.backgroundPosition = `-${(x * zoom) - w}px -${(y * zoom) - h}px`
   };
 
@@ -81,22 +91,21 @@ function startMagnifyingGlass(id, zoom = 2) {
   window.addEventListener('resize', () => {
     if (magnifier.style.display !== 'none') configureBackground()
   });
-
-  /* Para permitir que también funcione en pantallas táctiles */
+  
+  //* Para permitir que también funcione en pantallas táctiles
   projectImg.addEventListener('touchstart', (e) => {
-    e.preventDefault() //* Previene que se abra el popup del navegador
+    e.preventDefault(); /* Previene que se abra el popup del navegador */
 
     configureBackground()
     magnifier.style.display = 'block'
     //* Posiciona la lupa de acuerdo a la posición del primer toque
-    if (e.touches && e.touches[0]) moveMagnifier(e.touches[0])
+    moveMagnifier(e)
   }, { passive: false });
 
   /* Se dispara al mover el deslizar el dedo en la pantalla, actualizando la posición de la lupa */
   projectImg.addEventListener('touchmove', (e) => {
-    e.preventDefault()
-
-    if (e.touches && e.touches[0]) moveMagnifier(e.touches[0])
+    e.preventDefault();
+    moveMagnifier(e)
   }, { passive: false });
 
   /* Se dispara al levantar el dedo de la pantalla, ocultando la lupa */
