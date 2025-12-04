@@ -559,7 +559,7 @@ footer { position: sticky; min-height: 150px; }
     border-top: 2px dashed var(--mediumJungleGreen);     
 }
 .footer-bottom span { opacity: .5; }
-.footer-bottom p { font-size: 12px; word-spacing: 2px; } .footer-bottom i, .footer-bottom p::after { font-size: 16px; opacity: .7; }
+.footer-bottom p { font-size: 12px; word-spacing: 2px; } .footer-bottom i, .footer-bottom p::after { font-size: 16px; }
 .footer-bottom i { color: #ffc83d; margin-right: 2px; }.footer-bottom p::after {
     content: "🤙"; display: inline-block;
     animation: var(--fa-shake-animation); --fa-bounce-height: 1;
