@@ -265,9 +265,9 @@ header {
 }
 /* ----------------------------------------------------------------- SVG ICONS ---------------------------------------------------------------- */
 img.Vue-Icon { content: url(../svg/VueJS.svg); } img.TailCSS-Icon { content: url(../svg/tailwindcss.svg); } img.Figma-Icon { content: url(../svg/Figma.svg); } img.Maven-Icon { content: url(../svg/maven.svg); } img.Cardboard-Icon { content: url(../svg/GoogleCardboard.png); } 
-img.Java-Icon { content: url(../svg/Java.svg); } img.C-Icon { content: url(../svg/CSharp.webp); } img.PHP-Icon { content: url(../svg/PHP.svg); } img.Jasper-Icon { content: url(../svg/Jaspersoft.webp); } img.NetBeans-Icon { content: url(../svg/NetBeans.svg); } 
+img.Java-Icon { content: url(../svg/Java.svg); } img.C-Icon { content: url(../svg/CSharp.svg); } img.PHP-Icon { content: url(../svg/PHP.svg); } img.Jasper-Icon { content: url(../svg/Jaspersoft.webp); } img.NetBeans-Icon { content: url(../svg/NetBeans.svg); } 
 img.AStudio-Icon { content: url(../svg/AndroidStudio.svg); } img.Rxjs-Icon { content: url(../svg/rxjs.svg); } img.JWT-Icon { content: url(../svg/JWT.svg); } img.GitLab-Icon { content: url(../svg/GitLab.svg); } img.TypeScript-Icon { content: url(../svg/TypeScript.svg); } 
-img.JavaScript-Icon { content: url(../svg/JavaScript.svg); } img.Spring-Icon { content: url(../svg/Spring.svg); } img.Angular-Icon { content: url(../svg/Angular.svg); } img.SQL-Icon { content: url(../svg/MySQL.png); } img.HTML-Icon { content: url(../svg/HTML.svg); } 
+img.JavaScript-Icon { content: url(../svg/JavaScript.svg); } img.Spring-Icon { content: url(../svg/Spring.svg); } img.Angular-Icon { content: url(../svg/Angular.svg); } img.SQL-Icon { content: url(../svg/MySQL.svg); } img.HTML-Icon { content: url(../svg/HTML.svg); } 
 img.CSS-Icon { content: url(../svg/CSS.svg); } img.Python-Icon { content: url(../svg/Python.svg); } img.Unity-Icon { content: url(../svg/Unity.svg); } img.Bootstrap-Icon { content: url(../svg/Bootstrap.svg); } img.PostgreSQL-Icon { content: url(../svg/PostgreSQL.svg); } 
 img.jQuery-Icon { content: url(../svg/jQuery.svg); } img.GitHub-Icon { content: url(../svg/GitHub.svg); } img.AJAX-Icon { content: url(../svg/AJAX.svg); } img.JSON-Icon { content: url(../svg/json.svg); } img.NPM-Icon { content: url(../svg/NPM.svg); } 
 img.Thymeleaf-Icon { content: url(../svg/Thymeleaf.svg); } img.SASS-Icon { content: url(../svg/SASS.svg); } img.Photoshop-Icon { content: url(../svg/Photoshop.svg); } img.Postman-Icon { content: url(../svg/Postman.svg); } img.Firebase-Icon { content: url(../svg/Firebase.webp); } 
@@ -322,8 +322,8 @@ img.WPS-Icon { content: url(../svg/WPSOffice.svg); } img.FontAwesome-Icon { cont
 .tech-icons-list { gap: 5px; }
 .tech-icons-list li, .tech-icons-lg li { list-style: none; }
 .tech-icons-list li .tech-svg { /* Icon */
-    width: 23px; height: 23px; cursor: pointer; 
-    filter: var(--iconShadow); object-fit: contain;
+    width: 25px; height: 25px; cursor: pointer; 
+    object-fit: contain;
 }.tech-svg:hover { scale: 1.1; animation: var(--fa-shake-animation); animation-iteration-count: 1; }
 .web-links-buttons { list-style: none; border-top: 2px dashed var(--darkSlateGray); } .web-links-buttons li:nth-child(1) { border-right: 2px dashed var(--darkSlateGray); }
 .no-web-links { opacity: .75; cursor: default; }
@@ -415,7 +415,7 @@ img.WPS-Icon { content: url(../svg/WPSOffice.svg); } img.FontAwesome-Icon { cont
 .time span { padding: 2px; margin: 0 3px; }
 .time span:nth-child(2) { font-size: 5.5px; margin: 0 2px 0 -3px !important; } /* '-' Character */ 
 /* ---------------------------------------------------------------- SKILLS ------------------------------------------------------------------ */
-.skills-cards .cards-container { min-height: 100%; gap: 15px; row-gap: 20px; }
+.skills-cards .cards-container { min-height: 100%; gap: 15px; row-gap: 25px; }
 .card-skills { /* Cards */
     width: 90px; height: 90px; 
     cursor: pointer; box-shadow: var(--borderBoxShadow);   
@@ -427,7 +427,7 @@ img.WPS-Icon { content: url(../svg/WPSOffice.svg); } img.FontAwesome-Icon { cont
 .card-skills:hover::before { opacity: 1; }
 .card-skills:hover .info-skills { opacity: 1; transform: translateY(0px); }
 .card-skills img { 
-    width: 80px; height: 80px; object-fit: contain; filter: var(--iconShadow);
+    width: 80px; height: 80px; object-fit: contain; /*filter: var(--iconShadow);*/
 }
 .info-skills { 
     color: #FFF; border: 1px solid var(--mediumJungleGreen);
@@ -438,7 +438,7 @@ img.WPS-Icon { content: url(../svg/WPSOffice.svg); } img.FontAwesome-Icon { cont
 .tooltip-success .tooltip-inner, .tooltip-warning .tooltip-inner, .tooltip-danger .tooltip-inner { font-size: 8px; text-shadow: var(--textShadowCustom); }
 .bg-success { background-color: var(--americanGreen); }.bg-warning { background-color: var(--mikadoYellow); }.bg-danger { background-color: var(--rustyRed); }
 /* In Process Skills */
-.skills-section-subtitle { width: 100%; font-size: 10px; line-height: 1.5; } 
+/* .skills-section-subtitle { width: 100%; font-size: 10px; line-height: 1.5; }  */
 .info-skills small > i { font-size: 8px; animation-duration: 1.5s; }
 /* -------------------------------------------------------------- CERTIFICATIONS -------------------------------------------------------------- */
 .certification-container { height: fit-content; padding: 1em 1em 1.5rem 1em; gap: 50px; }
@@ -618,7 +618,7 @@ footer { position: sticky; min-height: 150px; }
     /* Projects Section */ 
     .modal-header h6, .modal-footer p { font-size: 8px;} 
     /* Skills Section */
-    .skills-section-subtitle { font-size: 9px; } 
+    .skills-section-subtitle, .card-skills::after { font-size: 10px; } 
     /* Cards 'Touch Screen' Icon */
     .intro-cards::after, .touch-btn::before, .card-skills::after, .experience-card::after, .flip-card::after { 
         content: "\f577"; position: absolute; display: block; z-index: 1;
@@ -630,7 +630,7 @@ footer { position: sticky; min-height: 150px; }
         border-radius: 50%; border: 1px dashed var(--cultured); box-shadow: var(--circleBoxShadow); visibility: visible;
     }
     .experience-card::after { bottom: 2px; right: 5px;  } 
-    .card-skills::after { font-size: 10px; left: 82%; bottom: 0%; } 
+    .card-skills::after { left: 82%; bottom: 0%; } 
     .flip-card::after { width: fit-content; position: relative; bottom: 13%; left: 92%; }.flip-card:nth-child(2):hover::after { color: var(--darkSlateGray); } 
     .intro-cards::after, .flip-card:nth-child(2)::after, .touch-btn::before { color: #FFF; } 
 }
@@ -647,7 +647,7 @@ footer { position: sticky; min-height: 150px; }
     /* About Section */
     .abt-hobbies h6 { font-size: 13px; }.abt-hobbies i { margin-inline: 8px; } 
     /* Projects Section */
-    .tech-svg { width: 18px; height: 18px; }       
+    .tech-svg { width: 20px; height: 20px; }       
     /* Skills Section */
     .cards-container { gap: 10px; row-gap: 15px; }
     .card-skills { width: 60px; height: 60px; } .card-skills img { width: 50px; height: 50px; }     
