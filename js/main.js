@@ -87,7 +87,6 @@ window.onload = () => {
     loadTemplates()
 };
 
-
 /* Da el efecto 'Parallax' a la imagen de fondo de toda la sección 'Main' y la sección de 'Contact' */
 const main = document.querySelectorAll('.main'), contact = document.querySelectorAll(".contactme")
 window.addEventListener("scroll", () => {
@@ -195,6 +194,7 @@ const langChange = (lang) => {
 
     //* Cambia la imagen central de la introducción dependiendo el idioma
     document.querySelector('.intro-middle-img img').src = currLang === 'es' ? `./img/back-front-es.webp` : `./img/back-front-en.webp`
+    document.querySelector('.intro-middle-img img').setAttribute('title', currLang === 'es' ? 'Créditos: EDTeam' : 'Credits: EDteam')
 
     //* Cambia el valor del atributo 'data-label-hover' de un elemento en la sección de 'Sobre mí'
     const nameHeading = document.querySelector('.abt-name-text')
