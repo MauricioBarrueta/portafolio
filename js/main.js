@@ -188,8 +188,11 @@ var currLang //* Almacena el idioma actual de la página
 const langChange = (lang) => {
     currLang = lang
     localStorage.setItem('lang', lang) //* Se almacena el lenguaje en el localStorage
-    $(`[data-${lang}]`).text( function() { 
-        return $(this).data(lang) 
+    // $(`[data-${lang}]`).text( function() { 
+    //     return $(this).data(lang) 
+    // })
+    $(`[data-${lang}]`).html(function () {
+        return $(this).data(lang).replace(/\//g, '<span class="slash mx-2">/</span>')
     })
 
     //* Cambia la imagen central de la introducción dependiendo el idioma
