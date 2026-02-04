@@ -21,6 +21,10 @@ html { overflow: hidden; }
 }
 /* Custom Bootstrap Classes */
 .fs-7 { font-size: 7px; }
+.slash {
+  font-family: 'Roboto', system-ui, sans-serif !important;  
+  font-size: 15px; font-weight: bolder; color: var(--jellyBeanBlue);
+}
 /* ------------------------------------------------------------ BG COLOR / COLOR -------------------------------------------------------------- */
 .jelly-bean, .navbar::after { background-color: var(--jellyBeanBlue); color: #FFF !important; }
 .moonstone, .experience-card::before { background-color: var(--moonstoneBlue); color: #FFF; }
@@ -219,7 +223,7 @@ header {
     font-size: 8px; opacity: 0; transition: opacity 0.25s; 
 }
 .abt-img-container span::after { 
-    content: '\1FAF0'; display: inline-block;  
+    content: '\1F44B'; display: inline-block;  
     font-size: 14px; margin-left: 5px; filter: drop-shadow(0 0 1px #111);
 } .abt-img-container:hover span { opacity: 1; }
 .abt-img-container:hover span::after { animation: var(--fa-shake-animation); animation-iteration-count: 1; animation-delay: 0.5s; }
@@ -278,6 +282,7 @@ img.Eclipse-Icon { content: url(../svg/Eclipse.svg); } img.SQLite-Icon { content
 img.Nitro-Icon { content: url(../svg/Nitro.webp); } img.React-Icon { content: url(../svg/React.svg); } img.Laravel-Icon { content: url(../svg/Laravel.svg); } img.Mockito-Icon { content: url(../svg/Mockito.webp); } img.Docker-Icon { content: url(../svg/Docker.svg); } 
 img.AdobeXD-Icon { content: url(../svg/AdobeXD.svg); } img.Material-Icon { content: url(../svg/materialize.svg); } img.SQLServer-Icon { content: url(../svg/SQLServer.svg); } img.Sketchup-Icon { content: url(../svg/Sketchup.svg); } img.WPS-Icon { content: url(../svg/WPSOffice.svg); } 
 img.FontAwesome-Icon { content: url(../svg/FontAwesome.svg); } img.AJAX-Icon { content: url(../svg/AJAX.svg); filter: brightness(0) saturate(100%) invert(43%) sepia(80%) saturate(639%) hue-rotate(166deg) brightness(90%) contrast(84%) !important; }
+img.Java-xs-Icon { content: url(../svg/Java-small.svg); } img.Spring-xs-Icon { content: url(../svg/Spring-small.svg); } img.jQuery-xs-Icon { content: url(../svg/jQuery-small.svg); } img.NetBeans-xs-Icon { content: url(../svg/NetBeans-small.svg); } img.MySQL-xs-Icon { content: url(../svg/MySQL-small.svg); }
 /* ------------------------------------------------------------------ PROJECTS -------------------------------------------------------------- */
 /* Carousel Instructions / Show-Hide Button Label */
 .carousel-instructions, .show-hide-text, .complementary {     
@@ -501,7 +506,7 @@ img.FontAwesome-Icon { content: url(../svg/FontAwesome.svg); } img.AJAX-Icon { c
 #send-email-btn:is(:hover, :focus)::after { width: 24px; margin-left: 8px; animation: var(--fa-bounce-animation); animation-iteration-count: 1; }
 .icons {  width: 40%; } /* Social Media Buttons */
 .copy-email-title, .social-media-title { 
-    font-size: 14px; line-height: 1.5; 
+    font-size: 14px; line-height: 1.75; 
     border-bottom: 2px dashed var(--jellyBeanBlue);
 } 
 .icons p, .social-media-list { 
