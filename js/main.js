@@ -121,9 +121,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /* Abre la página del archivo correspondiente al Currículum de acuerdo al idioma actual de la página */
-const cvBtn = document.getElementById('btn-cv'), cvPath = 'https://mauriciobarrueta.github.io/portafolio/files/CV-Edgar-Mauricio-Barrueta-Aguirre.pdf'
+const cvBtn = document.getElementById('btn-cv'), cvPath = 'https://mauriciobarrueta.github.io/portafolio/files/CV-Edgar-Mauricio-Barrueta-Aguirre'
 cvBtn.addEventListener('click', () => {
-    cvBtn.href = currLang === 'es' ? `${cvPath}#page=1` : `${cvPath}#page=2`
+    cvBtn.href = currLang === 'es' ? `${cvPath}-ES.pdf` : `${cvPath}-EN.pdf`
 })
 
 /* Se obtiene los atributos 'src', 'alt' y 'title' de la imagen del proyecto seleccionado para mostrarlo en el Modal */
@@ -189,7 +189,10 @@ const langChange = (lang) => {
     currLang = lang
     localStorage.setItem('lang', lang) //* Se almacena el lenguaje en el localStorage
     $(`[data-${lang}]`).html(function () {
-        return $(this).data(lang).replace(/\//g, '<span class="slash mx-2">/</span>')
+        return $(this).data(lang).replace(/[\/\u002B]/g, match => {
+            const className = match === '/' ? 'slash' : 'plus'
+            return `<span class="${className} mx-2">${match}</span>`
+        })
     })
 
     //* Cambia la imagen central de la introducción dependiendo el idioma
