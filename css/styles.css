@@ -21,10 +21,9 @@ html { overflow: hidden; }
 }
 /* Custom Bootstrap Classes */
 .fs-7 { font-size: 7px; }
-.slash {
-  font-family: 'Roboto', system-ui, sans-serif !important;  
-  font-size: 15px; font-weight: bolder; color: var(--jellyBeanBlue);
-}
+.slash, .plus { font-family: 'Roboto', system-ui, sans-serif !important; font-weight: bolder; }
+.slash { font-size: 15px; }
+.plus { position: relative; top: -1px; font-size: 10px; }
 /* ------------------------------------------------------------ BG COLOR / COLOR -------------------------------------------------------------- */
 .jelly-bean, .navbar::after { background-color: var(--jellyBeanBlue); color: #FFF !important; }
 .moonstone, .experience-card::before { background-color: var(--moonstoneBlue); color: #FFF; }
@@ -684,6 +683,7 @@ footer { position: sticky; min-height: 150px; }
     .skills-section-subtitle { margin: 8px 0 !important; } 
     /* Contact Section */
     .button, .icon { width: 45px; height: 45px; font-size: 26px; } .button { margin: 0 5px; }
+    .contact-form-container > span { margin-top: 5px; }
     /* Footer Content */
     .intro-subtitles span, .menu a, #complementary-skills { font-size: 8px; }    
     .footer-content p, .footer-bottom p, .intro-card-desc, .show-hide-text, .abt-text-content pre, .time span { font-size: 9px; }
