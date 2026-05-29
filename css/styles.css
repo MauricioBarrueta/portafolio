@@ -167,8 +167,12 @@ header {
 .intro-card-title, .intro-card-desc { translate: -25px; transition: opacity 0.25s, translate 0.35s; }
 .intro-card-desc { font-size: 10px; line-height: 2; opacity: 0; }
 .intro-cards:hover .intro-card-desc, .intro-cards:hover .intro-card-title { opacity: 1; translate: 0; }
+.intro-middle-img {
+    width: 332px; height: 313px;
+    background: #008FEA; background: linear-gradient(to bottom, #008FEA 44%, #35B3FC 44%);
+}
 .intro-middle-img img { 
-    height: 289px;
+    height: 289px; object-fit: contain;
     border: 2px dashed var(--darkSlateGray); cursor: none; 
 }
 .intro-middle-img span {
