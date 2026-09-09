@@ -24,14 +24,14 @@ window.onload = () => {
                 //* Estructura del map: [ id, selector CSS del destino, método ]
                 const mapTempContent = [
                     ['java-projects', '.java-project-icon', 'prepend'],
-                    ['netbeans-projects', '.netbeans-project-icon', 'appendChild'],
                     ['mysql-icon', '.mysql-prj-icon', 'append'],
+                    ['postgresql-icon', '.postgresql-project-icon', 'append'],
+                    ['sqlserver-icon', '.sqlserver-project-icon', 'append'],
                     ['firebase-host-projects', '.firebase-hosting', 'appendChild'],
                     ['angular-projects', '.angular-project-icons', 'prepend'],
                     ['php-projects', '.php-projects-icons', 'appendChild'],
                     ['static-projects', '.static-projects-icons', 'appendChild'],
                     ['unity-projects', '.unity-projects-icons', 'prepend'],
-                    ['multi-css-frameworks-projects', '.multi-css', 'append'],
                     ['skills-template', '.cards-container', 'append']
                 ];
 
@@ -79,6 +79,17 @@ window.onload = () => {
         ignoreLoader ? (hideLoader(), localStorage.removeItem('ignoreLoader')) : setTimeout(hideLoader, 1500)
 
         AOS.init({ once: false })
+
+        /* Actualiza los títulos de los tooltips cuando el ícono de la tecnología es reemplazado mediante CSS */
+        document.querySelectorAll('.bootstrap-to-tail li:nth-child(5)').forEach(element => {
+            element.setAttribute('title', 'Tailwind CSS');
+        });
+        document.querySelectorAll('.css-to-scss li:nth-child(4)').forEach(element => {
+            element.setAttribute('title', 'SCSS')
+        });
+        document.querySelectorAll('.scss-to-css li:nth-child(4)').forEach(element => {
+            element.setAttribute('title', 'CSS')
+        });
 
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
@@ -175,13 +186,24 @@ contactForm.addEventListener('submit', (event) => {
         sendBtn.disabled = false, sendBtn.innerHTML = currLang === 'es' ? 'Enviar' : 'Send'  
         alertText.innerHTML = currLang === 'es' ? `Espere un momento, la aplicación del correo se iniciará en breve...` : `Please wait, the email app will be initialized soon...`
         showAlert()             
-        mailto.setAttribute('href', `mailto:mauba22@outlook.com?subject=Hola, te contacto desde tu portafolio, soy ${formData.get('name')}, mi correo es: ${formData.get('email')}&body=${formData.get('message')}`)
+
+        const subject = currLang === 'es' ? '¡Hola! Te contacto desde tu portafolio' : "Hi! I'm contacting you through your portfolio"
+        const body = currLang === 'es'
+            ? `Nombre: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\n${formData.get('message')}`
+            : `Name: ${formData.get('name')}\nEmail: ${formData.get('email')}\n\n${formData.get('message')}`;
+        
+        mailto.setAttribute('href', `mailto:mauba22@outlook.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`)
         mailto.click()
     }, 3500)    
 });
 /* Se asigna el URL de LinkedIn dependiendo el idioma actual */
-const linkedinBtn = document.getElementById('linkedin-url'), linkedinUrl = 'http://www.linkedin.com/in/mauricio-barrueta'
-linkedinBtn.addEventListener('click', () => {linkedinBtn.href = currLang === 'es' ? `${linkedinUrl}` : `${linkedinUrl}/?locale=en_US` })
+const linkedinBtn = document.getElementById('linkedin-url'), linkedinUrl = 'https://www.linkedin.com/in/mauricio-barrueta'
+linkedinBtn.addEventListener('click', () => { linkedinBtn.href = currLang === 'es' ? `${linkedinUrl}` : `${linkedinUrl}/?locale=en_US` })
+
+const whatsappBtn = document.getElementById('whatsapp-url'), whatsappUrl = 'https://wa.me/527227982747?text='
+whatsappBtn.addEventListener('click', () => { whatsappBtn.href = currLang === 'es' 
+    ? `${whatsappUrl}Hola!%20Te%20escribo%20desde%20tu%20portafolio` 
+    : `${whatsappUrl}Hi!%20I'm%20contacting%20you%20through%20your%20portfolio` })
 
 /* Traduce el contenido de toda la página a inglés o español */
 var currLang //* Almacena el idioma actual de la página
@@ -205,8 +227,8 @@ const langChange = (lang) => {
 
     //* Cambia los valores del atributo 'placeholder' del form en la sección de 'Contacto' */
     let namePlaceholder = document.querySelector('.form-name'), emailPlaceholder = document.querySelector('.form-email')
-    lang === 'es' ? (namePlaceholder.setAttribute('placeholder', 'Ingresa tu nombre'), emailPlaceholder.setAttribute('placeholder', 'Ejemplo: correo@email.com'))
-        : (namePlaceholder.setAttribute('placeholder', 'Enter your name'), emailPlaceholder.setAttribute('placeholder', 'Example: user@email.com'))
+    lang === 'es' ? (namePlaceholder.setAttribute('placeholder', 'Ingresa tu nombre o empresa'), emailPlaceholder.setAttribute('placeholder', 'ejemplo@email.com'))
+        : (namePlaceholder.setAttribute('placeholder', 'Enter your name or company'), emailPlaceholder.setAttribute('placeholder', 'example@email.com'))
 }
 $('.lang-btn').click(function() {
     langChange($(this).data('lang'))    

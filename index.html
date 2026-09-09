@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Animate On Scroll Library -->
   <link rel="stylesheet" href="css/styles.css">
   <title>Portafolio • Mauricio Barrueta</title> 
@@ -15,52 +15,79 @@
 <body class="body top-0 pe-0" data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="0" tabindex="0">  
   <div id="google_translate_element" style="display: none;"></div> <!-- Google Translate -->
 
-  <div class="main position-relative z-1 cultured">  
+  <div class="main position-relative z-1 cultured">      
     <div id="loading-popup" class="loading-page-gif w-100 h-100 position-fixed top-0 start-0 cultured flex"><span class="loader position-relative"></span></div> <!-- Loader -->
     <div class="status-not-ok w-100 position-absolute flex flex-column text-center py-5 px-3" id="status-not-ok"> <!-- Error Loading Site -->
       <span id="status-error-text"></span><button class="border-0 ms-1 bg-transparent" id="error-reload-btn" onclick="location.reload()">🔃</button>
     </div>
-    <button class="scroll-to-top btn position-fixed rounded-circle p-2 trsn-030 jelly-bean" onclick="window.scrollTo({ top: 0, left: 0 })"></button> <!-- Scroll to top -->
+
+    <!-- Scroll to top -->
+    <button class="scroll-to-top btn position-fixed d-flex align-items-center justify-content-center rounded-circle trsn-030 jelly-bean" onclick="window.scrollTo({ top: 0, left: 0 })"></button> 
 
     <header class="position-relative flex" id="Main">  
       <div class="position-absolute w-100 h-100 z-1 top-0 waves-down-img"></div>
-      <div class="scroll-down-l position-absolute flex flex-column z-0"><span class="dark-slate def-cursor rounded-3" data-es="Desliza hacia abajo &#xf103;" data-en="Scroll down &#xf103;"></span></div>           
-      <div class="scroll-down-r position-absolute flex flex-column z-0"><span class="dark-slate def-cursor rounded-3" data-es="Desliza hacia abajo &#xf103;" data-en="Scroll down &#xf103;"></span></div> 
-      <section class="introduction rad-pad-10-1 flex flex-column">               
-        <div class="intro-subtitles w-100 flex justify-content-start rad-pad-5-05 moonstone def-cursor">
-          <span class="purple-font">if(</span><span class="yellow-font" data-es="explorarSitio" data-en="exploreWebsite"></span><span class="purple-font">) {</span> 
-          <span class="comment-font comment-symbol">&#x002F;*</span><span class="comment-font" data-es=" Desliza hacia abajo " data-en=" Scroll down "></span><span class="comment-font comment-symbol">*&#x002F;</span>
-        </div>          
+
+      <div class="scroll-down-l position-absolute flex flex-column z-0"><span class="dark-slate def-cursor rounded-3" data-es="Desliza hacia abajo &#xf107;" data-en="Scroll down &#xf107;"></span></div>           
+      <div class="scroll-down-r position-absolute flex flex-column z-0"><span class="dark-slate def-cursor rounded-3" data-es="Desliza hacia abajo &#xf107;" data-en="Scroll down &#xf107;"></span></div> 
+      
+      <section class="introduction rad-pad-10-1 flex flex-column">            
+        <div class="intro-subtitles w-100 d-flex gap-2 align-items-center rad-pad-5-05 moonstone def-cursor">
+          <div class="code-line d-flex align-items-center">
+            <span class="purple-font">if(</span>
+            <span class="yellow-font" data-es="explorarSitio" data-en="exploreWebsite"></span>
+            <span class="purple-font">) &#x007B;</span>
+          </div>
+          <div class="comment-line d-flex align-items-center">
+            <span class="comment-font comment-symbol">/*</span>
+            <span class="comment-font" data-es=" Desliza hacia abajo " data-en=" Scroll down "></span>    
+            <span class="comment-font comment-symbol">*/</span>
+          </div>
+        </div>
+
         <div class="content w-100 flex justify-content-evenly mx-auto my-0 z-0">          
           <div class="intro-cards position-relative border-shadow rounded chineseBlack">
             <img class="w-100 h-100 card-img-container" src="./img/intro-left-h.webp" loading="eager">
-            <div class="intro-card-content position-absolute flex flex-column text-center">
-              <h2 class="w-100 intro-card-title m-0 fw-normal" data-es="Como desarrollador Back end:" data-en="As a Back end developer:"></h2>
-              <p class="intro-card-desc text-center mb-0" data-es="Mi objetivo es escribir código limpio y optimizado, comprensible, eficiente y que garantice los resultados esperados." 
-                data-en="My goal is to write clean, optimized code that is easy to understand, efficient, and reliable.">
+            <div class="intro-card-content position-absolute flex flex-column gap-3 text-center">
+              <h2 class="w-100 intro-card-title m-0 fw-normal" data-es="Como desarrollador Back-end:" data-en="As a Back-end developer:"></h2>
+              <p class="intro-card-desc text-center mb-0" data-es="Mi objetivo es escribir código limpio, comprensible y eficiente, que cumpla con los resultados esperados" 
+                data-en="My goal is to write clean, understandable, and efficient code that delivers the expected results">
               </p>
             </div>
-          </div>          
+          </div>   
+
           <div class="intro-middle-img border-shadow rounded flex flex-column flex-wrap position-relative cultured">
             <img id="intro-middle-img" class="w-100 h-image-img border-bottom-0 rounded-top" src="" loading="eager">
             <span class="w-100 text-center rounded-bottom def-cursor p-1 mediumJungle" data-es="Explicación gráfica de roles" data-en="Visual explanation of roles"></span>
           </div> 
+          
           <div class="intro-cards position-relative border-shadow rounded chineseBlack">
             <img class="w-100 h-100 card-img-container" src="./img/intro-right-h.webp" loading="eager">
-            <div class="intro-card-content position-absolute flex flex-column text-center">
-              <h2 class="w-100 intro-card-title m-0 fw-normal" data-es="Como desarrollador Front end:" data-en="As a Front end developer:"></h2>
-              <p class="intro-card-desc text-center mb-0" data-es="Mi objetivo es crear interfaces visualmente atractivas, funcionales, optimizadas y adaptables a cualquier dispositivo, procurando siempre que sean fáciles de usar." 
-                data-en="My goal is to create visually appealing, functional, optimized, and responsive interfaces that are always easy to use.">
+            <div class="intro-card-content position-absolute flex flex-column gap-3 text-center">
+              <h2 class="w-100 intro-card-title m-0 fw-normal" data-es="Como desarrollador Front-end:" data-en="As a Front-end developer:"></h2>
+              <p class="intro-card-desc text-center mb-0" data-es="Mi objetivo es crear interfaces atractivas, funcionales y adaptables a cualquier dispositivo, procurando siempre que sean fáciles de usar" 
+                data-en="My goal is to create visually appealing, functional, and responsive interfaces that work across devices, while always striving to make them easy to use">
               </p>
             </div>
           </div>  
-        </div>          
-        <div class="intro-subtitles w-100 flex justify-content-start rad-pad-5-05 moonstone def-cursor">
-          <span class="purple-font">} else {</span><span class="yellow-font" data-es="contactar" data-en="contact"></span><span class="brackets-font">() </span><span class="purple-font">}</span>
-          <span class="comment-font comment-symbol">&#x002F;*</span><span class="comment-font" data-es=" O haz clic en el botón " data-en=" Or click the button "></span><span class="comment-font comment-symbol">*&#x002F;</span>
-        </div>        
+        </div>    
+
+        <div class="intro-subtitles w-100 d-flex gap-2 align-items-center rad-pad-5-05 moonstone def-cursor">
+          <div class="code-line d-flex align-items-center">
+            <span class="purple-font">&#x007D; else &#x007B;</span>
+            <span class="yellow-font" data-es="contactar" data-en="contact"></span>
+            <span class="brackets-font">()</span>
+            <span class="purple-font">&#x007D;</span>
+          </div>
+          <div class="comment-line d-flex align-items-center">
+            <span class="comment-font comment-symbol">/*</span>
+            <span class="comment-font" data-es=" Haz clic en el botón " data-en=" Click the button "></span>
+            <span class="comment-font comment-symbol">*/</span>
+          </div>
+        </div>
+
         <a href="#Contact" class="intro-contact-btn flex jelly-bean btn rad-pad-5-05 border-shadow border-0" data-es="Contacto" data-en="Contact"></a>
       </section>
+
       <div class="position-absolute w-100 h-100 z-0 bottom-0 waves-up-img"></div>
     </header>   
 
@@ -87,11 +114,11 @@
             </li>
           </ul>          
         </div>
-        <div class="navbar-brand nav-lang position-absolute def-cursor">
-          <button class='lang-btn border-0 bg-transparent text-decoration-none' data-lang="es" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Español" data-bs-custom-class="p-tec-tooltip">
+        <div class="navbar-brand nav-lang position-absolute flex gap-4 def-cursor">
+          <button class='lang-btn border-0 bg-transparent text-decoration-none' data-lang="es" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Español" data-bs-delay='{"show":1000,"hide":0}' data-bs-custom-class="p-tec-tooltip">
             <img class="trsn-030 border-shadow" src="svg/mexico.png">
           </button>
-          <button class='lang-btn border-0 bg-transparent text-decoration-none' data-lang="en" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="English" data-bs-custom-class="p-tec-tooltip">
+          <button class='lang-btn border-0 bg-transparent text-decoration-none' data-lang="en" data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="English" data-bs-delay='{"show":1000,"hide":0}' data-bs-custom-class="p-tec-tooltip">
             <img class="trsn-030 border-shadow" src="svg/usa.png">
           </button>
         </div>
@@ -100,69 +127,112 @@
 
     <section class="about flex" id="About">
       <div class="content w-100 flex justify-content-around mx-auto my-0 z-1" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="50">
-        <div class="abt-img-container cultured rad-pad-10-1 border-shadow">
-          <span class="position-absolute start-0 end-0 text-center m-0 def-cursor txt-color-ds" data-es="Este soy yo!" data-en="Hello there!"></span>
+        
+        <div class="abt-img-container cultured rad-pad-10-1 pt-2 border-shadow">
+          <span class="position-absolute start-0 end-0 text-center m-0 def-cursor txt-color-ds" data-es="¡Buenas!" data-en="Hello there!"></span>
           <img class="position-relative rounded w-100" src="img/photo.webp">          
         </div>    
+
         <div class="abt-text-content cultured rad-pad-10-1 border-shadow text-center txt-jelly">
           <h1 class="rad-pad-5-05 jelly-bean def-cursor flex" data-es="¿Quién soy?" data-en="¿Who am I?"></h1>      
           <h3 class="abt-name-text w-100 position-relative d-inline-block mb-0 py-2 text-center txt-color-ds" data-label="Edgar Mauricio Barrueta Aguirre" data-label-hover="">&nbsp;</h3>
           <pre class="def-cursor d-inline-block mt-0 pt-2"
-            data-es="Soy egresado de la carrera de Ingeniería en Tecnologías de la Información y Comunicación por la Universidad Tecnológica del Sur del Estado de México, con enfoque en desarrollo web, especialmente en Front end y en la creación de interfaces con Angular.
+            data-es="Soy egresado de la carrera de Ingeniería en Tecnologías de la Información y Comunicación por la Universidad Tecnológica del Sur del Estado de México, con enfoque en desarrollo web, especialmente en Front-end y en la creación de interfaces con Angular.
 
-              Tengo experiencia trabajando con Angular, TypeScript y JavaScript para la creación de interfaces web funcionales, visualmente atractivas y adaptables a distintos dispositivos. También cuento con conocimientos en Java y nociones muy básicas de Spring, además del uso de herramientas y librerías esenciales como Tailwind CSS, Bootstrap, Materialize CSS, Angular Material, RxJS, Node.js y npm, así como control de versiones con Git.  
-              
+              Tengo experiencia trabajando con Angular, TypeScript y JavaScript para crear interfaces web funcionales, visualmente atractivas y adaptables a distintos dispositivos. También cuento con conocimientos en Java y nociones muy básicas de Spring, además del uso de herramientas y librerías como Tailwind CSS, Bootstrap, Angular Material, Materialize CSS, RxJS, Node.js y npm, así como control de versiones con Git.
+
               Me considero una persona responsable, analítica y autodidacta, con buena capacidad para resolver problemas. A través de proyectos personales y prácticas profesionales he fortalecido mis habilidades, adoptando buenas prácticas de desarrollo y manteniéndome en constante aprendizaje."
-            data-en="I graduated with a degree in Information and Communication Technologies Engineering from the Universidad Tecnológica del Sur del Estado de México, with a focus on web development, particularly Front end development and building interfaces with Angular.
-            
-              I have experience working with Angular, TypeScript, and JavaScript to create functional, visually appealing, and responsive web interfaces. I also have knowledge of Java and very basic familiarity with Spring, as well as experience using essential tools and libraries such as Tailwind CSS, Bootstrap, Materialize CSS, Angular Material, RxJS, Node.js, npm, and version control with Git.
+            data-en="I graduated with a degree in Information and Communication Technologies Engineering from the Universidad Tecnológica del Sur del Estado de México, with a focus on web development, particularly Front-end development and building interfaces with Angular.
 
-              I consider myself a responsible, analytical, and self-taught person with strong problem-solving skills. Through personal projects and professional internships, I've strengthened my skills, adopted good development practices, and continued learning on a daily basis. ">
+              I have experience working with Angular, TypeScript, and JavaScript to create functional, visually appealing, and responsive web interfaces. I also have knowledge of Java and very basic familiarity with Spring, as well as experience using tools and libraries such as Tailwind CSS, Bootstrap, Angular Material, Materialize CSS, RxJS, Node.js, and npm, along with version control using Git.
+
+              I consider myself a responsible, analytical, and self-taught person with good problem-solving skills. Through personal projects and professional internships, I've strengthened my skills, adopted good development practices, and continued to learn and improve.">
           </pre>
+
           <div class="abt-hobbies text-center rad-pad-5-05 moonstone def-cursor">
-            <h6 class="pb-2">Hobbies</h6>           
-            <i class="d-inline-block fst-normal">&#xf5fc;</i><i class="d-inline-block fst-normal">&#xf025;</i><i class="d-inline-block fst-normal">&#xf7a6;</i><i class="d-inline-block fst-normal">&#xf008;</i><i class="d-inline-block fst-normal">&#xf11b;</i><i class="d-inline-block fst-normal">&#xf7b6;</i>         
+            <h6 class="pb-2">Hobbies</h6>  
+            <div class="d-flex justify-content-center align-items-center gap-4 pb-2 fst-normal">                    
+              <i class="fa-solid fa-laptop-code"></i>
+              <i class="fa-solid fa-headphones"></i>
+              <i class="fa-solid fa-film"></i>
+              <i class="fa-solid fa-gamepad"></i>
+              <i class="fa-solid fa-guitar"></i>     
+              <i class="fa-solid fa-kitchen-set"></i>  
+            </div> 
           </div>
-          <a class="cv-btn flex btn jelly-bean" id="btn-cv" target="_blank" data-es="Descarga mi CV" data-en="Download my resume"></a>
+          <a class="cv-btn flex btn jelly-bean" id="btn-cv" target="_blank" data-es="Ver mi CV" data-en="View my resume"></a>
         </div>
       </div>
     </section>   
    
     <section class="projects position-relative text-center py-3 px-0" id="Projects" name="Projects" data-aos="fade-down" data-aos-duration="1200" data-aos-delay="125">
       <h3 class="section-title position-relative mb-0 p-3 text-uppercase dark-slate projects-title def-cursor" data-es="Mis proyectos" data-en="My projects" aria-labelledby="titleInfo"></h3>
-      <small class="w-100 position-relative d-inline-block text-center carousel-instructions p-1 def-cursor" data-es="Utiliza los botones ◀️ y ▶️ para desplazarte entre los proyectos" data-en="Use the buttons ◀️ y ▶️ to navigate between projects"></small>
+      <small class="w-100 position-relative d-inline-block text-center carousel-instructions p-1 def-cursor" data-es="Utiliza los botones de navegación para explorar todos los proyectos" data-en="Use the navigation buttons to browse all projects"></small>
       <div class="proj-cards-container flex">   
+
         <div class="project-card position-relative rounded cultured border-shadow card-lg carousel slide carousel-fade" id="angularAPIProjects">         
           <div class="carousel-inner position-relative h-100">
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item active">
-              <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Simulador de compras online" data-en="E-commerce Simulator"></span>
-              <img src="./img/proj/fake-comm.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting y conectado a la API DummyJSON (dummyjson.com)."       
-                data-title="Este sitio simula un e-commerce que permite iniciar sesión, explorar productos, filtrar resultados y gestionar favoritos y un carrito de compras ficticio, recreando la experiencia de una tienda en línea real e incorporando sus funciones típicas.">
+              <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Adivina la canción" data-en="Guess the Song"></span>
+              <img src="./img/proj/guess-the-song.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting e integrado con Deezer API y LRCLIB API, utilizando Cloudflare Workers como proxy para Deezer"              
+                data-title="Juego de trivia sobre adivinar canciones. Presenta fragmentos de canciones para identificar la respuesta correcta entre varias opciones, con dos niveles de dificultad, pistas mediante la letra y un sistema de puntuación">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons firebase-hosting css-to-scss bootstrap-to-tail p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons firebase-hosting css-to-scss bootstrap-to-tail p-0 m-0">
+                     <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Cloudflare Workers">
+                        <img class="Cloudflare-Icon tech-svg trsn-030">
+                      </li>
+                  </ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
-                  <li class="w-50">
+                  <li class="w-50 bg-white">
                     <span data-es="Sitio web" data-en="Website"></span>
-                    <a class="d-inline-block w-100 dark-slate" href="https://fakecommerce-c69d8.web.app/products" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
+                    <a class="d-inline-block w-100 dark-slate" href="https://guess-the-song-74c9e.web.app" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
-                  <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
-                    <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/FakeCommerce.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
+                  <li class="w-50 bg-white">
+                    <span data-es="Código fuente" data-en="Source code"></span>
+                    <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/Guess-the-Song.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
               </div>
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
-              <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Desafío quiz" data-en="Quiz challenge"></span>
-              <img src="./img/proj/quiz.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting, conectado a la API Open Trivia DB (opentdb.com) y con traducción automática mediante Google Translate." 
-                data-title="Este sitio ofrece un juego de trivia con opción de partida rápida o personalizada, donde puedes elegir dificultad, cantidad de preguntas, entre otras opciones, además de traducir automáticamente las preguntas al español o conservarlas en inglés.">
+              <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Simulador de compras online" data-en="E-commerce Simulator"></span>
+              <img src="./img/proj/fake-comm.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting y conectado a la API DummyJSON"  
+                data-title="Sitio web que simula un e-commerce que permite iniciar sesión, explorar y filtrar productos, gestionar favoritos y utilizar un carrito de compras ficticio">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons firebase-hosting css-to-scss bootstrap-to-tail p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons firebase-hosting css-to-scss bootstrap-to-tail p-0 m-0"></ul>
+                </div>  
+                <ul class="web-links-buttons flex justify-content-between m-0 p-0">
+                  <li class="w-50 bg-white">
+                    <span data-es="Sitio web" data-en="Website"></span>
+                    <a class="d-inline-block w-100 dark-slate" href="https://fakecommerce-c69d8.web.app/products" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
+                  </li>
+                  <li class="w-50 bg-white">
+                    <span data-es="Código fuente" data-en="Source code"></span>
+                    <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/FakeCommerce.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
+                  </li>  
+                </ul>
+              </div>
+            </div>            
+            <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
+              <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Desafío quiz" data-en="Quiz challenge"></span>
+              <img src="./img/proj/quiz.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting, conectado a Open Trivia DB y con traducción automática mediante Google Translate API" 
+                data-title="Juego de trivia sobre cultura popular con partidas rápidas o personalizadas. Permite elegir la dificultad y cantidad de preguntas, además de traducirlas automáticamente al español o conservarlas en inglés">
+              <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
+              <div class="w-100 carousel-caption">
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons firebase-hosting css-to-scss bootstrap-to-tail p-0 m-0">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Google Translate API">
+                      <img class="gTranslate-Icon tech-svg trsn-030">
+                    </li>
+                  </ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -170,7 +240,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://quizgame-612a1.web.app/main-menu" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/quizGame.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -178,12 +248,17 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Base de datos de la NASA" data-en="NASA database"></span>
-              <img src="./img/proj/nasa.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS, Bootstrap y Materialize CSS, publicado con Firebase Hosting y conectado al catálogo de APIs de la NASA (api.nasa.gov)." 
-                data-title="Este sitio muestra contenido obtenido de varias API proporcionadas por la NASA, como imágenes capturadas por los rovers en Marte, la ubicación en tiempo real de la Estación Espacial Internacional (ISS), entre otras.">
+              <img src="./img/proj/nasa.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS, Bootstrap y Materialize CSS, publicado con Firebase Hosting y conectado a las APIs de la NASA" 
+                data-title="Sitio web que muestra contenido obtenido de varias APIs de la NASA, como imágenes capturadas por rovers en Marte y la ubicación en tiempo real de la Estación Espacial Internacional (ISS), entre otros datos">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons multi-css css-to-scss hide-ang-mat p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons firebase-hosting css-to-scss p-0 m-0">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Materialize CSS">
+                      <img class="Material-Icon tech-svg trsn-030">
+                    </li>
+                  </ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -191,7 +266,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://nasadb-2fe0e.web.app/astronomy/picture-of-the-day" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/nasaDB.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -199,12 +274,20 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Catálogo de recetas" data-en="Recipe collection"></span>
-              <img src="./img/proj/recipes.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS, Angular Material, Bootstrap y Materialize CSS, publicado con Firebase Hosting y conectado a la API TheMealDB (themealdb.com/api.php)." 
-                data-title="Este sitio muestra una gran variedad de recetas internacionales, que puedes filtrar por nombre, orden alfabético, país de origen, entre otras opciones. Cada receta incluye los ingredientes necesarios y las instrucciones para su preparación.">
+              <img src="./img/proj/recipes.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS, Angular Material, Bootstrap y Materialize CSS, publicado con Firebase Hosting y conectado a la API TheMealDB" 
+                data-title="Sitio web que muestra una variedad de recetas internacionales, que puedes filtrar por nombre, orden alfabético, país de origen, entre otras opciones. Cada receta incluye los ingredientes necesarios y las instrucciones para su preparación">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list tech-icons-lg w-100 flex justify-content-evenly angular-project-icons multi-css css-to-scss hide-multi-css p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list tech-icons-lg w-100 flex gap-3 angular-project-icons firebase-hosting css-to-scss p-0 m-0">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular Material">
+                      <img class="AngMaterial-Icon tech-svg trsn-030">
+                    </li>
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Materialize CSS">
+                      <img class="Material-Icon tech-svg trsn-030">
+                    </li>
+                  </ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -212,7 +295,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://recipesdb-7389d.web.app/recipes/random" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/recipesDB.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -220,12 +303,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Datos botánicos de plantas" data-en="Botanical data of plants"></span>
-              <img src="./img/proj/plants.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting y conectado a la API de Perenual (perenual.com/docs/api)." 
-                data-title="Este sitio permite consultar datos botánicos de diversas especies de plantas, incluyendo sus características, plagas comunes, cuidados y zonas ideales para su crecimiento.">
+              <img src="./img/proj/plants.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting y conectado a la API Perenual" 
+                data-title="Sitio web que permite consultar datos botánicos de diversas especies de plantas, incluyendo sus características, plagas comunes, cuidados y zonas ideales para su crecimiento">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -233,7 +317,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://plantsdb-ba711.web.app" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/plantsAPI.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -241,12 +325,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Base de datos de películas y series" data-en="Movies and series database"></span>
-              <img src="./img/proj/omdb.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting y conectado a OMDb API (omdbapi.com)." 
-                data-title="Este sitio permite consultar información detallada sobre películas y series, incluyendo temporadas, episodios y datos específicos de cada uno.">
+              <img src="./img/proj/omdb.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting y conectado a OMDb API" 
+                data-title="Sitio web que permite consultar información detallada sobre películas y series, incluyendo temporadas, episodios y datos específicos de cada uno">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -254,7 +339,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://movies-seriesdb.web.app" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/omdbAPI.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -262,12 +347,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Filtro de artículos de Wikipedia" data-en="Wikipedia article filter"></span>
-              <img src="./img/proj/wiki.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting y conectado a la API de MediaWiki (mediawiki.org/wiki/API)." 
-                data-title="Este sitio permite buscar y filtrar entre todos los artículos de Wikipedia según lo que ingreses.">
+              <img src="./img/proj/wiki.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, CSS y Bootstrap, publicado con Firebase Hosting y conectado a la API de MediaWiki" 
+                data-title="Sitio web que permite buscar y filtrar entre los artículos de Wikipedia según los términos ingresados">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons firebase-hosting p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons firebase-hosting p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -275,7 +361,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://wikipediaclone-61809.web.app/" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/wikiAPI.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -283,12 +369,17 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Base de datos de Dragon Ball Super" data-en="Dragon Ball Super database"></span>
-              <img src="./img/proj/dragonball.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Materialize CSS, publicado con Firebase Hosting y conectado a la API de Dragon Ball Super (web.dragonball-api.com)." 
-                data-title="Este sitio permite consultar información detallada de personajes del universo Dragon Ball, que puedes filtrar por nombre, género, raza, entre otras opciones.">
+              <img src="./img/proj/dragonball.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Materialize CSS, publicado con Firebase Hosting y conectado a la API de Dragon Ball Super" 
+                data-title="Sitio web que permite consultar información detallada de personajes del universo Dragon Ball, que puedes filtrar por nombre, género, raza, entre otras opciones">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons hide-bootstrap multi-css css-to-scss hide-ang-mat p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons remove-bootstrap firebase-hosting css-to-scss p-0 m-0">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Materialize CSS">
+                      <img class="Material-Icon tech-svg trsn-030">
+                    </li>
+                  </ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -296,7 +387,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://dragonballwiki-e14b1.web.app/main-page" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/dragonBallWiki.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -304,13 +395,14 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Base de datos de Pokémon" data-en="Pokémon database"></span>
-              <img src="./img/proj/pokeapi.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS, Angular Material y Bootstrap, publicado con Firebase Hosting y conectado a PokeAPI (pokeapi.co)." 
-                data-title="Este sitio lista todos los Pokémon según su orden evolutivo y permite filtrarlos por nombre, simulando una Pokédex.">
+              <img src="./img/proj/pokeapi.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS, Angular Material y Bootstrap, publicado con Firebase Hosting y conectado a PokeAPI" 
+                data-title="Sitio web que lista todos los Pokémon según su orden evolutivo y permite filtrarlos por nombre, simulando una Pokédex">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons css-to-scss firebase-hosting p-0 m-0">                    
-                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="TypeScript">
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons css-to-scss firebase-hosting p-0 m-0">                    
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular Material">
                       <img class="AngMaterial-Icon tech-svg trsn-030">
                     </li>
                   </ul>
@@ -321,7 +413,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://pokemondb-d9a4c.web.app" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/angularPokedex.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -329,12 +421,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Base de datos de Rick y Morty" data-en="Rick and Morty database"></span>
-              <img src="./img/proj/ricknmorty.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting y conectado a la API de Rick and Morty (rickandmortyapi.com)." 
-                data-title="Este sitio lista todos los personajes de la serie Rick and Morty, además de que puedes filtrarlos por su nombre.">
+              <img src="./img/proj/ricknmorty.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting y conectado a la API de Rick and Morty" 
+                data-title="Sitio web que lista todos los personajes de la serie Rick and Morty y permite filtrarlos por nombre">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons css-to-scss firebase-hosting p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -342,7 +435,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://rickandmortydb-18e36.web.app" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/angularRickAndMorty.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -357,16 +450,22 @@
             <i class="fa-solid fa-angle-right fw-normal"></i>
           </button>        
         </div>
-        <div class="project-card position-relative rounded cultured border-shadow carousel slide carousel-fade" id="angularFrontend">         
+
+        <div class="project-card position-relative rounded cultured border-shadow card-md carousel slide carousel-fade" id="angularFrontend">         
           <div class="carousel-inner position-relative h-100">
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item active">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Clon del sitio Monstercat" data-en="Monstercat website clone"></span>
-              <img src="./img/proj/monstercat.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting. Basado en una práctica del sitio Frontend Practice y tomando como referencia el sitio Monstercat. Se implementó la API de YouTube para la reproducción de audio." 
-                data-title="Este sitio replica el diseño y la funcionalidad del módulo 'Release' de Monstercat, incluyendo menú desplegable, diseño adaptable, reproducción de audio y video, entre otras características destacadas.">
+              <img src="./img/proj/monstercat.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting, basado en una práctica de Frontend Practice y tomando como referencia el sitio de Monstercat. Implementa la API de YouTube para la reproducción de audio" 
+                data-title="Sitio web que replica el diseño y la funcionalidad del módulo «Release» de Monstercat, incluyendo un menú desplegable, diseño adaptable y reproducción de audio y video, entre otras características">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons firebase-hosting css-to-scss tech-icons-lg p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons firebase-hosting css-to-scss tech-icons-lg p-0 m-0">
+                    <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="YouTube API">
+                      <img class="YouTube-Icon tech-svg trsn-030">
+                    </li>
+                  </ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -374,7 +473,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://monstercatclone.web.app/" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/MonstercatClone.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -382,12 +481,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Clon del sitio Starbucks" data-en="Starbucks website clone"></span>
-              <img src="./img/proj/starbucks.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting. Basado en una práctica del sitio Frontend Practice y tomando como referencia el sitio de Starbucks." 
-                data-title="Este sitio replica el diseño y la funcionalidad del módulo 'Rewards' de Starbucks, incluye carrusel de imágenes idéntico, ventana emergente dinámica, diseño adaptable y otras características destacadas.">
+              <img src="./img/proj/starbucks.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y Bootstrap, publicado con Firebase Hosting. Basado en una práctica de Frontend Practice y tomando como referencia el sitio de Starbucks" 
+                data-title="Sitio web que replica el diseño y la funcionalidad del módulo «Rewards» de Starbucks, incluyendo un carrusel de imágenes, una ventana emergente dinámica y diseño adaptable, entre otras características">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly angular-project-icons firebase-hosting css-to-scss tech-icons-lg p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons firebase-hosting css-to-scss tech-icons-lg p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -395,7 +495,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://starbucksclone-96cee.web.app/rewards" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/StarbucksClone.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -409,17 +509,19 @@
           <button class="carousel-control-next jelly-bean trsn-025" type="button" data-bs-target="#angularFrontend" data-bs-slide="next">
             <i class="fa-solid fa-angle-right fw-normal"></i>
           </button>         
-        </div>          
+        </div>    
+
         <div class="project-card position-relative rounded cultured border-shadow carousel slide carousel-fade" id="JavaScriptAPIProjects">
           <div class="carousel-inner position-relative h-100">
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item active">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador de contraseñas" data-en="Password generator"></span>
-              <img src="./img/proj/pass-generator.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, la biblioteca jQuery, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio genera contraseñas aleatorias personalizadas, con opciones para definir caracteres permitidos, longitud, uso de espacios y repeticiones.">
+              <img src="./img/proj/pass-generator.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, la biblioteca jQuery, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que genera contraseñas aleatorias personalizadas, con opciones para definir los caracteres permitidos, la longitud, el uso de espacios y las repeticiones">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -427,7 +529,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/PasswordGenerator/" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/PasswordGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -435,12 +537,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Acortador de URL" data-en="URL shortener"></span>
-              <img src="./img/proj/tiny-url.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages, conectado a la API de TinyURL (tinyurl.com/app/dev)." 
-                data-title="Este sitio permite acortar enlaces, compatible con URLs que inicien con los protocolos 'http', 'https' o con 'www'.">
+              <img src="./img/proj/tiny-url.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages y conectado a la API de TinyURL" 
+                data-title="Sitio web que permite acortar enlaces y es compatible con URLs que comiencen con «http://», «https://» o «www»">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -448,7 +551,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/tinyUrl" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/tinyUrl.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -456,12 +559,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Lista de tareas" data-en="To-Do list"></span>
-              <img src="./img/proj/to-do.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite crear, editar y eliminar notas o tareas ilimitadas, las cuales pueden filtrarse por su estado: completadas o pendientes.">
+              <img src="./img/proj/to-do.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite crear, editar y eliminar notas o tareas ilimitadas, que pueden filtrarse por estado: completadas o pendientes">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -469,7 +573,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/ToDoList/" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/ToDoList.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -477,12 +581,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador y lector de QR" data-en="QR generator and reader"></span>
-              <img src="./img/proj/qr.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages, utilizando la biblioteca QRCode.js para la generación y QR Code API para la lectura (goqr.me/api)." 
-                data-title="Este sitio permite generar códigos QR personalizables en tamaño y color, además de escanear cualquier QR para obtener su contenido.">
+              <img src="./img/proj/qr.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages, utilizando la biblioteca QRCode.js para la generación y QR Code API para la lectura" 
+                data-title="Sitio web que permite generar códigos QR personalizables en tamaño y color, además de escanear códigos QR para obtener su contenido">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -490,7 +595,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/QR-CreatorScanner/" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/QR-CreatorScanner.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -498,12 +603,13 @@
             </div> 
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Juego del ahorcado" data-en="Hangman Game"></span>
-              <img src="./img/proj/hangman.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio ofrece el clásico juego del ahorcado, con seis intentos para adivinar antes de perder y más de 50 palabras en español.">
+              <img src="./img/proj/hangman.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Juego del ahorcado, con seis intentos para adivinar la palabra antes de perder y más de 50 palabras en español">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -511,7 +617,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/hangmanGame" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/hangmanGame.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -519,12 +625,13 @@
             </div>            
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Creador de pixel art" data-en="Pixel art maker"></span>
-              <img src="./img/proj/pixel-maker.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, CSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite dibujar en estilo pixel art mediante una cuadrícula adaptable al tamaño de la pantalla, con una paleta de colores y herramientas para borrar o continuar el trazo.">
+              <img src="./img/proj/pixel-maker.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, CSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite dibujar en estilo pixel art mediante una cuadrícula adaptable al tamaño de la pantalla, con una paleta de colores y herramientas para borrar o continuar el trazo">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons scss-to-css remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons scss-to-css remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -532,7 +639,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/PixelArtGenerator" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/PixelArtGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -540,12 +647,13 @@
             </div>   
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Pronóstico del clima" data-en="Weather forecast"></span>
-              <img src="./img/proj/weather.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, la biblioteca jQuery, CSS y Bootstrap, publicado mediante GitHub Pages, conectado a la API de OpenWeatherMap (openweathermap.org)." 
-                data-title="Este sitio consulta el pronóstico detallado del clima a partir del nombre o las coordenadas de una ciudad, además de incluir la hora actual, el amanecer y el anochecer según su zona horaria.">
+              <img src="./img/proj/weather.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, la biblioteca jQuery, CSS y Bootstrap, publicado mediante GitHub Pages y conectado a la API de OpenWeatherMap" 
+                data-title="Sitio web que permite consultar el pronóstico detallado del clima a partir del nombre o las coordenadas de una ciudad, además de incluir la hora actual, el amanecer y el anochecer según su zona horaria">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons css-to-css p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons scss-to-css p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -553,7 +661,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/currentWeatherAPI/" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/currentWeatherAPI" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -561,12 +669,13 @@
             </div>            
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Selector de color" data-en="Image color picker"></span>
-              <img src="./img/proj/color-picker.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, la biblioteca jQuery, SCSS y Bootstrap, publicado mediante GitHub Pages, conectado a EyeDropper API." 
-                data-title="Este sitio permite cargar una imagen, seleccionar un color y obtener su código en RGB, RGBA y hexadecimal.">
+              <img src="./img/proj/color-picker.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages y conectado a EyeDropper API" 
+                data-title="Sitio web que permite cargar una imagen, seleccionar un color y obtener su código en RGB, RGBA y hexadecimal">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -574,7 +683,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/imgColorPicker/" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/imgColorPicker.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -582,12 +691,13 @@
             </div> 
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Base de datos de Pokémon" data-en="Pokémon database"></span>
-              <img src="./img/proj/pokeapi-js.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, la biblioteca jQuery, CSS y Bootstrap, publicado mediante GitHub Pages y conectado a PokeAPI (pokeapi.co)." 
-                data-title="Este sitio muestra una lista de Pokémon según su orden evolutivo basado en el valor ingresado, y permite filtrarlos por nombre, simulando una Pokédex.">
+              <img src="./img/proj/pokeapi-js.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, la biblioteca jQuery, CSS y Bootstrap, publicado mediante GitHub Pages y conectado a PokeAPI" 
+                data-title="Sitio web que muestra una lista de Pokémon según su orden evolutivo a partir del valor ingresado y permite filtrarlos por nombre, simulando una Pokédex">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons scss-to-css p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons scss-to-css p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -595,7 +705,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/pokemonPokedex/" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/pokemonPokedex.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -603,12 +713,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Base de datos de Rick y Morty" data-en="Rick and Morty database"></span>
-              <img src="./img/proj/ricknmorty-js.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, la biblioteca jQuery, CSS y Bootstrap, publicado mediante GitHub Pages y conectado a la API de Rick and Morty (rickandmortyapi.com)." 
-                data-title="Este sitio lista todos los personajes de la serie Rick and Morty, además de que puedes filtrarlos por su nombre.">
+              <img src="./img/proj/ricknmorty-js.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, CSS y Bootstrap, publicado mediante GitHub Pages y conectado a la API de Rick and Morty" 
+                data-title="Sitio web que lista todos los personajes de la serie Rick and Morty y permite filtrarlos por nombre">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons scss-to-css remove-jquery p-0 m-0"></ul> 
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons scss-to-css remove-jquery p-0 m-0"></ul> 
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -616,7 +727,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/RickAndMortyAPI" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/RickAndMortyAPI.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -630,17 +741,19 @@
           <button class="carousel-control-next jelly-bean trsn-025" type="button" data-bs-target="#JavaScriptAPIProjects" data-bs-slide="next">
             <i class="fa-solid fa-angle-right fw-normal"></i>
           </button>        
-        </div>     
+        </div>   
+
         <div class="project-card position-relative rounded cultured border-shadow carousel slide carousel-fade" id="cssGenerators">
           <div class="carousel-inner position-relative h-100">    
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item active">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador de box-shadow CSS" data-en="CSS box-shadow generator"></span>
-              <img src="./img/proj/box-shadow.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite personalizar la propiedad 'box-shadow' de CSS, con vista previa en tiempo real y generación automática del código.">
+              <img src="./img/proj/box-shadow.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite personalizar la propiedad «box-shadow» de CSS, con vista previa en tiempo real y generación automática del código">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -648,7 +761,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/boxShadowGenerator" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/boxShadowGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -656,12 +769,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador de text-shadow CSS" data-en="CSS text-shadow generator"></span>
-              <img src="./img/proj/text-shadow.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite personalizar la propiedad 'text-shadow' de CSS, con la opción de agregar múltiples estilos al mismo texto y eliminarlos si es necesario, mientras la vista se actualiza en tiempo real y el código se genera automáticamente.">
+              <img src="./img/proj/text-shadow.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite personalizar la propiedad «text-shadow» de CSS, agregar múltiples estilos al mismo texto y eliminarlos cuando sea necesario, con vista previa en tiempo real y generación automática del código">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -669,7 +783,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/textShadowGenerator" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/textShadowGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -677,12 +791,13 @@
             </div>   
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador de border CSS" data-en="CSS border generator"></span>
-              <img src="./img/proj/border.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite personalizar la propiedad 'border' de CSS, con vista previa en tiempo real y generación automática del código.">
+              <img src="./img/proj/border.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite personalizar la propiedad «border» de CSS, con vista previa en tiempo real y generación automática del código">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -690,7 +805,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/borderGenerator" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/borderGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -698,12 +813,13 @@
             </div>
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador de border-radius CSS" data-en="CSS border-radius generator"></span>
-              <img src="./img/proj/border-radius.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite personalizar la propiedad 'border-radius' de CSS, con vista previa en tiempo real y generación automática del código.">
+              <img src="./img/proj/border-radius.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite personalizar la propiedad «border-radius» de CSS, con vista previa en tiempo real y generación automática del código">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -711,7 +827,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/borderRadiusGenerator" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/borderRadiusGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -719,12 +835,13 @@
             </div> 
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador de transform CSS" data-en="CSS transform generator"></span>
-              <img src="./img/proj/transform.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite personalizar la propiedad CSS 'transform', combinando múltiples funciones con vista previa en tiempo real y generación automática del código.">
+              <img src="./img/proj/transform.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite personalizar la propiedad CSS «transform», combinando múltiples funciones con vista previa en tiempo real y generación automática del código">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -732,7 +849,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/transformGenerator" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/transformGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -740,12 +857,13 @@
             </div> 
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador de filter CSS" data-en="CSS filter generator"></span>
-              <img src="./img/proj/filter.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite personalizar la propiedad CSS 'filter', combinando múltiples funciones y permitiendo subir una imagen propia, con vista previa en tiempo real y generación automática del código.">
+              <img src="./img/proj/filter.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite personalizar la propiedad CSS «filter», combinando múltiples funciones y permitiendo subir una imagen propia, con vista previa en tiempo real y generación automática del código">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -753,7 +871,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/filterGenerator" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/filterGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -761,12 +879,13 @@
             </div>            
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador de gradient CSS" data-en="CSS gradient generator"></span>
-              <img src="./img/proj/gradient.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite personalizar gradients CSS (lineales y radiales) con 2 o 3 colores y dirección ajustable, con vista previa en tiempo real y generación automática del código.">
+              <img src="./img/proj/gradient.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite personalizar gradientes CSS (lineales y radiales) con 2 o 3 colores y dirección ajustable, con vista previa en tiempo real y generación automática del código">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -774,7 +893,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/gradientBgGenerator" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/gradientBgGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -782,12 +901,13 @@
             </div>    
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador de color CSS" data-en="CSS color generator"></span>
-              <img src="./img/proj/color.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite personalizar colores en formatos RGB, RGBA y hexadecimal para la propiedad CSS 'color', generando automáticamente el valor equivalente y permitiendo copiar el código en el modelo deseado.">
+              <img src="./img/proj/color.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite personalizar colores en formatos RGB, RGBA y hexadecimal para la propiedad CSS «color», generando automáticamente el valor equivalente y permitiendo copiar el código en el formato deseado">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -795,7 +915,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/rgbaHexGenerator" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/rgbaHexGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -803,12 +923,13 @@
             </div>  
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Generador de glassmorphism CSS" data-en="CSS glassmorphism generator"></span>
-              <img src="./img/proj/glassmorphism.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages." 
-                data-title="Este sitio permite personalizar las propiedades CSS para crear el efecto 'Glassmorphism', con vista previa en tiempo real y generación automática del código.">
+              <img src="./img/proj/glassmorphism.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con JavaScript, SCSS y Bootstrap, publicado mediante GitHub Pages" 
+                data-title="Sitio web que permite personalizar las propiedades CSS para crear el efecto «Glassmorphism», con vista previa en tiempo real y generación automática del código">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
               <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                  <ul class="tech-icons-list w-100 flex justify-content-evenly static-projects-icons remove-jquery p-0 m-0"></ul>
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 static-projects-icons remove-jquery p-0 m-0"></ul>
                 </div>  
                 <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                   <li class="w-50">
@@ -816,7 +937,7 @@
                     <a class="d-inline-block w-100 dark-slate" href="https://mauriciobarrueta.github.io/glassmorphismGenerator" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                   <li class="w-50">
-                    <span data-es="Código" data-en="Code"></span>
+                    <span data-es="Código fuente" data-en="Source code"></span>
                     <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/glassmorphismGenerator.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                   </li>  
                 </ul>
@@ -831,29 +952,21 @@
             <i class="fa-solid fa-angle-right fw-normal"></i>
           </button>        
         </div>         
+
         <span class="projects-limit"></span>
         <div class="hidden-projects">        
           <div class="project-card position-relative rounded cultured border-shadow card-lg carousel slide carousel-fade" id="javaSpringProjects">
             <div class="carousel-inner position-relative h-100">
               <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item active">
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Sistema de gestión de documentos" data-en="Document management system"></span>
-                <img src="./img/proj/docs-management.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Software desarrollado en Java, utilizando la biblioteca gráfica Java Swing, JasperReports para la generación de reportes en PDF y la herramienta de gestión Maven. Está conectado a una base de datos MySQL."
-                  data-title="Este sistema fue desarrollado para apoyar a un oficinista en el control de los documentos archivados, permitiéndole además llevar un registro de quién los solicitaba y cuándo eran devueltos.">
+                <img src="./img/proj/docs-management.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Software desarrollado en Java, utilizando la biblioteca gráfica Java Swing, JasperReports para la generación de reportes en PDF y Maven como herramienta de gestión. Está conectado a una base de datos MySQL"
+                  data-title="Sistema desarrollado para apoyar a un oficinista en el control de documentos archivados, permitiéndole también llevar un registro de quién los solicita y cuándo son devueltos">
                 <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa"
                   data-en="Preview image"></p>
+                
                 <div class="w-100 carousel-caption">
-                  <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex justify-content-evenly java-project-icon mysql-prj-icon p-0 m-0">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
-                        <img class="Jasper-Icon tech-svg trsn-030">
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Maven">
-                        <img class="Maven-Icon tech-svg trsn-030">
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans">
-                        <img class="NetBeans-Icon tech-svg trsn-030">
-                      </li>
-                    </ul>
+                  <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                    <ul class="tech-icons-list w-100 flex gap-3 java-project-icon mysql-prj-icon p-0 m-0"></ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                     <li class="w-50">
@@ -861,7 +974,7 @@
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
-                      <span data-es="Código" data-en="Code"></span>
+                      <span data-es="Código fuente" data-en="Source code"></span>
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                   </ul>
@@ -869,28 +982,21 @@
               </div>
               <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Administrador de usuarios" data-en="User administrator"></span>
-                <img src="./img/proj/admin.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Java, JavaScript, la biblioteca jQuery y el uso de AJAX. Utiliza el framework Spring y las bibliotecas Thymeleaf e Hibernate, además de CSS y Bootstrap. Integra una base de datos remota en PostgreSQL y control de versiones con GitLab y GitHub."
-                  data-title="Este sitio, desarrollado como parte de mis prácticas en la empresa Médicos Hoy (ene. – abr. 2020), permitiría a un banco administrar todos los usuarios de sus diferentes aplicaciones desde un solo sistema.">
+                <img src="./img/proj/admin.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Java, JavaScript y la biblioteca jQuery. Utiliza el framework Spring y las bibliotecas Thymeleaf e Hibernate, además de CSS y Bootstrap. Integra una base de datos remota en PostgreSQL y control de versiones con GitLab y GitHub"
+                  data-title="Este sitio web permite a un banco administrar los usuarios de sus diferentes aplicaciones desde un solo lugar">
                 <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa"
                   data-en="Preview image"></p>
+                
                 <div class="w-100 carousel-caption">
-                  <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list tech-icons-lg w-100 flex justify-content-evenly java-project-icon p-0 m-0">
+                  <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                    <ul class="tech-icons-list w-100 flex gap-2 java-project-icon postgresql-project-icon p-0 m-0">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
                         <img class="JavaScript-Icon tech-svg trsn-030">
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="jQuery">
                         <img class="jQuery-Icon tech-svg trsn-030">
                       </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="AJAX">
-                        <img class="AJAX-Icon tech-svg trsn-030">
-                      </li>
-                      <li id="template-icons" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="GitLab">
-                        <img class="GitLab-Icon tech-svg trsn-030">
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="PostgreSQL">
-                        <img class="PostgreSQL-Icon tech-svg trsn-030">
-                      </li>
+                      <div class="d-none" id="template-icons"></div> <!-- Template asigna íconos debajo -->                      
                     </ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
@@ -899,7 +1005,7 @@
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
-                      <span data-es="Código" data-en="Code"></span>
+                      <span data-es="Código fuente" data-en="Source code"></span>
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                   </ul>
@@ -907,23 +1013,14 @@
               </div>
               <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Administrador de almacén" data-en="Warehouse Manager"></span>
-                <img src="./img/proj/warehouse.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Software desarrollado en Java, utilizando la biblioteca gráfica Java Swing, JasperReports para generación de reportes PDF y conectado a una base de datos Microsoft SQL Server (MSSQL)."
-                  data-title="Este sistema, desarrollado como parte de mis prácticas en la empresa GFR Telecomm (may. – ago. 2018), permitiría a la empresa llevar el control de su almacén de herramientas, así como el registro de entradas y salidas por parte de los empleados.">
+                <img src="./img/proj/warehouse.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Software desarrollado en Java, utilizando la biblioteca gráfica Java Swing y JasperReports para la generación de reportes en PDF, conectado a una base de datos Microsoft SQL Server (MSSQL)"
+                  data-title="Sistema desarrollado para que la empresa lleve el control de su almacén de herramientas, así como el registro de entradas y salidas por parte de los empleados">
                 <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa"
                   data-en="Preview image"></p>
+                
                 <div class="w-100 carousel-caption">
-                  <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex justify-content-evenly java-project-icon p-0 m-0">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JasperReports">
-                        <img class="Jasper-Icon tech-svg trsn-030">
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="NetBeans">
-                        <img class="NetBeans-Icon tech-svg trsn-030">
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="MSSQL">
-                        <img class="SQLServer-Icon tech-svg trsn-030">
-                      </li>
-                    </ul>
+                  <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                    <ul class="tech-icons-list w-100 flex gap-3 java-project-icon sqlserver-project-icon p-0 m-0"></ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                     <li class="w-50">
@@ -931,7 +1028,7 @@
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
-                      <span data-es="Código" data-en="Code"></span>
+                      <span data-es="Código fuente" data-en="Source code"></span>
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                   </ul>
@@ -939,23 +1036,24 @@
               </div>
               <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Práctica: API REST Spring&#43;Angular" data-en="Practice: REST API Spring&#43;Angular"></span>
-                <img src="./img/proj/ang-spring.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Desarrollado con los frameworks Angular y Spring, usando TypeScript, JavaScript, Java, CSS y Bootstrap, conectado a una base de datos MySQL local."
-                  data-title="Sitio desarrollado como práctica de una aplicación web con operaciones CRUD conectadas a una base de datos local, donde el frontend y el backend se implementaron por separado pero trabajan de forma integrada.">
+                <img src="./img/proj/ang-spring.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y Spring, utilizando TypeScript, JavaScript, Java, CSS y Bootstrap, conectado a una base de datos MySQL local"
+                  data-title="Este sitio web permite realizar operaciones CRUD sobre una base de datos local, con el frontend y el backend implementados por separado y trabajando de forma integrada">
                 <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa"
                   data-en="Preview image"></p>
+                
                 <div class="w-100 carousel-caption">
-                  <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list tech-icons-lg w-100 flex justify-content-evenly java-project-icon mysql-prj-icon static-projects-icons remove-icons p-0 m-0">
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="TypeScript">
-                        <img class="TypeScript-Icon tech-svg trsn-030">
-                      </li>
+                  <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                    <ul class="tech-icons-list w-100 flex gap-2 java-project-icon p-0 m-0">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Spring">
                         <img class="Spring-Icon tech-svg trsn-030">
                       </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Angular">
-                        <img class="Angular-Icon tech-svg trsn-030">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="MySQL">
+                        <img class="SQL-Icon tech-svg trsn-030">
                       </li>
-                      <span id="fullstackIconsBefore" style="display: none;"></span>
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JavaScript">
+                        <img class="JavaScript-Icon  tech-svg trsn-030">
+                      </li>
+                      <div class="tech-icons-list flex gap-2 angular-project-icons"></div> <!-- Template asigna íconos debajo -->
                     </ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
@@ -964,7 +1062,7 @@
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
-                      <span data-es="Código" data-en="Code"></span>
+                      <span data-es="Código fuente" data-en="Source code"></span>
                       <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/API-REST-Spring-Angular.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                     </li>
                   </ul>
@@ -972,19 +1070,15 @@
               </div>
               <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Práctica: API REST&#43;Tests" data-en="Practice: REST API&#43;Tests"></span>
-                <img src="./img/proj/unit-test.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Desarrollado con Java, el framework Spring y las bibliotecas Thymeleaf e Hibernate, además de CSS y Bootstrap, conectado a una base de datos MySQL local. Incluye pruebas unitarias básicas con JUnit 5 y Mockito."
-                  data-title="Sitio desarrollado como práctica de una aplicación web con operaciones CRUD conectadas a una base de datos local e implementación de pruebas unitarias básicas.">
+                <img src="./img/proj/unit-test.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Java, Spring y las bibliotecas Thymeleaf e Hibernate, además de CSS y Bootstrap, conectado a una base de datos MySQL local. Incluye pruebas unitarias básicas con JUnit 5 y Mockito"
+                  data-title="Este sitio web permite realizar operaciones CRUD sobre una base de datos local e incluye pruebas unitarias básicas">
                 <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa"
                   data-en="Preview image"></p>
+                
                 <div class="w-100 carousel-caption">
-                  <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list tech-icons-lg w-100 flex justify-content-evenly java-project-icon mysql-prj-icon p-0 m-0">
-                      <li id="template-icons" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JUnit 5">
-                        <img class="JUnit-Icon tech-svg trsn-030">
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Mockito">
-                        <img class="Mockito-Icon tech-svg trsn-030">
-                      </li>
+                  <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                    <ul class="tech-icons-list tech-icons-lg w-100 flex gap-3 java-project-icon mysql-prj-icon p-0 m-0">                      
+                      <div class="d-none" id="template-icons"></div> <!-- Template asigna íconos debajo -->   
                     </ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
@@ -993,7 +1087,7 @@
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
-                      <span data-es="Código" data-en="Code"></span>
+                      <span data-es="Código fuente" data-en="Source code"></span>
                       <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/CrudSpringDataJPA.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                     </li>
                   </ul>
@@ -1001,22 +1095,19 @@
               </div>
               <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Práctica: API REST con JWT" data-en="Practice: REST API with JWT"></span>
-                <img src="./img/proj/rest-jwt.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Desarrollado con Java y el framework Spring, se utilizó JSON Web Token (JWT), Postman para pruebas de endpoints, conectado a una base de datos MySQL local."
-                  data-title="Sitio desarrollado como práctica de una aplicación web con operaciones CRUD, inicio de sesión, autenticación mediante JSON Web Token (JWT), y gestión de publicaciones y comentarios.">
-                <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa"
-                  data-en="Preview image"></p>
+                <img src="./img/proj/rest-jwt.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Java y Spring, utilizando JSON Web Token (JWT) para la autenticación y conectado a una base de datos MySQL local"
+                  data-title="Este sitio web permite realizar operaciones CRUD, iniciar sesión y gestionar publicaciones y comentarios mediante autenticación con JSON Web Token (JWT)">
+                <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+                
                 <div class="w-100 carousel-caption">
-                  <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list tech-icons-lg w-100 flex justify-content-evenly java-project-icon mysql-prj-icon remove-icons p-0 m-0">
+                  <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                    <ul class="tech-icons-list tech-icons-lg w-100 flex gap-3 java-project-icon mysql-prj-icon p-0 m-0">
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Spring">
                         <img class="Spring-Icon tech-svg trsn-030">
                       </li>
                       <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="JWT">
                         <img class="JWT-Icon tech-svg trsn-030">
-                      </li>
-                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Postman">
-                        <img class="Postman-Icon tech-svg trsn-030">
-                      </li>
+                      </li>                      
                     </ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
@@ -1025,7 +1116,7 @@
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
-                      <span data-es="Código" data-en="Code"></span>
+                      <span data-es="Código fuente" data-en="Source code"></span>
                       <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/API-REST-JWT.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
                     </li>
                   </ul>
@@ -1040,16 +1131,22 @@
               <i class="fa-solid fa-angle-right fw-normal"></i>
             </button>
           </div>
+
           <div class="project-card position-relative rounded cultured border-shadow carousel slide carousel-fade" id="unityProjects">
             <div class="carousel-inner position-relative h-100">
               <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item active">
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="App de recorrido virtual" data-en="Virtual tour app"></span>
-                <img src="./img/proj/app-tour.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Aplicación desarrollada en C# utilizando el motor multiplataforma Unity, con modelado 3D en SketchUp, diseño de texturas en Adobe Photoshop, y servicios de realidad virtual mediante Google Cardboard, además de diversos recursos gratuitos disponibles en la web."
-                  data-title="Esta aplicación ofrece un recorrido virtual interactivo por diversas zonas arqueológicas y lugares históricos de México. Los usuarios pueden seleccionar múltiples puntos de interacción para escuchar y leer información sobre cada sitio. Nota: Requiere dispositivo con giroscopio.">
+                <img src="./img/proj/app-tour.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Aplicación desarrollada en C# utilizando el motor multiplataforma Unity, con modelado 3D en SketchUp, diseño de texturas en Adobe Photoshop y realidad virtual mediante Google Cardboard"
+                  data-title="Aplicación que permite realizar un recorrido virtual interactivo por diversas zonas arqueológicas y lugares históricos de México, con puntos de interacción para escuchar y consultar información sobre cada sitio. Nota: Requiere un dispositivo con giroscopio">
                 <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+                
                 <div class="w-100 carousel-caption">
-                  <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex justify-content-evenly unity-projects-icons p-0 m-0"></ul>
+                  <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                    <ul class="tech-icons-list w-100 flex gap-3 unity-projects-icons p-0 m-0">
+                      <li data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="p-tec-tooltip" title="Google Cardboard XR Plugin">
+                        <img class="Cardboard-Icon tech-svg trsn-030">
+                      </li>
+                    </ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                     <li class="w-50">
@@ -1057,7 +1154,7 @@
                       <a class="d-inline-block w-100 dark-slate" href="https://drive.google.com/file/d/1BPA2lyJqQjDTdI1tc_MWtSu6TyT7Njdo/view?pli=1" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
                   </li>
                     <li class="w-50">
-                      <span data-es="Código" data-en="Code"></span>
+                      <span data-es="Código fuente" data-en="Source code"></span>
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                   </ul>
@@ -1065,12 +1162,13 @@
               </div>
               <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Videojuego móvil 2D" data-en="2D Mobile Video Game"></span>
-                <img src="./img/proj/app-game.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Aplicación desarrollada con C# y el motor multiplataforma Unity, utilizando Adobe Photoshop para diseñar sprites y texturas, además de diversos recursos gratuitos disponibles en la web."
-                  data-title="Aplicación tipo videojuego 2D RPG/plataformas, inspirada en clásicos retro y dirigida principalmente a un público infantil para ayudarles a aprender y repasar las tablas de multiplicar mientras avanzan en la historia y se divierten.">
+                <img src="./img/proj/app-game.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Aplicación desarrollada con C# y el motor multiplataforma Unity, utilizando Adobe Photoshop para el diseño de sprites y texturas"
+                  data-title="Videojuego 2D de tipo RPG y plataformas, inspirado en clásicos retro y dirigido principalmente a un público infantil, que permite aprender y repasar las tablas de multiplicar mientras se avanza en la historia">
                 <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+                
                 <div class="w-100 carousel-caption">
-                  <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex justify-content-evenly unity-projects-icons remove-unity-icons p-0 m-0"></ul>
+                  <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                    <ul class="tech-icons-list w-100 flex gap-3 unity-projects-icons p-0 m-0"></ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                     <li class="w-50">
@@ -1078,7 +1176,7 @@
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
-                      <span data-es="Código" data-en="Code"></span>
+                      <span data-es="Código fuente" data-en="Source code"></span>
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                   </ul>
@@ -1093,16 +1191,18 @@
               <i class="fa-solid fa-angle-right fw-normal"></i>
             </button>
           </div>
-          <div class="project-card position-relative rounded cultured border-shadow carousel slide carousel-fade" id="phpProjects">
+
+          <div class="project-card position-relative rounded cultured border-shadow card-md carousel slide carousel-fade" id="phpProjects">
             <div class="carousel-inner position-relative h-100">
               <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item active">
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Sistema de control escolar" data-en="School Management System"></span>
-                <img src="./img/proj/school-sys.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con PHP y JavaScript, utilizando las bibliotecas jQuery y TCPDF, además de AJAX, CSS y Bootstrap. Está conectado a una base de datos MySQL."
-                  data-title="Este sitio permite llevar el control de horarios de entrada y salida, permisos y días de descanso del personal docente y administrativo de una universidad. Además de las funciones CRUD, permite generar reportes en formato PDF.">
+                <img src="./img/proj/school-sys.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con PHP y JavaScript, utilizando las bibliotecas jQuery y TCPDF, además de CSS y Bootstrap. Está conectado a una base de datos MySQL"
+                  data-title="Este sitio web permite llevar el control de los horarios de entrada y salida, permisos y días de descanso del personal docente y administrativo de una universidad. Además de las funciones CRUD, permite generar reportes en formato PDF">
                 <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+                
                 <div class="w-100 carousel-caption">
-                  <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex justify-content-evenly php-projects-icons p-0 m-0"></ul>
+                  <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                    <ul class="tech-icons-list w-100 flex gap-3 php-projects-icons p-0 m-0"></ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                     <li class="w-50">
@@ -1110,7 +1210,7 @@
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
-                      <span data-es="Código" data-en="Code"></span>
+                      <span data-es="Código fuente" data-en="Source code"></span>
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                   </ul>
@@ -1118,12 +1218,13 @@
               </div>
               <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
                 <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Red social para egresados" data-en="Alumni Social Network"></span>
-                <img src="./img/proj/social-network.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con PHP y JavaScript, la biblioteca jQuery y el uso de AJAX, además de CSS y Bootstrap. Está conectado a una base de datos MySQL."
-                  data-title="Este sitio simula una red social orientada a recién egresados y empresas que ofrecen vacantes. Permite publicar contenido, enviar solicitudes de amistad, postularse a ofertas y comunicarse mediante un chat entre ambas partes.">
+                <img src="./img/proj/social-network.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con PHP y JavaScript, utilizando la biblioteca jQuery, además de CSS y Bootstrap. Está conectado a una base de datos MySQL"
+                  data-title="Este sitio web simula una red social orientada a recién egresados y empresas que ofrecen vacantes. Permite publicar contenido, enviar solicitudes de amistad, postularse a ofertas y comunicarse mediante un chat entre ambas partes">
                 <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+                
                 <div class="w-100 carousel-caption">
-                  <div class="project-tech-icons d-flex justify-content-center align-items-center">
-                    <ul class="tech-icons-list w-100 flex justify-content-evenly php-projects-icons p-0 m-0"></ul>
+                  <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                    <ul class="tech-icons-list w-100 flex gap-3 php-projects-icons p-0 m-0"></ul>
                   </div>
                   <ul class="web-links-buttons flex justify-content-between m-0 p-0">
                     <li class="w-50">
@@ -1131,7 +1232,7 @@
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                     <li class="w-50">
-                      <span data-es="Código" data-en="Code"></span>
+                      <span data-es="Código fuente" data-en="Source code"></span>
                       <a class="d-inline-block w-100 dark-slate no-web-links"><i class="fs-7 fw-normal fst-normal" data-es="No disponible" data-en="Not available"></i></a>
                     </li>
                   </ul>
@@ -1148,13 +1249,13 @@
           </div>        
         </div>
       </div>      
-      <span class="w-100 position-relative d-inline-block text-center info-text-bottom def-cursor" class="form-text" data-es="ℹ️ El orden no depende de la fecha de creación ℹ️" data-en="ℹ️ The order of these doesn't depend on their date of creation ℹ️"></span>
 
       <div class="show-hide-container">
-        <span class="w-100 d-inline-block show-hide-text def-cursor p-2" data-es="Haz clic para mostrar u ocultar proyectos:" data-en="Click here to show or hide projects:"></span>
+        <span class="w-100 d-inline-block show-hide-text def-cursor p-2" data-es="Haz clic para mostrar u ocultar los proyectos:" data-en="Click to show or hide the projects:"></span>
         <a class="btn btn-dark w-50 b-0 jelly-bean" id="show-projects" data-es="Ver más" data-en="Show more"></a>
       </div>      
     </section> 
+
     <section class="experience" id="experience" data-aos="flip-up" data-aos-duration="850" data-aos-delay="115">
       <h1 class="exp-section-title d-grid align-items-center def-cursor txt-color-ds" data-es="Experiencia profesional" data-en="Professional experience"></h1>
       <div class="experience-container flex">
@@ -1185,6 +1286,7 @@
       <h3 class="section-title position-relative mb-0 p-3 text-uppercase dark-slate skills-title def-cursor" data-es="Habilidades técnicas" data-en="Technical skills"></h3>
       <div class="cards-container flex"><!-- Template --></div>
     </section>
+
     <section class="certifications" id="certifications" data-aos="flip-up" data-aos-duration="750" data-aos-delay="60">
       <h1 class="cert-section-title d-grid align-items-center def-cursor txt-color-ds" data-es="Certificaciones" data-en="Certifications"></h1>
       <div class="certification-container position-relative flex">        
@@ -1202,6 +1304,7 @@
             </div>
           </div>
         </div>
+
         <div class="flip-card bg-transparent">
           <div class="flip-card-inner w-100 h-100 position-relative text-center">
             <div class="flip-card-front w-100 h-100 position-absolute rounded cultured border-shadow">
@@ -1222,48 +1325,52 @@
     <section class="contact-section-separator position-relative dark-slate"></section>
     <section class="contactme position-relative flex" id="Contact">                
       <div class="content w-100 flex justify-content-around mx-auto my-0 z-1" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">                        
-        <!-- Form -->
+
         <div class="contact-form cultured rad-pad-10-1 border-shadow"> 
           <h1 class="text-center jelly-bean rad-pad-5-05 def-cursor" data-es="Envíame un mensaje" data-en="Send me a message"></h1>
           <form class="contact-form-container" id="contact-form" action="">
             <label for="name" class="form-label txt-color-ds d-inline-flex align-items-center" data-es="Nombre&#x002F;Empresa:" data-en="Full name&#x002F;Company:"></label><span>*</span>
             <div class="input-group mb-3">
               <span class="input-group-text border-0 dark-slate" id="name-icon">&#xf2bd;</span>
-              <input name="name" id="name" type="text" class="form-control form-name txt-color-ds" aria-describedby="name-icon" required autocomplete="off">
+              <input name="name" id="name" type="text" class="form-control form-name txt-black text-capitalize" aria-describedby="name-icon" required autocomplete="off">
             </div>
+
             <label for="email" class="form-label txt-color-ds">Email:</label><span>*</span>
             <div class="input-group mb-2">
               <span class="input-group-text border-0 dark-slate" id="icon-email" style="font-family: FontAwesome !important;">&#x40;</span>
-              <input name="email" id="email" type="email" class="form-control form-email txt-color-ds" aria-describedby="icon-email" required autocomplete="off">
+              <input name="email" id="email" type="email" class="form-control form-email txt-black" aria-describedby="icon-email" required autocomplete="off">
             </div>
             <div id="emailHelp" for="email" class="form-text def-cursor text-start txt-color-ds m-0 pb-3" data-es="Tu correo electrónico no se comparte con nadie más" data-en="Your email isn't shared with anyone else"></div>
+            
             <div class="form-floating">
-              <textarea name="message" class="form-control txt-color-ds" id="message" class="message" placeholder="Mensaje:" required></textarea>
-              <label class="txt-color-ds" for="message" data-es="Texto:" data-en="Text:"></label>
+              <textarea name="message" class="form-control txt-black" id="message" class="message" placeholder="Mensaje:" required></textarea>
+              <label class="txt-color-ds" for="message" data-es="Mensaje:" data-en="Message:"></label>
             </div>
+
             <button id="send-email-btn" class="btn jelly-bean flex" data-es="Enviar" data-en="Send"></button>
           </form>
-          <a href="mailto:mauba22@outlook.com" id="mailto" style="display: none;">mail</a> <!-- mailto -->
+          <a href="mailto:mauba22@outlook.com" target="_blank" id="mailto" class="d-none">mail</a> <!-- mailto -->
         </div>  
-        <!-- Buttons -->
+
         <div class="icons m-0 cultured rad-pad-10-1 border-shadow"> 
-          <h4 class="copy-email-title text-center mb-0 rounded-top def-cursor jelly-bean p-2" data-es="Mi correo electrónico:" data-en="My e-mail:"></h4>
+          <h4 class="copy-email-title text-center mb-0 rounded-top def-cursor jelly-bean p-2" data-es="Mi correo electrónico" data-en="My email"></h4>
           <p class="flex justify-content-between rounded-0 mb-0 p-3 text-center def-cursor txt-color-ds">
             <input class="email-text mx-auto border-0 cultured txt-color-ds" type="text" value="mauba22@outlook.com" id="email-copy" readonly>
             <button class="border-0 bg-transparent txt-jelly copy-btn trsn-030" id="copy-btn">&#xf0c5;</button>
           </p>
-          <h4 class="social-media-title text-center m-0 rounded-0 def-cursor jelly-bean p-2" data-es="Otras formas de contactarme:" data-en="Other ways to contact me"></h4>
-          <div class="social-media-list flex text-center p-3 rounded-bottom"> 
-            <a class="button text-decoration-none" href="https://wa.me/527227982747?text=Te%20contacto%20desde%20tu%20portafolio" target="_blank">
+
+          <h4 class="social-media-title text-center m-0 rounded-0 def-cursor jelly-bean p-2" data-es="Otras formas de contacto" data-en="Other ways to contact me"></h4>
+          <div class="social-media-list flex gap-3 text-center p-3 rounded-bottom"> 
+            <a class="button text-decoration-none bg-white" href="https://wa.me/527227982747?text=Te%20contacto%20desde%20tu%20portafolio" target="_blank" id="whatsapp-url">
               <div class="icon d-inline-block text-center rounded-circle txt-color-ds">&#xf232;</div><span>WhatsApp</span>
             </a> 
-            <a class="button text-decoration-none" href="https://t.me/MauricioBarrueta" target="_blank">
+            <a class="button text-decoration-none bg-white" href="https://t.me/MauricioBarrueta" target="_blank">
               <div class="icon d-inline-block text-center rounded-circle txt-color-ds">&#xf2c6;</div><span>Telegram</span>
             </a>         
-            <a class="button text-decoration-none" href="https://github.com/MauricioBarrueta" target="_blank">
+            <a class="button text-decoration-none bg-white" href="https://github.com/MauricioBarrueta" target="_blank">
               <div class="icon d-inline-block text-center rounded-circle txt-color-ds">&#xf09b;</div><span>GitHub</span>
             </a>                                     
-            <a class="button text-decoration-none" target="_blank" id="linkedin-url">
+            <a class="button text-decoration-none bg-white" target="_blank" id="linkedin-url">
               <div class="icon d-inline-block text-center rounded-circle txt-color-ds">&#xf08c;</div><span>LinkedIn</span>
             </a>            
           </div>
@@ -1281,10 +1388,11 @@
         <li class="mx-3"><a class="text-decoration-none trsn-030" href="#Skills" data-es="Habilidades" data-en="Skills"></a></li>
         <li class="mx-3"><a class="text-decoration-none trsn-030" href="#Contact" data-es="Contacto" data-en="Contact"></a></li>
       </ul>  
-      <p class="mt-2 me-0 ms-0 def-cursor" data-es="Sitio web desarrollado por:" data-en="Website developed by:"></p>
+      <p class="me-0 ms-0 def-cursor" data-es="Sitio web desarrollado por:" data-en="Website developed by:"></p>
     </div>
+
     <div class="footer-bottom w-100 position-absolute bottom-0 p-2 text-center def-cursor">
-      <p class="m-0" ><span class="fw-bold">&copy; 2023 |</span> Edgar Mauricio Barrueta Aguirre <i class="fst-normal">😗</i></p>
+      <p class="m-0" ><span class="fw-bold">&copy; 2023 |</span> Edgar Mauricio Barrueta Aguirre <i class="fa-solid fa-face-kiss fst-normal"></i></p>
     </div>
   </footer> 
   
@@ -1293,24 +1401,32 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
       <div class="modal-content position-relative cultured">
         <button type="button" class="btn-close position-absolute rounded-circle" data-bs-dismiss="modal" aria-label="Close" ></button>
-        <div class="modal-header rounded-0 border-0 dark-slate">
+        
+        <div class="modal-header rounded-top border-0 dark-slate">
           <h6 class="w-100 mb-0 text-center def-cursor"></h6>
         </div>
+
         <div class="modal-body img-magnifier-container position-relative p-2 m-0 rad-pad-5-05 cultured">
           <img id="project-image" class="w-100 img-modal rounded-2" src="" alt="">
           <p class="w-100 position-absolute m-0 pt-1 pb-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
         </div>
-        <div class="modal-footer rounded-0 rounded-bottom border-0 jelly-bean">
+        
+        <div class="modal-footer rounded-bottom border-0 jelly-bean">
           <p class="w-100 mb-0 text-center def-cursor"></p>
         </div>
       </div>
     </div>
   </div>
+  
   <div class="changing-lang modal fade" tabindex="-1" role="dialog" id="spinnerModal"> 
-    <div class="modal-dialog modal-dialog-centered justify-content-center" role="document" style="box-shadow: none;">
-      <span class="text-center" id="changing-lang-txt" data-es=" Traduciendo, por favor espere..." data-en=" Translating, please wait..."></span>&nbsp;<i class="fa-solid fa-hammer fa-shake text-center"></i>       
+    <div class="modal-dialog modal-dialog-centered justify-content-center shadow-none" role="document">
+      <div class="flex gap-4">
+        <span class="text-center" id="changing-lang-txt" data-es="Traduciendo, por favor espere..." data-en="Translating, please wait..."></span>
+        <i class="fa-solid fa-hammer fa-shake"></i>       
+      </div>
     </div>
   </div>  
+
   <div class="alert-popup position-fixed end-0 bottom-0 flex rounded def-cursor mediumJungle hide" id="alert-popup"> 
     <span class="fas fa-solid fa-circle-check position-absolute"></span><span class="alert-text w-100 d-inline-block py-0 px-3" id="alert-text"></span>
     <span class="close-alert position-absolute top-50 end-0 dark-slate trsn-025" title="Cerrar" onclick="closeAlert()"></span>
