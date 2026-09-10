@@ -147,7 +147,7 @@ header {
     font-size: 22px; text-shadow: var(--textShadowCustom);
 }.intro-subtitles span { filter: saturate(1.35); }
 .purple-font { color: #A586B6; } .yellow-font { color: #DCCD79; } .brackets-font { color: #C5C900; } .comment-font { color: #6A9955; font-size: 18px; }
-.comment-symbol { font-size: 14px; margin: 0 10px 0 5px; }
+.comment-symbol { font-size: 14px; margin-inline: 6px; }
 .intro-cards { 
     width: 385px; height: 315px; 
     overflow: hidden; cursor: pointer; 
@@ -619,15 +619,15 @@ footer { position: sticky; min-height: 150px; }
 }
 @media screen and (max-width: 980px) {  
     .projects-title::before, .skills-title::before, .contact-section-separator::before, .projects-title::after, .skills-title::after { background-size: 48%; }  
-    .section-title, .cv-btn, #send-email-btn, #show-projects, .intro-contact-btn, .experience-card::after, .flip-card::after, .touch-btn::before { 
+    .section-title, .cv-btn, #show-projects, .intro-contact-btn, .experience-card::after, .flip-card::after, .touch-btn::before, .contact-form h1, #send-email-btn { 
         font-size: 12px; 
-    }.cv-btn::after, .intro-contact-btn::after { margin-bottom: -10px; } #send-email-btn::after { margin-bottom: -2px; }
+    }.cv-btn::after, .intro-contact-btn::after { margin-bottom: -10px; } #send-email-btn::after { margin-bottom: -5px; }
     /* Projects Section */ 
     .modal-header h6, .modal-footer p { font-size: 8px;} 
     /* Skills Section */
     .skills-section-subtitle { font-size: 10px; } 
     /* Cards 'Touch Screen' Icon */
-    .intro-cards::after, .touch-btn::before, .card-skills::after, .experience-card::after, .flip-card::after { 
+    .intro-cards::after, .touch-btn::before, .experience-card::after, .flip-card::after { 
         content: "\f577"; position: absolute; display: block; z-index: 1;
         text-align: center; font-size: 12px; color: var(--darkSlateGray); 
         cursor: pointer; animation: var(--fa-beat-animation);     
@@ -638,15 +638,13 @@ footer { position: sticky; min-height: 150px; }
         border-radius: 50%; border: 1px solid rgba(255, 255, 255, 0.3); box-shadow: var(--boxShadowBottom); visibility: visible;
     }.touch-btn::before { margin-bottom: 2px; }
     .experience-card::after { top: 5px; right: 10px } 
-    .card-skills::after { left: 75%; bottom: 3%; font-size: 9px; } 
     .flip-card::after { bottom: 5%; right: 3%; }.flip-card:nth-child(2):hover::after { color: var(--darkSlateGray); }     
     .intro-cards::after, .flip-card:nth-child(2)::after, .touch-btn::before { color: #FFF; } 
     .modal-header, .modal-footer { padding: 0.75rem 1rem; }
 }
 @media screen and (max-width: 800px) { 
     .intro-middle-img { height: 313px; }
-    .scroll-down-l, .scroll-down-r, .intro-subtitles span { font-size: 12px; }
-    .exp-section-title, .cert-section-title, .form-label, .form-floating label { font-size: 10px; } 
+    .scroll-down-l, .scroll-down-r, .intro-subtitles span, .exp-section-title, .cert-section-title, .form-label, .form-floating label { font-size: 10px; } 
     .exp-section-title, .cert-section-title { letter-spacing: 1px; }
     .alert-popup .fa-circle-check { font-size: 8px; }
     /* About Section */
@@ -657,6 +655,7 @@ footer { position: sticky; min-height: 150px; }
     /* Skills Section */
     .cards-container { gap: 10px; row-gap: 15px; }
     .card-skills { width: 70px; height: 70px; }
+    .flip-card { margin-inline: 0; }
     .button span, .alert-text, .intro-middle-img span, .comment-font { font-size: 7px !important; }
     /* Contact Section */
     .button:hover { width: 125px; } .button span { margin-left: 2px; }
@@ -671,9 +670,7 @@ footer { position: sticky; min-height: 150px; }
     /* Introduction Section */
     .introduction { width: 100%; padding-inline: 0; }
     .intro-card-content { padding: 0.5rem; }
-    .intro-card-title, .cv-btn, .icons h4, .email-text, #show-projects, .intro-contact-btn, .contact-form h1, .abt-text-content h1 { 
-        font-size: 10px; 
-    }.cv-btn::after, .intro-contact-btn::after { margin-bottom: -13px; }
+    .intro-card-title, .icons h4, .email-text { font-size: 10px; }
     /* About Section */
     .abt-hobbies i, .btn-close { font-size: 16px; } 
     /* Projects Section */
@@ -685,12 +682,12 @@ footer { position: sticky; min-height: 150px; }
     .cards-container { gap: 5px; row-gap: 12px !important; }
     .skills-section-subtitle { margin: 8px 0 !important; } 
     /* Contact Section */
-    .button, .icon { width: 45px; height: 45px; font-size: 26px; } .button { margin: 0 5px; }
+    /* .button, .icon { width: 45px; height: 45px; font-size: 26px; } .button { margin: 0 5px; } */
     .contact-form-container > span { margin-top: 5px; }
     /* Footer Content */
     .menu a, #complementary-skills, .complementary .comp-skill { font-size: 8px; }    /* .intro-subtitles span */
     .footer-content p, .footer-bottom p, .intro-card-desc, .show-hide-text, .abt-text-content pre, .time span, .intro-subtitles span { font-size: 9px; }
-    .changing-lang .fa-hammer, #changing-lang-txt, .abt-name-text, .abt-text-content .abt-hobbies h6, .input-group-text { font-size: 12px; }
+    .changing-lang .fa-hammer, #changing-lang-txt, .abt-name-text, .abt-text-content .abt-hobbies h6, .input-group-text, .abt-text-content h1 { font-size: 12px; }
 }    
 @media screen and (max-width: 480px) {
     /* Introduction Section */
@@ -698,7 +695,7 @@ footer { position: sticky; min-height: 150px; }
     .intro-cards { width: 100%; }       
     .comment-font { font-size: 6px !important; }
     /* About */
-    .abt-name-text, #changing-lang-txt, .changing-lang .fa-hammer { font-size: 9px; }
+    .abt-name-text, #changing-lang-txt, .changing-lang .fa-hammer, .email-text { font-size: 9px; }
     /* Projects Section */
     .abt-text-content pre, .carousel-instructions, .icons h4, .footer-content p { font-size: 8px; }  
     .touch-btn { right: -10px; }
