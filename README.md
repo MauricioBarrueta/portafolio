@@ -4,4 +4,4 @@
 
 🔗 https://mauriciobarrueta.github.io/portafolio/
 
-<img width="1366" height="635" alt="portafolio" src="https://github.com/user-attachments/assets/6af53ad9-331d-4c26-a0f0-e637946ed9cc" />
+<img width="1366" height="635" alt="portafolio" src="https://github.com/user-attachments/assets/f1b176df-d863-440e-a4ef-cd70cd8214cc" />
