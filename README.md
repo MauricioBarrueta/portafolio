@@ -1,7 +1,7 @@
-🇲🇽 Sitio web desarrollado con JavaScript, la biblioteca jQuery, CSS y Bootstrap, publicado mediante GitHub Pages. Incluye una sección con traducción automática, que se activa únicamente si el idioma es inglés, mediante Google Translate.
+🇲🇽 Sitio web desarrollado con JavaScript, la biblioteca jQuery, CSS y Bootstrap, publicado mediante GitHub Pages. Incluye una sección con traducción automática al inglés mediante Google Translate API.
 
-🇺🇸 Website developed with JavaScript, jQuery library, CSS and Bootstrap, published via GitHub Pages. Includes a section with automatic translation that is triggered only if the language is English, using Google Translate.
+🇺🇸 Website developed with JavaScript, using the jQuery library, CSS, and Bootstrap, deployed on GitHub Pages. Includes a section with automatic translation into English using the Google Translate API.
 
 🔗 https://mauriciobarrueta.github.io/portafolio/
 
-<img width="1349" height="653" alt="portfolio" src="https://github.com/user-attachments/assets/00ff3453-1480-4832-9d26-b1f111b76784" />
+<img width="1366" height="635" alt="portafolio" src="https://github.com/user-attachments/assets/f1b176df-d863-440e-a4ef-cd70cd8214cc" />
