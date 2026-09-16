@@ -198,7 +198,7 @@ contactForm.addEventListener('submit', (event) => {
 });
 /* Se asigna el URL de LinkedIn dependiendo el idioma actual */
 const linkedinBtn = document.getElementById('linkedin-url'), linkedinUrl = 'https://www.linkedin.com/in/mauricio-barrueta'
-linkedinBtn.addEventListener('click', () => { linkedinBtn.href = currLang === 'es' ? `${linkedinUrl}` : `${linkedinUrl}/?locale=en_US` })
+linkedinBtn.addEventListener('click', () => { linkedinBtn.href = currLang === 'es' ? `${linkedinUrl}` : `${linkedinUrl}/?locale=en-US` })
 
 const whatsappBtn = document.getElementById('whatsapp-url'), whatsappUrl = 'https://wa.me/527227982747?text='
 whatsappBtn.addEventListener('click', () => { whatsappBtn.href = currLang === 'es' 
