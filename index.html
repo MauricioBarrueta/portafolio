@@ -6,7 +6,7 @@
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- Animate On Scroll Library -->
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"> <!-- Animate On Scroll Library -->
   <link rel="stylesheet" href="css/styles.css">
   <title>Portafolio • Mauricio Barrueta</title> 
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">   
@@ -173,6 +173,28 @@
         <div class="project-card position-relative rounded cultured border-shadow card-lg carousel slide carousel-fade" id="angularAPIProjects">         
           <div class="carousel-inner position-relative h-100">
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item active">
+              <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Simulador de compras online" data-en="E-commerce Simulator"></span>
+              <img src="./img/proj/fake-comm.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting y conectado a la API DummyJSON"  
+                data-title="Sitio web que simula un e-commerce, permite iniciar sesión, explorar y filtrar productos, gestionar favoritos, utilizar un carrito de compras ficticio y simular el proceso de compra">
+              <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
+              
+              <div class="w-100 carousel-caption">
+                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
+                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons firebase-hosting css-to-scss bootstrap-to-tail p-0 m-0"></ul>
+                </div>  
+                <ul class="web-links-buttons flex justify-content-between m-0 p-0">
+                  <li class="w-50 bg-white">
+                    <span data-es="Sitio web" data-en="Website"></span>
+                    <a class="d-inline-block w-100 dark-slate" href="https://fakecommerce-c69d8.web.app/products" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
+                  </li>
+                  <li class="w-50 bg-white">
+                    <span data-es="Código fuente" data-en="Source code"></span>
+                    <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/FakeCommerce.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
+                  </li>  
+                </ul>
+              </div>
+            </div> 
+            <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Adivina la canción" data-en="Guess the Song"></span>
               <img src="./img/proj/guess-the-song.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting e integrado con Deezer API y LRCLIB API, utilizando Cloudflare Workers como proxy para Deezer"              
                 data-title="Juego de trivia sobre adivinar canciones. Presenta fragmentos de canciones para identificar la respuesta correcta entre varias opciones, con dos niveles de dificultad, pistas mediante la letra y un sistema de puntuación">
@@ -197,32 +219,10 @@
                   </li>  
                 </ul>
               </div>
-            </div>
-            <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
-              <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Simulador de compras online" data-en="E-commerce Simulator"></span>
-              <img src="./img/proj/fake-comm.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting y conectado a la API DummyJSON"  
-                data-title="Sitio web que simula un e-commerce que permite iniciar sesión, explorar y filtrar productos, gestionar favoritos y utilizar un carrito de compras ficticio">
-              <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
-              
-              <div class="w-100 carousel-caption">
-                <div class="project-tech-icons d-flex justify-content-center align-items-center p-2">
-                  <ul class="tech-icons-list w-100 flex gap-3 angular-project-icons firebase-hosting css-to-scss bootstrap-to-tail p-0 m-0"></ul>
-                </div>  
-                <ul class="web-links-buttons flex justify-content-between m-0 p-0">
-                  <li class="w-50 bg-white">
-                    <span data-es="Sitio web" data-en="Website"></span>
-                    <a class="d-inline-block w-100 dark-slate" href="https://fakecommerce-c69d8.web.app/products" target="_blank"><i class="fa-solid fa-link fw-normal"></i></a>
-                  </li>
-                  <li class="w-50 bg-white">
-                    <span data-es="Código fuente" data-en="Source code"></span>
-                    <a class="d-inline-block w-100 dark-slate" href="https://github.com/MauricioBarrueta/FakeCommerce.git" target="_blank"><i class="fa-brands fa-github fw-normal"></i></a>
-                  </li>  
-                </ul>
-              </div>
-            </div>            
+            </div>                       
             <div class="position-absolute cultured trsn-025 me-0 rounded carousel-item">
               <span class="w-100 d-inline-block position-relative carousel-title py-2 px-1 def-cursor" data-es="Desafío quiz" data-en="Quiz challenge"></span>
-              <img src="./img/proj/quiz.webp" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting, conectado a Open Trivia DB y con traducción automática mediante Google Translate API" 
+              <img src="./img/proj/quiz.png" class="position-absolute top-0 start-0 w-100 h-100 rounded img-item cultured trsn-025" alt="Sitio web desarrollado con Angular y TypeScript, SCSS y principalmente Tailwind CSS, publicado con Firebase Hosting, conectado a Open Trivia DB y con traducción automática mediante Google Translate API" 
                 data-title="Juego de trivia sobre cultura popular con partidas rápidas o personalizadas. Permite elegir la dificultad y cantidad de preguntas, además de traducirlas automáticamente al español o conservarlas en inglés">
               <p class="w-100 position-absolute bottom-0 m-0 carousel-subtitle" data-es="Imagen de vista previa" data-en="Preview image"></p>
               
@@ -1330,7 +1330,6 @@
     <section class="contact-section-separator position-relative dark-slate"></section>
     <section class="contactme position-relative flex" id="Contact">                
       <div class="content w-100 flex justify-content-around mx-auto my-0 z-1" data-aos="fade-down" data-aos-duration="1000" data-aos-delay="100">                        
-
         <div class="contact-form cultured rad-pad-10-1 border-shadow"> 
           <h1 class="text-center jelly-bean rad-pad-5-05 def-cursor" data-es="Envíame un mensaje" data-en="Send me a message"></h1>
           <form class="contact-form-container" id="contact-form" action="">
@@ -1440,7 +1439,7 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>    
   <script type="text/javascript" src="js/main.js" defer></script> 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js" defer></script> <!-- AOS Library Script -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js" defer></script> <!-- AOS Library Script -->
   <script type="text/javascript" src="js/magnifying-glass.js" defer></script>       
 </body>
 </html>
